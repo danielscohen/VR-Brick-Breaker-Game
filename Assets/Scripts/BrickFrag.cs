@@ -31,7 +31,6 @@ public class BrickFrag : MonoBehaviour
     [SerializeField] GameObject cam;
     [SerializeField] FragSpawner fragSpawner;
     [SerializeField] float particleExpDelay = 1f;
-    [SerializeField] float craterFracDelay = 1f;
     [SerializeField] int ptsPerUnit = 10;
     [SerializeField] float coneAngle = 30f;
     [SerializeField] int fracBranchDepth = 1;
