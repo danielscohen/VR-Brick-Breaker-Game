@@ -24,7 +24,7 @@ public class WallBuilderScript : MonoBehaviour
     [SerializeField] Vector3Int numBricks;
     [SerializeField] Vector3Int numVoxels;
     [SerializeField] GameObject brickPreFab;
-    [SerializeField] VoxelSpawner voxSpawner;
+    VoxelSpawner voxSpawner;
     [SerializeField] Material voxInternalMat;
     [SerializeField] Material voxEdgeMat;
 
@@ -44,6 +44,10 @@ public class WallBuilderScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.DownArrow)) {
             transform.Rotate(new Vector3(0, -15f, 0));
         }
+    }
+
+    private void Awake() {
+        voxSpawner = GameObject.Find("Voxel Spawner").GetComponent<VoxelSpawner>();
     }
 
 
@@ -99,7 +103,7 @@ public class WallBuilderScript : MonoBehaviour
             CreateVoxels(brick);
         }
 
-        transform.localPosition = wallPos;
+        transform.position = wallPos;
         transform.localScale = wallSize;
         transform.Rotate(wallRotation);
 
