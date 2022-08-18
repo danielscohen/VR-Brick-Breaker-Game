@@ -14,11 +14,11 @@ public class BallController : MonoBehaviour
     }
 
     private void Start() {
-        playerPos = GameObject.Find("Main Camera").transform.position;
+        playerPos = Camera.main.transform.position;
     }
     private void FixedUpdate() {
         velocity = ballRb.velocity;
-        Vector3 dir = (playerPos - transform.position).normalized;
+        Vector3 dir = new Vector3(0,0,-1);
         ballRb.AddForce(dir * Gravity);
     }
 }
