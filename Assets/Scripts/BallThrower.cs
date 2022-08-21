@@ -7,8 +7,6 @@ using System;
 public class BallThrower : MonoBehaviour
 {
     [Header("References")]
-    public Transform cam;
-    public Transform throwPoint;
     public GameObject ball;
     public TextMeshProUGUI powerText;
 
@@ -55,11 +53,11 @@ public class BallThrower : MonoBehaviour
     private void Throw(float timePressed) {
         //readyToThrow = false;
 
-        GameObject projectile = Instantiate(ball, throwPoint.position, cam.rotation);
+        GameObject projectile = Instantiate(ball, transform.position, transform.rotation);
 
         Rigidbody projectileRb = projectile.GetComponent<Rigidbody>();
 
-        Vector3 forceToAdd = (cam.transform.forward * throwForce  + transform.up * throwUpwordForce) * timePressed;
+        Vector3 forceToAdd = (transform.forward * throwForce  + transform.up * throwUpwordForce) * timePressed;
 
         projectileRb.AddForce(forceToAdd, ForceMode.Impulse);
 
