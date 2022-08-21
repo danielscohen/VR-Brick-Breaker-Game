@@ -5,6 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
+
+    public int PlayerHealth { get; private set; }
+    public static GameController Instance { get; private set; }
+
+    [SerializeField] int playerStartHealth;
+
     void Update() {
         if (Input.GetKeyDown(KeyCode.R)) {
             Restart();
@@ -18,7 +24,30 @@ public class GameController : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
+    void OnEnable() {
+        PlayerCollider.fragCollideWithPlayer += DecreasePlayerHealth;
+    }
+
+    private void OnDisable() {
+        PlayerCollider.fragCollideWithPlayer -= DecreasePlayerHealth;
+    }
+
     void BuildWall() {
 
     }
+
+    void DecreasePlayerHealth(int healthValDecreaseBy) {
+        PlayerHealth -= healthValDecreaseBy;
+    }
+
+    void Awake() {
+        if(Instance != null && Instance != this){
+            Destroy(this);
+        } else {
+            Instance = this;
+        }
+
+        PlayerHealth = playerStartHealth;
+    }
+
 }

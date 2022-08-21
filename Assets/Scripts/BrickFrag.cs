@@ -74,7 +74,7 @@ public class BrickFrag : MonoBehaviour
 
 
     private void Start() {
-        cam = GameObject.Find("Main Camera");
+        cam = Camera.main.gameObject;
         fragSpawner = GameObject.Find("Frag Spawner").GetComponent<FragSpawner>();
     }
 
@@ -288,7 +288,7 @@ public class BrickFrag : MonoBehaviour
 
     void DeleteSmallFracs() {
         foreach(var frag in frags) {
-            if (frag.fragC.GetFragSize() < minFragSizeKeep) {
+            if (frag.fragC.FragSize < minFragSizeKeep) {
                 frag.fragC.DeleteFrag();
                 frag.isDestroyed = true;
             }

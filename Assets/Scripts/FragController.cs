@@ -8,7 +8,7 @@ public class FragController : MonoBehaviour
     Vector3 playerPos;
     float collForce;
     Vector3 gravityDir;
-    int fragSize;
+    public int FragSize { get; set; }
     float startTime;
 
 
@@ -33,7 +33,7 @@ public class FragController : MonoBehaviour
         this.playerPos = playerPos;
         this.collForce = collForce;
         this.brickScript = brickScript;
-        this.fragSize = fragSize;
+        this.FragSize = fragSize;
 
         fragRb = GetComponent<Rigidbody>();
         nDist = UtilFunctions.CalcDistScore(Vector3.Distance(transform.position, collisionPt), brickSize) / 100f;
@@ -92,14 +92,11 @@ public class FragController : MonoBehaviour
 
     public void MakeFall() {
         EnableGravity();
-        if (fragSize <= maxFragFadeSize && gameObject.activeSelf) {
+        if (FragSize <= maxFragFadeSize && gameObject.activeSelf) {
             StartCoroutine(FadeOut(fadeDuration, 0, true));
         }
     }
 
-    public int GetFragSize() {
-        return fragSize;
-    }
 
     public IEnumerator FadeOut(float duration, float tranPer, bool destroy) {
         List<Material> childMats = GetFragMats();
