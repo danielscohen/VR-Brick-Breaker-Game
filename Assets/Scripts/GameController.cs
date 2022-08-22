@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,10 +7,17 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
 
+    enum GameState {
+        StartScreen, Running, Paused, EndScreen
+    }
+    public static event Action onGameOver;
     public int PlayerHealth { get; private set; }
+    GameState CurrentGameState { get; set; }
     public static GameController Instance { get; private set; }
 
     [SerializeField] int playerStartHealth;
+
+
 
     void Update() {
         if (Input.GetKeyDown(KeyCode.R)) {
@@ -32,12 +40,12 @@ public class GameController : MonoBehaviour
         PlayerCollider.fragCollideWithPlayer -= DecreasePlayerHealth;
     }
 
-    void BuildWall() {
-
-    }
 
     void DecreasePlayerHealth(int healthValDecreaseBy) {
         PlayerHealth -= healthValDecreaseBy;
+        if (PlayerHealth <= 0) {
+            onGameOver?.Invoke();
+        }
     }
 
     void Awake() {
@@ -48,6 +56,18 @@ public class GameController : MonoBehaviour
         }
 
         PlayerHealth = playerStartHealth;
+        CurrentGameState = GameState.StartScreen;
+    }
+
+    void Start() {
+
+        
+
+        
+    }
+
+    public void EndGame() {
+        onGameOver?.Invoke();
     }
 
 }
