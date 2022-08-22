@@ -1,6 +1,6 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 
 public class BallManager : MonoBehaviour
@@ -8,7 +8,6 @@ public class BallManager : MonoBehaviour
     [SerializeField] GameDifficultySettings difficultySettings;
     [SerializeField] GameObject _ballPrefab;
     [SerializeField] GameObject _throwPt;
-    [SerializeField] TextMeshProUGUI powerText;
     [SerializeField] float throwForce;
     [SerializeField] float throwUpwordForce;
 
@@ -16,8 +15,10 @@ public class BallManager : MonoBehaviour
     List<GameObject> activeBalls = new List<GameObject>(); 
     Stack<GameObject> ballPool = new Stack<GameObject>();
 
+    public static event Action<float> onBallThrowPowerChange;
+    public static event Action<int> onBallsLeftCountChange;
+
     int _ballsRemaining;
-    GameObject _loadedBall = null;
     int _maxBallID = 0;
     KeyCode throwKey = KeyCode.Mouse0;
     float timeDown;
@@ -38,24 +39,24 @@ public class BallManager : MonoBehaviour
     }
 
     void Start() {
-        UpdateThrowPowerText(0);
-        LoadNewBall();
+        onBallThrowPowerChange?.Invoke(0f);
+        onBallsLeftCountChange?.Invoke(_ballsRemaining);
     }
 
     void Update() {
-        if(Input.GetKeyDown(throwKey) && readyToThrow && _loadedBall != null) {
+        if(Input.GetKeyDown(throwKey) && readyToThrow && _ballsRemaining > 0) {
             keyPressed = true;
             timeDown = Time.time;
         }
 
-        if(Input.GetKeyUp(throwKey) && readyToThrow && _loadedBall != null) {
+        if(Input.GetKeyUp(throwKey) && readyToThrow && _ballsRemaining > 0) {
             keyPressed = false;
             timePressed = Time.time - timeDown;
             Throw(timePressed);
         }
 
         if (keyPressed) {
-            UpdateThrowPowerText(Time.time - timeDown);
+            onBallThrowPowerChange?.Invoke(Time.time - timeDown);
         }
     }
 
@@ -77,39 +78,41 @@ public class BallManager : MonoBehaviour
 
     void DisableBall(GameObject ball) {
         var ballRB = ball.GetComponent<Rigidbody>();
+        ball.GetComponent<BallController>().GravityEnabled = false;
         ballRB.velocity = Vector3.zero;
         ballRB.angularVelocity = Vector3.zero;
         ball.SetActive(false);
         ballPool.Push(ball);
     }
 
-    void LoadNewBall() {
+    GameObject LoadNewBall() {
+        GameObject ball = null;
         if (ballPool.Count > 0) {
-            _loadedBall = ballPool.Pop();
+            ball = ballPool.Pop();
         } else {
-            _loadedBall = Instantiate(_ballPrefab);
+            ball = Instantiate(_ballPrefab);
+            ball.GetComponent<BallController>().BallID = _maxBallID;
             _maxBallID++;
-            _loadedBall.GetComponent<BallController>().BallID = _maxBallID;
         }
 
-        _loadedBall.GetComponent<Rigidbody>().position = _throwPt.transform.position;
+
         _ballsRemaining--;
-    }
-    void UpdateThrowPowerText(float power) {
-        powerText.text = string.Format("{0:N2}", power);
+        onBallsLeftCountChange?.Invoke(_ballsRemaining);
+        return ball;
     }
     private void Throw(float timePressed) {
+        var ball = LoadNewBall();
 
+        activeBalls.Add(ball);
 
-        Rigidbody ballRB = _loadedBall.GetComponent<Rigidbody>();
+        ball.SetActive(true);
+
+        Rigidbody ballRB = ball.GetComponent<Rigidbody>();
+        ballRB.position = _throwPt.transform.position;
 
         Vector3 forceToAdd = (_throwPt.transform.forward * throwForce  + transform.up * throwUpwordForce) * timePressed;
 
         ballRB.AddForce(forceToAdd, ForceMode.Impulse);
-
-        if (_ballsRemaining > 0) {
-            LoadNewBall();
-        }
 
     }
 }

@@ -8,12 +8,15 @@ public class BallController : MonoBehaviour
     Rigidbody ballRb;
     [SerializeField] float Gravity = 1.0f;
     public int BallID { get; set; }
+    public bool GravityEnabled { get; set; }
 
-    private void Awake() {
+    void Awake() {
         ballRb = GetComponent<Rigidbody>();
+        GravityEnabled = true;
     }
 
-    private void FixedUpdate() {
+    void FixedUpdate() {
+        if (!GravityEnabled) return;
         velocity = ballRb.velocity;
         Vector3 dir = new Vector3(0,0,-1);
         ballRb.AddForce(dir * Gravity);
