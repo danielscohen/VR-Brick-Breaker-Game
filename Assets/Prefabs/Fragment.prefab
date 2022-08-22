@@ -47,15 +47,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nDist: 0
-  expMag: 0.8
+  expMag: 1.4
   Gravity: 0.2
-  waitExp: 0.001
-  waitGravity: 0.001
-  maxDistDelete: 0.04
   maxFragFadeSize: 5
   fadeDuration: 1.5
   fragLifeTime: 15
-  particle: {fileID: 5562269911192423190, guid: 010b5c79243a9cb48b8d2ed0880780e9, type: 3}
   toDisable: 0
 --- !u!54 &4100311205927107429
 Rigidbody:

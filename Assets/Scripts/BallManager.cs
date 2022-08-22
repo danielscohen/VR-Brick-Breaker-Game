@@ -70,7 +70,7 @@ public class BallManager : MonoBehaviour
         activeBalls.RemoveAt(index);
         DisableBall(ball);
         if (activeBalls.Count == 0 && _ballsRemaining == 0) {
-            GameController.Instance.EndGame();
+            GameController.Instance.EndGame(GameOverReason.BallsRanOut);
             return;
         }
 

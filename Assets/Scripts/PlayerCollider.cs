@@ -9,7 +9,7 @@ public class PlayerCollider : MonoBehaviour
     public static event Action<int> fragCollideWithPlayer;
 
     private void OnTriggerEnter(Collider other) {
-        Debug.Log("Triggered by: " + other.tag);
+        //Debug.Log("Triggered by: " + other.tag);
         if (other.CompareTag("Frag") || other.CompareTag("Ball") || other.CompareTag("Particle")) {
             if (other.gameObject.transform.parent != null && other.CompareTag("Frag")) {
                 FragController frag = other.gameObject.GetComponentInParent<FragController>();

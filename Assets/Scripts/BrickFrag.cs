@@ -58,6 +58,7 @@ public class BrickFrag : MonoBehaviour
     List<Vector3Int> deletedVoxels = new List<Vector3Int>();
 
 
+
     Vector3 brickSize;
     Vector3Int numVoxels;
     Vector3 ballCollDir;
@@ -80,6 +81,8 @@ public class BrickFrag : MonoBehaviour
 
     private void OnCollisionEnter(Collision other) {
         if(!other.collider.CompareTag("Ball") || brickAlreadyHit) return;
+
+        GameObject.Find("Arena").GetComponent<WallManager>().NumBricksRemaining--;
 
         brickAlreadyHit = true;
 
@@ -106,6 +109,7 @@ public class BrickFrag : MonoBehaviour
         //yield return new WaitForSeconds(craterFracDelay);
 
         CreateFracLines();
+        Debug.Log($"frac line pts: {fracLinePts.Count}");
         yield return StartCoroutine(FadeVoxels(voxFadePer, voxFadeOutDur));
         yield return StartCoroutine(DrawFracLines());
         yield return StartCoroutine(FadeVoxels(1f, voxFadeInDur));
@@ -170,10 +174,12 @@ public class BrickFrag : MonoBehaviour
             fracDir = PerturbVectorDir(fracDir).normalized;
         }
         float distToBound = GetLineBrickBoundsIntersect(branchPt, fracDir);
+        Debug.Log($"dist to bound: {distToBound}");
         if (distToBound < 0) return false;
         Vector3 boundPt = branchPt + fracDir * distToBound;
 
         var numPts = (int)(ptsPerUnit * Mathf.Abs(distToBound));
+        Debug.Log($"num points: {numPts}");
         if(numPts == 0) return false;
         fracDrawPts.Add(new List<DrawPt>());
         for (int i = 0; i <= numPts; i++) {

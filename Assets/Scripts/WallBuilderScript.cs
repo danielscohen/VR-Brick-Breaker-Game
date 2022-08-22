@@ -51,7 +51,7 @@ public class WallBuilderScript : MonoBehaviour
     }
 
 
-    public void BuildWall(Vector3 wallPos, Vector3 wallSize, Vector3 wallRotation) {
+    public int BuildWall(Vector3 wallPos, Vector3 wallSize, Vector3 wallRotation) {
         InitWallMap();
 
         int brickId = 0;
@@ -106,6 +106,8 @@ public class WallBuilderScript : MonoBehaviour
         transform.position = wallPos;
         transform.localScale = wallSize;
         transform.Rotate(wallRotation);
+
+        return bricks.Count;
 
     }
 

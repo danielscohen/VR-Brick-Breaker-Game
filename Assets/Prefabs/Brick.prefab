@@ -114,17 +114,16 @@ MonoBehaviour:
   cam: {fileID: 0}
   fragSpawner: {fileID: 0}
   particleExpDelay: 0.1
-  craterFracDelay: 0.1
   ptsPerUnit: 45
   coneAngle: 170
   fracBranchDepth: 3
   fragSizeMult: 0.5
-  lineWidth: 0.011
+  lineWidth: 0.02
   lineMaterial: {fileID: 2100000, guid: d45b8b46fc886764f9fbc6b86a483474, type: 2}
   fracBranchProb: 3
   craterRadMult: 0.01
   maxFragDepth: 3
-  fracLineDrawDelay: 0.02
+  fracLineDrawDelay: 0.01
   fragExpDelay: 0.00001
   voxFadePer: 0.2
   voxFadeOutDur: 0.5

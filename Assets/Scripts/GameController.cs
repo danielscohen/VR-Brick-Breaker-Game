@@ -10,7 +10,7 @@ public class GameController : MonoBehaviour
     enum GameState {
         StartScreen, Running, Paused, EndScreen
     }
-    public static event Action onGameOver;
+    public static event Action<GameOverReason> onGameOver;
     public int PlayerHealth { get; private set; }
     GameState CurrentGameState { get; set; }
     public static GameController Instance { get; private set; }
@@ -44,7 +44,7 @@ public class GameController : MonoBehaviour
     void DecreasePlayerHealth(int healthValDecreaseBy) {
         PlayerHealth -= healthValDecreaseBy;
         if (PlayerHealth <= 0) {
-            onGameOver?.Invoke();
+            EndGame(GameOverReason.HealthRanOut);
         }
     }
 
@@ -66,8 +66,9 @@ public class GameController : MonoBehaviour
         
     }
 
-    public void EndGame() {
-        onGameOver?.Invoke();
+    public void EndGame(GameOverReason reason) {
+        Debug.Log($"GAME OVER: {reason}");
+        onGameOver?.Invoke(reason);
     }
 
 }
