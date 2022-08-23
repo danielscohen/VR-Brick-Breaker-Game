@@ -51,7 +51,7 @@ public class WallBuilderScript : MonoBehaviour
     }
 
 
-    public int BuildWall(Vector3 wallPos, Vector3 wallSize, Vector3 wallRotation) {
+    public int BuildWall() {
         InitWallMap();
 
         int brickId = 0;
@@ -102,10 +102,6 @@ public class WallBuilderScript : MonoBehaviour
             brick.GetComponent<Renderer>().material.color = new Color32((byte)Random.Range(0, 256), (byte)Random.Range(0, 256), (byte)Random.Range(0, 256), 255);
             CreateVoxels(brick);
         }
-
-        transform.position = wallPos;
-        transform.localScale = wallSize;
-        transform.Rotate(wallRotation);
 
         return bricks.Count;
 

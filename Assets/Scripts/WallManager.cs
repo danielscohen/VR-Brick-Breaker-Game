@@ -10,7 +10,7 @@ public class WallManager : MonoBehaviour
     [SerializeField] Vector3 wallSize;
     [SerializeField] Vector3 wallRotation;
     [SerializeField] GameObject wallPrefab;
-    [SerializeField] GameObject[] wallBounds;
+    [SerializeField] GameObject[] _wallLayers;
 
     List<GameObject> walls = new List<GameObject>();
 
@@ -30,15 +30,14 @@ public class WallManager : MonoBehaviour
     }
 
     void CreateWalls() {
-        int numWalls = Mathf.Min(MaxNumWallLayers, (int)((transform.localScale.z - distPlayerFirstWall) / (wallSize.z + distBetweenLayers)));
-        for (int i = 0; i < numWalls; i++) {
+        foreach (GameObject layer in _wallLayers) {
             GameObject wall =  Instantiate(wallPrefab);
-            NumBricksRemaining += wall.GetComponent<WallBuilderScript>().BuildWall(new Vector3(0, 0, i * (wallSize.z + distBetweenLayers) + distPlayerFirstWall), wallSize, wallRotation);
-            wall.transform.parent = transform;
-            wall.transform.localPosition = new Vector3(0, 0, i * (wallSize.z + distBetweenLayers));
+            NumBricksRemaining += wall.GetComponent<WallBuilderScript>().BuildWall();
+            wall.transform.parent = layer.transform;
+            wall.transform.localPosition = Vector3.zero;
+            wall.transform.localScale = wallSize;
             walls.Add(wall);
         }
-
     }
 
 }
