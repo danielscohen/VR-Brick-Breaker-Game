@@ -81,6 +81,7 @@ public class BrickFrag : MonoBehaviour
 
     private void OnCollisionEnter(Collision other) {
         if(!other.collider.CompareTag("Ball") || brickAlreadyHit) return;
+        var ballCollVel = other.gameObject.GetComponent<BallController>().PrevVelocity;
 
         GameObject.Find("Arena").GetComponent<WallManager>().NumBricksRemaining--;
 
@@ -90,7 +91,6 @@ public class BrickFrag : MonoBehaviour
         GetComponent<Renderer>().enabled = false;
         brickSize = Vector3.Scale(transform.parent.localScale, transform.localScale);
         numVoxels = new Vector3Int(voxels.GetLength(0), voxels.GetLength(1), voxels.GetLength(2));
-        var ballCollVel = other.gameObject.GetComponent<BallController>().velocity;
         ballCollDir = ballCollVel.normalized;
         ballCollSpeed = ballCollVel.magnitude;
         craterRadius = ballCollSpeed * craterRadMult;
@@ -141,6 +141,7 @@ public class BrickFrag : MonoBehaviour
         var brickBounds = GetComponent<Renderer>().bounds;
         Vector3 startPt = collisionPt;
         startPt = NudgeCollisionPt(ballCollDir);
+        //Debug.DrawRay(collisionPt, ballCollDir, Color.green, 1000f);
 
         Vector3 dirToCenter = (transform.TransformPoint(Vector3.zero) - startPt).normalized;
 
@@ -164,7 +165,7 @@ public class BrickFrag : MonoBehaviour
     }
 
     Vector3 NudgeCollisionPt(Vector3 dir) {
-        float startDist = Mathf.Min(brickSize.x, brickSize.y, brickSize.z) / 20f;
+        float startDist = Mathf.Min(brickSize.x, brickSize.y, brickSize.z) / 10f;
         return collisionPt + dir * startDist;
     }
 
@@ -174,12 +175,12 @@ public class BrickFrag : MonoBehaviour
             fracDir = PerturbVectorDir(fracDir).normalized;
         }
         float distToBound = GetLineBrickBoundsIntersect(branchPt, fracDir);
-        Debug.Log($"dist to bound: {distToBound}");
+        //Debug.Log($"dist to bound: {distToBound}");
         if (distToBound < 0) return false;
         Vector3 boundPt = branchPt + fracDir * distToBound;
 
         var numPts = (int)(ptsPerUnit * Mathf.Abs(distToBound));
-        Debug.Log($"num points: {numPts}");
+        //Debug.Log($"num points: {numPts}");
         if(numPts == 0) return false;
         fracDrawPts.Add(new List<DrawPt>());
         for (int i = 0; i <= numPts; i++) {
