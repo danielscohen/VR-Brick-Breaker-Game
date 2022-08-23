@@ -10,6 +10,7 @@ public class WallManager : MonoBehaviour
     [SerializeField] Vector3 wallSize;
     [SerializeField] Vector3 wallRotation;
     [SerializeField] GameObject wallPrefab;
+    [SerializeField] GameObject[] wallBounds;
 
     List<GameObject> walls = new List<GameObject>();
 
@@ -34,6 +35,7 @@ public class WallManager : MonoBehaviour
             GameObject wall =  Instantiate(wallPrefab);
             NumBricksRemaining += wall.GetComponent<WallBuilderScript>().BuildWall(new Vector3(0, 0, i * (wallSize.z + distBetweenLayers) + distPlayerFirstWall), wallSize, wallRotation);
             wall.transform.parent = transform;
+            wall.transform.localPosition = new Vector3(0, 0, i * (wallSize.z + distBetweenLayers));
             walls.Add(wall);
         }
 
