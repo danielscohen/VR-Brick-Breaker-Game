@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nDist: 0
-  expMag: 2
+  expMag: 4
   Gravity: 0.2
   maxFragFadeSize: 5
   fadeDuration: 1.5

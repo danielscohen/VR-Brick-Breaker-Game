@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 9009056121948191749}
   - component: {fileID: -7965699594030033948}
   - component: {fileID: -8969689934680865580}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Voxel
   m_TagString: Frag
   m_Icon: {fileID: 0}

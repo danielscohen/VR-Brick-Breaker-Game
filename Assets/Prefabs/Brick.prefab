@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2390515395319445729}
   m_Layer: 0
   m_Name: Brick
-  m_TagString: Untagged
+  m_TagString: Brick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -118,7 +118,7 @@ MonoBehaviour:
   coneAngle: 170
   fracBranchDepth: 3
   fragSizeMult: 0.3
-  lineWidth: 0.02
+  lineWidth: 0.04
   lineMaterial: {fileID: 2100000, guid: d45b8b46fc886764f9fbc6b86a483474, type: 2}
   fracBranchProb: 4
   craterRadMult: 0.01

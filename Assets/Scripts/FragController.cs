@@ -94,6 +94,16 @@ public class FragController : MonoBehaviour
         EnableGravity();
         if (FragSize <= maxFragFadeSize && gameObject.activeSelf) {
             StartCoroutine(FadeOut(fadeDuration, 0, true));
+        } else if (FragSize > maxFragFadeSize && gameObject.activeSelf) {
+            StartCoroutine(FadeOutIfStuck());
+        }
+    }
+
+    IEnumerator FadeOutIfStuck() {
+        Vector3 origPos = transform.position;
+        yield return new WaitForSeconds(2f);
+        if(Vector3.Distance(origPos, transform.position) < 0.2f) {
+            StartCoroutine(FadeOut(fadeDuration, 0, true));
         }
     }
 

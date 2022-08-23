@@ -80,7 +80,7 @@ public class BrickFrag : MonoBehaviour
     }
 
     private void OnCollisionEnter(Collision other) {
-        if(!other.collider.CompareTag("Ball") || brickAlreadyHit) return;
+        if(!other.collider.CompareTag("Ball") || brickAlreadyHit || !other.gameObject.GetComponent<BallController>().IsCollisionAllowed()) return;
         var ballCollVel = other.gameObject.GetComponent<BallController>().PrevVelocity;
 
         GameObject.Find("Arena").GetComponent<WallManager>().NumBricksRemaining--;
