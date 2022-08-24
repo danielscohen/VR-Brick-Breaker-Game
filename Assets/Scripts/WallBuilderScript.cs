@@ -27,27 +27,50 @@ public class WallBuilderScript : MonoBehaviour
     VoxelSpawner voxSpawner;
     [SerializeField] Material voxInternalMat;
     [SerializeField] Material voxEdgeMat;
+    [SerializeField] float _moveSpeed = 1f;
 
     int[,] wallMap;
 
+    Vector3 _leftMovePos;
+    Vector3 _rightMovePos;
+    Vector3 _upMovePos;
+    Vector3 _downMovePos;
+
+    MoveDir _moveDir;
+
+    enum MoveDir{
+        UpDown,
+        LeftRight
+    }
+
 
     private void Update() {
-        if (Input.GetKeyDown(KeyCode.LeftArrow)) {
-            transform.position = new Vector3(transform.position.x - 0.5f, transform.position.y, transform.position.z);
-        }
-        if (Input.GetKeyDown(KeyCode.RightArrow)) {
-            transform.position = new Vector3(transform.position.x + 0.5f, transform.position.y, transform.position.z);
-        }
-        if (Input.GetKeyDown(KeyCode.UpArrow)) {
-            transform.Rotate(new Vector3(0, 15f, 0));
-        }
-        if (Input.GetKeyDown(KeyCode.DownArrow)) {
-            transform.Rotate(new Vector3(0, -15f, 0));
-        }
+        MoveWall();
     }
 
     private void Awake() {
         voxSpawner = GameObject.Find("Voxel Spawner").GetComponent<VoxelSpawner>();
+        _moveDir = Random.Range(0, 2) == 0 ? MoveDir.UpDown : MoveDir.LeftRight;
+    }
+
+    void Start() {
+        Transform leftMove = GameObject.Find("Wall Move Left").transform;
+        Transform rightMove = GameObject.Find("Wall Move Right").transform;
+        Transform upMove = GameObject.Find("Wall Move Up").transform;
+        Transform downMove = GameObject.Find("Wall Move Down").transform;
+
+        _leftMovePos = new Vector3(leftMove.position.x, leftMove.position.y, transform.position.z);
+        _rightMovePos = new Vector3(rightMove.position.x, rightMove.position.y, transform.position.z);
+        _upMovePos = new Vector3(transform.position.x, upMove.position.y, transform.position.z);
+        _downMovePos = new Vector3(transform.position.x, downMove.position.y, transform.position.z);
+    }
+
+    void MoveWall() {
+        if (_moveDir == MoveDir.LeftRight) {
+            transform.position = Vector3.Lerp(_leftMovePos, _rightMovePos, Mathf.PingPong(Time.time * 0.5f, 1));
+        } else {
+            transform.position = Vector3.Lerp(_upMovePos, _downMovePos, Mathf.PingPong(Time.time * 0.5f, 1));
+        }
     }
 
 
