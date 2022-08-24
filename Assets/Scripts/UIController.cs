@@ -10,11 +10,16 @@ public class UIController : MonoBehaviour
     [SerializeField] TextMeshProUGUI _ballPowerText;
     [SerializeField] TextMeshProUGUI _ballsRemainingText;
     [SerializeField] TextMeshProUGUI _timerText;
+    [SerializeField] GameObject _startScreen;
+    [SerializeField] GameObject _screenOverlay;
+    [SerializeField] GameObject _pauseScreen;
+    [SerializeField] GameObject _gameOverScreen;
     void OnEnable() {
         PlayerCollider.onFragCollideWithPlayer += DecreasePlayerHealthText;
         BallManager.onBallThrowPowerChange += UpdateThrowPowerText;
         BallManager.onBallsLeftCountChange += UpdateBallsRemainingText;
         TimerController.onUpdateTimer += UpdateTimerText;
+        GameController.onResumeGame += ShowScreenOverlay;
         
     }
 
@@ -23,6 +28,7 @@ public class UIController : MonoBehaviour
         BallManager.onBallThrowPowerChange -= UpdateThrowPowerText;
         BallManager.onBallsLeftCountChange -= UpdateBallsRemainingText;
         TimerController.onUpdateTimer -= UpdateTimerText;
+        GameController.onResumeGame -= ShowScreenOverlay;
     }
 
     void Start() {
@@ -42,5 +48,12 @@ public class UIController : MonoBehaviour
     }
     void UpdateTimerText(string time) {
         _timerText.text = time;
+    }
+
+    void ShowScreenOverlay() {
+        _screenOverlay.SetActive(true);
+        _startScreen.SetActive(false);
+        _pauseScreen.SetActive(false);
+        _gameOverScreen.SetActive(false);
     }
 }

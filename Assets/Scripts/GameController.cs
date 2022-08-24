@@ -7,13 +7,12 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
 
-    enum GameState {
-        StartScreen, Running, Paused, EndScreen
-    }
     public static event Action<GameOverReason> onGameOver;
+    public static event Action onResumeGame;
     public int PlayerHealth { get; private set; }
-    GameState CurrentGameState { get; set; }
     public static GameController Instance { get; private set; }
+    public Difficulty GameDifficulty { get; private set; }
+    public GameState CurrentGameState { get; private set; }
 
     [SerializeField] int playerStartHealth;
 
@@ -56,14 +55,39 @@ public class GameController : MonoBehaviour
         }
 
         PlayerHealth = playerStartHealth;
-        CurrentGameState = GameState.StartScreen;
+        CurrentGameState = GameState.Started;
+        Time.timeScale = 0;
     }
 
     void Start() {
+    }
 
-        
+    void SetGameDifficulty(int difficulty) {
+        switch (difficulty) {
+            case 0:
+                GameDifficulty = Difficulty.Beginner;
+                break;
+            case 1:
+                GameDifficulty = Difficulty.Normal;
+                break;
+            default:
+                GameDifficulty = Difficulty.Expert;
+                break;
+        }
+    }
 
-        
+    public void StartGame(int difficulty) {
+        Debug.Log("started");
+        SetGameDifficulty(difficulty);
+        Time.timeScale = 1;
+        onResumeGame?.Invoke();
+    }
+
+    void SetTimeScaleToZero() {
+        Time.timeScale = 0;
+    }
+    void SetTimeScaleToOne() {
+        Time.timeScale = 1;
     }
 
     public void EndGame(GameOverReason reason) {

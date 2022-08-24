@@ -23,10 +23,12 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse1)) {
-            ResetCamera();
+        if (GameController.Instance.CurrentGameState == GameState.Running) {
+            if (Input.GetKeyDown(KeyCode.Mouse1)) {
+                ResetCamera();
+            }
+            UpdateMouseLook();
         }
-        UpdateMouseLook();
 
         if (Input.GetKey(KeyCode.W)) {
             transform.position += Vector3.up * Time.deltaTime * _moveSpeed;
