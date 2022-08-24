@@ -9,10 +9,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField] bool lockCursor = true;
     [SerializeField] float _moveSpeed = 1f;
 
+    GameObject _racket;
+
     float cameraPitch = 0.0f;
     // Start is called before the first frame update
     void Start()
     {
+        _racket = GameObject.Find("Racket");
+        _racket.SetActive(false);
+
         if (lockCursor) {
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
@@ -24,7 +29,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         if (GameController.Instance.CurrentGameState == GameState.Running) {
-            if (Input.GetKeyDown(KeyCode.Mouse1)) {
+            if (Input.GetKeyDown(KeyCode.Mouse2)) {
                 ResetCamera();
             }
             UpdateMouseLook();
@@ -43,8 +48,14 @@ public class PlayerController : MonoBehaviour
             transform.position += Vector3.left * Time.deltaTime * _moveSpeed;
         }
 
-        
+        if (Input.GetKey(KeyCode.Mouse1)) {
+            _racket.SetActive(true);
+        }
+        if (Input.GetKeyUp(KeyCode.Mouse1)) {
+            _racket.SetActive(false);
+        }
     }
+
 
     void UpdateMouseLook() {
         Vector2 mouseDelta = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));

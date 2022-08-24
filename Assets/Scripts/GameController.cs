@@ -9,6 +9,8 @@ public class GameController : MonoBehaviour
 
     public static event Action<GameOverReason> onGameOver;
     public static event Action onResumeGame;
+    public static event Action onStartGame;
+    public static event Action onPauseGame;
     public int PlayerHealth { get; private set; }
     public static GameController Instance { get; private set; }
     public Difficulty GameDifficulty { get; private set; }
@@ -25,10 +27,17 @@ public class GameController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape)) {
             Application.Quit();
         }
+        if (Input.GetKeyDown(KeyCode.P)) {
+            PauseGame();
+        }
     }
 
-    void Restart() {
+    public void Restart() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void ExitGame() {
+        Application.Quit();
     }
 
     void OnEnable() {
@@ -60,6 +69,7 @@ public class GameController : MonoBehaviour
     }
 
     void Start() {
+        onStartGame?.Invoke();
     }
 
     void SetGameDifficulty(int difficulty) {
@@ -77,10 +87,21 @@ public class GameController : MonoBehaviour
     }
 
     public void StartGame(int difficulty) {
-        Debug.Log("started");
         SetGameDifficulty(difficulty);
         Time.timeScale = 1;
+        CurrentGameState = GameState.Running;
         onResumeGame?.Invoke();
+    }
+
+    public void ContinueGame() {
+        Time.timeScale = 1;
+        CurrentGameState = GameState.Running;
+        onResumeGame?.Invoke();
+    }
+    void PauseGame() {
+        Time.timeScale = 0;
+        CurrentGameState = GameState.Paused;
+        onPauseGame?.Invoke();
     }
 
     void SetTimeScaleToZero() {
@@ -91,7 +112,8 @@ public class GameController : MonoBehaviour
     }
 
     public void EndGame(GameOverReason reason) {
-        Debug.Log($"GAME OVER: {reason}");
+        Time.timeScale = 0;
+        CurrentGameState = GameState.GameOver;
         onGameOver?.Invoke(reason);
     }
 

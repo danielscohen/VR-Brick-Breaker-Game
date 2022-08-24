@@ -46,19 +46,21 @@ public class BallManager : MonoBehaviour
     }
 
     void Update() {
-        if(Input.GetKeyDown(throwKey) && readyToThrow && _ballsRemaining > 0) {
-            keyPressed = true;
-            timeDown = Time.time;
-        }
+        if (readyToThrow && GameController.Instance.CurrentGameState == GameState.Running && _ballsRemaining > 0) {
+            if (Input.GetKeyDown(throwKey)) {
+                keyPressed = true;
+                timeDown = Time.time;
+            }
 
-        if(Input.GetKeyUp(throwKey) && readyToThrow && _ballsRemaining > 0) {
-            keyPressed = false;
-            timePressed = Time.time - timeDown;
-            Throw(timePressed);
-        }
+            if (Input.GetKeyUp(throwKey) && keyPressed) {
+                keyPressed = false;
+                timePressed = Time.time - timeDown;
+                Throw(timePressed);
+            }
 
-        if (keyPressed) {
-            onBallThrowPowerChange?.Invoke(Time.time - timeDown);
+            if (keyPressed) {
+                onBallThrowPowerChange?.Invoke(Time.time - timeDown);
+            }
         }
     }
 

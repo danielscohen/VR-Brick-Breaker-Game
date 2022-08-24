@@ -10,6 +10,7 @@ public class UIController : MonoBehaviour
     [SerializeField] TextMeshProUGUI _ballPowerText;
     [SerializeField] TextMeshProUGUI _ballsRemainingText;
     [SerializeField] TextMeshProUGUI _timerText;
+    [SerializeField] TextMeshProUGUI _gameOverText;
     [SerializeField] GameObject _startScreen;
     [SerializeField] GameObject _screenOverlay;
     [SerializeField] GameObject _pauseScreen;
@@ -20,6 +21,9 @@ public class UIController : MonoBehaviour
         BallManager.onBallsLeftCountChange += UpdateBallsRemainingText;
         TimerController.onUpdateTimer += UpdateTimerText;
         GameController.onResumeGame += ShowScreenOverlay;
+        GameController.onGameOver += ShowGameOverScreen;
+        GameController.onStartGame += ShowStartScreen;
+        GameController.onPauseGame += ShowPauseScreen;
         
     }
 
@@ -29,6 +33,9 @@ public class UIController : MonoBehaviour
         BallManager.onBallsLeftCountChange -= UpdateBallsRemainingText;
         TimerController.onUpdateTimer -= UpdateTimerText;
         GameController.onResumeGame -= ShowScreenOverlay;
+        GameController.onGameOver -= ShowGameOverScreen;
+        GameController.onStartGame -= ShowStartScreen;
+        GameController.onPauseGame -= ShowPauseScreen;
     }
 
     void Start() {
@@ -56,4 +63,41 @@ public class UIController : MonoBehaviour
         _pauseScreen.SetActive(false);
         _gameOverScreen.SetActive(false);
     }
+    void ShowStartScreen() {
+        _screenOverlay.SetActive(false);
+        _startScreen.SetActive(true);
+        _pauseScreen.SetActive(false);
+        _gameOverScreen.SetActive(false);
+    }
+    void ShowPauseScreen() {
+        _screenOverlay.SetActive(false);
+        _startScreen.SetActive(false);
+        _pauseScreen.SetActive(true);
+        _gameOverScreen.SetActive(false);
+    }
+
+    void ShowGameOverScreen(GameOverReason reason) {
+        string gameOverText;
+
+        _screenOverlay.SetActive(false);
+        _gameOverScreen.SetActive(true);
+
+        switch (reason) {
+            case GameOverReason.GameWon:
+                gameOverText = $"Congrats, You Won!\n You Got a Score of {playerHealth}";
+                break;
+            case GameOverReason.HealthRanOut:
+                gameOverText = "You Ran-Out of Health!";
+                break;
+            case GameOverReason.TimeRanOut:
+                gameOverText = "You Ran-Out of Time!";
+                break;
+            default:
+                gameOverText = "You Ran-Out of Balls!";
+                break;
+        }
+
+        _gameOverText.text = gameOverText;
+    }
+    
 }
