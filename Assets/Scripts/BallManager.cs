@@ -27,11 +27,13 @@ public class BallManager : MonoBehaviour
     bool readyToThrow = true;
 
     void OnEnable() {
-        DestroyZoneController.onBallLost += ManageBallLost;
+        DestroyZoneController.onBallLost += ManageBallReturn;
+        PlayerCollider.onPlayerCaughtBall += ManageBallReturn;
     }
 
     void OnDisable() {
-        DestroyZoneController.onBallLost -= ManageBallLost;
+        DestroyZoneController.onBallLost -= ManageBallReturn;
+        PlayerCollider.onPlayerCaughtBall -= ManageBallReturn;
     }
 
     void Awake() {
@@ -60,21 +62,30 @@ public class BallManager : MonoBehaviour
         }
     }
 
-    void ManageBallLost(int ballID) {
+    void ManageBallReturn(int ballID, BallReturnReason reason) {
         var index = activeBalls.FindIndex(x => x.GetComponent<BallController>().BallID == ballID);
         if(index < 0) {
-            Debug.LogError($"Ball with ballID {ballID} was lost but never thrown.");
+            if (reason == BallReturnReason.BallLost) {
+                Debug.LogError($"Ball with ballID {ballID} was lost but never thrown.");
+            } else {
+                Debug.LogError($"Ball with ballID {ballID} was caught but never thrown.");
+            }
             return;
         }
         var ball = activeBalls[index];
         activeBalls.RemoveAt(index);
         DisableBall(ball);
+        if(reason == BallReturnReason.BallCaught) {
+            _ballsRemaining++;
+            onBallsLeftCountChange?.Invoke(_ballsRemaining);
+        }
         if (activeBalls.Count == 0 && _ballsRemaining == 0) {
             GameController.Instance.EndGame(GameOverReason.BallsRanOut);
             return;
         }
 
     }
+
 
     void DisableBall(GameObject ball) {
         var ballRB = ball.GetComponent<Rigidbody>();

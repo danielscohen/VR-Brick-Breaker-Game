@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class DestroyZoneController : MonoBehaviour
 {
-    public static event Action<int> onBallLost;
+    public static event Action<int, BallReturnReason> onBallLost;
     private void OnTriggerEnter(Collider other) {
         //Debug.Log("Triggered by: " + other.tag);
         if(other.CompareTag("Frag") || other.CompareTag("Particle")) {
@@ -16,7 +16,7 @@ public class DestroyZoneController : MonoBehaviour
             }
             other.gameObject.SetActive(false);
         } else if (other.CompareTag("Ball")) {
-            onBallLost?.Invoke(other.GetComponent<BallController>().BallID);
+            onBallLost?.Invoke(other.GetComponent<BallController>().BallID, BallReturnReason.BallLost);
         }
     }
 }

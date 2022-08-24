@@ -492,7 +492,7 @@ public class BrickFrag : MonoBehaviour
         for (int i = 0; i < MaxGroupIndex; i++) {
             GameObject parent = fragSpawner.GetNewFrag(posSums[i] / groupCounts[i], Quaternion.identity);
             FragController fragC = parent.GetComponent<FragController>();
-            fragC.Init(groupCounts[i], brickSize, collisionPt, cam.transform.position, ballCollSpeed / 10, GetComponent<BrickFrag>());
+            fragC.Init(groupCounts[i], brickSize, collisionPt, ballCollSpeed / 10, GetComponent<BrickFrag>());
             parent.name = "Frag_" + i;
             frags.Add(new Fragment(parent, fragC));
         }

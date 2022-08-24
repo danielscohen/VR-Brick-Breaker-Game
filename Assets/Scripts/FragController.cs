@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class FragController : MonoBehaviour
 {
-    Vector3 playerPos;
+    Vector3 _camPos;
     float collForce;
     Vector3 gravityDir;
     public int FragSize { get; set; }
@@ -27,10 +27,9 @@ public class FragController : MonoBehaviour
     bool timerOn;
 
 
-    public void Init(int fragSize, Vector3 brickSize, Vector3 collisionPt, Vector3 playerPos, float collForce, BrickFrag brickScript) {
+    public void Init(int fragSize, Vector3 brickSize, Vector3 collisionPt, float collForce, BrickFrag brickScript) {
         timerOn = true;
         startTime = Time.time;
-        this.playerPos = playerPos;
         this.collForce = collForce;
         this.brickScript = brickScript;
         this.FragSize = fragSize;
@@ -43,6 +42,10 @@ public class FragController : MonoBehaviour
     private void Awake() {
         toDisable = false;
         timerOn = false;
+    }
+
+    void Start() {
+        _camPos = Camera.main.transform.position;
     }
 
 
@@ -59,7 +62,7 @@ public class FragController : MonoBehaviour
 
     void FixedUpdate() {
         if (gravityApplied) {
-        gravityDir = (playerPos - transform.position);
+        gravityDir = (_camPos - transform.position);
             fragRb.AddForce(gravityDir * Gravity);
         }
 

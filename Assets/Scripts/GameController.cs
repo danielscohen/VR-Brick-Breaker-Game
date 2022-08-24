@@ -33,11 +33,11 @@ public class GameController : MonoBehaviour
     }
 
     void OnEnable() {
-        PlayerCollider.fragCollideWithPlayer += DecreasePlayerHealth;
+        PlayerCollider.onFragCollideWithPlayer += DecreasePlayerHealth;
     }
 
     private void OnDisable() {
-        PlayerCollider.fragCollideWithPlayer -= DecreasePlayerHealth;
+        PlayerCollider.onFragCollideWithPlayer -= DecreasePlayerHealth;
     }
 
 

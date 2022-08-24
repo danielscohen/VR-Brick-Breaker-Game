@@ -6,7 +6,8 @@ using UnityEngine;
 public class PlayerCollider : MonoBehaviour
 {
 
-    public static event Action<int> fragCollideWithPlayer;
+    public static event Action<int> onFragCollideWithPlayer;
+    public static event Action<int, BallReturnReason> onPlayerCaughtBall;
 
     private void OnTriggerEnter(Collider other) {
         //Debug.Log("Triggered by: " + other.tag);
@@ -14,7 +15,7 @@ public class PlayerCollider : MonoBehaviour
             if (other.gameObject.transform.parent != null && other.CompareTag("Frag")) {
                 FragController frag = other.gameObject.GetComponentInParent<FragController>();
                 if (frag.FragSize > 0) {
-                    fragCollideWithPlayer?.Invoke(frag.FragSize);
+                    onFragCollideWithPlayer?.Invoke(frag.FragSize);
                     frag.FragSize = 0;
                 }
 
@@ -22,6 +23,8 @@ public class PlayerCollider : MonoBehaviour
                 frag.toDisable = true;
             }
             other.gameObject.SetActive(false);
+        } else if (other.CompareTag("Ball")) {
+            onPlayerCaughtBall?.Invoke(other.gameObject.GetComponent<BallController>().BallID, BallReturnReason.BallCaught);
         }
     }
 }

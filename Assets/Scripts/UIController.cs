@@ -11,7 +11,7 @@ public class UIController : MonoBehaviour
     [SerializeField] TextMeshProUGUI _ballsRemainingText;
     [SerializeField] TextMeshProUGUI _timerText;
     void OnEnable() {
-        PlayerCollider.fragCollideWithPlayer += DecreasePlayerHealthText;
+        PlayerCollider.onFragCollideWithPlayer += DecreasePlayerHealthText;
         BallManager.onBallThrowPowerChange += UpdateThrowPowerText;
         BallManager.onBallsLeftCountChange += UpdateBallsRemainingText;
         TimerController.onUpdateTimer += UpdateTimerText;
@@ -19,7 +19,7 @@ public class UIController : MonoBehaviour
     }
 
     void OnDisable() {
-        PlayerCollider.fragCollideWithPlayer -= DecreasePlayerHealthText;
+        PlayerCollider.onFragCollideWithPlayer -= DecreasePlayerHealthText;
         BallManager.onBallThrowPowerChange -= UpdateThrowPowerText;
         BallManager.onBallsLeftCountChange -= UpdateBallsRemainingText;
         TimerController.onUpdateTimer -= UpdateTimerText;
