@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WallBuilderScript : MonoBehaviour
+public class WallController : MonoBehaviour
 {
     class Brick {
         public int id;
@@ -38,6 +38,8 @@ public class WallBuilderScript : MonoBehaviour
 
     MoveDir _moveDir;
 
+    WallManager _wallManager;
+
     enum MoveDir{
         UpDown,
         LeftRight
@@ -45,36 +47,40 @@ public class WallBuilderScript : MonoBehaviour
 
 
     private void Update() {
-        MoveWall();
+        //MoveWall();
     }
 
     private void Awake() {
         voxSpawner = GameObject.Find("Voxel Spawner").GetComponent<VoxelSpawner>();
-        _moveDir = Random.Range(0, 2) == 0 ? MoveDir.UpDown : MoveDir.LeftRight;
+        //_moveDir = Random.Range(0, 2) == 0 ? MoveDir.UpDown : MoveDir.LeftRight;
     }
 
     void Start() {
-        Transform leftMove = GameObject.Find("Wall Move Left").transform;
-        Transform rightMove = GameObject.Find("Wall Move Right").transform;
-        Transform upMove = GameObject.Find("Wall Move Up").transform;
-        Transform downMove = GameObject.Find("Wall Move Down").transform;
+        //Transform leftMove = GameObject.Find("Wall Move Left").transform;
+        //Transform rightMove = GameObject.Find("Wall Move Right").transform;
+        //Transform upMove = GameObject.Find("Wall Move Up").transform;
+        //Transform downMove = GameObject.Find("Wall Move Down").transform;
 
-        _leftMovePos = new Vector3(leftMove.position.x, leftMove.position.y, transform.position.z);
-        _rightMovePos = new Vector3(rightMove.position.x, rightMove.position.y, transform.position.z);
-        _upMovePos = new Vector3(transform.position.x, upMove.position.y, transform.position.z);
-        _downMovePos = new Vector3(transform.position.x, downMove.position.y, transform.position.z);
+        //_leftMovePos = new Vector3(leftMove.position.x, leftMove.position.y, transform.position.z);
+        //_rightMovePos = new Vector3(rightMove.position.x, rightMove.position.y, transform.position.z);
+        //_upMovePos = new Vector3(transform.position.x, upMove.position.y, transform.position.z);
+        //_downMovePos = new Vector3(transform.position.x, downMove.position.y, transform.position.z);
+
+        _wallManager = GameObject.Find("Arena").GetComponent<WallManager>();
+
+        BuildWall();
     }
 
-    void MoveWall() {
-        if (_moveDir == MoveDir.LeftRight) {
-            transform.position = Vector3.Lerp(_leftMovePos, _rightMovePos, Mathf.PingPong(Time.time * 0.5f, 1));
-        } else {
-            transform.position = Vector3.Lerp(_upMovePos, _downMovePos, Mathf.PingPong(Time.time * 0.5f, 1));
-        }
-    }
+    //void MoveWall() {
+    //    if (_moveDir == MoveDir.LeftRight) {
+    //        transform.position = Vector3.Lerp(_leftMovePos, _rightMovePos, Mathf.PingPong(Time.time * 0.5f, 1));
+    //    } else {
+    //        transform.position = Vector3.Lerp(_upMovePos, _downMovePos, Mathf.PingPong(Time.time * 0.5f, 1));
+    //    }
+    //}
 
 
-    public int BuildWall() {
+    public void BuildWall() {
         InitWallMap();
 
         int brickId = 0;
@@ -126,7 +132,7 @@ public class WallBuilderScript : MonoBehaviour
             CreateVoxels(brick);
         }
 
-        return bricks.Count;
+        _wallManager.NumBricksRemaining += bricks.Count;
 
     }
 
