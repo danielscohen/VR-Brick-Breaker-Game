@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,10 +9,43 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float mouseSensitivity = 3.5f;
     [SerializeField] bool lockCursor = true;
     [SerializeField] float _moveSpeed = 1f;
+    [SerializeField] GameDifficultySettings _beginnerSettings;
+    [SerializeField] GameDifficultySettings _normalSettings;
+    [SerializeField] GameDifficultySettings _expertSettings;
+
+    public static event Action<int> onUpdatePlayerHealth;
 
     GameObject _racket;
 
+    int _health;
+
     float cameraPitch = 0.0f;
+    void OnEnable() {
+        GameController.onStartGame += SetStartingHealth;
+        PlayerCollider.onFragCollideWithPlayer += DecreasePlayerHealth;
+    }
+
+    void SetStartingHealth() {
+        switch (GameController.Instance.GameDifficulty) {
+            case Difficulty.Beginner:
+                _health = _beginnerSettings.playerStartHealth;
+                break;
+            case Difficulty.Normal:
+                _health = _normalSettings.playerStartHealth;
+                break;
+            case Difficulty.Expert:
+                _health = _expertSettings.playerStartHealth;
+                break;
+        }
+
+        onUpdatePlayerHealth?.Invoke(_health);
+        
+    }
+
+    private void OnDisable() {
+        GameController.onStartGame -= SetStartingHealth;
+        PlayerCollider.onFragCollideWithPlayer -= DecreasePlayerHealth;
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -56,6 +90,13 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    void DecreasePlayerHealth(int healthValDecreaseBy) {
+        _health -= healthValDecreaseBy;
+        onUpdatePlayerHealth?.Invoke(_health);
+        if (_health <= 0) {
+            GameController.Instance.EndGame(GameOverReason.HealthRanOut);
+        }
+    }
 
     void UpdateMouseLook() {
         Vector2 mouseDelta = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));

@@ -5,7 +5,9 @@ using UnityEngine;
 
 public class BallManager : MonoBehaviour
 {
-    [SerializeField] GameDifficultySettings difficultySettings;
+    [SerializeField] GameDifficultySettings _beginnerSettings;
+    [SerializeField] GameDifficultySettings _normalSettings;
+    [SerializeField] GameDifficultySettings _expertSettings;
     [SerializeField] GameObject _ballPrefab;
     [SerializeField] GameObject _throwPt;
     [SerializeField] float throwForce;
@@ -29,16 +31,15 @@ public class BallManager : MonoBehaviour
     void OnEnable() {
         DestroyZoneController.onBallLost += ManageBallReturn;
         PlayerCollider.onPlayerCaughtBall += ManageBallReturn;
+        GameController.onStartGame += SetBallStartingCount;
     }
 
     void OnDisable() {
         DestroyZoneController.onBallLost -= ManageBallReturn;
         PlayerCollider.onPlayerCaughtBall -= ManageBallReturn;
+        GameController.onStartGame -= SetBallStartingCount;
     }
 
-    void Awake() {
-        _ballsRemaining = difficultySettings.ballLimit;
-    }
 
     void Start() {
         onBallThrowPowerChange?.Invoke(0f);
@@ -64,6 +65,22 @@ public class BallManager : MonoBehaviour
         }
     }
 
+    void SetBallStartingCount() {
+        switch (GameController.Instance.GameDifficulty) {
+            case Difficulty.Beginner:
+                _ballsRemaining = _beginnerSettings.ballLimit;
+                break;
+            case Difficulty.Normal:
+                _ballsRemaining = _normalSettings.ballLimit;
+                break;
+            case Difficulty.Expert:
+                _ballsRemaining = _expertSettings.ballLimit;
+                break;
+        }
+
+        onBallsLeftCountChange.Invoke(_ballsRemaining);
+        
+    }
     void ManageBallReturn(int ballID, BallReturnReason reason) {
         var index = activeBalls.FindIndex(x => x.GetComponent<BallController>().BallID == ballID);
         if(index < 0) {

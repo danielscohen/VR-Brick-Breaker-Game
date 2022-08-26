@@ -84,6 +84,7 @@ public class BrickFrag : MonoBehaviour
 
     private void OnCollisionEnter(Collision other) {
         if(!other.collider.CompareTag("Ball") || brickAlreadyHit || !other.gameObject.GetComponent<BallController>().IsCollisionAllowed()) return;
+        GetComponentInParent<Animator>().speed = 0;
         var ballCollVel = other.gameObject.GetComponent<BallController>().PrevVelocity;
 
         _wallManager.NumBricksRemaining--;
@@ -117,6 +118,8 @@ public class BrickFrag : MonoBehaviour
         yield return StartCoroutine(DrawFracLines());
         yield return StartCoroutine(FadeVoxels(1f, voxFadeInDur));
         DeleteFracLines();
+
+        GetComponentInParent<Animator>().speed = 1;
 
 
         int maxGroupIndex = generateVoxGroups();
@@ -240,6 +243,7 @@ public class BrickFrag : MonoBehaviour
             var line = new GameObject();
             var lineR = line.AddComponent<LineRenderer>();
             fracRenderers.Add(lineR);
+            //lineR.useWorldSpace = false;
             lineR.material = lineMaterial;
             lineR.startWidth = lineWidth;
             lineR.endWidth = lineWidth;

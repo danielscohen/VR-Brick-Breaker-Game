@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84836d1a0f172ff4494b5980051304c5, type: 3}
   m_Name: Normal Difficulty Settings
   m_EditorClassIdentifier: 
-  ballLimit: 4
+  ballLimit: 5
   playerStartHealth: 400
   timeLimit: 1500

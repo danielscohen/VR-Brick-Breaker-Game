@@ -118,12 +118,12 @@ MonoBehaviour:
   coneAngle: 170
   fracBranchDepth: 3
   fragSizeMult: 0.3
-  lineWidth: 0.04
+  lineWidth: 0.02
   lineMaterial: {fileID: 2100000, guid: d45b8b46fc886764f9fbc6b86a483474, type: 2}
   fracBranchProb: 4
   craterRadMult: 0.01
   maxFragDepth: 3
-  fracLineDrawDelay: 0.01
+  fracLineDrawDelay: 0.03
   fragExpDelay: 0.00001
   voxFadePer: 0.2
   voxFadeOutDur: 0.5

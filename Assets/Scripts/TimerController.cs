@@ -5,13 +5,19 @@ using System;
 
 public class TimerController : MonoBehaviour
 {
+    [SerializeField] GameDifficultySettings _beginnerSettings;
+    [SerializeField] GameDifficultySettings _normalSettings;
+    [SerializeField] GameDifficultySettings _expertSettings;
     public static event Action<string> onUpdateTimer;
-    [SerializeField] float timeRemaining = 300f;
+    float timeRemaining;
     bool timerIsRunning = false;
-    void Start()
-    {
-        // Starts the timer automatically
-        timerIsRunning = true;
+
+    void OnEnable() {
+        GameController.onStartGame += SetStartingTime;
+    }
+
+    void OnDisable() {
+        GameController.onStartGame -= SetStartingTime;
     }
     void Update()
     {
@@ -29,6 +35,23 @@ public class TimerController : MonoBehaviour
                 GameController.Instance.EndGame(GameOverReason.TimeRanOut);
             }
         }
+    }
+    void SetStartingTime() {
+        switch (GameController.Instance.GameDifficulty) {
+            case Difficulty.Beginner:
+                timeRemaining = _beginnerSettings.timeLimit;
+                break;
+            case Difficulty.Normal:
+                timeRemaining = _normalSettings.timeLimit;
+                break;
+            case Difficulty.Expert:
+                timeRemaining = _expertSettings.timeLimit;
+                break;
+        }
+
+        timerIsRunning = true;
+        DisplayTime(timeRemaining);
+        
     }
     void DisplayTime(float timeToDisplay)
     {

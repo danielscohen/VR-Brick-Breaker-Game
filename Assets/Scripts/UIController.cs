@@ -16,36 +16,31 @@ public class UIController : MonoBehaviour
     [SerializeField] GameObject _pauseScreen;
     [SerializeField] GameObject _gameOverScreen;
     void OnEnable() {
-        PlayerCollider.onFragCollideWithPlayer += DecreasePlayerHealthText;
         BallManager.onBallThrowPowerChange += UpdateThrowPowerText;
         BallManager.onBallsLeftCountChange += UpdateBallsRemainingText;
         TimerController.onUpdateTimer += UpdateTimerText;
+        PlayerController.onUpdatePlayerHealth += UpdatePLayerHealthText;
         GameController.onResumeGame += ShowScreenOverlay;
         GameController.onGameOver += ShowGameOverScreen;
-        GameController.onStartGame += ShowStartScreen;
+        GameController.onLoadGame += ShowStartScreen;
         GameController.onPauseGame += ShowPauseScreen;
         
     }
 
     void OnDisable() {
-        PlayerCollider.onFragCollideWithPlayer -= DecreasePlayerHealthText;
         BallManager.onBallThrowPowerChange -= UpdateThrowPowerText;
         BallManager.onBallsLeftCountChange -= UpdateBallsRemainingText;
         TimerController.onUpdateTimer -= UpdateTimerText;
+        PlayerController.onUpdatePlayerHealth -= UpdatePLayerHealthText;
         GameController.onResumeGame -= ShowScreenOverlay;
         GameController.onGameOver -= ShowGameOverScreen;
-        GameController.onStartGame -= ShowStartScreen;
+        GameController.onLoadGame -= ShowStartScreen;
         GameController.onPauseGame -= ShowPauseScreen;
     }
 
-    void Start() {
-        playerHealth = GameController.Instance.PlayerHealth;
-        _playerHealthText.text = playerHealth.ToString();
-    }
 
-    void DecreasePlayerHealthText(int healthDecVal) {
-        playerHealth -= healthDecVal;
-        _playerHealthText.text = playerHealth.ToString();
+    void UpdatePLayerHealthText(int health) {
+        _playerHealthText.text = health.ToString();
     }
     void UpdateThrowPowerText(float power) {
         _ballPowerText.text = string.Format("{0:N2}", power);
@@ -84,7 +79,7 @@ public class UIController : MonoBehaviour
 
         switch (reason) {
             case GameOverReason.GameWon:
-                gameOverText = $"Congrats, You Won!\n You Got a Score of {playerHealth}";
+                gameOverText = $"Congrats, You Won!\n You Got a Score of {_playerHealthText.text}";
                 break;
             case GameOverReason.HealthRanOut:
                 gameOverText = "You Ran-Out of Health!";

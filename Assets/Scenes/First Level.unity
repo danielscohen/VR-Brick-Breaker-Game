@@ -1320,6 +1320,9 @@ MonoBehaviour:
   mouseSensitivity: 3.5
   lockCursor: 0
   _moveSpeed: 2
+  _beginnerSettings: {fileID: 11400000, guid: c00edba58338c534b8d13a0459221cdb, type: 2}
+  _normalSettings: {fileID: 11400000, guid: 3793c2f8054500e4286675a686dfb738, type: 2}
+  _expertSettings: {fileID: 11400000, guid: f661ede0c34a20542820d768aa2ad381, type: 2}
 --- !u!54 &384871355
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1475,7 +1478,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 431636057}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 5.813}
+  m_LocalPosition: {x: 0, y: 0, z: 4.17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1494,6 +1497,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6762678556200436388, guid: 90e0d3044fa1ffc4c8d32ac79838ca2f,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6762678556200436388, guid: 90e0d3044fa1ffc4c8d32ac79838ca2f,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6762678556200436388, guid: 90e0d3044fa1ffc4c8d32ac79838ca2f,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 6762678556200436388, guid: 90e0d3044fa1ffc4c8d32ac79838ca2f,
         type: 3}
@@ -1728,7 +1746,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4988c52796c97194e9f18fdf2d44696d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  difficultySettings: {fileID: 11400000, guid: c00edba58338c534b8d13a0459221cdb, type: 2}
+  _beginnerSettings: {fileID: 11400000, guid: c00edba58338c534b8d13a0459221cdb, type: 2}
+  _normalSettings: {fileID: 11400000, guid: 3793c2f8054500e4286675a686dfb738, type: 2}
+  _expertSettings: {fileID: 11400000, guid: f661ede0c34a20542820d768aa2ad381, type: 2}
   _ballPrefab: {fileID: 797770555271050362, guid: 8458233362fe2f44ba7d662843705370,
     type: 3}
   _throwPt: {fileID: 1155401053}
@@ -1995,7 +2015,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59b00c0b33f402646a590d9d100d7ece, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerStartHealth: 200
 --- !u!4 &649228167
 Transform:
   m_ObjectHideFlags: 0
@@ -6562,7 +6581,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6240e7392e1725f4bb81824535d704f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeRemaining: 300
+  _beginnerSettings: {fileID: 11400000, guid: c00edba58338c534b8d13a0459221cdb, type: 2}
+  _normalSettings: {fileID: 11400000, guid: 3793c2f8054500e4286675a686dfb738, type: 2}
+  _expertSettings: {fileID: 11400000, guid: f661ede0c34a20542820d768aa2ad381, type: 2}
 --- !u!4 &893685015
 Transform:
   m_ObjectHideFlags: 0
@@ -8987,7 +9008,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh159566
+  m_Name: pb_Mesh170370
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

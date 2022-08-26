@@ -10,13 +10,12 @@ public class GameController : MonoBehaviour
     public static event Action<GameOverReason> onGameOver;
     public static event Action onResumeGame;
     public static event Action onStartGame;
+    public static event Action onLoadGame;
     public static event Action onPauseGame;
-    public int PlayerHealth { get; private set; }
     public static GameController Instance { get; private set; }
     public Difficulty GameDifficulty { get; private set; }
     public GameState CurrentGameState { get; private set; }
 
-    [SerializeField] int playerStartHealth;
 
 
 
@@ -40,21 +39,8 @@ public class GameController : MonoBehaviour
         Application.Quit();
     }
 
-    void OnEnable() {
-        PlayerCollider.onFragCollideWithPlayer += DecreasePlayerHealth;
-    }
-
-    private void OnDisable() {
-        PlayerCollider.onFragCollideWithPlayer -= DecreasePlayerHealth;
-    }
 
 
-    void DecreasePlayerHealth(int healthValDecreaseBy) {
-        PlayerHealth -= healthValDecreaseBy;
-        if (PlayerHealth <= 0) {
-            EndGame(GameOverReason.HealthRanOut);
-        }
-    }
 
     void Awake() {
         if(Instance != null && Instance != this){
@@ -63,13 +49,12 @@ public class GameController : MonoBehaviour
             Instance = this;
         }
 
-        PlayerHealth = playerStartHealth;
         CurrentGameState = GameState.Started;
         Time.timeScale = 0;
     }
 
     void Start() {
-        onStartGame?.Invoke();
+        onLoadGame?.Invoke();
     }
 
     void SetGameDifficulty(int difficulty) {
@@ -90,7 +75,13 @@ public class GameController : MonoBehaviour
         SetGameDifficulty(difficulty);
         Time.timeScale = 1;
         CurrentGameState = GameState.Running;
+        onStartGame?.Invoke();
         onResumeGame?.Invoke();
+    }
+
+    void SetPLayerStartHealth() {
+
+
     }
 
     public void ContinueGame() {
