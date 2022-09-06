@@ -82,9 +82,10 @@ public class BrickFrag : MonoBehaviour
         _wallManager = GameObject.Find("Arena").GetComponent<WallManager>();
     }
 
+
     private void OnCollisionEnter(Collision other) {
         if(!other.collider.CompareTag("Ball") || brickAlreadyHit || !other.gameObject.GetComponent<BallController>().IsCollisionAllowed()) return;
-        GetComponentInParent<Animator>().speed = 0;
+        // GetComponentInParent<Animator>().speed = 0;
         var ballCollVel = other.gameObject.GetComponent<BallController>().PrevVelocity;
 
         _wallManager.NumBricksRemaining--;
@@ -192,7 +193,7 @@ public class BrickFrag : MonoBehaviour
         for (int i = 0; i <= numPts; i++) {
             var point = Vector3.Lerp(branchPt, boundPt, (float)i / numPts);
             fracPts.Add(point);
-            fracDrawPts.Last().Add(new DrawPt(point, epoch + i));
+            fracDrawPts.Last().Add(new DrawPt(transform.InverseTransformPoint(point), epoch + i));
         }
         fracLinePts.AddRange(fracPts);
         for(int i = 1; i < fracPts.Count; i++) {
@@ -241,27 +242,30 @@ public class BrickFrag : MonoBehaviour
                 l.RemoveAll(p => IsInCrater(p.pt));
             }
             var line = new GameObject();
+            line.transform.parent = transform;
             var lineR = line.AddComponent<LineRenderer>();
             fracRenderers.Add(lineR);
-            //lineR.useWorldSpace = false;
+            lineR.useWorldSpace = false;
             lineR.material = lineMaterial;
             lineR.startWidth = lineWidth;
             lineR.endWidth = lineWidth;
             lineR.positionCount = 0;
         }
         int max = GetMaxEpoch();
+        fracLineBeingDrawn = true;
         for (int i = 0; i < max; i++) {
             for (int j = 0; j < fracDrawPts.Count; j++) {
                 var index = fracDrawPts[j].FindIndex(x => x.epoch == i);
                 if (index != -1) {
                     fracRenderers[j].positionCount = index + 1;
-                    fracRenderers[j].SetPosition(index, fracDrawPts[j][index].pt);
+                    fracRenderers[j].SetPosition(index, fracRenderers[j].transform.InverseTransformPoint(transform.TransformPoint(fracDrawPts[j][index].pt)));
                 }
             }
             if (i % 1 == 0) {
                 yield return new WaitForSeconds(fracLineDrawDelay);
             }  
         }
+
 
     }
 
@@ -360,6 +364,7 @@ public class BrickFrag : MonoBehaviour
     }
 
     void DeleteFracLines() {
+        fracLineBeingDrawn = false;
         foreach (LineRenderer line in fracRenderers) {
             line.enabled = false;
         }
