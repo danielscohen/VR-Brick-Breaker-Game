@@ -136,7 +136,7 @@ public class BrickFrag : MonoBehaviour
         DeleteSmallFracs();
 
         for (int i = 0; i < frags.Count; i++) {
-            frags[i].fragC.ApplyFracForce(fracLinePts);
+            frags[i].fragC.ApplyFracForce(GetWorldFracPoints());
             if (i % 10 == 0) {
                 yield return new WaitForSeconds(fragExpDelay);
             }
@@ -155,11 +155,32 @@ public class BrickFrag : MonoBehaviour
         Vector3 dir = ballCollDir;
 
         while (true) {
-            if (CreateFracLine(startPt, dir, brickBounds, fracBranchDepth, 0, true)) return;
-            if (Vector3.Angle(dir, dirToCenter) < 1f) return;
+            if (CreateFracLine(startPt, dir, brickBounds, fracBranchDepth, 0, true)){
+                ConvertFracPointsToLocal();
+                return;
+            }
+            if (Vector3.Angle(dir, dirToCenter) < 1f){
+                ConvertFracPointsToLocal();
+                return;
+            } 
             dir = Vector3.RotateTowards(dir, dirToCenter, 20f, 0);
         }
     }
+
+    void ConvertFracPointsToLocal(){
+        for(int i = 0; i < fracLinePts.Count; i++){
+            fracLinePts[i] = transform.InverseTransformPoint(fracLinePts[i]);
+        }
+    }
+
+    List<Vector3> GetWorldFracPoints(){
+        var fracPts = new List<Vector3>();
+        for(int i = 0; i < fracLinePts.Count; i++){
+            fracPts.Add(transform.TransformPoint(fracLinePts[i]));
+        }
+        return fracPts;
+    }
+
 
     bool ContainedInBrick(Vector3 pt) {
         Vector3 localPos = transform.InverseTransformPoint(pt);
@@ -252,7 +273,6 @@ public class BrickFrag : MonoBehaviour
             lineR.positionCount = 0;
         }
         int max = GetMaxEpoch();
-        fracLineBeingDrawn = true;
         for (int i = 0; i < max; i++) {
             for (int j = 0; j < fracDrawPts.Count; j++) {
                 var index = fracDrawPts[j].FindIndex(x => x.epoch == i);
@@ -364,7 +384,6 @@ public class BrickFrag : MonoBehaviour
     }
 
     void DeleteFracLines() {
-        fracLineBeingDrawn = false;
         foreach (LineRenderer line in fracRenderers) {
             line.enabled = false;
         }
