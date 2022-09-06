@@ -2682,6 +2682,7 @@ GameObject:
   m_Component:
   - component: {fileID: 793631219}
   - component: {fileID: 793631220}
+  - component: {fileID: 793631221}
   m_Layer: 0
   m_Name: Arena
   m_TagString: Untagged
@@ -2723,6 +2724,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wallLayers: []
+--- !u!95 &793631221
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 793631218}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c3781b385d46cff4d8cae4e2f704b48c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &816297368
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9309,7 +9330,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh45756
+  m_Name: pb_Mesh50150
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
