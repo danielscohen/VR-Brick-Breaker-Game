@@ -8,6 +8,7 @@ public class PlayerCollider : MonoBehaviour
 
     public static event Action<int> onFragCollideWithPlayer;
     public static event Action<int, BallReturnReason> onPlayerCaughtBall;
+    public static event Action<PowerUpType> onPLayerCaughtPowerUp;
 
     private void OnTriggerEnter(Collider other) {
         //Debug.Log("Triggered by: " + other.tag);
@@ -25,6 +26,9 @@ public class PlayerCollider : MonoBehaviour
             other.gameObject.SetActive(false);
         } else if (other.CompareTag("Ball")) {
             onPlayerCaughtBall?.Invoke(other.gameObject.GetComponent<BallController>().BallID, BallReturnReason.BallCaught);
+        } else if (other.CompareTag("PowerUp")) {
+            onPLayerCaughtPowerUp?.Invoke(other.gameObject.GetComponent<PowerUpController>().type);
+            Destroy(other.gameObject);
         }
     }
 }

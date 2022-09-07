@@ -32,12 +32,14 @@ public class BallManager : MonoBehaviour
         DestroyZoneController.onBallLost += ManageBallReturn;
         PlayerCollider.onPlayerCaughtBall += ManageBallReturn;
         GameController.onStartGame += SetBallStartingCount;
+        PlayerCollider.onPLayerCaughtPowerUp += AddBallPowerUp;
     }
 
     void OnDisable() {
         DestroyZoneController.onBallLost -= ManageBallReturn;
         PlayerCollider.onPlayerCaughtBall -= ManageBallReturn;
         GameController.onStartGame -= SetBallStartingCount;
+        PlayerCollider.onPLayerCaughtPowerUp -= AddBallPowerUp;
     }
 
 
@@ -103,6 +105,13 @@ public class BallManager : MonoBehaviour
             return;
         }
 
+    }
+
+    void AddBallPowerUp(PowerUpType type){
+        if(type == PowerUpType.ExtraBall){
+            _ballsRemaining++;
+            onBallsLeftCountChange?.Invoke(_ballsRemaining);
+        }
     }
 
 

@@ -8,6 +8,7 @@ TagManager:
   - Frag
   - Particle
   - Brick
+  - PowerUp
   layers:
   - Default
   - TransparentFX

@@ -47,6 +47,8 @@ public class BrickFrag : MonoBehaviour
     [SerializeField] float voxFadeInDur = 0.1f;
     [SerializeField] int minFragSizeKeep = 1;
     [SerializeField] int particleProb = 4;
+    [SerializeField] int PowerUpSpawnProb = 10;
+    public static event System.Action<Vector3> onSpawnPowerUp;
     
     int[,,] voxMap;
     public GameObject[,,] voxels;
@@ -135,6 +137,12 @@ public class BrickFrag : MonoBehaviour
 
         DeleteSmallFracs();
 
+        if(UnityEngine.Random.Range(0, PowerUpSpawnProb) == 0){
+            onSpawnPowerUp?.Invoke(transform.position);
+        }
+
+
+
         for (int i = 0; i < frags.Count; i++) {
             frags[i].fragC.ApplyFracForce(GetWorldFracPoints());
             if (i % 10 == 0) {
@@ -218,7 +226,7 @@ public class BrickFrag : MonoBehaviour
         }
         fracLinePts.AddRange(fracPts);
         for(int i = 1; i < fracPts.Count; i++) {
-            if (branchDepth > 0 && Random.Range(0, fracBranchProb) == 0) {
+            if (branchDepth > 0 && UnityEngine.Random.Range(0, fracBranchProb) == 0) {
                 CreateFracLine(fracPts[i], fracDir, brickBounds, branchDepth - 1, epoch, false);
             }
             epoch++;
