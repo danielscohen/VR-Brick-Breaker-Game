@@ -113,12 +113,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
   fragSpawner: {fileID: 0}
+  lightExpPrefab: {fileID: 1989625961592895221, guid: 0191ea5fa50e3c848a7900d6d2ab8a24,
+    type: 3}
   particleExpDelay: 0.1
   ptsPerUnit: 30
   coneAngle: 170
   fracBranchDepth: 3
   fragSizeMult: 0.3
-  lineWidth: 0.02
+  lineWidth: 0.01
   lineMaterial: {fileID: 2100000, guid: d45b8b46fc886764f9fbc6b86a483474, type: 2}
   fracBranchProb: 4
   craterRadMult: 0.01

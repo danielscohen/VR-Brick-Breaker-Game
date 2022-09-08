@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 6762678556200436395}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 2, z: 0.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -46,7 +46,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numBricks: {x: 4, y: 4, z: 1}
   numVoxels: {x: 8, y: 8, z: 8}
-  brickPreFab: {fileID: 2390515395319445736, guid: 1dc913c3e4d2f3e43ab0e6ce391388fa, type: 3}
-  voxSpawner: {fileID: 0}
+  brickPreFab: {fileID: 2390515395319445736, guid: 1dc913c3e4d2f3e43ab0e6ce391388fa,
+    type: 3}
   voxInternalMat: {fileID: 2100000, guid: ff90269803d411e41bb13863cbaf54c3, type: 2}
   voxEdgeMat: {fileID: 2100000, guid: 58e62ecba9778174082df60105490de1, type: 2}
+  _moveSpeed: 1

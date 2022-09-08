@@ -30,6 +30,7 @@ public class BrickFrag : MonoBehaviour
 
     [SerializeField] GameObject cam;
     [SerializeField] FragSpawner fragSpawner;
+    [SerializeField] GameObject lightExpPrefab;
     [SerializeField] float particleExpDelay = 1f;
     [SerializeField] int ptsPerUnit = 10;
     [SerializeField] float coneAngle = 30f;
@@ -141,7 +142,7 @@ public class BrickFrag : MonoBehaviour
             onSpawnPowerUp?.Invoke(transform.position);
         }
 
-
+        yield return StartCoroutine(CreateLightExplosion());
 
         for (int i = 0; i < frags.Count; i++) {
             frags[i].fragC.ApplyFracForce(GetWorldFracPoints());
@@ -150,6 +151,12 @@ public class BrickFrag : MonoBehaviour
             }
         }
 
+    }
+
+    IEnumerator CreateLightExplosion()
+    {
+        GameObject lightExp = Instantiate(lightExpPrefab, transform, false);
+        yield return new WaitForSeconds(0.5f);
     }
 
     void CreateFracLines() {

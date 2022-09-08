@@ -62,7 +62,8 @@ public class FragController : MonoBehaviour
 
     void FixedUpdate() {
         if (gravityApplied) {
-        gravityDir = (_camPos - transform.position);
+        
+        gravityDir = (Camera.main.transform.position - transform.position);
             fragRb.AddForce(gravityDir * Gravity);
         }
 
