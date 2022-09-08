@@ -38,7 +38,7 @@ public class WallController : MonoBehaviour
 
     MoveDir _moveDir;
 
-    WallManager _wallManager;
+    ArenaManager _arenaManager;
 
     enum MoveDir{
         UpDown,
@@ -66,7 +66,7 @@ public class WallController : MonoBehaviour
         //_upMovePos = new Vector3(transform.position.x, upMove.position.y, transform.position.z);
         //_downMovePos = new Vector3(transform.position.x, downMove.position.y, transform.position.z);
 
-        _wallManager = GameObject.Find("Arena").GetComponent<WallManager>();
+        _arenaManager = GameObject.Find("Arena").GetComponent<ArenaManager>();
 
         BuildWall();
     }
@@ -132,7 +132,7 @@ public class WallController : MonoBehaviour
             CreateVoxels(brick);
         }
 
-        _wallManager.NumBricksRemaining += bricks.Count;
+        _arenaManager.NumBricksRemaining += bricks.Count;
 
     }
 

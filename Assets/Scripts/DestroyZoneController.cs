@@ -17,6 +17,8 @@ public class DestroyZoneController : MonoBehaviour
             other.gameObject.SetActive(false);
         } else if (other.CompareTag("Ball")) {
             onBallLost?.Invoke(other.GetComponent<BallController>().BallID, BallReturnReason.BallLost);
+        } else if (other.CompareTag("PowerUp")) {
+            Destroy(other.gameObject);
         }
     }
 }

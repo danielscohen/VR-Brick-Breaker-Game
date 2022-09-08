@@ -5,5 +5,6 @@ using UnityEngine;
 public enum PowerUpType
 {
     ExtraBall,
-    Sheild
+    Sheild,
+    ArenaSpin
 }

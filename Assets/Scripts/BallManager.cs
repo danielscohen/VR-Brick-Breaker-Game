@@ -153,5 +153,7 @@ public class BallManager : MonoBehaviour
 
         ballRB.AddForce(forceToAdd, ForceMode.Impulse);
 
+        Debug.Log($"Throw Force: {forceToAdd.magnitude}");
+
     }
 }

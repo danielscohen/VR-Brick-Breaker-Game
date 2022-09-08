@@ -59,7 +59,7 @@ public class BrickFrag : MonoBehaviour
     List<List<DrawPt>> fracDrawPts = new List<List<DrawPt>>();
     List<Vector3Int> deletedVoxels = new List<Vector3Int>();
 
-    WallManager _wallManager;
+    ArenaManager _arenaManager;
 
 
 
@@ -81,7 +81,7 @@ public class BrickFrag : MonoBehaviour
     private void Start() {
         cam = Camera.main.gameObject;
         fragSpawner = GameObject.Find("Frag Spawner").GetComponent<FragSpawner>();
-        _wallManager = GameObject.Find("Arena").GetComponent<WallManager>();
+        _arenaManager = GameObject.Find("Arena").GetComponent<ArenaManager>();
     }
 
 
@@ -90,7 +90,7 @@ public class BrickFrag : MonoBehaviour
         // GetComponentInParent<Animator>().speed = 0;
         var ballCollVel = other.gameObject.GetComponent<BallController>().PrevVelocity;
 
-        _wallManager.NumBricksRemaining--;
+        _arenaManager.NumBricksRemaining--;
 
         brickAlreadyHit = true;
 
