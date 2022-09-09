@@ -17,34 +17,34 @@ public class PlayerController : MonoBehaviour
 
     GameObject _racket;
 
-    int _health;
+    int _points = 0;
 
     float cameraPitch = 0.0f;
+
+    bool negativePts = false;
     void OnEnable() {
-        GameController.onStartGame += SetStartingHealth;
-        PlayerCollider.onFragCollideWithPlayer += DecreasePlayerHealth;
+        PlayerCollider.onFragCollideWithPlayer += ChangePlayerPts;
     }
 
     void SetStartingHealth() {
         switch (GameController.Instance.GameDifficulty) {
             case Difficulty.Beginner:
-                _health = _beginnerSettings.playerStartHealth;
+                _points = _beginnerSettings.playerStartHealth;
                 break;
             case Difficulty.Normal:
-                _health = _normalSettings.playerStartHealth;
+                _points = _normalSettings.playerStartHealth;
                 break;
             case Difficulty.Expert:
-                _health = _expertSettings.playerStartHealth;
+                _points = _expertSettings.playerStartHealth;
                 break;
         }
 
-        onUpdatePlayerHealth?.Invoke(_health);
+        onUpdatePlayerHealth?.Invoke(_points);
         
     }
 
     private void OnDisable() {
-        GameController.onStartGame -= SetStartingHealth;
-        PlayerCollider.onFragCollideWithPlayer -= DecreasePlayerHealth;
+        PlayerCollider.onFragCollideWithPlayer -= ChangePlayerPts;
     }
     // Start is called before the first frame update
     void Start()
@@ -56,6 +56,8 @@ public class PlayerController : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
         }
+
+        onUpdatePlayerHealth?.Invoke(_points);
         
     }
 
@@ -90,12 +92,11 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void DecreasePlayerHealth(int healthValDecreaseBy) {
-        _health -= healthValDecreaseBy;
-        onUpdatePlayerHealth?.Invoke(_health);
-        if (_health <= 0) {
-            GameController.Instance.EndGame(GameOverReason.HealthRanOut);
-        }
+    void ChangePlayerPts(int ptDelta) {
+        ptDelta = negativePts ? -ptDelta : ptDelta;
+        _points += ptDelta;
+        if(_points < 0) _points = 0;
+        onUpdatePlayerHealth?.Invoke(_points);
     }
 
     void UpdateMouseLook() {

@@ -156,7 +156,7 @@ public class BrickFrag : MonoBehaviour
     IEnumerator CreateLightExplosion()
     {
         GameObject lightExp = Instantiate(lightExpPrefab, transform, false);
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.1f);
     }
 
     void CreateFracLines() {
