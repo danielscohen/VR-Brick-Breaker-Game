@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PowerUpManager : MonoBehaviour
 {
-    [SerializeField] GameObject [] powerUpPrefabs;
+    [SerializeField] GameObject _powerUpPrefab;
 
     void OnEnable() {
         BrickFrag.onSpawnPowerUp += CreateNewPowerUp;
@@ -15,7 +15,6 @@ public class PowerUpManager : MonoBehaviour
     }
 
     void CreateNewPowerUp(Vector3 pos){
-        GameObject prefab = powerUpPrefabs[Random.Range(0, powerUpPrefabs.Length)];
-        GameObject powerUp = Instantiate(prefab, pos, Quaternion.identity);
+        GameObject powerUp = Instantiate(_powerUpPrefab, pos, Quaternion.identity);
     }
 }
