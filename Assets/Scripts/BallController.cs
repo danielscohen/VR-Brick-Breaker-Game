@@ -18,7 +18,7 @@ public class BallController : MonoBehaviour
     void Awake() {
         
         ballRb = GetComponent<Rigidbody>();
-        GravityEnabled = false;
+        GravityEnabled = true;
     }
 
     void Start() {

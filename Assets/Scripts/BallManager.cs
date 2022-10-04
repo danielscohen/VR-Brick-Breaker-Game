@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class BallManager : MonoBehaviour
 {
@@ -31,15 +32,15 @@ public class BallManager : MonoBehaviour
 
     void OnEnable() {
         DestroyZoneController.onBallLost += ManageBallReturn;
-        PlayerCollider.onPlayerCaughtBall += ManageBallReturn;
         GameController.onStartGame += SetBallStartingCount;
+        GameController.onStartGame += LoadNewBall;
         PlayerCollider.onPLayerCaughtPowerUp += AddBallPowerUp;
     }
 
     void OnDisable() {
         DestroyZoneController.onBallLost -= ManageBallReturn;
-        PlayerCollider.onPlayerCaughtBall -= ManageBallReturn;
         GameController.onStartGame -= SetBallStartingCount;
+        GameController.onStartGame -= LoadNewBall;
         PlayerCollider.onPLayerCaughtPowerUp -= AddBallPowerUp;
     }
 
@@ -84,23 +85,15 @@ public class BallManager : MonoBehaviour
         onBallsLeftCountChange.Invoke(_ballsRemaining);
         
     }
-    void ManageBallReturn(int ballID, BallReturnReason reason) {
+    void ManageBallReturn(int ballID) {
         var index = activeBalls.FindIndex(x => x.GetComponent<BallController>().BallID == ballID);
         if(index < 0) {
-            if (reason == BallReturnReason.BallLost) {
-                Debug.LogError($"Ball with ballID {ballID} was lost but never thrown.");
-            } else {
-                Debug.LogError($"Ball with ballID {ballID} was caught but never thrown.");
-            }
+            Debug.LogError($"Ball with ballID {ballID} was caught but never thrown.");
             return;
         }
         var ball = activeBalls[index];
         activeBalls.RemoveAt(index);
         DisableBall(ball);
-        if(reason == BallReturnReason.BallCaught) {
-            _ballsRemaining++;
-            onBallsLeftCountChange?.Invoke(_ballsRemaining);
-        }
         if (activeBalls.Count == 0 && _ballsRemaining == 0) {
             GameController.Instance.EndGame(GameOverReason.BallsRanOut);
             return;
@@ -142,6 +135,12 @@ public class BallManager : MonoBehaviour
         activeBalls.Add(ball);
         _ballsRemaining--;
         onBallsLeftCountChange?.Invoke(_ballsRemaining);
+    }
+
+    public void OnBallRemovedFromLoader(SelectExitEventArgs args){
+        if(_ballsRemaining > 0){
+            LoadNewBall();
+        }
     }
     // private void Throw(float timePressed) {
     //     var ball = LoadNewBall();
