@@ -10,6 +10,7 @@ public class BallManager : MonoBehaviour
     [SerializeField] GameDifficultySettings _expertSettings;
     [SerializeField] GameObject _ballPrefab;
     [SerializeField] GameObject _throwPt;
+    [SerializeField] Transform _loadLoc;
     [SerializeField] float throwForce;
     [SerializeField] float throwUpwordForce;
 
@@ -48,24 +49,24 @@ public class BallManager : MonoBehaviour
         onBallsLeftCountChange?.Invoke(_ballsRemaining);
     }
 
-    void Update() {
-        if (readyToThrow && GameController.Instance.CurrentGameState == GameState.Running && _ballsRemaining > 0) {
-            if (Input.GetKeyDown(throwKey)) {
-                keyPressed = true;
-                timeDown = Time.time;
-            }
+    // void Update() {
+    //     if (readyToThrow && GameController.Instance.CurrentGameState == GameState.Running && _ballsRemaining > 0) {
+    //         if (Input.GetKeyDown(throwKey)) {
+    //             keyPressed = true;
+    //             timeDown = Time.time;
+    //         }
 
-            if (Input.GetKeyUp(throwKey) && keyPressed) {
-                keyPressed = false;
-                timePressed = Time.time - timeDown;
-                Throw(timePressed);
-            }
+    //         if (Input.GetKeyUp(throwKey) && keyPressed) {
+    //             keyPressed = false;
+    //             timePressed = Time.time - timeDown;
+    //             Throw(timePressed);
+    //         }
 
-            if (keyPressed) {
-                onBallThrowPowerChange?.Invoke(Time.time - timeDown);
-            }
-        }
-    }
+    //         if (keyPressed) {
+    //             onBallThrowPowerChange?.Invoke(Time.time - timeDown);
+    //         }
+    //     }
+    // }
 
     void SetBallStartingCount() {
         switch (GameController.Instance.GameDifficulty) {
@@ -124,7 +125,7 @@ public class BallManager : MonoBehaviour
         ballPool.Push(ball);
     }
 
-    GameObject LoadNewBall() {
+    void LoadNewBall() {
         GameObject ball = null;
         if (ballPool.Count > 0) {
             ball = ballPool.Pop();
@@ -134,26 +135,29 @@ public class BallManager : MonoBehaviour
             _maxBallID++;
         }
 
-
-        _ballsRemaining--;
-        onBallsLeftCountChange?.Invoke(_ballsRemaining);
-        return ball;
-    }
-    private void Throw(float timePressed) {
-        var ball = LoadNewBall();
-
-        activeBalls.Add(ball);
-
+        ball.transform.position = _loadLoc.position;
         ball.SetActive(true);
 
-        Rigidbody ballRB = ball.GetComponent<Rigidbody>();
-        ballRB.position = _throwPt.transform.position;
 
-        Vector3 forceToAdd = (_throwPt.transform.forward * throwForce  + transform.up * throwUpwordForce) * timePressed;
-
-        ballRB.AddForce(forceToAdd, ForceMode.Impulse);
-
-        Debug.Log($"Throw Force: {forceToAdd.magnitude}");
-
+        activeBalls.Add(ball);
+        _ballsRemaining--;
+        onBallsLeftCountChange?.Invoke(_ballsRemaining);
     }
+    // private void Throw(float timePressed) {
+    //     var ball = LoadNewBall();
+
+    //     activeBalls.Add(ball);
+
+    //     ball.SetActive(true);
+
+    //     Rigidbody ballRB = ball.GetComponent<Rigidbody>();
+    //     ballRB.position = _throwPt.transform.position;
+
+    //     Vector3 forceToAdd = (_throwPt.transform.forward * throwForce  + transform.up * throwUpwordForce) * timePressed;
+
+    //     ballRB.AddForce(forceToAdd, ForceMode.Impulse);
+
+    //     Debug.Log($"Throw Force: {forceToAdd.magnitude}");
+
+    // }
 }

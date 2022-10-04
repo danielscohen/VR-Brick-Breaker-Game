@@ -18,7 +18,7 @@ public class BallController : MonoBehaviour
     void Awake() {
         
         ballRb = GetComponent<Rigidbody>();
-        GravityEnabled = true;
+        GravityEnabled = false;
     }
 
     void Start() {
@@ -57,5 +57,12 @@ public class BallController : MonoBehaviour
         if (!GravityEnabled) return;
         Vector3 dir = (_camPos - transform.position).normalized;
         ballRb.AddForce(dir * Gravity);
+    }
+
+    public void EnableGravity(){
+        GravityEnabled = true;
+    }
+    public void DisableGravity(){
+        GravityEnabled = false;
     }
 }
