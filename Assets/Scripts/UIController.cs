@@ -6,6 +6,7 @@ using TMPro;
 public class UIController : MonoBehaviour
 {
     int playerHealth;
+    bool _uIMenuActive;
     [SerializeField] TextMeshProUGUI _playerHealthText;
     [SerializeField] TextMeshProUGUI _ballPowerText;
     [SerializeField] TextMeshProUGUI _ballsRemainingText;
@@ -38,6 +39,16 @@ public class UIController : MonoBehaviour
         GameController.onPauseGame -= ShowPauseScreen;
     }
 
+    void Update() {
+        if(_uIMenuActive){
+            Vector3 vHeadPos = Camera.main.transform.position;
+            Vector3 vGazeDir = Camera.main.transform.forward;
+            transform.position = (vHeadPos + vGazeDir * 3.0f) + new Vector3(0.0f, -.40f, 0.0f);
+            Vector3 vRot = Camera.main.transform.eulerAngles; vRot.z = 0;
+            transform.eulerAngles = vRot;
+        }
+    }
+
 
     void UpdatePLayerHealthText(int health) {
         _playerHealthText.text = health.ToString();
@@ -53,18 +64,21 @@ public class UIController : MonoBehaviour
     }
 
     void ShowScreenOverlay() {
+        _uIMenuActive = false;
         _screenOverlay.SetActive(true);
         _startScreen.SetActive(false);
         _pauseScreen.SetActive(false);
         _gameOverScreen.SetActive(false);
     }
     void ShowStartScreen() {
+        _uIMenuActive = true;
         _screenOverlay.SetActive(false);
         _startScreen.SetActive(true);
         _pauseScreen.SetActive(false);
         _gameOverScreen.SetActive(false);
     }
     void ShowPauseScreen() {
+        _uIMenuActive = true;
         _screenOverlay.SetActive(false);
         _startScreen.SetActive(false);
         _pauseScreen.SetActive(true);
@@ -72,6 +86,7 @@ public class UIController : MonoBehaviour
     }
 
     void ShowGameOverScreen(GameOverReason reason) {
+        _uIMenuActive = true;
         string gameOverText;
 
         _screenOverlay.SetActive(false);
