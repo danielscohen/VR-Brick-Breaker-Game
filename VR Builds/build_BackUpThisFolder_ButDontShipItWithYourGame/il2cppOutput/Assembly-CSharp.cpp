@@ -334,6 +334,8 @@ struct OnFinishFlash_tA6B6283A2505FFED48E0B15C3AB6F300DED3365B;
 struct ParticleController_tAFFF1284CCCAA9663C6086B839C44FC9EDFBB802;
 // ParticleSpawner
 struct ParticleSpawner_t2CC06D137D33D671B4F4211B6389BBFD88B25C0E;
+// UnityEngine.ParticleSystem
+struct ParticleSystem_tB19986EE308BD63D36FB6025EEEAFBEDB97C67C1;
 // PlayerCollider
 struct PlayerCollider_t8EE0B401DC79302C8A64779ABA66AB8D75398372;
 // PlayerController
@@ -430,8 +432,6 @@ struct U3CU3Ec__DisplayClass27_0_tB82AE84D5924F20BBB9390AF340349FB88D467B9;
 struct U3CU3Ec_tD44F2DE84AE58A813A92BECCF849330662656B39;
 // BrickFrag/<>c__DisplayClass56_0
 struct U3CU3Ec__DisplayClass56_0_t663859E59A83A5A0750790F3FF4A9A76842EFDF7;
-// BrickFrag/<CreateLightExplosion>d__46
-struct U3CCreateLightExplosionU3Ed__46_t01B06CA8F9C87D0A3CEF4C669D150E763E27C44F;
 // BrickFrag/<CreateParticleStream>d__64
 struct U3CCreateParticleStreamU3Ed__64_t87C50616B3DEEE36225105F80C0AD0A34CB42C31;
 // BrickFrag/<DrawFracLines>d__56
@@ -530,7 +530,6 @@ IL2CPP_EXTERN_C RuntimeClass* StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9
 IL2CPP_EXTERN_C RuntimeClass* TimerController_t9FACAA69550370472C446690F3AD92032ECE8CC5_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Type_t_il2cpp_TypeInfo_var;
-IL2CPP_EXTERN_C RuntimeClass* U3CCreateLightExplosionU3Ed__46_t01B06CA8F9C87D0A3CEF4C669D150E763E27C44F_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CCreateParticleStreamU3Ed__64_t87C50616B3DEEE36225105F80C0AD0A34CB42C31_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CDrawFracLinesU3Ed__56_t5AA7B33A897E708FF7E22807F1D1ECB37791BA59_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CFadeOutIfStuckU3Ed__28_t99D116B0E4FD5C67233E32B8127E5EE04C01DC68_il2cpp_TypeInfo_var;
@@ -597,6 +596,7 @@ IL2CPP_EXTERN_C const RuntimeMethod* Component_GetComponent_TisBrickFrag_tB9F5EC
 IL2CPP_EXTERN_C const RuntimeMethod* Component_GetComponent_TisCollider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76_m820398EDBF1D3766C3166A0C323A127662A29A14_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Component_GetComponent_TisFragController_t21CE457B3E96183C9813CA29EE774B3CA28128C8_m8C6C3BC87C0062D8B1C89410F9B191050D4E181A_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Component_GetComponent_TisMeshFilter_t6D1CE2473A1E45AC73013400585A1163BF66B2F5_mB82F66059DFB5715DD85BDED1D90BC03A6C9E623_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Component_GetComponent_TisParticleSystem_tB19986EE308BD63D36FB6025EEEAFBEDB97C67C1_mF2B700ECAEEEDBCC076CC66C9592C6DDFA0D36F9_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Component_GetComponent_TisRenderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF_mC91ACC92AD57CA6CA00991DAF1DB3830BCE07AF8_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Component_GetComponent_TisRigidbody_t268697F5A994213ED97393309870968BC1C7393C_m4B5CAD64B52D153BEA96432633CA9A45FA523DD8_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Enumerable_Last_TisList_1_t70A20755ED786878537D93B17C2A317A0425A7CF_m0CB4F80F99BDEE2313778013A4B959F3D6608CEE_RuntimeMethod_var;
@@ -707,7 +707,6 @@ IL2CPP_EXTERN_C const RuntimeMethod* ObjectPool_1__ctor_m73DC627035714D7114B8E2D
 IL2CPP_EXTERN_C const RuntimeMethod* ObjectPool_1__ctor_m9B1B5073E182DB646087D87F7A37651873611B70_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m10D87C6E0708CA912BBB02555BF7D0FBC5D7A2B3_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m831D2F71DF2AA6C93AFDFEFA04CF2CFC5FBBCDB4_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_mCE536F8736F04AC3C46EED6FD5FA02F5D22A84C6_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* ParticleSpawner_DisableGravity_m6DB9B66D85093B95E77B06DC3C4D111EC782B772_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* PlayerController_ChangePlayerPts_m47A461228489BA60CE736B8597D68B91A4633A2E_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* PowerUpManager_CreateNewPowerUp_m0BBE9D81A2778F48B63BFA0F0EE9A25B1BE8E8AB_RuntimeMethod_var;
@@ -716,7 +715,6 @@ IL2CPP_EXTERN_C const RuntimeMethod* Stack_1_Push_m03D2069DF70B4E90843AA84CA38A6
 IL2CPP_EXTERN_C const RuntimeMethod* Stack_1__ctor_mB61FA1997AF5AE140B8697C9B9CC286CCD588A02_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Stack_1_get_Count_mB690F86B95C6FB1424E9BFC67CA82B61E16168D1_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* TimerController_SetStartingTime_mDEFD193CD8FE5B19C51692E6B9E029AE46290CB0_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* U3CCreateLightExplosionU3Ed__46_System_Collections_IEnumerator_Reset_m248DEDF8ACBB523C3F2581F5C4BB12FD1DFAC2CF_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CCreateParticleStreamU3Ed__64_System_Collections_IEnumerator_Reset_m5D71C7686C62121EE9823B438B3C50CB7F981395_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CDrawFracLinesU3Ed__56_System_Collections_IEnumerator_Reset_mBD95CBC677781887CA961CC8DC0D833D524E395B_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CFadeOutIfStuckU3Ed__28_System_Collections_IEnumerator_Reset_m0A9D420015D63056EEF3ED13681FAAF43785A79D_RuntimeMethod_var;
@@ -1204,17 +1202,6 @@ struct U3CU3Ec__DisplayClass56_0_t663859E59A83A5A0750790F3FF4A9A76842EFDF7  : pu
 	int32_t ___i_0;
 	// System.Predicate`1<BrickFrag/DrawPt> BrickFrag/<>c__DisplayClass56_0::<>9__1
 	Predicate_1_tCA75DFF5777347E309F13EED2A5AA0F46A3CFA33* ___U3CU3E9__1_1;
-};
-
-// BrickFrag/<CreateLightExplosion>d__46
-struct U3CCreateLightExplosionU3Ed__46_t01B06CA8F9C87D0A3CEF4C669D150E763E27C44F  : public RuntimeObject
-{
-	// System.Int32 BrickFrag/<CreateLightExplosion>d__46::<>1__state
-	int32_t ___U3CU3E1__state_0;
-	// System.Object BrickFrag/<CreateLightExplosion>d__46::<>2__current
-	RuntimeObject* ___U3CU3E2__current_1;
-	// BrickFrag BrickFrag/<CreateLightExplosion>d__46::<>4__this
-	BrickFrag_tB9F5EC2E69C2473D1A7E4958069298BE4CD7B5EF* ___U3CU3E4__this_2;
 };
 
 // BrickFrag/<DrawFracLines>d__56
@@ -2842,6 +2829,11 @@ struct MeshFilter_t6D1CE2473A1E45AC73013400585A1163BF66B2F5  : public Component_
 
 // System.NotSupportedException
 struct NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A  : public SystemException_tCC48D868298F4C0705279823E34B00F4FBDB7295
+{
+};
+
+// UnityEngine.ParticleSystem
+struct ParticleSystem_tB19986EE308BD63D36FB6025EEEAFBEDB97C67C1  : public Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3
 {
 };
 
@@ -5139,8 +5131,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1__ctor_m1482ECB85FF6B8BB8DEB6F8710
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Component_GetComponentInParent_TisRuntimeObject_m6746D6BB99912B1B509746C993906492F86CD119_gshared (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method) ;
 // System.Void System.Action`1<UnityEngine.Vector3>::Invoke(T)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Action_1_Invoke_m211AB6C2AA7326F6BFC8338EC888360A219AFF41_gshared_inline (Action_1_t2EDB30EAB747FDF563DD6410FC76AF861A09A0C2* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___obj0, const RuntimeMethod* method) ;
-// T UnityEngine.Object::Instantiate<System.Object>(T,UnityEngine.Transform,System.Boolean)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Object_Instantiate_TisRuntimeObject_mDC5AD8BD13FE50E98B67B956C048367F4E8C6F94_gshared (RuntimeObject* ___original0, Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___parent1, bool ___worldPositionStays2, const RuntimeMethod* method) ;
 // T UnityEngine.GameObject::AddComponent<System.Object>()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* GameObject_AddComponent_TisRuntimeObject_m69B93700FACCF372F5753371C6E8FB780800B824_gshared (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method) ;
 // System.Void System.Collections.Generic.List`1<UnityEngine.Color>::.ctor()
@@ -5475,8 +5465,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* BrickFrag_StartCollActions_m9350571FC4A288E3B52F2DD81BB8E4D7AE6AF774 (BrickFrag_tB9F5EC2E69C2473D1A7E4958069298BE4CD7B5EF* __this, const RuntimeMethod* method) ;
 // System.Void BrickFrag/<StartCollActions>d__45::.ctor(System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CStartCollActionsU3Ed__45__ctor_m98135F1F7B08E8EBCE47A3D75CE22409DFCF7F51 (U3CStartCollActionsU3Ed__45_tE1DCA4B2E2269CE6D42D6BBB03563D67B3141384* __this, int32_t ___U3CU3E1__state0, const RuntimeMethod* method) ;
-// System.Void BrickFrag/<CreateLightExplosion>d__46::.ctor(System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CCreateLightExplosionU3Ed__46__ctor_m21B632FDAC6DF0C5099385F19D6EAD995388700C (U3CCreateLightExplosionU3Ed__46_t01B06CA8F9C87D0A3CEF4C669D150E763E27C44F* __this, int32_t ___U3CU3E1__state0, const RuntimeMethod* method) ;
+// T UnityEngine.Component::GetComponent<UnityEngine.ParticleSystem>()
+inline ParticleSystem_tB19986EE308BD63D36FB6025EEEAFBEDB97C67C1* Component_GetComponent_TisParticleSystem_tB19986EE308BD63D36FB6025EEEAFBEDB97C67C1_mF2B700ECAEEEDBCC076CC66C9592C6DDFA0D36F9 (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method)
+{
+	return ((  ParticleSystem_tB19986EE308BD63D36FB6025EEEAFBEDB97C67C1* (*) (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3*, const RuntimeMethod*))Component_GetComponent_TisRuntimeObject_m7181F81CAEC2CF53F5D2BC79B7425C16E1F80D33_gshared)(__this, method);
+}
+// System.Void UnityEngine.ParticleSystem::Play()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ParticleSystem_Play_mD943E601BFE16CB9BB5D1F5E6AED5C36F5F11EF5 (ParticleSystem_tB19986EE308BD63D36FB6025EEEAFBEDB97C67C1* __this, const RuntimeMethod* method) ;
 // UnityEngine.Bounds UnityEngine.Renderer::get_bounds()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Bounds_t367E830C64BBF235ED8C3B2F8CF6254FDCAD39C3 Renderer_get_bounds_m390CF334730C3C34E45CE59F1D08C3B9F3109C7C (Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* __this, const RuntimeMethod* method) ;
 // UnityEngine.Vector3 BrickFrag::NudgeCollisionPt(UnityEngine.Vector3)
@@ -5854,8 +5849,8 @@ inline void Action_1_Invoke_m211AB6C2AA7326F6BFC8338EC888360A219AFF41_inline (Ac
 {
 	((  void (*) (Action_1_t2EDB30EAB747FDF563DD6410FC76AF861A09A0C2*, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, const RuntimeMethod*))Action_1_Invoke_m211AB6C2AA7326F6BFC8338EC888360A219AFF41_gshared_inline)(__this, ___obj0, method);
 }
-// System.Collections.IEnumerator BrickFrag::CreateLightExplosion()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* BrickFrag_CreateLightExplosion_mE58E6B650FB808D1E26AFD865E707500B4D8EB53 (BrickFrag_tB9F5EC2E69C2473D1A7E4958069298BE4CD7B5EF* __this, const RuntimeMethod* method) ;
+// System.Void BrickFrag::MakeFlash()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickFrag_MakeFlash_mA8F27112493A091633A6B715D9073AC6FAB942B3 (BrickFrag_tB9F5EC2E69C2473D1A7E4958069298BE4CD7B5EF* __this, const RuntimeMethod* method) ;
 // System.Collections.Generic.List`1<UnityEngine.Vector3> BrickFrag::GetWorldFracPoints()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_t77B94703E05C519A9010DD0614F757F974E1CD8B* BrickFrag_GetWorldFracPoints_m812F6E3D305A738D3FC32063B068D754565CBCE3 (BrickFrag_tB9F5EC2E69C2473D1A7E4958069298BE4CD7B5EF* __this, const RuntimeMethod* method) ;
 // System.Void FragController::ApplyFracForce(System.Collections.Generic.List`1<UnityEngine.Vector3>)
@@ -5864,11 +5859,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FragController_ApplyFracForce_mF7D2CC89E
 inline int32_t List_1_get_Count_m26BBB12F106C95E45ED814A2022C722FBED8E206_inline (List_1_t5819FF01F7A1E3C1EAF3CD3E31AF5840D9CC74EA* __this, const RuntimeMethod* method)
 {
 	return ((  int32_t (*) (List_1_t5819FF01F7A1E3C1EAF3CD3E31AF5840D9CC74EA*, const RuntimeMethod*))List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_gshared_inline)(__this, method);
-}
-// T UnityEngine.Object::Instantiate<UnityEngine.GameObject>(T,UnityEngine.Transform,System.Boolean)
-inline GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_mCE536F8736F04AC3C46EED6FD5FA02F5D22A84C6 (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___original0, Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___parent1, bool ___worldPositionStays2, const RuntimeMethod* method)
-{
-	return ((  GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* (*) (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*, Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1*, bool, const RuntimeMethod*))Object_Instantiate_TisRuntimeObject_mDC5AD8BD13FE50E98B67B956C048367F4E8C6F94_gshared)(___original0, ___parent1, ___worldPositionStays2, method);
 }
 // System.Collections.Generic.List`1/Enumerator<T> System.Collections.Generic.List`1<System.Collections.Generic.List`1<BrickFrag/DrawPt>>::GetEnumerator()
 inline Enumerator_t2C83466F9496C6BEDB5ECAE84AFA932BC71C6C1D List_1_GetEnumerator_m3E0192FD81EDA0396A8CE8A4E43619E9E5EB83A3 (List_1_tA11CFA06F0532087A06B8B7228A9428D76632476* __this, const RuntimeMethod* method)
@@ -8742,24 +8732,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* BrickFrag_StartCollActions_m93
 		return L_1;
 	}
 }
-// System.Collections.IEnumerator BrickFrag::CreateLightExplosion()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* BrickFrag_CreateLightExplosion_mE58E6B650FB808D1E26AFD865E707500B4D8EB53 (BrickFrag_tB9F5EC2E69C2473D1A7E4958069298BE4CD7B5EF* __this, const RuntimeMethod* method) 
+// System.Void BrickFrag::MakeFlash()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickFrag_MakeFlash_mA8F27112493A091633A6B715D9073AC6FAB942B3 (BrickFrag_tB9F5EC2E69C2473D1A7E4958069298BE4CD7B5EF* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CCreateLightExplosionU3Ed__46_t01B06CA8F9C87D0A3CEF4C669D150E763E27C44F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Component_GetComponent_TisParticleSystem_tB19986EE308BD63D36FB6025EEEAFBEDB97C67C1_mF2B700ECAEEEDBCC076CC66C9592C6DDFA0D36F9_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		U3CCreateLightExplosionU3Ed__46_t01B06CA8F9C87D0A3CEF4C669D150E763E27C44F* L_0 = (U3CCreateLightExplosionU3Ed__46_t01B06CA8F9C87D0A3CEF4C669D150E763E27C44F*)il2cpp_codegen_object_new(U3CCreateLightExplosionU3Ed__46_t01B06CA8F9C87D0A3CEF4C669D150E763E27C44F_il2cpp_TypeInfo_var);
+		// var flash = GetComponent<ParticleSystem>();
+		ParticleSystem_tB19986EE308BD63D36FB6025EEEAFBEDB97C67C1* L_0;
+		L_0 = Component_GetComponent_TisParticleSystem_tB19986EE308BD63D36FB6025EEEAFBEDB97C67C1_mF2B700ECAEEEDBCC076CC66C9592C6DDFA0D36F9(__this, Component_GetComponent_TisParticleSystem_tB19986EE308BD63D36FB6025EEEAFBEDB97C67C1_mF2B700ECAEEEDBCC076CC66C9592C6DDFA0D36F9_RuntimeMethod_var);
+		// flash.Play();
 		NullCheck(L_0);
-		U3CCreateLightExplosionU3Ed__46__ctor_m21B632FDAC6DF0C5099385F19D6EAD995388700C(L_0, 0, NULL);
-		U3CCreateLightExplosionU3Ed__46_t01B06CA8F9C87D0A3CEF4C669D150E763E27C44F* L_1 = L_0;
-		NullCheck(L_1);
-		L_1->___U3CU3E4__this_2 = __this;
-		Il2CppCodeGenWriteBarrier((void**)(&L_1->___U3CU3E4__this_2), (void*)__this);
-		return L_1;
+		ParticleSystem_Play_mD943E601BFE16CB9BB5D1F5E6AED5C36F5F11EF5(L_0, NULL);
+		// }
+		return;
 	}
 }
 // System.Void BrickFrag::CreateFracLines()
@@ -12031,31 +12021,27 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CStartCollActionsU3Ed__45_MoveNext_mDB
 		{
 			case 0:
 			{
-				goto IL_0032;
+				goto IL_002e;
 			}
 			case 1:
 			{
-				goto IL_00aa;
+				goto IL_00a6;
 			}
 			case 2:
 			{
-				goto IL_00cc;
+				goto IL_00c8;
 			}
 			case 3:
 			{
-				goto IL_00f9;
+				goto IL_00f5;
 			}
 			case 4:
 			{
-				goto IL_013e;
+				goto IL_013a;
 			}
 			case 5:
 			{
-				goto IL_018f;
-			}
-			case 6:
-			{
-				goto IL_01e5;
+				goto IL_01c5;
 			}
 		}
 	}
@@ -12063,7 +12049,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CStartCollActionsU3Ed__45_MoveNext_mDB
 		return (bool)0;
 	}
 
-IL_0032:
+IL_002e:
 	{
 		__this->___U3CU3E1__state_0 = (-1);
 		// MakeVoxMap();
@@ -12128,7 +12114,7 @@ IL_0032:
 		return (bool)1;
 	}
 
-IL_00aa:
+IL_00a6:
 	{
 		__this->___U3CU3E1__state_0 = (-1);
 		// yield return StartCoroutine(DrawFracLines());
@@ -12146,7 +12132,7 @@ IL_00aa:
 		return (bool)1;
 	}
 
-IL_00cc:
+IL_00c8:
 	{
 		__this->___U3CU3E1__state_0 = (-1);
 		// yield return StartCoroutine(FadeVoxels(1f, voxFadeInDur));
@@ -12167,7 +12153,7 @@ IL_00cc:
 		return (bool)1;
 	}
 
-IL_00f9:
+IL_00f5:
 	{
 		__this->___U3CU3E1__state_0 = (-1);
 		// DeleteFracLines();
@@ -12205,7 +12191,7 @@ IL_00f9:
 		return (bool)1;
 	}
 
-IL_013e:
+IL_013a:
 	{
 		__this->___U3CU3E1__state_0 = (-1);
 		// DeleteSmallFracs();
@@ -12220,7 +12206,7 @@ IL_013e:
 		L_50 = Random_Range_m6763D9767F033357F88B6637F048F4ACA4123B68(0, L_49, NULL);
 		if (L_50)
 		{
-			goto IL_0174;
+			goto IL_0170;
 		}
 	}
 	{
@@ -12231,14 +12217,14 @@ IL_013e:
 		if (L_52)
 		{
 			G_B9_0 = L_52;
-			goto IL_0164;
+			goto IL_0160;
 		}
 	}
 	{
-		goto IL_0174;
+		goto IL_0170;
 	}
 
-IL_0164:
+IL_0160:
 	{
 		BrickFrag_tB9F5EC2E69C2473D1A7E4958069298BE4CD7B5EF* L_53 = V_1;
 		NullCheck(L_53);
@@ -12251,97 +12237,83 @@ IL_0164:
 		Action_1_Invoke_m211AB6C2AA7326F6BFC8338EC888360A219AFF41_inline(G_B9_0, L_55, NULL);
 	}
 
-IL_0174:
+IL_0170:
 	{
-		// yield return StartCoroutine(CreateLightExplosion());
+		// MakeFlash();
 		BrickFrag_tB9F5EC2E69C2473D1A7E4958069298BE4CD7B5EF* L_56 = V_1;
-		BrickFrag_tB9F5EC2E69C2473D1A7E4958069298BE4CD7B5EF* L_57 = V_1;
-		NullCheck(L_57);
-		RuntimeObject* L_58;
-		L_58 = BrickFrag_CreateLightExplosion_mE58E6B650FB808D1E26AFD865E707500B4D8EB53(L_57, NULL);
 		NullCheck(L_56);
-		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_59;
-		L_59 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(L_56, L_58, NULL);
-		__this->___U3CU3E2__current_1 = L_59;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current_1), (void*)L_59);
-		__this->___U3CU3E1__state_0 = 5;
-		return (bool)1;
-	}
-
-IL_018f:
-	{
-		__this->___U3CU3E1__state_0 = (-1);
+		BrickFrag_MakeFlash_mA8F27112493A091633A6B715D9073AC6FAB942B3(L_56, NULL);
 		// for (int i = 0; i < frags.Count; i++) {
 		__this->___U3CiU3E5__2_3 = 0;
-		goto IL_01fc;
+		goto IL_01dc;
 	}
 
-IL_019f:
+IL_017f:
 	{
 		// frags[i].fragC.ApplyFracForce(GetWorldFracPoints());
-		BrickFrag_tB9F5EC2E69C2473D1A7E4958069298BE4CD7B5EF* L_60 = V_1;
+		BrickFrag_tB9F5EC2E69C2473D1A7E4958069298BE4CD7B5EF* L_57 = V_1;
+		NullCheck(L_57);
+		List_1_t5819FF01F7A1E3C1EAF3CD3E31AF5840D9CC74EA* L_58 = L_57->___frags_28;
+		int32_t L_59 = __this->___U3CiU3E5__2_3;
+		NullCheck(L_58);
+		Fragment_t4F76C0BC8D2459231E478C03B439FEA394715542* L_60;
+		L_60 = List_1_get_Item_m074F7F701322267E24E6D190E99B88F551CC12EC(L_58, L_59, List_1_get_Item_m074F7F701322267E24E6D190E99B88F551CC12EC_RuntimeMethod_var);
 		NullCheck(L_60);
-		List_1_t5819FF01F7A1E3C1EAF3CD3E31AF5840D9CC74EA* L_61 = L_60->___frags_28;
-		int32_t L_62 = __this->___U3CiU3E5__2_3;
+		FragController_t21CE457B3E96183C9813CA29EE774B3CA28128C8* L_61 = L_60->___fragC_1;
+		BrickFrag_tB9F5EC2E69C2473D1A7E4958069298BE4CD7B5EF* L_62 = V_1;
+		NullCheck(L_62);
+		List_1_t77B94703E05C519A9010DD0614F757F974E1CD8B* L_63;
+		L_63 = BrickFrag_GetWorldFracPoints_m812F6E3D305A738D3FC32063B068D754565CBCE3(L_62, NULL);
 		NullCheck(L_61);
-		Fragment_t4F76C0BC8D2459231E478C03B439FEA394715542* L_63;
-		L_63 = List_1_get_Item_m074F7F701322267E24E6D190E99B88F551CC12EC(L_61, L_62, List_1_get_Item_m074F7F701322267E24E6D190E99B88F551CC12EC_RuntimeMethod_var);
-		NullCheck(L_63);
-		FragController_t21CE457B3E96183C9813CA29EE774B3CA28128C8* L_64 = L_63->___fragC_1;
-		BrickFrag_tB9F5EC2E69C2473D1A7E4958069298BE4CD7B5EF* L_65 = V_1;
-		NullCheck(L_65);
-		List_1_t77B94703E05C519A9010DD0614F757F974E1CD8B* L_66;
-		L_66 = BrickFrag_GetWorldFracPoints_m812F6E3D305A738D3FC32063B068D754565CBCE3(L_65, NULL);
-		NullCheck(L_64);
-		FragController_ApplyFracForce_mF7D2CC89EC41BA5451CCD1BF0272CD71BCCCDF8F(L_64, L_66, NULL);
+		FragController_ApplyFracForce_mF7D2CC89EC41BA5451CCD1BF0272CD71BCCCDF8F(L_61, L_63, NULL);
 		// if (i % 10 == 0) {
-		int32_t L_67 = __this->___U3CiU3E5__2_3;
-		if (((int32_t)(L_67%((int32_t)10))))
+		int32_t L_64 = __this->___U3CiU3E5__2_3;
+		if (((int32_t)(L_64%((int32_t)10))))
 		{
-			goto IL_01ec;
+			goto IL_01cc;
 		}
 	}
 	{
 		// yield return new WaitForSeconds(fragExpDelay);
-		BrickFrag_tB9F5EC2E69C2473D1A7E4958069298BE4CD7B5EF* L_68 = V_1;
-		NullCheck(L_68);
-		float L_69 = L_68->___fragExpDelay_18;
-		WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3* L_70 = (WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3*)il2cpp_codegen_object_new(WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var);
-		NullCheck(L_70);
-		WaitForSeconds__ctor_m579F95BADEDBAB4B3A7E302C6EE3995926EF2EFC(L_70, L_69, NULL);
-		__this->___U3CU3E2__current_1 = L_70;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current_1), (void*)L_70);
-		__this->___U3CU3E1__state_0 = 6;
+		BrickFrag_tB9F5EC2E69C2473D1A7E4958069298BE4CD7B5EF* L_65 = V_1;
+		NullCheck(L_65);
+		float L_66 = L_65->___fragExpDelay_18;
+		WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3* L_67 = (WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3*)il2cpp_codegen_object_new(WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var);
+		NullCheck(L_67);
+		WaitForSeconds__ctor_m579F95BADEDBAB4B3A7E302C6EE3995926EF2EFC(L_67, L_66, NULL);
+		__this->___U3CU3E2__current_1 = L_67;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current_1), (void*)L_67);
+		__this->___U3CU3E1__state_0 = 5;
 		return (bool)1;
 	}
 
-IL_01e5:
+IL_01c5:
 	{
 		__this->___U3CU3E1__state_0 = (-1);
 	}
 
-IL_01ec:
+IL_01cc:
 	{
 		// for (int i = 0; i < frags.Count; i++) {
-		int32_t L_71 = __this->___U3CiU3E5__2_3;
-		V_3 = L_71;
-		int32_t L_72 = V_3;
-		__this->___U3CiU3E5__2_3 = ((int32_t)il2cpp_codegen_add(L_72, 1));
+		int32_t L_68 = __this->___U3CiU3E5__2_3;
+		V_3 = L_68;
+		int32_t L_69 = V_3;
+		__this->___U3CiU3E5__2_3 = ((int32_t)il2cpp_codegen_add(L_69, 1));
 	}
 
-IL_01fc:
+IL_01dc:
 	{
 		// for (int i = 0; i < frags.Count; i++) {
-		int32_t L_73 = __this->___U3CiU3E5__2_3;
-		BrickFrag_tB9F5EC2E69C2473D1A7E4958069298BE4CD7B5EF* L_74 = V_1;
-		NullCheck(L_74);
-		List_1_t5819FF01F7A1E3C1EAF3CD3E31AF5840D9CC74EA* L_75 = L_74->___frags_28;
-		NullCheck(L_75);
-		int32_t L_76;
-		L_76 = List_1_get_Count_m26BBB12F106C95E45ED814A2022C722FBED8E206_inline(L_75, List_1_get_Count_m26BBB12F106C95E45ED814A2022C722FBED8E206_RuntimeMethod_var);
-		if ((((int32_t)L_73) < ((int32_t)L_76)))
+		int32_t L_70 = __this->___U3CiU3E5__2_3;
+		BrickFrag_tB9F5EC2E69C2473D1A7E4958069298BE4CD7B5EF* L_71 = V_1;
+		NullCheck(L_71);
+		List_1_t5819FF01F7A1E3C1EAF3CD3E31AF5840D9CC74EA* L_72 = L_71->___frags_28;
+		NullCheck(L_72);
+		int32_t L_73;
+		L_73 = List_1_get_Count_m26BBB12F106C95E45ED814A2022C722FBED8E206_inline(L_72, List_1_get_Count_m26BBB12F106C95E45ED814A2022C722FBED8E206_RuntimeMethod_var);
+		if ((((int32_t)L_70) < ((int32_t)L_73)))
 		{
-			goto IL_019f;
+			goto IL_017f;
 		}
 	}
 	{
@@ -12369,123 +12341,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CStartCollActionsU3Ed__45_System_Colle
 }
 // System.Object BrickFrag/<StartCollActions>d__45::System.Collections.IEnumerator.get_Current()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CStartCollActionsU3Ed__45_System_Collections_IEnumerator_get_Current_m782D25AB590E8BBAB829476DC289370F87AE720E (U3CStartCollActionsU3Ed__45_tE1DCA4B2E2269CE6D42D6BBB03563D67B3141384* __this, const RuntimeMethod* method) 
-{
-	{
-		RuntimeObject* L_0 = __this->___U3CU3E2__current_1;
-		return L_0;
-	}
-}
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-// System.Void BrickFrag/<CreateLightExplosion>d__46::.ctor(System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CCreateLightExplosionU3Ed__46__ctor_m21B632FDAC6DF0C5099385F19D6EAD995388700C (U3CCreateLightExplosionU3Ed__46_t01B06CA8F9C87D0A3CEF4C669D150E763E27C44F* __this, int32_t ___U3CU3E1__state0, const RuntimeMethod* method) 
-{
-	{
-		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
-		int32_t L_0 = ___U3CU3E1__state0;
-		__this->___U3CU3E1__state_0 = L_0;
-		return;
-	}
-}
-// System.Void BrickFrag/<CreateLightExplosion>d__46::System.IDisposable.Dispose()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CCreateLightExplosionU3Ed__46_System_IDisposable_Dispose_mE396850824837F2BEC77D8B4E9B1D2F5D987BDD9 (U3CCreateLightExplosionU3Ed__46_t01B06CA8F9C87D0A3CEF4C669D150E763E27C44F* __this, const RuntimeMethod* method) 
-{
-	{
-		return;
-	}
-}
-// System.Boolean BrickFrag/<CreateLightExplosion>d__46::MoveNext()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CCreateLightExplosionU3Ed__46_MoveNext_mC1CB53D33553B67B1DFFAFDDB10B5239DFE38EAC (U3CCreateLightExplosionU3Ed__46_t01B06CA8F9C87D0A3CEF4C669D150E763E27C44F* __this, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_mCE536F8736F04AC3C46EED6FD5FA02F5D22A84C6_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	int32_t V_0 = 0;
-	BrickFrag_tB9F5EC2E69C2473D1A7E4958069298BE4CD7B5EF* V_1 = NULL;
-	{
-		int32_t L_0 = __this->___U3CU3E1__state_0;
-		V_0 = L_0;
-		BrickFrag_tB9F5EC2E69C2473D1A7E4958069298BE4CD7B5EF* L_1 = __this->___U3CU3E4__this_2;
-		V_1 = L_1;
-		int32_t L_2 = V_0;
-		if (!L_2)
-		{
-			goto IL_0017;
-		}
-	}
-	{
-		int32_t L_3 = V_0;
-		if ((((int32_t)L_3) == ((int32_t)1)))
-		{
-			goto IL_004a;
-		}
-	}
-	{
-		return (bool)0;
-	}
-
-IL_0017:
-	{
-		__this->___U3CU3E1__state_0 = (-1);
-		// GameObject lightExp = Instantiate(lightExpPrefab, transform, false);
-		BrickFrag_tB9F5EC2E69C2473D1A7E4958069298BE4CD7B5EF* L_4 = V_1;
-		NullCheck(L_4);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_5 = L_4->___lightExpPrefab_6;
-		BrickFrag_tB9F5EC2E69C2473D1A7E4958069298BE4CD7B5EF* L_6 = V_1;
-		NullCheck(L_6);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_7;
-		L_7 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_6, NULL);
-		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_8;
-		L_8 = Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_mCE536F8736F04AC3C46EED6FD5FA02F5D22A84C6(L_5, L_7, (bool)0, Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_mCE536F8736F04AC3C46EED6FD5FA02F5D22A84C6_RuntimeMethod_var);
-		// yield return new WaitForSeconds(0.1f);
-		WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3* L_9 = (WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3*)il2cpp_codegen_object_new(WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var);
-		NullCheck(L_9);
-		WaitForSeconds__ctor_m579F95BADEDBAB4B3A7E302C6EE3995926EF2EFC(L_9, (0.100000001f), NULL);
-		__this->___U3CU3E2__current_1 = L_9;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current_1), (void*)L_9);
-		__this->___U3CU3E1__state_0 = 1;
-		return (bool)1;
-	}
-
-IL_004a:
-	{
-		__this->___U3CU3E1__state_0 = (-1);
-		// }
-		return (bool)0;
-	}
-}
-// System.Object BrickFrag/<CreateLightExplosion>d__46::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CCreateLightExplosionU3Ed__46_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mF948EED45CF2F6D41D61D2CA5188E4CDF1496394 (U3CCreateLightExplosionU3Ed__46_t01B06CA8F9C87D0A3CEF4C669D150E763E27C44F* __this, const RuntimeMethod* method) 
-{
-	{
-		RuntimeObject* L_0 = __this->___U3CU3E2__current_1;
-		return L_0;
-	}
-}
-// System.Void BrickFrag/<CreateLightExplosion>d__46::System.Collections.IEnumerator.Reset()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CCreateLightExplosionU3Ed__46_System_Collections_IEnumerator_Reset_m248DEDF8ACBB523C3F2581F5C4BB12FD1DFAC2CF (U3CCreateLightExplosionU3Ed__46_t01B06CA8F9C87D0A3CEF4C669D150E763E27C44F* __this, const RuntimeMethod* method) 
-{
-	{
-		NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A* L_0 = (NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A_il2cpp_TypeInfo_var)));
-		NullCheck(L_0);
-		NotSupportedException__ctor_m1398D0CDE19B36AA3DE9392879738C1EA2439CDF(L_0, NULL);
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CCreateLightExplosionU3Ed__46_System_Collections_IEnumerator_Reset_m248DEDF8ACBB523C3F2581F5C4BB12FD1DFAC2CF_RuntimeMethod_var)));
-	}
-}
-// System.Object BrickFrag/<CreateLightExplosion>d__46::System.Collections.IEnumerator.get_Current()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CCreateLightExplosionU3Ed__46_System_Collections_IEnumerator_get_Current_m591478EE451E9826450E5A247226F9F990A4E843 (U3CCreateLightExplosionU3Ed__46_t01B06CA8F9C87D0A3CEF4C669D150E763E27C44F* __this, const RuntimeMethod* method) 
 {
 	{
 		RuntimeObject* L_0 = __this->___U3CU3E2__current_1;

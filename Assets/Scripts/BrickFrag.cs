@@ -142,7 +142,7 @@ public class BrickFrag : MonoBehaviour
             onSpawnPowerUp?.Invoke(transform.position);
         }
 
-        yield return StartCoroutine(CreateLightExplosion());
+        MakeFlash();
 
         for (int i = 0; i < frags.Count; i++) {
             frags[i].fragC.ApplyFracForce(GetWorldFracPoints());
@@ -153,10 +153,15 @@ public class BrickFrag : MonoBehaviour
 
     }
 
-    IEnumerator CreateLightExplosion()
-    {
-        GameObject lightExp = Instantiate(lightExpPrefab, transform, false);
-        yield return new WaitForSeconds(0.1f);
+    // IEnumerator CreateLightExplosion()
+    // {
+    //     GameObject lightExp = Instantiate(lightExpPrefab, transform, false);
+    //     yield return new WaitForSeconds(0.1f);
+    // }
+
+    void MakeFlash(){
+        var flash = GetComponent<ParticleSystem>();
+        flash.Play();
     }
 
     void CreateFracLines() {
