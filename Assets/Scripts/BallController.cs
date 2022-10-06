@@ -55,8 +55,8 @@ public class BallController : MonoBehaviour
 
     void FixedUpdate() {
         if (!GravityEnabled) return;
-        Vector3 dir = (_camPos - transform.position).normalized;
-        ballRb.AddForce(dir * Gravity);
+        // Vector3 dir = (_camPos - transform.position).normalized;
+        ballRb.AddForce(Vector3.back * Gravity);
     }
 
     public void EnableGravity(){

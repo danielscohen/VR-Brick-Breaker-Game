@@ -24,11 +24,6 @@ public class PlayerCollider : MonoBehaviour
                 frag.toDisable = true;
             }
             other.gameObject.SetActive(false);
-        } else if (other.CompareTag("Ball")) {
-            onPlayerCaughtBall?.Invoke(other.gameObject.GetComponent<BallController>().BallID, BallReturnReason.BallCaught);
-        } else if (other.CompareTag("PowerUp")) {
-            onPLayerCaughtPowerUp?.Invoke(other.gameObject.GetComponent<PowerUpController>().Type);
-            Destroy(other.gameObject);
         }
     }
 }

@@ -9,6 +9,7 @@ TagManager:
   - Particle
   - Brick
   - PowerUp
+  - Player Bounds
   layers:
   - Default
   - TransparentFX
