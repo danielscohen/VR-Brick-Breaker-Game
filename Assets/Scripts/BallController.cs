@@ -12,12 +12,14 @@ public class BallController : MonoBehaviour
     Rigidbody ballRb;
     Vector3 _camPos;
     [SerializeField] float Gravity = 2.0f;
+    [SerializeField] float maxSpeed = 2.0f;
     public int BallID { get; set; }
     public bool GravityEnabled { get; set; }
 
     void Awake() {
         
         ballRb = GetComponent<Rigidbody>();
+        ballRb.useGravity = true;
         GravityEnabled = true;
     }
 
@@ -53,11 +55,18 @@ public class BallController : MonoBehaviour
         }
     }
 
-    void FixedUpdate() {
-        if (!GravityEnabled) return;
-        // Vector3 dir = (_camPos - transform.position).normalized;
-        ballRb.AddForce(Vector3.back * Gravity);
-    }
+    // private void FixedUpdate() {
+    //     if(ballRb.velocity.magnitude > maxSpeed){
+    //         ballRb.velocity = ballRb.velocity.normalized * maxSpeed;
+    //     }
+    // }
+
+    // void FixedUpdate() {
+    //     if (!GravityEnabled) return;
+    //     // Vector3 dir = (_camPos - transform.position).normalized;
+    //     // ballRb.AddForce(Vector3.back * Gravity, ForceMode.Acceleration);
+    //     ballRb.useGravity = true;
+    // }
 
     public void EnableGravity(){
         GravityEnabled = true;
