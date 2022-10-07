@@ -16,11 +16,12 @@ public class UIController : MonoBehaviour
     [SerializeField] GameObject _screenOverlay;
     [SerializeField] GameObject _pauseScreen;
     [SerializeField] GameObject _gameOverScreen;
+    [SerializeField] GameObject _menuUI;
     void OnEnable() {
         BallManager.onBallThrowPowerChange += UpdateThrowPowerText;
         BallManager.onBallsLeftCountChange += UpdateBallsRemainingText;
         TimerController.onUpdateTimer += UpdateTimerText;
-        PlayerController.onUpdatePlayerHealth += UpdatePLayerHealthText;
+        PlayerPointsManager.onUpdatePlayerPoints += UpdatePLayerHealthText;
         GameController.onResumeGame += ShowScreenOverlay;
         GameController.onGameOver += ShowGameOverScreen;
         GameController.onLoadGame += ShowStartScreen;
@@ -32,7 +33,7 @@ public class UIController : MonoBehaviour
         BallManager.onBallThrowPowerChange -= UpdateThrowPowerText;
         BallManager.onBallsLeftCountChange -= UpdateBallsRemainingText;
         TimerController.onUpdateTimer -= UpdateTimerText;
-        PlayerController.onUpdatePlayerHealth -= UpdatePLayerHealthText;
+        PlayerPointsManager.onUpdatePlayerPoints -= UpdatePLayerHealthText;
         GameController.onResumeGame -= ShowScreenOverlay;
         GameController.onGameOver -= ShowGameOverScreen;
         GameController.onLoadGame -= ShowStartScreen;
@@ -43,9 +44,9 @@ public class UIController : MonoBehaviour
         if(_uIMenuActive){
             Vector3 vHeadPos = Camera.main.transform.position;
             Vector3 vGazeDir = Camera.main.transform.forward;
-            transform.position = (vHeadPos + vGazeDir * 2.5f) + new Vector3(0.0f, -.40f, 0.0f);
+            _menuUI.transform.position = (vHeadPos + vGazeDir * 2.5f) + new Vector3(0.0f, -.40f, 0.0f);
             Vector3 vRot = Camera.main.transform.eulerAngles; vRot.z = 0;
-            transform.eulerAngles = vRot;
+            _menuUI.transform.eulerAngles = vRot;
         }
     }
 
