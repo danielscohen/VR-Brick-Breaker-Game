@@ -8,7 +8,6 @@ public class UIController : MonoBehaviour
     int playerHealth;
     bool _uIMenuActive;
     [SerializeField] TextMeshProUGUI _playerHealthText;
-    [SerializeField] TextMeshProUGUI _ballPowerText;
     [SerializeField] TextMeshProUGUI _ballsRemainingText;
     [SerializeField] TextMeshProUGUI _timerText;
     [SerializeField] TextMeshProUGUI _gameOverText;
@@ -18,7 +17,6 @@ public class UIController : MonoBehaviour
     [SerializeField] GameObject _gameOverScreen;
     [SerializeField] GameObject _menuUI;
     void OnEnable() {
-        BallManager.onBallThrowPowerChange += UpdateThrowPowerText;
         BallManager.onBallsLeftCountChange += UpdateBallsRemainingText;
         TimerController.onUpdateTimer += UpdateTimerText;
         PlayerPointsManager.onUpdatePlayerPoints += UpdatePLayerHealthText;
@@ -30,7 +28,6 @@ public class UIController : MonoBehaviour
     }
 
     void OnDisable() {
-        BallManager.onBallThrowPowerChange -= UpdateThrowPowerText;
         BallManager.onBallsLeftCountChange -= UpdateBallsRemainingText;
         TimerController.onUpdateTimer -= UpdateTimerText;
         PlayerPointsManager.onUpdatePlayerPoints -= UpdatePLayerHealthText;
@@ -53,9 +50,6 @@ public class UIController : MonoBehaviour
 
     void UpdatePLayerHealthText(int health) {
         _playerHealthText.text = health.ToString();
-    }
-    void UpdateThrowPowerText(float power) {
-        _ballPowerText.text = string.Format("{0:N2}", power);
     }
     void UpdateBallsRemainingText(int numBalls) {
         _ballsRemainingText.text = $"Balls Left: {numBalls}";
