@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 public class GameController : MonoBehaviour
 {
@@ -16,20 +17,17 @@ public class GameController : MonoBehaviour
     public Difficulty GameDifficulty { get; private set; }
     public GameState CurrentGameState { get; private set; }
 
+    [SerializeField] InputActionReference pauseReference;
 
 
-
-    void Update() {
-        if (Input.GetKeyDown(KeyCode.R)) {
-            Restart();
-        }
-        if (Input.GetKeyDown(KeyCode.Escape)) {
-            Application.Quit();
-        }
-        if (Input.GetKeyDown(KeyCode.P)) {
-            PauseGame();
-        }
+    private void OnEnable() {
+        pauseReference.action.started += OnPausePressed;
     }
+    private void OnDisable() {
+        pauseReference.action.started -= OnPausePressed;
+    }
+
+
 
     public void Restart() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
@@ -82,6 +80,14 @@ public class GameController : MonoBehaviour
     void SetPLayerStartHealth() {
 
 
+    }
+
+    void OnPausePressed(InputAction.CallbackContext context){
+        if(CurrentGameState == GameState.Running){
+            PauseGame();
+        } else if(CurrentGameState == GameState.Paused){
+            ContinueGame();
+        }
     }
 
     public void ContinueGame() {

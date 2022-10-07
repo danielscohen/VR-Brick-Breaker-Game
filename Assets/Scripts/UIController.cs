@@ -43,7 +43,7 @@ public class UIController : MonoBehaviour
         if(_uIMenuActive){
             Vector3 vHeadPos = Camera.main.transform.position;
             Vector3 vGazeDir = Camera.main.transform.forward;
-            transform.position = (vHeadPos + vGazeDir * 3.0f) + new Vector3(0.0f, -.40f, 0.0f);
+            transform.position = (vHeadPos + vGazeDir * 2.5f) + new Vector3(0.0f, -.40f, 0.0f);
             Vector3 vRot = Camera.main.transform.eulerAngles; vRot.z = 0;
             transform.eulerAngles = vRot;
         }
