@@ -39,7 +39,10 @@ public class HandRayController : MonoBehaviour
         _rightHandRay.SetActive(false);
     }
 
-    void DisableLeftHand(SelectExitEventArgs args){
+    public void DisableLeftHand(SelectEnterEventArgs args){
         _leftHand.SetActive(false);
+    }
+    public void EnableLeftHand(SelectExitEventArgs args){
+        _leftHand.SetActive(true);
     }
 }

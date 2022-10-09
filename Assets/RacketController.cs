@@ -9,7 +9,7 @@ public class RacketController : MonoBehaviour
     private void Start() {
         transform.position = _socketLoc.position;
     }
-    void ReturnRacketToSocket(SelectExitEventArgs args){
+    public void ReturnRacketToSocket(SelectExitEventArgs args){
         transform.position = _socketLoc.position;
         transform.rotation = Quaternion.identity;
     }
