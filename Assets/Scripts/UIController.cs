@@ -12,7 +12,8 @@ public class UIController : MonoBehaviour
     [SerializeField] TextMeshProUGUI _timerText;
     [SerializeField] TextMeshProUGUI _gameOverText;
     [SerializeField] GameObject _startScreen;
-    [SerializeField] GameObject _screenOverlay;
+    [SerializeField] GameObject _timerPointsUI;
+    [SerializeField] GameObject _ballsRemainingUI;
     [SerializeField] GameObject _pauseScreen;
     [SerializeField] GameObject _gameOverScreen;
     [SerializeField] GameObject _menuUI;
@@ -60,21 +61,24 @@ public class UIController : MonoBehaviour
 
     void ShowScreenOverlay() {
         _uIMenuActive = false;
-        _screenOverlay.SetActive(true);
+        _timerPointsUI.SetActive(true);
+        _ballsRemainingUI.SetActive(true);
         _startScreen.SetActive(false);
         _pauseScreen.SetActive(false);
         _gameOverScreen.SetActive(false);
     }
     void ShowStartScreen() {
         _uIMenuActive = true;
-        _screenOverlay.SetActive(false);
+        _timerPointsUI.SetActive(false);
+        _ballsRemainingUI.SetActive(false);
         _startScreen.SetActive(true);
         _pauseScreen.SetActive(false);
         _gameOverScreen.SetActive(false);
     }
     void ShowPauseScreen() {
         _uIMenuActive = true;
-        _screenOverlay.SetActive(false);
+        _timerPointsUI.SetActive(false);
+        _ballsRemainingUI.SetActive(false);
         _startScreen.SetActive(false);
         _pauseScreen.SetActive(true);
         _gameOverScreen.SetActive(false);
@@ -84,7 +88,8 @@ public class UIController : MonoBehaviour
         _uIMenuActive = true;
         string gameOverText;
 
-        _screenOverlay.SetActive(false);
+        _timerPointsUI.SetActive(false);
+        _ballsRemainingUI.SetActive(false);
         _gameOverScreen.SetActive(true);
 
         switch (reason) {
