@@ -28,6 +28,7 @@ public class WallController : MonoBehaviour
     [SerializeField] Material voxInternalMat;
     [SerializeField] Material voxEdgeMat;
     [SerializeField] float _moveSpeed = 1f;
+    [SerializeField] float _intensity = 1f;
 
     int[,] wallMap;
 
@@ -37,6 +38,9 @@ public class WallController : MonoBehaviour
     Vector3 _downMovePos;
 
     MoveDir _moveDir;
+
+    Color _brickColor;
+    
 
     ArenaManager _arenaManager;
 
@@ -128,7 +132,8 @@ public class WallController : MonoBehaviour
             brick.transform.parent = transform;
             brick.transform.localPosition = new Vector3(posX, posY, 0);
             brick.transform.localScale = Vector3.Scale(scale, new Vector3(b.width, b.height, 1));
-            brick.GetComponent<Renderer>().material.color = new Color32((byte)Random.Range(0, 256), (byte)Random.Range(0, 256), (byte)Random.Range(0, 256), 255);
+            _brickColor = new Color32((byte)Random.Range(0, 256), (byte)Random.Range(0, 256), (byte)Random.Range(0, 256), 255);
+            brick.GetComponent<Renderer>().material.SetColor("_EmissionColor", _brickColor * _intensity);
             CreateVoxels(brick);
         }
 
@@ -193,7 +198,8 @@ public class WallController : MonoBehaviour
         float midZ = (float)(numVoxels.z - 1) / 2f;
 
         float colorPer = Mathf.Max((float)Mathf.Abs(midX - x) / (midX + 1), (float)Mathf.Abs(midY - y) / (midY + 1), (float)Mathf.Abs(midZ - z) / (midZ + 1));
-        voxel.GetComponent<Renderer>().material.color = Color.Lerp(Color.black, brick.GetComponent<Renderer>().material.color, colorPer);
+        Color color = Color.Lerp(Color.black, _brickColor, colorPer);
+        voxel.GetComponent<Renderer>().material.SetColor("_EmissionColor", color * _intensity);
 
 
 
