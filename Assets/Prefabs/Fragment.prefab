@@ -53,7 +53,7 @@ MonoBehaviour:
   fadeDuration: 1.5
   fragLifeTime: 15
   _startIntensity: 1
-  _maxIntensity: 10
+  _maxIntensity: 8
   _flashDuration: 0.6
   toDisable: 0
 --- !u!54 &4100311205927107429

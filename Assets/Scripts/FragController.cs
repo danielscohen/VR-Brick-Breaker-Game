@@ -151,9 +151,10 @@ public class FragController : MonoBehaviour
         }
 
         time = 0f;
-        while(time < _flashDuration * 2) {
+        while(time < _flashDuration * 1.2f) {
             foreach (Material mat in childMats) {
-                float intensity = Mathf.Lerp(_maxIntensity, _startIntensity, time / (_flashDuration * 2));
+                // mat.color = Color.Lerp(mat.GetColor("_EmissionColor"), color, time / (_flashDuration * 1.2f));
+                float intensity = Mathf.Lerp(_maxIntensity, _startIntensity, time / (_flashDuration * 1.2f));
                 mat.SetColor("_EmissionColor", color * intensity);
             }
             time += Time.deltaTime;

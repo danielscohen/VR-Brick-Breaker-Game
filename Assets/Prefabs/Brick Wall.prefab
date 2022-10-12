@@ -51,4 +51,4 @@ MonoBehaviour:
   voxInternalMat: {fileID: 2100000, guid: ff90269803d411e41bb13863cbaf54c3, type: 2}
   voxEdgeMat: {fileID: 2100000, guid: 58e62ecba9778174082df60105490de1, type: 2}
   _moveSpeed: 1
-  _intensity: 0.5
+  _intensity: 1
