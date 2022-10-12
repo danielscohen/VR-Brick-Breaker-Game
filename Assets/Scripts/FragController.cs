@@ -21,6 +21,9 @@ public class FragController : MonoBehaviour
     [SerializeField] int maxFragFadeSize = 3;
     [SerializeField] float fadeDuration = 4f;
     [SerializeField] float fragLifeTime = 16f;
+    [SerializeField] float _startIntensity = 1f;
+    [SerializeField] float _maxIntensity = 10f;
+    [SerializeField] float _flashDuration = 0.1f;
 
     BrickFrag brickScript;
     public bool toDisable;
@@ -84,12 +87,13 @@ public class FragController : MonoBehaviour
         gameObject.SetActive(false);
     }
     
-    public void ApplyFracForce(List<Vector3> fracPts) {
+    public void MakeFragExplode(List<Vector3> fracPts) {
         Vector3 minPt = UtilFunctions.FindClosestFracPt(transform.position, fracPts);
         float distFromFracPt = Vector3.Distance(minPt, transform.position);
         //Vector3 expForce = ((transform.position - minPt)).normalized * (1 / nDist) * expMag * collForce;
         Vector3 expForce = ((transform.position - minPt)).normalized * expMag * collForce;
         fragRb.AddForce(expForce, ForceMode.Impulse);
+        StartCoroutine(MakeFragFlash());
         MakeFall();
     }
 
@@ -130,6 +134,31 @@ public class FragController : MonoBehaviour
             DeleteFrag();
         }
 
+    }
+    IEnumerator MakeFragFlash() {
+        List<Material> childMats = GetFragMats();
+
+        float time = 0f;
+        Color color = childMats[0].color;
+       
+        while(time < _flashDuration) {
+            foreach (Material mat in childMats) {
+                float intensity = Mathf.Lerp(_startIntensity, _maxIntensity, time / _flashDuration);
+                mat.SetColor("_EmissionColor", color * intensity);
+            }
+            time += Time.deltaTime;
+            yield return null;
+        }
+
+        time = 0f;
+        while(time < _flashDuration * 2) {
+            foreach (Material mat in childMats) {
+                float intensity = Mathf.Lerp(_maxIntensity, _startIntensity, time / (_flashDuration * 2));
+                mat.SetColor("_EmissionColor", color * intensity);
+            }
+            time += Time.deltaTime;
+            yield return null;
+        }
     }
 
     List<Material> GetFragMats() {

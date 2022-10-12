@@ -162,8 +162,8 @@ public class BrickFrag : MonoBehaviour
         _audioSource.PlayOneShot(_explosionAudio);
 
         for (int i = 0; i < frags.Count; i++) {
-            frags[i].fragC.ApplyFracForce(GetWorldFracPoints());
-            if (i % 10 == 0) {
+            frags[i].fragC.MakeFragExplode(GetWorldFracPoints());
+            if (i % 2 == 0) {
                 yield return new WaitForSeconds(fragExpDelay);
             }
         }

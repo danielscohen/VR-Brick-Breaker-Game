@@ -476,10 +476,12 @@ struct DrawPt_t2728986AB6FEFAC411DEFD0B04E625B8349CED3A;
 struct Fragment_t4F76C0BC8D2459231E478C03B439FEA394715542;
 // UnityEngine.Camera/CameraCallback
 struct CameraCallback_t844E527BFE37BC0495E7F67993E43C07642DA9DD;
-// FragController/<FadeOut>d__29
-struct U3CFadeOutU3Ed__29_t48DBEE72F74D479595361100D941EFEF27AC65A1;
-// FragController/<FadeOutIfStuck>d__28
-struct U3CFadeOutIfStuckU3Ed__28_t99D116B0E4FD5C67233E32B8127E5EE04C01DC68;
+// FragController/<FadeOut>d__32
+struct U3CFadeOutU3Ed__32_tBA317A74512B86152B6650854A2048F1300EB98E;
+// FragController/<FadeOutIfStuck>d__31
+struct U3CFadeOutIfStuckU3Ed__31_t90CC6F301362006C48DC10920274FD2AD652F84D;
+// FragController/<MakeFragFlash>d__33
+struct U3CMakeFragFlashU3Ed__33_t37161EC0BA12E40DF4A633A50F6A0EE72FCC9148;
 // UnityEngine.UI.MaskableGraphic/CullStateChangedEvent
 struct CullStateChangedEvent_t6073CD0D951EC1256BF74B8F9107D68FC89B99B8;
 // ParticleController/<FadeOut>d__7
@@ -564,10 +566,11 @@ IL2CPP_EXTERN_C RuntimeClass* Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB
 IL2CPP_EXTERN_C RuntimeClass* Type_t_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CCreateParticleStreamU3Ed__73_tC1298DA02FA176ECF40262BF3924C903FE76D29C_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CDrawFracLinesU3Ed__65_tE658F30E4B7865EBC172C7CCD73F0D2DD44C54DE_il2cpp_TypeInfo_var;
-IL2CPP_EXTERN_C RuntimeClass* U3CFadeOutIfStuckU3Ed__28_t99D116B0E4FD5C67233E32B8127E5EE04C01DC68_il2cpp_TypeInfo_var;
-IL2CPP_EXTERN_C RuntimeClass* U3CFadeOutU3Ed__29_t48DBEE72F74D479595361100D941EFEF27AC65A1_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* U3CFadeOutIfStuckU3Ed__31_t90CC6F301362006C48DC10920274FD2AD652F84D_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* U3CFadeOutU3Ed__32_tBA317A74512B86152B6650854A2048F1300EB98E_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CFadeOutU3Ed__7_tB5B6790773302638DF04A50EF0A3BD87B859C1C2_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CFadeVoxelsU3Ed__70_t74CB7FC7C31F93A805041BFCEFB81DA80CE79B81_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* U3CMakeFragFlashU3Ed__33_t37161EC0BA12E40DF4A633A50F6A0EE72FCC9148_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CRotateArenaCoU3Ed__10_t75E2348FF844D85CE281F3CB2D53A683B63BB42B_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CSpawnOverTimeU3Ed__9_tD36482696FBA1F9F894BAA2DD52A04DDA4165493_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CStartCollActionsU3Ed__52_t84F4D8528CB97BDE310F56110288640AD60445BE_il2cpp_TypeInfo_var;
@@ -754,10 +757,11 @@ IL2CPP_EXTERN_C const RuntimeMethod* Stack_1_get_Count_mB690F86B95C6FB1424E9BFC6
 IL2CPP_EXTERN_C const RuntimeMethod* TimerController_SetStartingTime_mDEFD193CD8FE5B19C51692E6B9E029AE46290CB0_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CCreateParticleStreamU3Ed__73_System_Collections_IEnumerator_Reset_m4A9D4F2548663628C3E0257964B9EEA847A144BF_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CDrawFracLinesU3Ed__65_System_Collections_IEnumerator_Reset_mF6334714E05F539A6D44E4CF5D7DBC6AEE22DD2D_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* U3CFadeOutIfStuckU3Ed__28_System_Collections_IEnumerator_Reset_m0A9D420015D63056EEF3ED13681FAAF43785A79D_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* U3CFadeOutU3Ed__29_System_Collections_IEnumerator_Reset_mAE61FE530F62AEF4C5837D10712280E025336E2E_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* U3CFadeOutIfStuckU3Ed__31_System_Collections_IEnumerator_Reset_m03CBA237E57135FE7EE9172FBDE6626C137B872D_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* U3CFadeOutU3Ed__32_System_Collections_IEnumerator_Reset_m2AC132E86598A965E7D65D4CCB714C18F59EB9EF_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CFadeOutU3Ed__7_System_Collections_IEnumerator_Reset_mF67E37F480620AD6132AA59F8880A9019E6694CF_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CFadeVoxelsU3Ed__70_System_Collections_IEnumerator_Reset_m6A050C626BF231F0EF00D5A45EC4147C30B7908E_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* U3CMakeFragFlashU3Ed__33_System_Collections_IEnumerator_Reset_mC28F29C0965DF146B6174E96E85DC469884F30A5_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CRotateArenaCoU3Ed__10_System_Collections_IEnumerator_Reset_mC0B88BFC268C053DEAA2D6EDDD7A821DD95A86DC_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CSpawnOverTimeU3Ed__9_System_Collections_IEnumerator_Reset_mEF67754BDAD95BD4C502692561607E6711722AB4_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CStartCollActionsU3Ed__52_System_Collections_IEnumerator_Reset_m6D1B588F04B55E5348C4BEFE6F2A7B5E2F01BF05_RuntimeMethod_var;
@@ -2650,42 +2654,59 @@ struct DrawPt_t2728986AB6FEFAC411DEFD0B04E625B8349CED3A  : public RuntimeObject
 	int32_t ___epoch_1;
 };
 
-// FragController/<FadeOut>d__29
-struct U3CFadeOutU3Ed__29_t48DBEE72F74D479595361100D941EFEF27AC65A1  : public RuntimeObject
+// FragController/<FadeOut>d__32
+struct U3CFadeOutU3Ed__32_tBA317A74512B86152B6650854A2048F1300EB98E  : public RuntimeObject
 {
-	// System.Int32 FragController/<FadeOut>d__29::<>1__state
+	// System.Int32 FragController/<FadeOut>d__32::<>1__state
 	int32_t ___U3CU3E1__state_0;
-	// System.Object FragController/<FadeOut>d__29::<>2__current
+	// System.Object FragController/<FadeOut>d__32::<>2__current
 	RuntimeObject* ___U3CU3E2__current_1;
-	// FragController FragController/<FadeOut>d__29::<>4__this
+	// FragController FragController/<FadeOut>d__32::<>4__this
 	FragController_t21CE457B3E96183C9813CA29EE774B3CA28128C8* ___U3CU3E4__this_2;
-	// System.Single FragController/<FadeOut>d__29::tranPer
+	// System.Single FragController/<FadeOut>d__32::tranPer
 	float ___tranPer_3;
-	// System.Single FragController/<FadeOut>d__29::duration
+	// System.Single FragController/<FadeOut>d__32::duration
 	float ___duration_4;
-	// System.Boolean FragController/<FadeOut>d__29::destroy
+	// System.Boolean FragController/<FadeOut>d__32::destroy
 	bool ___destroy_5;
-	// System.Collections.Generic.List`1<UnityEngine.Material> FragController/<FadeOut>d__29::<childMats>5__2
+	// System.Collections.Generic.List`1<UnityEngine.Material> FragController/<FadeOut>d__32::<childMats>5__2
 	List_1_t386E09F4F22DDE4D2AC41A8567FFF283C254537B* ___U3CchildMatsU3E5__2_6;
-	// System.Single FragController/<FadeOut>d__29::<time>5__3
+	// System.Single FragController/<FadeOut>d__32::<time>5__3
 	float ___U3CtimeU3E5__3_7;
-	// UnityEngine.Color FragController/<FadeOut>d__29::<startColor>5__4
+	// UnityEngine.Color FragController/<FadeOut>d__32::<startColor>5__4
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___U3CstartColorU3E5__4_8;
-	// UnityEngine.Color FragController/<FadeOut>d__29::<endColor>5__5
+	// UnityEngine.Color FragController/<FadeOut>d__32::<endColor>5__5
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___U3CendColorU3E5__5_9;
 };
 
-// FragController/<FadeOutIfStuck>d__28
-struct U3CFadeOutIfStuckU3Ed__28_t99D116B0E4FD5C67233E32B8127E5EE04C01DC68  : public RuntimeObject
+// FragController/<FadeOutIfStuck>d__31
+struct U3CFadeOutIfStuckU3Ed__31_t90CC6F301362006C48DC10920274FD2AD652F84D  : public RuntimeObject
 {
-	// System.Int32 FragController/<FadeOutIfStuck>d__28::<>1__state
+	// System.Int32 FragController/<FadeOutIfStuck>d__31::<>1__state
 	int32_t ___U3CU3E1__state_0;
-	// System.Object FragController/<FadeOutIfStuck>d__28::<>2__current
+	// System.Object FragController/<FadeOutIfStuck>d__31::<>2__current
 	RuntimeObject* ___U3CU3E2__current_1;
-	// FragController FragController/<FadeOutIfStuck>d__28::<>4__this
+	// FragController FragController/<FadeOutIfStuck>d__31::<>4__this
 	FragController_t21CE457B3E96183C9813CA29EE774B3CA28128C8* ___U3CU3E4__this_2;
-	// UnityEngine.Vector3 FragController/<FadeOutIfStuck>d__28::<origPos>5__2
+	// UnityEngine.Vector3 FragController/<FadeOutIfStuck>d__31::<origPos>5__2
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___U3CorigPosU3E5__2_3;
+};
+
+// FragController/<MakeFragFlash>d__33
+struct U3CMakeFragFlashU3Ed__33_t37161EC0BA12E40DF4A633A50F6A0EE72FCC9148  : public RuntimeObject
+{
+	// System.Int32 FragController/<MakeFragFlash>d__33::<>1__state
+	int32_t ___U3CU3E1__state_0;
+	// System.Object FragController/<MakeFragFlash>d__33::<>2__current
+	RuntimeObject* ___U3CU3E2__current_1;
+	// FragController FragController/<MakeFragFlash>d__33::<>4__this
+	FragController_t21CE457B3E96183C9813CA29EE774B3CA28128C8* ___U3CU3E4__this_2;
+	// System.Collections.Generic.List`1<UnityEngine.Material> FragController/<MakeFragFlash>d__33::<childMats>5__2
+	List_1_t386E09F4F22DDE4D2AC41A8567FFF283C254537B* ___U3CchildMatsU3E5__2_3;
+	// System.Single FragController/<MakeFragFlash>d__33::<time>5__3
+	float ___U3CtimeU3E5__3_4;
+	// UnityEngine.Color FragController/<MakeFragFlash>d__33::<color>5__4
+	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___U3CcolorU3E5__4_5;
 };
 
 // ParticleController/<FadeOut>d__7
@@ -3702,12 +3723,18 @@ struct FragController_t21CE457B3E96183C9813CA29EE774B3CA28128C8  : public MonoBe
 	float ___fadeDuration_15;
 	// System.Single FragController::fragLifeTime
 	float ___fragLifeTime_16;
+	// System.Single FragController::_startIntensity
+	float ____startIntensity_17;
+	// System.Single FragController::_maxIntensity
+	float ____maxIntensity_18;
+	// System.Single FragController::_flashDuration
+	float ____flashDuration_19;
 	// BrickFrag FragController::brickScript
-	BrickFrag_tB9F5EC2E69C2473D1A7E4958069298BE4CD7B5EF* ___brickScript_17;
+	BrickFrag_tB9F5EC2E69C2473D1A7E4958069298BE4CD7B5EF* ___brickScript_20;
 	// System.Boolean FragController::toDisable
-	bool ___toDisable_18;
+	bool ___toDisable_21;
 	// System.Boolean FragController::timerOn
-	bool ___timerOn_19;
+	bool ___timerOn_22;
 };
 
 // FragSpawner
@@ -6161,8 +6188,8 @@ inline void Action_1_Invoke_m211AB6C2AA7326F6BFC8338EC888360A219AFF41_inline (Ac
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BrickFrag_MakeFlash_mA8F27112493A091633A6B715D9073AC6FAB942B3 (BrickFrag_tB9F5EC2E69C2473D1A7E4958069298BE4CD7B5EF* __this, const RuntimeMethod* method) ;
 // System.Collections.Generic.List`1<UnityEngine.Vector3> BrickFrag::GetWorldFracPoints()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_t77B94703E05C519A9010DD0614F757F974E1CD8B* BrickFrag_GetWorldFracPoints_m812F6E3D305A738D3FC32063B068D754565CBCE3 (BrickFrag_tB9F5EC2E69C2473D1A7E4958069298BE4CD7B5EF* __this, const RuntimeMethod* method) ;
-// System.Void FragController::ApplyFracForce(System.Collections.Generic.List`1<UnityEngine.Vector3>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FragController_ApplyFracForce_mF7D2CC89EC41BA5451CCD1BF0272CD71BCCCDF8F (FragController_t21CE457B3E96183C9813CA29EE774B3CA28128C8* __this, List_1_t77B94703E05C519A9010DD0614F757F974E1CD8B* ___fracPts0, const RuntimeMethod* method) ;
+// System.Void FragController::MakeFragExplode(System.Collections.Generic.List`1<UnityEngine.Vector3>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FragController_MakeFragExplode_mD4B15697F8DBE1E0E48969EBB733626514E21B61 (FragController_t21CE457B3E96183C9813CA29EE774B3CA28128C8* __this, List_1_t77B94703E05C519A9010DD0614F757F974E1CD8B* ___fracPts0, const RuntimeMethod* method) ;
 // System.Int32 System.Collections.Generic.List`1<BrickFrag/Fragment>::get_Count()
 inline int32_t List_1_get_Count_m26BBB12F106C95E45ED814A2022C722FBED8E206_inline (List_1_t5819FF01F7A1E3C1EAF3CD3E31AF5840D9CC74EA* __this, const RuntimeMethod* method)
 {
@@ -6378,6 +6405,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rigidbody_AddForce_m7A3EEEED21F986917107
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* Transform_GetChild_mE686DF0C7AAC1F7AEF356967B1C04D8B8E240EAF (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* __this, int32_t ___index0, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Transform::DetachChildren()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Transform_DetachChildren_m7E4B3405F2F053B059E76EC1DF0F235EED335D69 (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* __this, const RuntimeMethod* method) ;
+// System.Collections.IEnumerator FragController::MakeFragFlash()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* FragController_MakeFragFlash_mABB7B95B335FD88BF5F8977FAE3EC42A950E029C (FragController_t21CE457B3E96183C9813CA29EE774B3CA28128C8* __this, const RuntimeMethod* method) ;
 // System.Void FragController::MakeFall()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FragController_MakeFall_m8268D2E9EB1233AE92858DA8FE60C567F261750F (FragController_t21CE457B3E96183C9813CA29EE774B3CA28128C8* __this, const RuntimeMethod* method) ;
 // System.Void FragController::EnableGravity()
@@ -6388,10 +6417,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool GameObject_get_activeSelf_m4F3E5240E138B
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* FragController_FadeOut_mFD499F676AD188A927CDCD45F801511EAF8582BB (FragController_t21CE457B3E96183C9813CA29EE774B3CA28128C8* __this, float ___duration0, float ___tranPer1, bool ___destroy2, const RuntimeMethod* method) ;
 // System.Collections.IEnumerator FragController::FadeOutIfStuck()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* FragController_FadeOutIfStuck_m9F4A9313A29C5B79DD42C33A75752B38458AF604 (FragController_t21CE457B3E96183C9813CA29EE774B3CA28128C8* __this, const RuntimeMethod* method) ;
-// System.Void FragController/<FadeOutIfStuck>d__28::.ctor(System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CFadeOutIfStuckU3Ed__28__ctor_m0BB3449CF51F6258B634D4F831EDEC61E32EE74E (U3CFadeOutIfStuckU3Ed__28_t99D116B0E4FD5C67233E32B8127E5EE04C01DC68* __this, int32_t ___U3CU3E1__state0, const RuntimeMethod* method) ;
-// System.Void FragController/<FadeOut>d__29::.ctor(System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CFadeOutU3Ed__29__ctor_m635D67C51B27331EC6E2BB712667E536F43F37B2 (U3CFadeOutU3Ed__29_t48DBEE72F74D479595361100D941EFEF27AC65A1* __this, int32_t ___U3CU3E1__state0, const RuntimeMethod* method) ;
+// System.Void FragController/<FadeOutIfStuck>d__31::.ctor(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CFadeOutIfStuckU3Ed__31__ctor_mAA2C3230C05EF060BE9BDB84D2121E4F2F832BA1 (U3CFadeOutIfStuckU3Ed__31_t90CC6F301362006C48DC10920274FD2AD652F84D* __this, int32_t ___U3CU3E1__state0, const RuntimeMethod* method) ;
+// System.Void FragController/<FadeOut>d__32::.ctor(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CFadeOutU3Ed__32__ctor_m560B6B5695EFC208D972DF6D1E232CC8F8DEF8C1 (U3CFadeOutU3Ed__32_tBA317A74512B86152B6650854A2048F1300EB98E* __this, int32_t ___U3CU3E1__state0, const RuntimeMethod* method) ;
+// System.Void FragController/<MakeFragFlash>d__33::.ctor(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CMakeFragFlashU3Ed__33__ctor_mDDDC02FEF2355A30398E3F0414F4D257E30D224C (U3CMakeFragFlashU3Ed__33_t37161EC0BA12E40DF4A633A50F6A0EE72FCC9148* __this, int32_t ___U3CU3E1__state0, const RuntimeMethod* method) ;
 // System.Collections.IEnumerator UnityEngine.Transform::GetEnumerator()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Transform_GetEnumerator_mA7E1C882ACA0C33E284711CD09971DEA3FFEF404 (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* __this, const RuntimeMethod* method) ;
 // System.Collections.Generic.List`1<UnityEngine.Material> FragController::GetFragMats()
@@ -6416,6 +6447,12 @@ inline bool Enumerator_MoveNext_mBA548D3D8366081A2D80A286DFBAE0744464D0EC (Enume
 {
 	return ((  bool (*) (Enumerator_tEF58C7D40DDB41B6D712E0CAD7DA2883F14744B8*, const RuntimeMethod*))Enumerator_MoveNext_mE921CC8F29FBBDE7CC3209A0ED0D921D58D00BCB_gshared)(__this, method);
 }
+// System.Single UnityEngine.Mathf::Lerp(System.Single,System.Single,System.Single)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Lerp_m47EF2FFB7647BD0A1FDC26DC03E28B19812139B5_inline (float ___a0, float ___b1, float ___t2, const RuntimeMethod* method) ;
+// UnityEngine.Color UnityEngine.Color::op_Multiply(UnityEngine.Color,System.Single)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F Color_op_Multiply_m379B20A820266ACF82A21425B9CAE8DCD773CFBB_inline (Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___a0, float ___b1, const RuntimeMethod* method) ;
+// System.Void UnityEngine.Material::SetColor(System.String,UnityEngine.Color)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Material_SetColor_mFAB32FAA44461E46FD707B34184EC080CBB3539F (Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* __this, String_t* ___name0, Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___value1, const RuntimeMethod* method) ;
 // System.Void FragmentGenerator::CreateFragments()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FragmentGenerator_CreateFragments_m195866B882A3B6C531289869FB77B98457E4B721 (FragmentGenerator_t7EF3C0C52F1CB633BDF41F124EC1012BAAE0A1CB* __this, const RuntimeMethod* method) ;
 // UnityEngine.Rigidbody UnityEngine.Collision::get_rigidbody()
@@ -6739,10 +6776,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Transform_set_localPosition_mDE1C997F7D7
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Color32__ctor_mC9C6B443F0C7CA3F8B174158B2AF6F05E18EAC4E_inline (Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B* __this, uint8_t ___r0, uint8_t ___g1, uint8_t ___b2, uint8_t ___a3, const RuntimeMethod* method) ;
 // UnityEngine.Color UnityEngine.Color32::op_Implicit(UnityEngine.Color32)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F Color32_op_Implicit_m47CBB138122B400E0B1F4BFD7C30A6C2C00FCA3E_inline (Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B ___c0, const RuntimeMethod* method) ;
-// UnityEngine.Color UnityEngine.Color::op_Multiply(UnityEngine.Color,System.Single)
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F Color_op_Multiply_m379B20A820266ACF82A21425B9CAE8DCD773CFBB_inline (Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___a0, float ___b1, const RuntimeMethod* method) ;
-// System.Void UnityEngine.Material::SetColor(System.String,UnityEngine.Color)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Material_SetColor_mFAB32FAA44461E46FD707B34184EC080CBB3539F (Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* __this, String_t* ___name0, Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___value1, const RuntimeMethod* method) ;
 // System.Void WallController::CreateVoxels(UnityEngine.GameObject)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WallController_CreateVoxels_m6F3C68E3B3D6336707B79B37D5C2886538F1677D (WallController_t02C65E7F2765F8CBE99879014FF9118374FE40BA* __this, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___brick0, const RuntimeMethod* method) ;
 // System.Boolean System.Collections.Generic.List`1/Enumerator<WallController/Brick>::MoveNext()
@@ -12506,7 +12539,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CStartCollActionsU3Ed__52_MoveNext_mA9
 			}
 			case 5:
 			{
-				goto IL_01d4;
+				goto IL_01d3;
 			}
 		}
 	}
@@ -12723,12 +12756,12 @@ IL_016e:
 		AudioSource_PlayOneShot_m098BCAE084AABB128BB19ED805D2D985E7B75112(L_58, L_60, NULL);
 		// for (int i = 0; i < frags.Count; i++) {
 		__this->___U3CiU3E5__2_3 = 0;
-		goto IL_01eb;
+		goto IL_01ea;
 	}
 
 IL_018e:
 	{
-		// frags[i].fragC.ApplyFracForce(GetWorldFracPoints());
+		// frags[i].fragC.MakeFragExplode(GetWorldFracPoints());
 		BrickFrag_tB9F5EC2E69C2473D1A7E4958069298BE4CD7B5EF* L_61 = V_1;
 		NullCheck(L_61);
 		List_1_t5819FF01F7A1E3C1EAF3CD3E31AF5840D9CC74EA* L_62 = L_61->___frags_32;
@@ -12743,12 +12776,12 @@ IL_018e:
 		List_1_t77B94703E05C519A9010DD0614F757F974E1CD8B* L_67;
 		L_67 = BrickFrag_GetWorldFracPoints_m812F6E3D305A738D3FC32063B068D754565CBCE3(L_66, NULL);
 		NullCheck(L_65);
-		FragController_ApplyFracForce_mF7D2CC89EC41BA5451CCD1BF0272CD71BCCCDF8F(L_65, L_67, NULL);
-		// if (i % 10 == 0) {
+		FragController_MakeFragExplode_mD4B15697F8DBE1E0E48969EBB733626514E21B61(L_65, L_67, NULL);
+		// if (i % 2 == 0) {
 		int32_t L_68 = __this->___U3CiU3E5__2_3;
-		if (((int32_t)(L_68%((int32_t)10))))
+		if (((int32_t)(L_68%2)))
 		{
-			goto IL_01db;
+			goto IL_01da;
 		}
 	}
 	{
@@ -12765,12 +12798,12 @@ IL_018e:
 		return (bool)1;
 	}
 
-IL_01d4:
+IL_01d3:
 	{
 		__this->___U3CU3E1__state_0 = (-1);
 	}
 
-IL_01db:
+IL_01da:
 	{
 		// for (int i = 0; i < frags.Count; i++) {
 		int32_t L_72 = __this->___U3CiU3E5__2_3;
@@ -12779,7 +12812,7 @@ IL_01db:
 		__this->___U3CiU3E5__2_3 = ((int32_t)il2cpp_codegen_add(L_73, 1));
 	}
 
-IL_01eb:
+IL_01ea:
 	{
 		// for (int i = 0; i < frags.Count; i++) {
 		int32_t L_74 = __this->___U3CiU3E5__2_3;
@@ -14546,7 +14579,7 @@ IL_001a:
 		Transform_set_parent_m9BD5E563B539DD5BEC342736B03F97B38A243234(L_18, (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1*)NULL, NULL);
 		// frag.toDisable = true;
 		NullCheck(L_15);
-		L_15->___toDisable_18 = (bool)1;
+		L_15->___toDisable_21 = (bool)1;
 	}
 
 IL_006b:
@@ -14707,7 +14740,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FragController_Init_m4222B38FD06188C5F0B
 	}
 	{
 		// timerOn = true;
-		__this->___timerOn_19 = (bool)1;
+		__this->___timerOn_22 = (bool)1;
 		// startTime = Time.time;
 		float L_0;
 		L_0 = Time_get_time_m3A271BB1B20041144AC5B7863B71AB1F0150374B(NULL);
@@ -14717,8 +14750,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FragController_Init_m4222B38FD06188C5F0B
 		__this->___collForce_5 = L_1;
 		// this.brickScript = brickScript;
 		BrickFrag_tB9F5EC2E69C2473D1A7E4958069298BE4CD7B5EF* L_2 = ___brickScript4;
-		__this->___brickScript_17 = L_2;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___brickScript_17), (void*)L_2);
+		__this->___brickScript_20 = L_2;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___brickScript_20), (void*)L_2);
 		// this.FragSize = fragSize;
 		int32_t L_3 = ___fragSize0;
 		FragController_set_FragSize_m5AB0202F4B05A7E1497ACBE3AF505476796963F1_inline(__this, L_3, NULL);
@@ -14749,9 +14782,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FragController_Awake_m168B44431FDBD84781
 {
 	{
 		// toDisable = false;
-		__this->___toDisable_18 = (bool)0;
+		__this->___toDisable_21 = (bool)0;
 		// timerOn = false;
-		__this->___timerOn_19 = (bool)0;
+		__this->___timerOn_22 = (bool)0;
 		// }
 		return;
 	}
@@ -14790,7 +14823,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FragController_Update_m9601B41DA69145807
 		}
 	}
 	{
-		bool L_2 = __this->___toDisable_18;
+		bool L_2 = __this->___toDisable_21;
 		if (!L_2)
 		{
 			goto IL_0028;
@@ -14798,7 +14831,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FragController_Update_m9601B41DA69145807
 	}
 	{
 		// toDisable = false;
-		__this->___toDisable_18 = (bool)0;
+		__this->___toDisable_21 = (bool)0;
 		// gameObject.SetActive(false);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_3;
 		L_3 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
@@ -14819,7 +14852,7 @@ IL_0028:
 		}
 	}
 	{
-		bool L_7 = __this->___timerOn_19;
+		bool L_7 = __this->___timerOn_22;
 		if (!L_7)
 		{
 			goto IL_004b;
@@ -14827,7 +14860,7 @@ IL_0028:
 	}
 	{
 		// timerOn = false;
-		__this->___timerOn_19 = (bool)0;
+		__this->___timerOn_22 = (bool)0;
 	}
 
 IL_004b:
@@ -14934,8 +14967,8 @@ IL_002b:
 		return;
 	}
 }
-// System.Void FragController::ApplyFracForce(System.Collections.Generic.List`1<UnityEngine.Vector3>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FragController_ApplyFracForce_mF7D2CC89EC41BA5451CCD1BF0272CD71BCCCDF8F (FragController_t21CE457B3E96183C9813CA29EE774B3CA28128C8* __this, List_1_t77B94703E05C519A9010DD0614F757F974E1CD8B* ___fracPts0, const RuntimeMethod* method) 
+// System.Void FragController::MakeFragExplode(System.Collections.Generic.List`1<UnityEngine.Vector3>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FragController_MakeFragExplode_mD4B15697F8DBE1E0E48969EBB733626514E21B61 (FragController_t21CE457B3E96183C9813CA29EE774B3CA28128C8* __this, List_1_t77B94703E05C519A9010DD0614F757F974E1CD8B* ___fracPts0, const RuntimeMethod* method) 
 {
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
 	memset((&V_0), 0, sizeof(V_0));
@@ -14987,6 +15020,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FragController_ApplyFracForce_mF7D2CC89E
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_18 = V_1;
 		NullCheck(L_17);
 		Rigidbody_AddForce_mBDBC288D0E266BC1B62E3649B4FCE46E7EA9CCBC(L_17, L_18, 1, NULL);
+		// StartCoroutine(MakeFragFlash());
+		RuntimeObject* L_19;
+		L_19 = FragController_MakeFragFlash_mABB7B95B335FD88BF5F8977FAE3EC42A950E029C(__this, NULL);
+		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_20;
+		L_20 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_19, NULL);
 		// MakeFall();
 		FragController_MakeFall_m8268D2E9EB1233AE92858DA8FE60C567F261750F(__this, NULL);
 		// }
@@ -15071,14 +15109,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* FragController_FadeOutIfStuck_
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CFadeOutIfStuckU3Ed__28_t99D116B0E4FD5C67233E32B8127E5EE04C01DC68_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CFadeOutIfStuckU3Ed__31_t90CC6F301362006C48DC10920274FD2AD652F84D_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		U3CFadeOutIfStuckU3Ed__28_t99D116B0E4FD5C67233E32B8127E5EE04C01DC68* L_0 = (U3CFadeOutIfStuckU3Ed__28_t99D116B0E4FD5C67233E32B8127E5EE04C01DC68*)il2cpp_codegen_object_new(U3CFadeOutIfStuckU3Ed__28_t99D116B0E4FD5C67233E32B8127E5EE04C01DC68_il2cpp_TypeInfo_var);
+		U3CFadeOutIfStuckU3Ed__31_t90CC6F301362006C48DC10920274FD2AD652F84D* L_0 = (U3CFadeOutIfStuckU3Ed__31_t90CC6F301362006C48DC10920274FD2AD652F84D*)il2cpp_codegen_object_new(U3CFadeOutIfStuckU3Ed__31_t90CC6F301362006C48DC10920274FD2AD652F84D_il2cpp_TypeInfo_var);
 		NullCheck(L_0);
-		U3CFadeOutIfStuckU3Ed__28__ctor_m0BB3449CF51F6258B634D4F831EDEC61E32EE74E(L_0, 0, NULL);
-		U3CFadeOutIfStuckU3Ed__28_t99D116B0E4FD5C67233E32B8127E5EE04C01DC68* L_1 = L_0;
+		U3CFadeOutIfStuckU3Ed__31__ctor_mAA2C3230C05EF060BE9BDB84D2121E4F2F832BA1(L_0, 0, NULL);
+		U3CFadeOutIfStuckU3Ed__31_t90CC6F301362006C48DC10920274FD2AD652F84D* L_1 = L_0;
 		NullCheck(L_1);
 		L_1->___U3CU3E4__this_2 = __this;
 		Il2CppCodeGenWriteBarrier((void**)(&L_1->___U3CU3E4__this_2), (void*)__this);
@@ -15091,30 +15129,50 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* FragController_FadeOut_mFD499F
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CFadeOutU3Ed__29_t48DBEE72F74D479595361100D941EFEF27AC65A1_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CFadeOutU3Ed__32_tBA317A74512B86152B6650854A2048F1300EB98E_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		U3CFadeOutU3Ed__29_t48DBEE72F74D479595361100D941EFEF27AC65A1* L_0 = (U3CFadeOutU3Ed__29_t48DBEE72F74D479595361100D941EFEF27AC65A1*)il2cpp_codegen_object_new(U3CFadeOutU3Ed__29_t48DBEE72F74D479595361100D941EFEF27AC65A1_il2cpp_TypeInfo_var);
+		U3CFadeOutU3Ed__32_tBA317A74512B86152B6650854A2048F1300EB98E* L_0 = (U3CFadeOutU3Ed__32_tBA317A74512B86152B6650854A2048F1300EB98E*)il2cpp_codegen_object_new(U3CFadeOutU3Ed__32_tBA317A74512B86152B6650854A2048F1300EB98E_il2cpp_TypeInfo_var);
 		NullCheck(L_0);
-		U3CFadeOutU3Ed__29__ctor_m635D67C51B27331EC6E2BB712667E536F43F37B2(L_0, 0, NULL);
-		U3CFadeOutU3Ed__29_t48DBEE72F74D479595361100D941EFEF27AC65A1* L_1 = L_0;
+		U3CFadeOutU3Ed__32__ctor_m560B6B5695EFC208D972DF6D1E232CC8F8DEF8C1(L_0, 0, NULL);
+		U3CFadeOutU3Ed__32_tBA317A74512B86152B6650854A2048F1300EB98E* L_1 = L_0;
 		NullCheck(L_1);
 		L_1->___U3CU3E4__this_2 = __this;
 		Il2CppCodeGenWriteBarrier((void**)(&L_1->___U3CU3E4__this_2), (void*)__this);
-		U3CFadeOutU3Ed__29_t48DBEE72F74D479595361100D941EFEF27AC65A1* L_2 = L_1;
+		U3CFadeOutU3Ed__32_tBA317A74512B86152B6650854A2048F1300EB98E* L_2 = L_1;
 		float L_3 = ___duration0;
 		NullCheck(L_2);
 		L_2->___duration_4 = L_3;
-		U3CFadeOutU3Ed__29_t48DBEE72F74D479595361100D941EFEF27AC65A1* L_4 = L_2;
+		U3CFadeOutU3Ed__32_tBA317A74512B86152B6650854A2048F1300EB98E* L_4 = L_2;
 		float L_5 = ___tranPer1;
 		NullCheck(L_4);
 		L_4->___tranPer_3 = L_5;
-		U3CFadeOutU3Ed__29_t48DBEE72F74D479595361100D941EFEF27AC65A1* L_6 = L_4;
+		U3CFadeOutU3Ed__32_tBA317A74512B86152B6650854A2048F1300EB98E* L_6 = L_4;
 		bool L_7 = ___destroy2;
 		NullCheck(L_6);
 		L_6->___destroy_5 = L_7;
 		return L_6;
+	}
+}
+// System.Collections.IEnumerator FragController::MakeFragFlash()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* FragController_MakeFragFlash_mABB7B95B335FD88BF5F8977FAE3EC42A950E029C (FragController_t21CE457B3E96183C9813CA29EE774B3CA28128C8* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CMakeFragFlashU3Ed__33_t37161EC0BA12E40DF4A633A50F6A0EE72FCC9148_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		U3CMakeFragFlashU3Ed__33_t37161EC0BA12E40DF4A633A50F6A0EE72FCC9148* L_0 = (U3CMakeFragFlashU3Ed__33_t37161EC0BA12E40DF4A633A50F6A0EE72FCC9148*)il2cpp_codegen_object_new(U3CMakeFragFlashU3Ed__33_t37161EC0BA12E40DF4A633A50F6A0EE72FCC9148_il2cpp_TypeInfo_var);
+		NullCheck(L_0);
+		U3CMakeFragFlashU3Ed__33__ctor_mDDDC02FEF2355A30398E3F0414F4D257E30D224C(L_0, 0, NULL);
+		U3CMakeFragFlashU3Ed__33_t37161EC0BA12E40DF4A633A50F6A0EE72FCC9148* L_1 = L_0;
+		NullCheck(L_1);
+		L_1->___U3CU3E4__this_2 = __this;
+		Il2CppCodeGenWriteBarrier((void**)(&L_1->___U3CU3E4__this_2), (void*)__this);
+		return L_1;
 	}
 }
 // System.Collections.Generic.List`1<UnityEngine.Material> FragController::GetFragMats()
@@ -15260,6 +15318,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FragController__ctor_m20753E6C0BA16DEE33
 		__this->___fadeDuration_15 = (4.0f);
 		// [SerializeField] float fragLifeTime = 16f;
 		__this->___fragLifeTime_16 = (16.0f);
+		// [SerializeField] float _startIntensity = 1f;
+		__this->____startIntensity_17 = (1.0f);
+		// [SerializeField] float _maxIntensity = 10f;
+		__this->____maxIntensity_18 = (10.0f);
+		// [SerializeField] float _flashDuration = 0.1f;
+		__this->____flashDuration_19 = (0.100000001f);
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
 	}
@@ -15272,8 +15336,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FragController__ctor_m20753E6C0BA16DEE33
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// System.Void FragController/<FadeOutIfStuck>d__28::.ctor(System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CFadeOutIfStuckU3Ed__28__ctor_m0BB3449CF51F6258B634D4F831EDEC61E32EE74E (U3CFadeOutIfStuckU3Ed__28_t99D116B0E4FD5C67233E32B8127E5EE04C01DC68* __this, int32_t ___U3CU3E1__state0, const RuntimeMethod* method) 
+// System.Void FragController/<FadeOutIfStuck>d__31::.ctor(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CFadeOutIfStuckU3Ed__31__ctor_mAA2C3230C05EF060BE9BDB84D2121E4F2F832BA1 (U3CFadeOutIfStuckU3Ed__31_t90CC6F301362006C48DC10920274FD2AD652F84D* __this, int32_t ___U3CU3E1__state0, const RuntimeMethod* method) 
 {
 	{
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
@@ -15282,15 +15346,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CFadeOutIfStuckU3Ed__28__ctor_m0BB3449
 		return;
 	}
 }
-// System.Void FragController/<FadeOutIfStuck>d__28::System.IDisposable.Dispose()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CFadeOutIfStuckU3Ed__28_System_IDisposable_Dispose_mBECFBF9868AF7AA9E78222B46EC6905D79B6F30D (U3CFadeOutIfStuckU3Ed__28_t99D116B0E4FD5C67233E32B8127E5EE04C01DC68* __this, const RuntimeMethod* method) 
+// System.Void FragController/<FadeOutIfStuck>d__31::System.IDisposable.Dispose()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CFadeOutIfStuckU3Ed__31_System_IDisposable_Dispose_mA1F60812FBD161820B88D2E5CA6C6DF11B86DC4F (U3CFadeOutIfStuckU3Ed__31_t90CC6F301362006C48DC10920274FD2AD652F84D* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// System.Boolean FragController/<FadeOutIfStuck>d__28::MoveNext()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CFadeOutIfStuckU3Ed__28_MoveNext_m037D58D4566D09647E0050B4619F1E346DFD9760 (U3CFadeOutIfStuckU3Ed__28_t99D116B0E4FD5C67233E32B8127E5EE04C01DC68* __this, const RuntimeMethod* method) 
+// System.Boolean FragController/<FadeOutIfStuck>d__31::MoveNext()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CFadeOutIfStuckU3Ed__31_MoveNext_mD56E7DBD353F708EA7F32AB0BF6AB161FC9E9D55 (U3CFadeOutIfStuckU3Ed__31_t90CC6F301362006C48DC10920274FD2AD652F84D* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -15384,26 +15448,26 @@ IL_0085:
 		return (bool)0;
 	}
 }
-// System.Object FragController/<FadeOutIfStuck>d__28::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CFadeOutIfStuckU3Ed__28_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m8A0A79E7F6A0A578118E50AD13E5C3AEE2F2C28C (U3CFadeOutIfStuckU3Ed__28_t99D116B0E4FD5C67233E32B8127E5EE04C01DC68* __this, const RuntimeMethod* method) 
+// System.Object FragController/<FadeOutIfStuck>d__31::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CFadeOutIfStuckU3Ed__31_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m12E85CD7C21EBCBD3E0F35BBB2FBDFE40D6A7F1A (U3CFadeOutIfStuckU3Ed__31_t90CC6F301362006C48DC10920274FD2AD652F84D* __this, const RuntimeMethod* method) 
 {
 	{
 		RuntimeObject* L_0 = __this->___U3CU3E2__current_1;
 		return L_0;
 	}
 }
-// System.Void FragController/<FadeOutIfStuck>d__28::System.Collections.IEnumerator.Reset()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CFadeOutIfStuckU3Ed__28_System_Collections_IEnumerator_Reset_m0A9D420015D63056EEF3ED13681FAAF43785A79D (U3CFadeOutIfStuckU3Ed__28_t99D116B0E4FD5C67233E32B8127E5EE04C01DC68* __this, const RuntimeMethod* method) 
+// System.Void FragController/<FadeOutIfStuck>d__31::System.Collections.IEnumerator.Reset()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CFadeOutIfStuckU3Ed__31_System_Collections_IEnumerator_Reset_m03CBA237E57135FE7EE9172FBDE6626C137B872D (U3CFadeOutIfStuckU3Ed__31_t90CC6F301362006C48DC10920274FD2AD652F84D* __this, const RuntimeMethod* method) 
 {
 	{
 		NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A* L_0 = (NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A_il2cpp_TypeInfo_var)));
 		NullCheck(L_0);
 		NotSupportedException__ctor_m1398D0CDE19B36AA3DE9392879738C1EA2439CDF(L_0, NULL);
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CFadeOutIfStuckU3Ed__28_System_Collections_IEnumerator_Reset_m0A9D420015D63056EEF3ED13681FAAF43785A79D_RuntimeMethod_var)));
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CFadeOutIfStuckU3Ed__31_System_Collections_IEnumerator_Reset_m03CBA237E57135FE7EE9172FBDE6626C137B872D_RuntimeMethod_var)));
 	}
 }
-// System.Object FragController/<FadeOutIfStuck>d__28::System.Collections.IEnumerator.get_Current()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CFadeOutIfStuckU3Ed__28_System_Collections_IEnumerator_get_Current_m052E6B3862F53114C0C5AA1F39816606B4159539 (U3CFadeOutIfStuckU3Ed__28_t99D116B0E4FD5C67233E32B8127E5EE04C01DC68* __this, const RuntimeMethod* method) 
+// System.Object FragController/<FadeOutIfStuck>d__31::System.Collections.IEnumerator.get_Current()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CFadeOutIfStuckU3Ed__31_System_Collections_IEnumerator_get_Current_m8DCF88B0B15C2601532C166E6660502CAFF7DF0F (U3CFadeOutIfStuckU3Ed__31_t90CC6F301362006C48DC10920274FD2AD652F84D* __this, const RuntimeMethod* method) 
 {
 	{
 		RuntimeObject* L_0 = __this->___U3CU3E2__current_1;
@@ -15418,8 +15482,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CFadeOutIfStuckU3Ed__28_Syst
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// System.Void FragController/<FadeOut>d__29::.ctor(System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CFadeOutU3Ed__29__ctor_m635D67C51B27331EC6E2BB712667E536F43F37B2 (U3CFadeOutU3Ed__29_t48DBEE72F74D479595361100D941EFEF27AC65A1* __this, int32_t ___U3CU3E1__state0, const RuntimeMethod* method) 
+// System.Void FragController/<FadeOut>d__32::.ctor(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CFadeOutU3Ed__32__ctor_m560B6B5695EFC208D972DF6D1E232CC8F8DEF8C1 (U3CFadeOutU3Ed__32_tBA317A74512B86152B6650854A2048F1300EB98E* __this, int32_t ___U3CU3E1__state0, const RuntimeMethod* method) 
 {
 	{
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
@@ -15428,15 +15492,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CFadeOutU3Ed__29__ctor_m635D67C51B2733
 		return;
 	}
 }
-// System.Void FragController/<FadeOut>d__29::System.IDisposable.Dispose()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CFadeOutU3Ed__29_System_IDisposable_Dispose_m011145254C6A184EA172EA7D64D33E4ACDA853F6 (U3CFadeOutU3Ed__29_t48DBEE72F74D479595361100D941EFEF27AC65A1* __this, const RuntimeMethod* method) 
+// System.Void FragController/<FadeOut>d__32::System.IDisposable.Dispose()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CFadeOutU3Ed__32_System_IDisposable_Dispose_m0ED23B7CA9B223D104433E16892595175DBA982E (U3CFadeOutU3Ed__32_tBA317A74512B86152B6650854A2048F1300EB98E* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// System.Boolean FragController/<FadeOut>d__29::MoveNext()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CFadeOutU3Ed__29_MoveNext_m32F4ABE690D44293BDB0823F85ACFF9656BCF8DA (U3CFadeOutU3Ed__29_t48DBEE72F74D479595361100D941EFEF27AC65A1* __this, const RuntimeMethod* method) 
+// System.Boolean FragController/<FadeOut>d__32::MoveNext()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CFadeOutU3Ed__32_MoveNext_mC32F45B276E40989C9876ACBEC0E7211569510C6 (U3CFadeOutU3Ed__32_tBA317A74512B86152B6650854A2048F1300EB98E* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -15616,26 +15680,366 @@ IL_0107:
 		return (bool)0;
 	}
 }
-// System.Object FragController/<FadeOut>d__29::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CFadeOutU3Ed__29_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mD0435910AD65990347B5F206B9463FD457C6D1C0 (U3CFadeOutU3Ed__29_t48DBEE72F74D479595361100D941EFEF27AC65A1* __this, const RuntimeMethod* method) 
+// System.Object FragController/<FadeOut>d__32::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CFadeOutU3Ed__32_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m8C16A1BD49CAEB07BBD469AB8F57FF7EFDD8DE4A (U3CFadeOutU3Ed__32_tBA317A74512B86152B6650854A2048F1300EB98E* __this, const RuntimeMethod* method) 
 {
 	{
 		RuntimeObject* L_0 = __this->___U3CU3E2__current_1;
 		return L_0;
 	}
 }
-// System.Void FragController/<FadeOut>d__29::System.Collections.IEnumerator.Reset()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CFadeOutU3Ed__29_System_Collections_IEnumerator_Reset_mAE61FE530F62AEF4C5837D10712280E025336E2E (U3CFadeOutU3Ed__29_t48DBEE72F74D479595361100D941EFEF27AC65A1* __this, const RuntimeMethod* method) 
+// System.Void FragController/<FadeOut>d__32::System.Collections.IEnumerator.Reset()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CFadeOutU3Ed__32_System_Collections_IEnumerator_Reset_m2AC132E86598A965E7D65D4CCB714C18F59EB9EF (U3CFadeOutU3Ed__32_tBA317A74512B86152B6650854A2048F1300EB98E* __this, const RuntimeMethod* method) 
 {
 	{
 		NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A* L_0 = (NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A_il2cpp_TypeInfo_var)));
 		NullCheck(L_0);
 		NotSupportedException__ctor_m1398D0CDE19B36AA3DE9392879738C1EA2439CDF(L_0, NULL);
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CFadeOutU3Ed__29_System_Collections_IEnumerator_Reset_mAE61FE530F62AEF4C5837D10712280E025336E2E_RuntimeMethod_var)));
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CFadeOutU3Ed__32_System_Collections_IEnumerator_Reset_m2AC132E86598A965E7D65D4CCB714C18F59EB9EF_RuntimeMethod_var)));
 	}
 }
-// System.Object FragController/<FadeOut>d__29::System.Collections.IEnumerator.get_Current()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CFadeOutU3Ed__29_System_Collections_IEnumerator_get_Current_mA46E91CA5B8EFEE865AD6112B95CE843B167CE99 (U3CFadeOutU3Ed__29_t48DBEE72F74D479595361100D941EFEF27AC65A1* __this, const RuntimeMethod* method) 
+// System.Object FragController/<FadeOut>d__32::System.Collections.IEnumerator.get_Current()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CFadeOutU3Ed__32_System_Collections_IEnumerator_get_Current_m0B311BE33267F2375C028A4E3FC027E757B85355 (U3CFadeOutU3Ed__32_tBA317A74512B86152B6650854A2048F1300EB98E* __this, const RuntimeMethod* method) 
+{
+	{
+		RuntimeObject* L_0 = __this->___U3CU3E2__current_1;
+		return L_0;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void FragController/<MakeFragFlash>d__33::.ctor(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CMakeFragFlashU3Ed__33__ctor_mDDDC02FEF2355A30398E3F0414F4D257E30D224C (U3CMakeFragFlashU3Ed__33_t37161EC0BA12E40DF4A633A50F6A0EE72FCC9148* __this, int32_t ___U3CU3E1__state0, const RuntimeMethod* method) 
+{
+	{
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		int32_t L_0 = ___U3CU3E1__state0;
+		__this->___U3CU3E1__state_0 = L_0;
+		return;
+	}
+}
+// System.Void FragController/<MakeFragFlash>d__33::System.IDisposable.Dispose()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CMakeFragFlashU3Ed__33_System_IDisposable_Dispose_mD10DD23378F7D3A6FA2501B0DF792360D5E3DE91 (U3CMakeFragFlashU3Ed__33_t37161EC0BA12E40DF4A633A50F6A0EE72FCC9148* __this, const RuntimeMethod* method) 
+{
+	{
+		return;
+	}
+}
+// System.Boolean FragController/<MakeFragFlash>d__33::MoveNext()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CMakeFragFlashU3Ed__33_MoveNext_m3D7D78628BA7EEF2278EF69F16809C3BEE3A5A57 (U3CMakeFragFlashU3Ed__33_t37161EC0BA12E40DF4A633A50F6A0EE72FCC9148* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_Dispose_m0C67BB2FAEE25E3D9B432C9A245E62C2760A78A8_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_MoveNext_mBA548D3D8366081A2D80A286DFBAE0744464D0EC_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_get_Current_m2194C411E1208AC29EFC254376D8F58E0B011CFD_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_GetEnumerator_mF472961C4665B7EE4F1C4C8A05B00B08153BB96A_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Item_m70F5CFC2DEA9332B78C5ADC0EE1CE1B7465B1456_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralB92EF51E45166C91E2762DB6C9F27C8BD6EBE466);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t V_0 = 0;
+	FragController_t21CE457B3E96183C9813CA29EE774B3CA28128C8* V_1 = NULL;
+	Enumerator_tEF58C7D40DDB41B6D712E0CAD7DA2883F14744B8 V_2;
+	memset((&V_2), 0, sizeof(V_2));
+	float V_3 = 0.0f;
+	float V_4 = 0.0f;
+	{
+		int32_t L_0 = __this->___U3CU3E1__state_0;
+		V_0 = L_0;
+		FragController_t21CE457B3E96183C9813CA29EE774B3CA28128C8* L_1 = __this->___U3CU3E4__this_2;
+		V_1 = L_1;
+		int32_t L_2 = V_0;
+		switch (L_2)
+		{
+			case 0:
+			{
+				goto IL_0022;
+			}
+			case 1:
+			{
+				goto IL_00e1;
+			}
+			case 2:
+			{
+				goto IL_0196;
+			}
+		}
+	}
+	{
+		return (bool)0;
+	}
+
+IL_0022:
+	{
+		__this->___U3CU3E1__state_0 = (-1);
+		// List<Material> childMats = GetFragMats();
+		FragController_t21CE457B3E96183C9813CA29EE774B3CA28128C8* L_3 = V_1;
+		NullCheck(L_3);
+		List_1_t386E09F4F22DDE4D2AC41A8567FFF283C254537B* L_4;
+		L_4 = FragController_GetFragMats_m120C86BA83E25E812236629309C0F88A1016130B(L_3, NULL);
+		__this->___U3CchildMatsU3E5__2_3 = L_4;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CchildMatsU3E5__2_3), (void*)L_4);
+		// float time = 0f;
+		__this->___U3CtimeU3E5__3_4 = (0.0f);
+		// Color color = childMats[0].color;
+		List_1_t386E09F4F22DDE4D2AC41A8567FFF283C254537B* L_5 = __this->___U3CchildMatsU3E5__2_3;
+		NullCheck(L_5);
+		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_6;
+		L_6 = List_1_get_Item_m70F5CFC2DEA9332B78C5ADC0EE1CE1B7465B1456(L_5, 0, List_1_get_Item_m70F5CFC2DEA9332B78C5ADC0EE1CE1B7465B1456_RuntimeMethod_var);
+		NullCheck(L_6);
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_7;
+		L_7 = Material_get_color_mA4B7D4B96200D9D8B4F36BF19957E9DA81071DBB(L_6, NULL);
+		__this->___U3CcolorU3E5__4_5 = L_7;
+		goto IL_00e8;
+	}
+
+IL_005c:
+	{
+		// foreach (Material mat in childMats) {
+		List_1_t386E09F4F22DDE4D2AC41A8567FFF283C254537B* L_8 = __this->___U3CchildMatsU3E5__2_3;
+		NullCheck(L_8);
+		Enumerator_tEF58C7D40DDB41B6D712E0CAD7DA2883F14744B8 L_9;
+		L_9 = List_1_GetEnumerator_mF472961C4665B7EE4F1C4C8A05B00B08153BB96A(L_8, List_1_GetEnumerator_mF472961C4665B7EE4F1C4C8A05B00B08153BB96A_RuntimeMethod_var);
+		V_2 = L_9;
+	}
+	{
+		auto __finallyBlock = il2cpp::utils::Finally([&]
+		{
+
+FINALLY_00b1:
+			{// begin finally (depth: 1)
+				Enumerator_Dispose_m0C67BB2FAEE25E3D9B432C9A245E62C2760A78A8((&V_2), Enumerator_Dispose_m0C67BB2FAEE25E3D9B432C9A245E62C2760A78A8_RuntimeMethod_var);
+				return;
+			}// end finally (depth: 1)
+		});
+		try
+		{// begin try (depth: 1)
+			{
+				goto IL_00a6_1;
+			}
+
+IL_006a_1:
+			{
+				// foreach (Material mat in childMats) {
+				Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_10;
+				L_10 = Enumerator_get_Current_m2194C411E1208AC29EFC254376D8F58E0B011CFD_inline((&V_2), Enumerator_get_Current_m2194C411E1208AC29EFC254376D8F58E0B011CFD_RuntimeMethod_var);
+				// float intensity = Mathf.Lerp(_startIntensity, _maxIntensity, time / _flashDuration);
+				FragController_t21CE457B3E96183C9813CA29EE774B3CA28128C8* L_11 = V_1;
+				NullCheck(L_11);
+				float L_12 = L_11->____startIntensity_17;
+				FragController_t21CE457B3E96183C9813CA29EE774B3CA28128C8* L_13 = V_1;
+				NullCheck(L_13);
+				float L_14 = L_13->____maxIntensity_18;
+				float L_15 = __this->___U3CtimeU3E5__3_4;
+				FragController_t21CE457B3E96183C9813CA29EE774B3CA28128C8* L_16 = V_1;
+				NullCheck(L_16);
+				float L_17 = L_16->____flashDuration_19;
+				float L_18;
+				L_18 = Mathf_Lerp_m47EF2FFB7647BD0A1FDC26DC03E28B19812139B5_inline(L_12, L_14, ((float)(L_15/L_17)), NULL);
+				V_3 = L_18;
+				// mat.SetColor("_EmissionColor", color * intensity);
+				Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_19 = __this->___U3CcolorU3E5__4_5;
+				float L_20 = V_3;
+				Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_21;
+				L_21 = Color_op_Multiply_m379B20A820266ACF82A21425B9CAE8DCD773CFBB_inline(L_19, L_20, NULL);
+				NullCheck(L_10);
+				Material_SetColor_mFAB32FAA44461E46FD707B34184EC080CBB3539F(L_10, _stringLiteralB92EF51E45166C91E2762DB6C9F27C8BD6EBE466, L_21, NULL);
+			}
+
+IL_00a6_1:
+			{
+				// foreach (Material mat in childMats) {
+				bool L_22;
+				L_22 = Enumerator_MoveNext_mBA548D3D8366081A2D80A286DFBAE0744464D0EC((&V_2), Enumerator_MoveNext_mBA548D3D8366081A2D80A286DFBAE0744464D0EC_RuntimeMethod_var);
+				if (L_22)
+				{
+					goto IL_006a_1;
+				}
+			}
+			{
+				goto IL_00bf;
+			}
+		}// end try (depth: 1)
+		catch(Il2CppExceptionWrapper& e)
+		{
+			__finallyBlock.StoreException(e.ex);
+		}
+	}
+
+IL_00bf:
+	{
+		// time += Time.deltaTime;
+		float L_23 = __this->___U3CtimeU3E5__3_4;
+		float L_24;
+		L_24 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
+		__this->___U3CtimeU3E5__3_4 = ((float)il2cpp_codegen_add(L_23, L_24));
+		// yield return null;
+		__this->___U3CU3E2__current_1 = NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current_1), (void*)NULL);
+		__this->___U3CU3E1__state_0 = 1;
+		return (bool)1;
+	}
+
+IL_00e1:
+	{
+		__this->___U3CU3E1__state_0 = (-1);
+	}
+
+IL_00e8:
+	{
+		// while(time < _flashDuration) {
+		float L_25 = __this->___U3CtimeU3E5__3_4;
+		FragController_t21CE457B3E96183C9813CA29EE774B3CA28128C8* L_26 = V_1;
+		NullCheck(L_26);
+		float L_27 = L_26->____flashDuration_19;
+		if ((((float)L_25) < ((float)L_27)))
+		{
+			goto IL_005c;
+		}
+	}
+	{
+		// time = 0f;
+		__this->___U3CtimeU3E5__3_4 = (0.0f);
+		goto IL_019d;
+	}
+
+IL_0109:
+	{
+		// foreach (Material mat in childMats) {
+		List_1_t386E09F4F22DDE4D2AC41A8567FFF283C254537B* L_28 = __this->___U3CchildMatsU3E5__2_3;
+		NullCheck(L_28);
+		Enumerator_tEF58C7D40DDB41B6D712E0CAD7DA2883F14744B8 L_29;
+		L_29 = List_1_GetEnumerator_mF472961C4665B7EE4F1C4C8A05B00B08153BB96A(L_28, List_1_GetEnumerator_mF472961C4665B7EE4F1C4C8A05B00B08153BB96A_RuntimeMethod_var);
+		V_2 = L_29;
+	}
+	{
+		auto __finallyBlock = il2cpp::utils::Finally([&]
+		{
+
+FINALLY_0166:
+			{// begin finally (depth: 1)
+				Enumerator_Dispose_m0C67BB2FAEE25E3D9B432C9A245E62C2760A78A8((&V_2), Enumerator_Dispose_m0C67BB2FAEE25E3D9B432C9A245E62C2760A78A8_RuntimeMethod_var);
+				return;
+			}// end finally (depth: 1)
+		});
+		try
+		{// begin try (depth: 1)
+			{
+				goto IL_015b_1;
+			}
+
+IL_0117_1:
+			{
+				// foreach (Material mat in childMats) {
+				Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_30;
+				L_30 = Enumerator_get_Current_m2194C411E1208AC29EFC254376D8F58E0B011CFD_inline((&V_2), Enumerator_get_Current_m2194C411E1208AC29EFC254376D8F58E0B011CFD_RuntimeMethod_var);
+				// float intensity = Mathf.Lerp(_maxIntensity, _startIntensity, time / (_flashDuration * 2));
+				FragController_t21CE457B3E96183C9813CA29EE774B3CA28128C8* L_31 = V_1;
+				NullCheck(L_31);
+				float L_32 = L_31->____maxIntensity_18;
+				FragController_t21CE457B3E96183C9813CA29EE774B3CA28128C8* L_33 = V_1;
+				NullCheck(L_33);
+				float L_34 = L_33->____startIntensity_17;
+				float L_35 = __this->___U3CtimeU3E5__3_4;
+				FragController_t21CE457B3E96183C9813CA29EE774B3CA28128C8* L_36 = V_1;
+				NullCheck(L_36);
+				float L_37 = L_36->____flashDuration_19;
+				float L_38;
+				L_38 = Mathf_Lerp_m47EF2FFB7647BD0A1FDC26DC03E28B19812139B5_inline(L_32, L_34, ((float)(L_35/((float)il2cpp_codegen_multiply(L_37, (2.0f))))), NULL);
+				V_4 = L_38;
+				// mat.SetColor("_EmissionColor", color * intensity);
+				Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_39 = __this->___U3CcolorU3E5__4_5;
+				float L_40 = V_4;
+				Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_41;
+				L_41 = Color_op_Multiply_m379B20A820266ACF82A21425B9CAE8DCD773CFBB_inline(L_39, L_40, NULL);
+				NullCheck(L_30);
+				Material_SetColor_mFAB32FAA44461E46FD707B34184EC080CBB3539F(L_30, _stringLiteralB92EF51E45166C91E2762DB6C9F27C8BD6EBE466, L_41, NULL);
+			}
+
+IL_015b_1:
+			{
+				// foreach (Material mat in childMats) {
+				bool L_42;
+				L_42 = Enumerator_MoveNext_mBA548D3D8366081A2D80A286DFBAE0744464D0EC((&V_2), Enumerator_MoveNext_mBA548D3D8366081A2D80A286DFBAE0744464D0EC_RuntimeMethod_var);
+				if (L_42)
+				{
+					goto IL_0117_1;
+				}
+			}
+			{
+				goto IL_0174;
+			}
+		}// end try (depth: 1)
+		catch(Il2CppExceptionWrapper& e)
+		{
+			__finallyBlock.StoreException(e.ex);
+		}
+	}
+
+IL_0174:
+	{
+		// time += Time.deltaTime;
+		float L_43 = __this->___U3CtimeU3E5__3_4;
+		float L_44;
+		L_44 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
+		__this->___U3CtimeU3E5__3_4 = ((float)il2cpp_codegen_add(L_43, L_44));
+		// yield return null;
+		__this->___U3CU3E2__current_1 = NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current_1), (void*)NULL);
+		__this->___U3CU3E1__state_0 = 2;
+		return (bool)1;
+	}
+
+IL_0196:
+	{
+		__this->___U3CU3E1__state_0 = (-1);
+	}
+
+IL_019d:
+	{
+		// while(time < _flashDuration * 2) {
+		float L_45 = __this->___U3CtimeU3E5__3_4;
+		FragController_t21CE457B3E96183C9813CA29EE774B3CA28128C8* L_46 = V_1;
+		NullCheck(L_46);
+		float L_47 = L_46->____flashDuration_19;
+		if ((((float)L_45) < ((float)((float)il2cpp_codegen_multiply(L_47, (2.0f))))))
+		{
+			goto IL_0109;
+		}
+	}
+	{
+		// }
+		return (bool)0;
+	}
+}
+// System.Object FragController/<MakeFragFlash>d__33::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CMakeFragFlashU3Ed__33_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m8CDB8206148E638CB70F4E86ED274EA78AE3E527 (U3CMakeFragFlashU3Ed__33_t37161EC0BA12E40DF4A633A50F6A0EE72FCC9148* __this, const RuntimeMethod* method) 
+{
+	{
+		RuntimeObject* L_0 = __this->___U3CU3E2__current_1;
+		return L_0;
+	}
+}
+// System.Void FragController/<MakeFragFlash>d__33::System.Collections.IEnumerator.Reset()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CMakeFragFlashU3Ed__33_System_Collections_IEnumerator_Reset_mC28F29C0965DF146B6174E96E85DC469884F30A5 (U3CMakeFragFlashU3Ed__33_t37161EC0BA12E40DF4A633A50F6A0EE72FCC9148* __this, const RuntimeMethod* method) 
+{
+	{
+		NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A* L_0 = (NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A_il2cpp_TypeInfo_var)));
+		NullCheck(L_0);
+		NotSupportedException__ctor_m1398D0CDE19B36AA3DE9392879738C1EA2439CDF(L_0, NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CMakeFragFlashU3Ed__33_System_Collections_IEnumerator_Reset_mC28F29C0965DF146B6174E96E85DC469884F30A5_RuntimeMethod_var)));
+	}
+}
+// System.Object FragController/<MakeFragFlash>d__33::System.Collections.IEnumerator.get_Current()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CMakeFragFlashU3Ed__33_System_Collections_IEnumerator_get_Current_m464A8406F52E33935C65005C3E9459F1952AAC0F (U3CMakeFragFlashU3Ed__33_t37161EC0BA12E40DF4A633A50F6A0EE72FCC9148* __this, const RuntimeMethod* method) 
 {
 	{
 		RuntimeObject* L_0 = __this->___U3CU3E2__current_1;
@@ -18525,7 +18929,7 @@ IL_0071:
 		// frag.toDisable = true;
 		FragController_t21CE457B3E96183C9813CA29EE774B3CA28128C8* L_24 = V_0;
 		NullCheck(L_24);
-		L_24->___toDisable_18 = (bool)1;
+		L_24->___toDisable_21 = (bool)1;
 	}
 
 IL_0089:
@@ -24419,6 +24823,56 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void FragController_set_FragSize_
 		return;
 	}
 }
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Lerp_m47EF2FFB7647BD0A1FDC26DC03E28B19812139B5_inline (float ___a0, float ___b1, float ___t2, const RuntimeMethod* method) 
+{
+	float V_0 = 0.0f;
+	{
+		float L_0 = ___a0;
+		float L_1 = ___b1;
+		float L_2 = ___a0;
+		float L_3 = ___t2;
+		float L_4;
+		L_4 = Mathf_Clamp01_mA7E048DBDA832D399A581BE4D6DED9FA44CE0F14_inline(L_3, NULL);
+		V_0 = ((float)il2cpp_codegen_add(L_0, ((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_subtract(L_1, L_2)), L_4))));
+		goto IL_0010;
+	}
+
+IL_0010:
+	{
+		float L_5 = V_0;
+		return L_5;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F Color_op_Multiply_m379B20A820266ACF82A21425B9CAE8DCD773CFBB_inline (Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___a0, float ___b1, const RuntimeMethod* method) 
+{
+	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	{
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_0 = ___a0;
+		float L_1 = L_0.___r_0;
+		float L_2 = ___b1;
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_3 = ___a0;
+		float L_4 = L_3.___g_1;
+		float L_5 = ___b1;
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_6 = ___a0;
+		float L_7 = L_6.___b_2;
+		float L_8 = ___b1;
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_9 = ___a0;
+		float L_10 = L_9.___a_3;
+		float L_11 = ___b1;
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_12;
+		memset((&L_12), 0, sizeof(L_12));
+		Color__ctor_m3786F0D6E510D9CFA544523A955870BD2A514C8C_inline((&L_12), ((float)il2cpp_codegen_multiply(L_1, L_2)), ((float)il2cpp_codegen_multiply(L_4, L_5)), ((float)il2cpp_codegen_multiply(L_7, L_8)), ((float)il2cpp_codegen_multiply(L_10, L_11)), /*hidden argument*/NULL);
+		V_0 = L_12;
+		goto IL_0029;
+	}
+
+IL_0029:
+	{
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_13 = V_0;
+		return L_13;
+	}
+}
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void GameController_set_Instance_m4A8BAF965F5537FC39B44D413A3752665727C76C_inline (GameController_tDA619EE453F7ED2C8297EF928518A0B447E44D09* ___value0, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24606,36 +25060,6 @@ IL_003d:
 	{
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_9 = V_0;
 		return L_9;
-	}
-}
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F Color_op_Multiply_m379B20A820266ACF82A21425B9CAE8DCD773CFBB_inline (Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___a0, float ___b1, const RuntimeMethod* method) 
-{
-	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F V_0;
-	memset((&V_0), 0, sizeof(V_0));
-	{
-		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_0 = ___a0;
-		float L_1 = L_0.___r_0;
-		float L_2 = ___b1;
-		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_3 = ___a0;
-		float L_4 = L_3.___g_1;
-		float L_5 = ___b1;
-		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_6 = ___a0;
-		float L_7 = L_6.___b_2;
-		float L_8 = ___b1;
-		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_9 = ___a0;
-		float L_10 = L_9.___a_3;
-		float L_11 = ___b1;
-		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_12;
-		memset((&L_12), 0, sizeof(L_12));
-		Color__ctor_m3786F0D6E510D9CFA544523A955870BD2A514C8C_inline((&L_12), ((float)il2cpp_codegen_multiply(L_1, L_2)), ((float)il2cpp_codegen_multiply(L_4, L_5)), ((float)il2cpp_codegen_multiply(L_7, L_8)), ((float)il2cpp_codegen_multiply(L_10, L_11)), /*hidden argument*/NULL);
-		V_0 = L_12;
-		goto IL_0029;
-	}
-
-IL_0029:
-	{
-		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_13 = V_0;
-		return L_13;
 	}
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F Color_get_black_mB50217951591A045844C61E7FF31EEE3FEF16737_inline (const RuntimeMethod* method) 
