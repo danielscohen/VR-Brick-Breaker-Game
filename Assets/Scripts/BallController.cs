@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,11 +17,14 @@ public class BallController : MonoBehaviour
     public int BallID { get; set; }
     public bool GravityEnabled { get; set; }
 
+    AudioSource _audioSource;
+
     void Awake() {
         
         ballRb = GetComponent<Rigidbody>();
         ballRb.useGravity = true;
         GravityEnabled = true;
+        _audioSource = GetComponent<AudioSource>();
     }
 
     void Start() {
@@ -36,6 +40,14 @@ public class BallController : MonoBehaviour
         if (collision.collider.CompareTag("Frag")) {
             Physics.IgnoreCollision(collision.collider, GetComponent<Collider>());
         }
+        if (collision.collider.CompareTag("Arena Wall")) {
+            PlayArenaWallHitAudio();
+        }
+    }
+
+    void PlayArenaWallHitAudio()
+    {
+        _audioSource.Play();
     }
 
     public bool IsCollisionAllowed() {

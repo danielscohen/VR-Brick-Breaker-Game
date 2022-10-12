@@ -10,6 +10,7 @@ TagManager:
   - Brick
   - PowerUp
   - Player Bounds
+  - Arena Wall
   layers:
   - Default
   - TransparentFX

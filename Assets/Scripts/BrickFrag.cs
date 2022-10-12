@@ -49,6 +49,9 @@ public class BrickFrag : MonoBehaviour
     [SerializeField] int minFragSizeKeep = 1;
     [SerializeField] int particleProb = 4;
     [SerializeField] int PowerUpSpawnProb = 10;
+    [SerializeField] AudioClip _impactAudio;
+    [SerializeField] AudioClip _fracAudio;
+    [SerializeField] AudioClip _explosionAudio;
     public static event System.Action<Vector3> onSpawnPowerUp;
     
     int[,,] voxMap;
@@ -61,6 +64,8 @@ public class BrickFrag : MonoBehaviour
     List<Vector3Int> deletedVoxels = new List<Vector3Int>();
 
     ArenaManager _arenaManager;
+
+    AudioSource _audioSource;
 
 
 
@@ -79,6 +84,9 @@ public class BrickFrag : MonoBehaviour
 
 
 
+    private void Awake() {
+        _audioSource = GetComponent<AudioSource>();
+    }
     private void Start() {
         cam = Camera.main.gameObject;
         fragSpawner = GameObject.Find("Frag Spawner").GetComponent<FragSpawner>();
@@ -110,6 +118,8 @@ public class BrickFrag : MonoBehaviour
     IEnumerator StartCollActions() {
         MakeVoxMap();
 
+        _audioSource.PlayOneShot(_impactAudio);
+
         MakeCrater();
 
         MakeVoxelsVisible();
@@ -117,9 +127,11 @@ public class BrickFrag : MonoBehaviour
         //yield return new WaitForSeconds(craterFracDelay);
 
         CreateFracLines();
-        Debug.Log($"frac line pts: {fracLinePts.Count}");
+        // Debug.Log($"frac line pts: {fracLinePts.Count}");
         yield return StartCoroutine(FadeVoxels(voxFadePer, voxFadeOutDur));
+        PlayFracAudio();
         yield return StartCoroutine(DrawFracLines());
+        StopFracAudio();
         yield return StartCoroutine(FadeVoxels(1f, voxFadeInDur));
         DeleteFracLines();
 
@@ -144,6 +156,8 @@ public class BrickFrag : MonoBehaviour
 
         MakeFlash();
 
+        _audioSource.PlayOneShot(_explosionAudio);
+
         for (int i = 0; i < frags.Count; i++) {
             frags[i].fragC.ApplyFracForce(GetWorldFracPoints());
             if (i % 10 == 0) {
@@ -151,6 +165,18 @@ public class BrickFrag : MonoBehaviour
             }
         }
 
+    }
+
+    private void StopFracAudio()
+    {
+        _audioSource.Stop();
+    }
+
+    private void PlayFracAudio()
+    {
+        _audioSource.clip = _fracAudio;
+        _audioSource.loop = true;
+        _audioSource.Play();
     }
 
     // IEnumerator CreateLightExplosion()
