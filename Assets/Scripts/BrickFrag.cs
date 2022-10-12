@@ -52,6 +52,7 @@ public class BrickFrag : MonoBehaviour
     [SerializeField] AudioClip _impactAudio;
     [SerializeField] AudioClip _fracAudio;
     [SerializeField] AudioClip _explosionAudio;
+    [SerializeField] GameObject _explosionPrefab;
     public static event System.Action<Vector3> onSpawnPowerUp;
     
     int[,,] voxMap;
@@ -66,6 +67,7 @@ public class BrickFrag : MonoBehaviour
     ArenaManager _arenaManager;
 
     AudioSource _audioSource;
+    ParticleSystem _explosionPS;
 
 
 
@@ -86,6 +88,7 @@ public class BrickFrag : MonoBehaviour
 
     private void Awake() {
         _audioSource = GetComponent<AudioSource>();
+        _explosionPS = Instantiate(_explosionPrefab, transform).GetComponent<ParticleSystem>();
     }
     private void Start() {
         cam = Camera.main.gameObject;
@@ -186,8 +189,7 @@ public class BrickFrag : MonoBehaviour
     // }
 
     void MakeFlash(){
-        var flash = GetComponent<ParticleSystem>();
-        flash.Play();
+        _explosionPS.Play();
     }
 
     void CreateFracLines() {
