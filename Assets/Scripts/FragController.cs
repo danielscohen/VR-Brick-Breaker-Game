@@ -139,7 +139,7 @@ public class FragController : MonoBehaviour
         List<Material> childMats = GetFragMats();
 
         float time = 0f;
-        Color color = childMats[0].color;
+        Color color = childMats[0].GetColor("_EmissionColor") / _startIntensity;
        
         while(time < _flashDuration) {
             foreach (Material mat in childMats) {
@@ -151,10 +151,10 @@ public class FragController : MonoBehaviour
         }
 
         time = 0f;
-        while(time < _flashDuration * 1.2f) {
+        while(time < _flashDuration * 1.1f) {
             foreach (Material mat in childMats) {
                 // mat.color = Color.Lerp(mat.GetColor("_EmissionColor"), color, time / (_flashDuration * 1.2f));
-                float intensity = Mathf.Lerp(_maxIntensity, _startIntensity, time / (_flashDuration * 1.2f));
+                float intensity = Mathf.Lerp(_maxIntensity, _startIntensity, time / (_flashDuration * 1.1f));
                 mat.SetColor("_EmissionColor", color * intensity);
             }
             time += Time.deltaTime;

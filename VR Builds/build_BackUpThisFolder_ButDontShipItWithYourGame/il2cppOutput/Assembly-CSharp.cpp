@@ -6447,14 +6447,16 @@ inline bool Enumerator_MoveNext_mBA548D3D8366081A2D80A286DFBAE0744464D0EC (Enume
 {
 	return ((  bool (*) (Enumerator_tEF58C7D40DDB41B6D712E0CAD7DA2883F14744B8*, const RuntimeMethod*))Enumerator_MoveNext_mE921CC8F29FBBDE7CC3209A0ED0D921D58D00BCB_gshared)(__this, method);
 }
+// UnityEngine.Color UnityEngine.Material::GetColor(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F Material_GetColor_mAC702C70081A597DD2AA2F4627B1A1C65DDF6609 (Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* __this, String_t* ___name0, const RuntimeMethod* method) ;
+// UnityEngine.Color UnityEngine.Color::op_Division(UnityEngine.Color,System.Single)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F Color_op_Division_m641F85C0191C56932E452CAAC8E4974C43675FEB_inline (Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___a0, float ___b1, const RuntimeMethod* method) ;
 // System.Single UnityEngine.Mathf::Lerp(System.Single,System.Single,System.Single)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Lerp_m47EF2FFB7647BD0A1FDC26DC03E28B19812139B5_inline (float ___a0, float ___b1, float ___t2, const RuntimeMethod* method) ;
 // UnityEngine.Color UnityEngine.Color::op_Multiply(UnityEngine.Color,System.Single)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F Color_op_Multiply_m379B20A820266ACF82A21425B9CAE8DCD773CFBB_inline (Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___a0, float ___b1, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Material::SetColor(System.String,UnityEngine.Color)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Material_SetColor_mFAB32FAA44461E46FD707B34184EC080CBB3539F (Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* __this, String_t* ___name0, Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___value1, const RuntimeMethod* method) ;
-// UnityEngine.Color UnityEngine.Color::get_blue()
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F Color_get_blue_mF04A26CE61D6DA3C0D8B1C4720901B1028C7AB87_inline (const RuntimeMethod* method) ;
 // System.Void FragmentGenerator::CreateFragments()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FragmentGenerator_CreateFragments_m195866B882A3B6C531289869FB77B98457E4B721 (FragmentGenerator_t7EF3C0C52F1CB633BDF41F124EC1012BAAE0A1CB* __this, const RuntimeMethod* method) ;
 // UnityEngine.Rigidbody UnityEngine.Collision::get_rigidbody()
@@ -15767,11 +15769,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CMakeFragFlashU3Ed__33_MoveNext_m3D7D7
 			}
 			case 1:
 			{
-				goto IL_00e1;
+				goto IL_00f1;
 			}
 			case 2:
 			{
-				goto IL_0195;
+				goto IL_01a6;
 			}
 		}
 	}
@@ -15791,32 +15793,37 @@ IL_0022:
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CchildMatsU3E5__2_3), (void*)L_4);
 		// float time = 0f;
 		__this->___U3CtimeU3E5__3_4 = (0.0f);
-		// Color color = childMats[0].color;
+		// Color color = childMats[0].GetColor("_EmissionColor") / _startIntensity;
 		List_1_t386E09F4F22DDE4D2AC41A8567FFF283C254537B* L_5 = __this->___U3CchildMatsU3E5__2_3;
 		NullCheck(L_5);
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_6;
 		L_6 = List_1_get_Item_m70F5CFC2DEA9332B78C5ADC0EE1CE1B7465B1456(L_5, 0, List_1_get_Item_m70F5CFC2DEA9332B78C5ADC0EE1CE1B7465B1456_RuntimeMethod_var);
 		NullCheck(L_6);
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_7;
-		L_7 = Material_get_color_mA4B7D4B96200D9D8B4F36BF19957E9DA81071DBB(L_6, NULL);
-		__this->___U3CcolorU3E5__4_5 = L_7;
-		goto IL_00e8;
+		L_7 = Material_GetColor_mAC702C70081A597DD2AA2F4627B1A1C65DDF6609(L_6, _stringLiteralB92EF51E45166C91E2762DB6C9F27C8BD6EBE466, NULL);
+		FragController_t21CE457B3E96183C9813CA29EE774B3CA28128C8* L_8 = V_1;
+		NullCheck(L_8);
+		float L_9 = L_8->____startIntensity_17;
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_10;
+		L_10 = Color_op_Division_m641F85C0191C56932E452CAAC8E4974C43675FEB_inline(L_7, L_9, NULL);
+		__this->___U3CcolorU3E5__4_5 = L_10;
+		goto IL_00f8;
 	}
 
-IL_005c:
+IL_006c:
 	{
 		// foreach (Material mat in childMats) {
-		List_1_t386E09F4F22DDE4D2AC41A8567FFF283C254537B* L_8 = __this->___U3CchildMatsU3E5__2_3;
-		NullCheck(L_8);
-		Enumerator_tEF58C7D40DDB41B6D712E0CAD7DA2883F14744B8 L_9;
-		L_9 = List_1_GetEnumerator_mF472961C4665B7EE4F1C4C8A05B00B08153BB96A(L_8, List_1_GetEnumerator_mF472961C4665B7EE4F1C4C8A05B00B08153BB96A_RuntimeMethod_var);
-		V_2 = L_9;
+		List_1_t386E09F4F22DDE4D2AC41A8567FFF283C254537B* L_11 = __this->___U3CchildMatsU3E5__2_3;
+		NullCheck(L_11);
+		Enumerator_tEF58C7D40DDB41B6D712E0CAD7DA2883F14744B8 L_12;
+		L_12 = List_1_GetEnumerator_mF472961C4665B7EE4F1C4C8A05B00B08153BB96A(L_11, List_1_GetEnumerator_mF472961C4665B7EE4F1C4C8A05B00B08153BB96A_RuntimeMethod_var);
+		V_2 = L_12;
 	}
 	{
 		auto __finallyBlock = il2cpp::utils::Finally([&]
 		{
 
-FINALLY_00b1:
+FINALLY_00c1:
 			{// begin finally (depth: 1)
 				Enumerator_Dispose_m0C67BB2FAEE25E3D9B432C9A245E62C2760A78A8((&V_2), Enumerator_Dispose_m0C67BB2FAEE25E3D9B432C9A245E62C2760A78A8_RuntimeMethod_var);
 				return;
@@ -15825,49 +15832,49 @@ FINALLY_00b1:
 		try
 		{// begin try (depth: 1)
 			{
-				goto IL_00a6_1;
+				goto IL_00b6_1;
 			}
 
-IL_006a_1:
+IL_007a_1:
 			{
 				// foreach (Material mat in childMats) {
-				Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_10;
-				L_10 = Enumerator_get_Current_m2194C411E1208AC29EFC254376D8F58E0B011CFD_inline((&V_2), Enumerator_get_Current_m2194C411E1208AC29EFC254376D8F58E0B011CFD_RuntimeMethod_var);
+				Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_13;
+				L_13 = Enumerator_get_Current_m2194C411E1208AC29EFC254376D8F58E0B011CFD_inline((&V_2), Enumerator_get_Current_m2194C411E1208AC29EFC254376D8F58E0B011CFD_RuntimeMethod_var);
 				// float intensity = Mathf.Lerp(_startIntensity, _maxIntensity, time / _flashDuration);
-				FragController_t21CE457B3E96183C9813CA29EE774B3CA28128C8* L_11 = V_1;
-				NullCheck(L_11);
-				float L_12 = L_11->____startIntensity_17;
-				FragController_t21CE457B3E96183C9813CA29EE774B3CA28128C8* L_13 = V_1;
-				NullCheck(L_13);
-				float L_14 = L_13->____maxIntensity_18;
-				float L_15 = __this->___U3CtimeU3E5__3_4;
+				FragController_t21CE457B3E96183C9813CA29EE774B3CA28128C8* L_14 = V_1;
+				NullCheck(L_14);
+				float L_15 = L_14->____startIntensity_17;
 				FragController_t21CE457B3E96183C9813CA29EE774B3CA28128C8* L_16 = V_1;
 				NullCheck(L_16);
-				float L_17 = L_16->____flashDuration_19;
-				float L_18;
-				L_18 = Mathf_Lerp_m47EF2FFB7647BD0A1FDC26DC03E28B19812139B5_inline(L_12, L_14, ((float)(L_15/L_17)), NULL);
-				V_3 = L_18;
+				float L_17 = L_16->____maxIntensity_18;
+				float L_18 = __this->___U3CtimeU3E5__3_4;
+				FragController_t21CE457B3E96183C9813CA29EE774B3CA28128C8* L_19 = V_1;
+				NullCheck(L_19);
+				float L_20 = L_19->____flashDuration_19;
+				float L_21;
+				L_21 = Mathf_Lerp_m47EF2FFB7647BD0A1FDC26DC03E28B19812139B5_inline(L_15, L_17, ((float)(L_18/L_20)), NULL);
+				V_3 = L_21;
 				// mat.SetColor("_EmissionColor", color * intensity);
-				Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_19 = __this->___U3CcolorU3E5__4_5;
-				float L_20 = V_3;
-				Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_21;
-				L_21 = Color_op_Multiply_m379B20A820266ACF82A21425B9CAE8DCD773CFBB_inline(L_19, L_20, NULL);
-				NullCheck(L_10);
-				Material_SetColor_mFAB32FAA44461E46FD707B34184EC080CBB3539F(L_10, _stringLiteralB92EF51E45166C91E2762DB6C9F27C8BD6EBE466, L_21, NULL);
+				Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_22 = __this->___U3CcolorU3E5__4_5;
+				float L_23 = V_3;
+				Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_24;
+				L_24 = Color_op_Multiply_m379B20A820266ACF82A21425B9CAE8DCD773CFBB_inline(L_22, L_23, NULL);
+				NullCheck(L_13);
+				Material_SetColor_mFAB32FAA44461E46FD707B34184EC080CBB3539F(L_13, _stringLiteralB92EF51E45166C91E2762DB6C9F27C8BD6EBE466, L_24, NULL);
 			}
 
-IL_00a6_1:
+IL_00b6_1:
 			{
 				// foreach (Material mat in childMats) {
-				bool L_22;
-				L_22 = Enumerator_MoveNext_mBA548D3D8366081A2D80A286DFBAE0744464D0EC((&V_2), Enumerator_MoveNext_mBA548D3D8366081A2D80A286DFBAE0744464D0EC_RuntimeMethod_var);
-				if (L_22)
+				bool L_25;
+				L_25 = Enumerator_MoveNext_mBA548D3D8366081A2D80A286DFBAE0744464D0EC((&V_2), Enumerator_MoveNext_mBA548D3D8366081A2D80A286DFBAE0744464D0EC_RuntimeMethod_var);
+				if (L_25)
 				{
-					goto IL_006a_1;
+					goto IL_007a_1;
 				}
 			}
 			{
-				goto IL_00bf;
+				goto IL_00cf;
 			}
 		}// end try (depth: 1)
 		catch(Il2CppExceptionWrapper& e)
@@ -15876,13 +15883,13 @@ IL_00a6_1:
 		}
 	}
 
-IL_00bf:
+IL_00cf:
 	{
 		// time += Time.deltaTime;
-		float L_23 = __this->___U3CtimeU3E5__3_4;
-		float L_24;
-		L_24 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
-		__this->___U3CtimeU3E5__3_4 = ((float)il2cpp_codegen_add(L_23, L_24));
+		float L_26 = __this->___U3CtimeU3E5__3_4;
+		float L_27;
+		L_27 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
+		__this->___U3CtimeU3E5__3_4 = ((float)il2cpp_codegen_add(L_26, L_27));
 		// yield return null;
 		__this->___U3CU3E2__current_1 = NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current_1), (void*)NULL);
@@ -15890,43 +15897,43 @@ IL_00bf:
 		return (bool)1;
 	}
 
-IL_00e1:
+IL_00f1:
 	{
 		__this->___U3CU3E1__state_0 = (-1);
 	}
 
-IL_00e8:
+IL_00f8:
 	{
 		// while(time < _flashDuration) {
-		float L_25 = __this->___U3CtimeU3E5__3_4;
-		FragController_t21CE457B3E96183C9813CA29EE774B3CA28128C8* L_26 = V_1;
-		NullCheck(L_26);
-		float L_27 = L_26->____flashDuration_19;
-		if ((((float)L_25) < ((float)L_27)))
+		float L_28 = __this->___U3CtimeU3E5__3_4;
+		FragController_t21CE457B3E96183C9813CA29EE774B3CA28128C8* L_29 = V_1;
+		NullCheck(L_29);
+		float L_30 = L_29->____flashDuration_19;
+		if ((((float)L_28) < ((float)L_30)))
 		{
-			goto IL_005c;
+			goto IL_006c;
 		}
 	}
 	{
 		// time = 0f;
 		__this->___U3CtimeU3E5__3_4 = (0.0f);
-		goto IL_019c;
+		goto IL_01ad;
 	}
 
-IL_0109:
+IL_0119:
 	{
 		// foreach (Material mat in childMats) {
-		List_1_t386E09F4F22DDE4D2AC41A8567FFF283C254537B* L_28 = __this->___U3CchildMatsU3E5__2_3;
-		NullCheck(L_28);
-		Enumerator_tEF58C7D40DDB41B6D712E0CAD7DA2883F14744B8 L_29;
-		L_29 = List_1_GetEnumerator_mF472961C4665B7EE4F1C4C8A05B00B08153BB96A(L_28, List_1_GetEnumerator_mF472961C4665B7EE4F1C4C8A05B00B08153BB96A_RuntimeMethod_var);
-		V_2 = L_29;
+		List_1_t386E09F4F22DDE4D2AC41A8567FFF283C254537B* L_31 = __this->___U3CchildMatsU3E5__2_3;
+		NullCheck(L_31);
+		Enumerator_tEF58C7D40DDB41B6D712E0CAD7DA2883F14744B8 L_32;
+		L_32 = List_1_GetEnumerator_mF472961C4665B7EE4F1C4C8A05B00B08153BB96A(L_31, List_1_GetEnumerator_mF472961C4665B7EE4F1C4C8A05B00B08153BB96A_RuntimeMethod_var);
+		V_2 = L_32;
 	}
 	{
 		auto __finallyBlock = il2cpp::utils::Finally([&]
 		{
 
-FINALLY_0165:
+FINALLY_0176:
 			{// begin finally (depth: 1)
 				Enumerator_Dispose_m0C67BB2FAEE25E3D9B432C9A245E62C2760A78A8((&V_2), Enumerator_Dispose_m0C67BB2FAEE25E3D9B432C9A245E62C2760A78A8_RuntimeMethod_var);
 				return;
@@ -15935,50 +15942,49 @@ FINALLY_0165:
 		try
 		{// begin try (depth: 1)
 			{
-				goto IL_015a_1;
+				goto IL_016b_1;
 			}
 
-IL_0117_1:
+IL_0127_1:
 			{
 				// foreach (Material mat in childMats) {
-				Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_30;
-				L_30 = Enumerator_get_Current_m2194C411E1208AC29EFC254376D8F58E0B011CFD_inline((&V_2), Enumerator_get_Current_m2194C411E1208AC29EFC254376D8F58E0B011CFD_RuntimeMethod_var);
-				// float intensity = Mathf.Lerp(_maxIntensity, _startIntensity, time / (_flashDuration * 1.2f));
-				FragController_t21CE457B3E96183C9813CA29EE774B3CA28128C8* L_31 = V_1;
-				NullCheck(L_31);
-				float L_32 = L_31->____maxIntensity_18;
-				FragController_t21CE457B3E96183C9813CA29EE774B3CA28128C8* L_33 = V_1;
-				NullCheck(L_33);
-				float L_34 = L_33->____startIntensity_17;
-				float L_35 = __this->___U3CtimeU3E5__3_4;
+				Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_33;
+				L_33 = Enumerator_get_Current_m2194C411E1208AC29EFC254376D8F58E0B011CFD_inline((&V_2), Enumerator_get_Current_m2194C411E1208AC29EFC254376D8F58E0B011CFD_RuntimeMethod_var);
+				// float intensity = Mathf.Lerp(_maxIntensity, _startIntensity, time / (_flashDuration * 1.1f));
+				FragController_t21CE457B3E96183C9813CA29EE774B3CA28128C8* L_34 = V_1;
+				NullCheck(L_34);
+				float L_35 = L_34->____maxIntensity_18;
 				FragController_t21CE457B3E96183C9813CA29EE774B3CA28128C8* L_36 = V_1;
 				NullCheck(L_36);
-				float L_37 = L_36->____flashDuration_19;
-				float L_38;
-				L_38 = Mathf_Lerp_m47EF2FFB7647BD0A1FDC26DC03E28B19812139B5_inline(L_32, L_34, ((float)(L_35/((float)il2cpp_codegen_multiply(L_37, (1.20000005f))))), NULL);
-				V_4 = L_38;
-				// mat.SetColor("_EmissionColor", Color.blue * intensity);
-				Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_39;
-				L_39 = Color_get_blue_mF04A26CE61D6DA3C0D8B1C4720901B1028C7AB87_inline(NULL);
-				float L_40 = V_4;
-				Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_41;
-				L_41 = Color_op_Multiply_m379B20A820266ACF82A21425B9CAE8DCD773CFBB_inline(L_39, L_40, NULL);
-				NullCheck(L_30);
-				Material_SetColor_mFAB32FAA44461E46FD707B34184EC080CBB3539F(L_30, _stringLiteralB92EF51E45166C91E2762DB6C9F27C8BD6EBE466, L_41, NULL);
+				float L_37 = L_36->____startIntensity_17;
+				float L_38 = __this->___U3CtimeU3E5__3_4;
+				FragController_t21CE457B3E96183C9813CA29EE774B3CA28128C8* L_39 = V_1;
+				NullCheck(L_39);
+				float L_40 = L_39->____flashDuration_19;
+				float L_41;
+				L_41 = Mathf_Lerp_m47EF2FFB7647BD0A1FDC26DC03E28B19812139B5_inline(L_35, L_37, ((float)(L_38/((float)il2cpp_codegen_multiply(L_40, (1.10000002f))))), NULL);
+				V_4 = L_41;
+				// mat.SetColor("_EmissionColor", color * intensity);
+				Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_42 = __this->___U3CcolorU3E5__4_5;
+				float L_43 = V_4;
+				Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_44;
+				L_44 = Color_op_Multiply_m379B20A820266ACF82A21425B9CAE8DCD773CFBB_inline(L_42, L_43, NULL);
+				NullCheck(L_33);
+				Material_SetColor_mFAB32FAA44461E46FD707B34184EC080CBB3539F(L_33, _stringLiteralB92EF51E45166C91E2762DB6C9F27C8BD6EBE466, L_44, NULL);
 			}
 
-IL_015a_1:
+IL_016b_1:
 			{
 				// foreach (Material mat in childMats) {
-				bool L_42;
-				L_42 = Enumerator_MoveNext_mBA548D3D8366081A2D80A286DFBAE0744464D0EC((&V_2), Enumerator_MoveNext_mBA548D3D8366081A2D80A286DFBAE0744464D0EC_RuntimeMethod_var);
-				if (L_42)
+				bool L_45;
+				L_45 = Enumerator_MoveNext_mBA548D3D8366081A2D80A286DFBAE0744464D0EC((&V_2), Enumerator_MoveNext_mBA548D3D8366081A2D80A286DFBAE0744464D0EC_RuntimeMethod_var);
+				if (L_45)
 				{
-					goto IL_0117_1;
+					goto IL_0127_1;
 				}
 			}
 			{
-				goto IL_0173;
+				goto IL_0184;
 			}
 		}// end try (depth: 1)
 		catch(Il2CppExceptionWrapper& e)
@@ -15987,13 +15993,13 @@ IL_015a_1:
 		}
 	}
 
-IL_0173:
+IL_0184:
 	{
 		// time += Time.deltaTime;
-		float L_43 = __this->___U3CtimeU3E5__3_4;
-		float L_44;
-		L_44 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
-		__this->___U3CtimeU3E5__3_4 = ((float)il2cpp_codegen_add(L_43, L_44));
+		float L_46 = __this->___U3CtimeU3E5__3_4;
+		float L_47;
+		L_47 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
+		__this->___U3CtimeU3E5__3_4 = ((float)il2cpp_codegen_add(L_46, L_47));
 		// yield return null;
 		__this->___U3CU3E2__current_1 = NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current_1), (void*)NULL);
@@ -16001,80 +16007,23 @@ IL_0173:
 		return (bool)1;
 	}
 
-IL_0195:
+IL_01a6:
 	{
 		__this->___U3CU3E1__state_0 = (-1);
 	}
 
-IL_019c:
+IL_01ad:
 	{
-		// while(time < _flashDuration * 1.2f) {
-		float L_45 = __this->___U3CtimeU3E5__3_4;
-		FragController_t21CE457B3E96183C9813CA29EE774B3CA28128C8* L_46 = V_1;
-		NullCheck(L_46);
-		float L_47 = L_46->____flashDuration_19;
-		if ((((float)L_45) < ((float)((float)il2cpp_codegen_multiply(L_47, (1.20000005f))))))
+		// while(time < _flashDuration * 1.1f) {
+		float L_48 = __this->___U3CtimeU3E5__3_4;
+		FragController_t21CE457B3E96183C9813CA29EE774B3CA28128C8* L_49 = V_1;
+		NullCheck(L_49);
+		float L_50 = L_49->____flashDuration_19;
+		if ((((float)L_48) < ((float)((float)il2cpp_codegen_multiply(L_50, (1.10000002f))))))
 		{
-			goto IL_0109;
+			goto IL_0119;
 		}
 	}
-	{
-		// foreach (Material mat in childMats) {
-		List_1_t386E09F4F22DDE4D2AC41A8567FFF283C254537B* L_48 = __this->___U3CchildMatsU3E5__2_3;
-		NullCheck(L_48);
-		Enumerator_tEF58C7D40DDB41B6D712E0CAD7DA2883F14744B8 L_49;
-		L_49 = List_1_GetEnumerator_mF472961C4665B7EE4F1C4C8A05B00B08153BB96A(L_48, List_1_GetEnumerator_mF472961C4665B7EE4F1C4C8A05B00B08153BB96A_RuntimeMethod_var);
-		V_2 = L_49;
-	}
-	{
-		auto __finallyBlock = il2cpp::utils::Finally([&]
-		{
-
-FINALLY_01dd:
-			{// begin finally (depth: 1)
-				Enumerator_Dispose_m0C67BB2FAEE25E3D9B432C9A245E62C2760A78A8((&V_2), Enumerator_Dispose_m0C67BB2FAEE25E3D9B432C9A245E62C2760A78A8_RuntimeMethod_var);
-				return;
-			}// end finally (depth: 1)
-		});
-		try
-		{// begin try (depth: 1)
-			{
-				goto IL_01d2_1;
-			}
-
-IL_01c1_1:
-			{
-				// foreach (Material mat in childMats) {
-				Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_50;
-				L_50 = Enumerator_get_Current_m2194C411E1208AC29EFC254376D8F58E0B011CFD_inline((&V_2), Enumerator_get_Current_m2194C411E1208AC29EFC254376D8F58E0B011CFD_RuntimeMethod_var);
-				// mat.color = Color.blue;
-				Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_51;
-				L_51 = Color_get_blue_mF04A26CE61D6DA3C0D8B1C4720901B1028C7AB87_inline(NULL);
-				NullCheck(L_50);
-				Material_set_color_m5C32DEBB215FF9EE35E7B575297D8C2F29CC2A2D(L_50, L_51, NULL);
-			}
-
-IL_01d2_1:
-			{
-				// foreach (Material mat in childMats) {
-				bool L_52;
-				L_52 = Enumerator_MoveNext_mBA548D3D8366081A2D80A286DFBAE0744464D0EC((&V_2), Enumerator_MoveNext_mBA548D3D8366081A2D80A286DFBAE0744464D0EC_RuntimeMethod_var);
-				if (L_52)
-				{
-					goto IL_01c1_1;
-				}
-			}
-			{
-				goto IL_01eb;
-			}
-		}// end try (depth: 1)
-		catch(Il2CppExceptionWrapper& e)
-		{
-			__finallyBlock.StoreException(e.ex);
-		}
-	}
-
-IL_01eb:
 	{
 		// }
 		return (bool)0;
@@ -24883,6 +24832,36 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void FragController_set_FragSize_
 		return;
 	}
 }
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F Color_op_Division_m641F85C0191C56932E452CAAC8E4974C43675FEB_inline (Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___a0, float ___b1, const RuntimeMethod* method) 
+{
+	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	{
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_0 = ___a0;
+		float L_1 = L_0.___r_0;
+		float L_2 = ___b1;
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_3 = ___a0;
+		float L_4 = L_3.___g_1;
+		float L_5 = ___b1;
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_6 = ___a0;
+		float L_7 = L_6.___b_2;
+		float L_8 = ___b1;
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_9 = ___a0;
+		float L_10 = L_9.___a_3;
+		float L_11 = ___b1;
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_12;
+		memset((&L_12), 0, sizeof(L_12));
+		Color__ctor_m3786F0D6E510D9CFA544523A955870BD2A514C8C_inline((&L_12), ((float)(L_1/L_2)), ((float)(L_4/L_5)), ((float)(L_7/L_8)), ((float)(L_10/L_11)), /*hidden argument*/NULL);
+		V_0 = L_12;
+		goto IL_0029;
+	}
+
+IL_0029:
+	{
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_13 = V_0;
+		return L_13;
+	}
+}
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Lerp_m47EF2FFB7647BD0A1FDC26DC03E28B19812139B5_inline (float ___a0, float ___b1, float ___t2, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
@@ -24931,24 +24910,6 @@ IL_0029:
 	{
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_13 = V_0;
 		return L_13;
-	}
-}
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F Color_get_blue_mF04A26CE61D6DA3C0D8B1C4720901B1028C7AB87_inline (const RuntimeMethod* method) 
-{
-	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F V_0;
-	memset((&V_0), 0, sizeof(V_0));
-	{
-		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_0;
-		memset((&L_0), 0, sizeof(L_0));
-		Color__ctor_m3786F0D6E510D9CFA544523A955870BD2A514C8C_inline((&L_0), (0.0f), (0.0f), (1.0f), (1.0f), /*hidden argument*/NULL);
-		V_0 = L_0;
-		goto IL_001d;
-	}
-
-IL_001d:
-	{
-		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1 = V_0;
-		return L_1;
 	}
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void GameController_set_Instance_m4A8BAF965F5537FC39B44D413A3752665727C76C_inline (GameController_tDA619EE453F7ED2C8297EF928518A0B447E44D09* ___value0, const RuntimeMethod* method) 
