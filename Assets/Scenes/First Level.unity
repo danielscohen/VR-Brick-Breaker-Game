@@ -20,11 +20,11 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientSkyColor: {r: 0.079654664, g: 0.10027292, b: 0.14150941, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: 81f714daf7144784b8a2f42f1cd30927, type: 2}
   m_HaloStrength: 0.5
@@ -3450,7 +3450,6 @@ GameObject:
   m_Component:
   - component: {fileID: 410087041}
   - component: {fileID: 410087040}
-  - component: {fileID: 410087042}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -3469,7 +3468,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.064079724, g: 0.13257217, b: 0.254717, a: 1}
   m_Intensity: 2
   m_Range: 10
   m_SpotAngle: 30
@@ -3513,7 +3512,7 @@ Light:
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
-  m_ColorTemperature: 5000
+  m_ColorTemperature: 13449
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
@@ -3535,18 +3534,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!114 &410087042
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 410087039}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &431636057
 GameObject:
   m_ObjectHideFlags: 0
@@ -3964,6 +3951,7 @@ GameObject:
   - component: {fileID: 576397284}
   - component: {fileID: 576397283}
   - component: {fileID: 576397282}
+  - component: {fileID: 576397285}
   m_Layer: 0
   m_Name: Top
   m_TagString: Arena Wall
@@ -4020,7 +4008,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3964486d90ee77e44a952d138259c8ee, type: 2}
+  - {fileID: 2100000, guid: 4e516cc8a769a11408a3370bc9cdac8a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4050,6 +4038,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 576397279}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &576397285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 576397279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f05d97164fdb444835a6ee574adeda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _startIntensity: 0.1
+  _maxIntensity: 2
+  _flashDuration: 0.3
 --- !u!1 &582850195
 GameObject:
   m_ObjectHideFlags: 0
@@ -4104,7 +4107,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &603317203
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11184,6 +11187,7 @@ GameObject:
   - component: {fileID: 944435261}
   - component: {fileID: 944435260}
   - component: {fileID: 944435259}
+  - component: {fileID: 944435262}
   m_Layer: 0
   m_Name: Left
   m_TagString: Arena Wall
@@ -11240,7 +11244,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3964486d90ee77e44a952d138259c8ee, type: 2}
+  - {fileID: 2100000, guid: 2dbddbe39c8219546bf1d9fcc42eccf2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -11270,6 +11274,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 944435256}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &944435262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 944435256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f05d97164fdb444835a6ee574adeda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _startIntensity: 0.1
+  _maxIntensity: 2
+  _flashDuration: 0.3
 --- !u!1 &948451914
 GameObject:
   m_ObjectHideFlags: 0
@@ -11606,6 +11625,7 @@ GameObject:
   - component: {fileID: 998654627}
   - component: {fileID: 998654626}
   - component: {fileID: 998654625}
+  - component: {fileID: 998654628}
   m_Layer: 0
   m_Name: Back
   m_TagString: Arena Wall
@@ -11662,7 +11682,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3964486d90ee77e44a952d138259c8ee, type: 2}
+  - {fileID: 2100000, guid: 958c2e3e8ed094b4299173ec0ad05311, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -11692,6 +11712,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 998654622}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &998654628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 998654622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f05d97164fdb444835a6ee574adeda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _startIntensity: 0.1
+  _maxIntensity: 2
+  _flashDuration: 0.3
 --- !u!1 &999994662
 GameObject:
   m_ObjectHideFlags: 0
@@ -14162,6 +14197,7 @@ GameObject:
   - component: {fileID: 1366943145}
   - component: {fileID: 1366943144}
   - component: {fileID: 1366943143}
+  - component: {fileID: 1366943146}
   m_Layer: 0
   m_Name: Right
   m_TagString: Arena Wall
@@ -14248,6 +14284,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1366943140}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1366943146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1366943140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f05d97164fdb444835a6ee574adeda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _startIntensity: 0.1
+  _maxIntensity: 2
+  _flashDuration: 0.3
 --- !u!1 &1391444757
 GameObject:
   m_ObjectHideFlags: 0
@@ -14790,6 +14841,7 @@ GameObject:
   - component: {fileID: 1482870700}
   - component: {fileID: 1482870699}
   - component: {fileID: 1482870698}
+  - component: {fileID: 1482870701}
   m_Layer: 0
   m_Name: Bottom
   m_TagString: Arena Wall
@@ -14846,7 +14898,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3964486d90ee77e44a952d138259c8ee, type: 2}
+  - {fileID: 2100000, guid: a6e20f080ef503748ab2a7620c638f0f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -14876,6 +14928,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1482870695}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1482870701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482870695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f05d97164fdb444835a6ee574adeda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _startIntensity: 0.1
+  _maxIntensity: 2
+  _flashDuration: 0.3
 --- !u!1 &1524649646
 GameObject:
   m_ObjectHideFlags: 0

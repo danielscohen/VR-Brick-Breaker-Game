@@ -53,7 +53,7 @@ public class UIController : MonoBehaviour
         _playerHealthText.text = health.ToString();
     }
     void UpdateBallsRemainingText(int numBalls) {
-        _ballsRemainingText.text = $"Balls Left: {numBalls}";
+        _ballsRemainingText.text = $"{numBalls} Orbs Left";
     }
     void UpdateTimerText(string time) {
         _timerText.text = time;
@@ -103,7 +103,7 @@ public class UIController : MonoBehaviour
                 gameOverText = "You Ran-Out of Time!";
                 break;
             default:
-                gameOverText = "You Ran-Out of Balls!";
+                gameOverText = "You Ran-Out of Orbs!";
                 break;
         }
 
