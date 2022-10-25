@@ -25,5 +25,8 @@ public class PlayerCollider : MonoBehaviour
             }
             other.gameObject.SetActive(false);
         }
+        else if(other.CompareTag("PowerUp")){
+            onPLayerCaughtPowerUp?.Invoke(other.GetComponent<PowerUpController>().Type);
+        }
     }
 }

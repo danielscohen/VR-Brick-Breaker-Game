@@ -9,11 +9,14 @@ public class PlayerPointsManager : MonoBehaviour
     public static event Action<int> onUpdatePlayerPoints;
     int _points = 0;
     bool _negPoints = false;
+    [SerializeField] float _negPointsTime = 20f;
     void OnEnable() {
         PlayerCollider.onFragCollideWithPlayer += ChangePlayerPts;
+        PlayerCollider.onPLayerCaughtPowerUp += StartNegatingPoints;
     }
     private void OnDisable() {
         PlayerCollider.onFragCollideWithPlayer -= ChangePlayerPts;
+        PlayerCollider.onPLayerCaughtPowerUp -= StartNegatingPoints;
     }
 
     private void Start() {
@@ -24,5 +27,22 @@ public class PlayerPointsManager : MonoBehaviour
         _points += ptDelta;
         if(_points < 0) _points = 0;
         onUpdatePlayerPoints?.Invoke(_points);
+    }
+    void StartNegatingPoints(PowerUpType type){
+        if(type == PowerUpType.NegativePts){
+            StartCoroutine(NegatePoints());
+        }
+    }
+    IEnumerator NegatePoints()
+    {
+        float timePassed = 0;
+
+        _negPoints = true;
+        while(timePassed < _negPointsTime){
+            timePassed += Time.deltaTime;
+
+            yield return null;
+        }
+        _negPoints = false;
     }
 }

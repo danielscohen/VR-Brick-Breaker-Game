@@ -117,7 +117,7 @@ MonoBehaviour:
   lightExpPrefab: {fileID: 1989625961592895221, guid: 0191ea5fa50e3c848a7900d6d2ab8a24,
     type: 3}
   particleExpDelay: 0.1
-  ptsPerUnit: 30
+  ptsPerUnit: 50
   coneAngle: 170
   fracBranchDepth: 3
   fragSizeMult: 0.8
@@ -132,7 +132,7 @@ MonoBehaviour:
   voxFadeOutDur: 0.5
   voxFadeInDur: 0.1
   minFragSizeKeep: 1
-  particleProb: 4
+  particleProb: 3
   PowerUpSpawnProb: 1
   _impactAudio: {fileID: 8300000, guid: 69a458f045892a549bbc6dea3120cfbf, type: 3}
   _fracAudio: {fileID: 8300000, guid: e0a923b712a6b6047a97543d13cea64c, type: 3}

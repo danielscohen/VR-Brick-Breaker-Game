@@ -24,7 +24,7 @@ RenderSettings:
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 3
+  m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: 81f714daf7144784b8a2f42f1cd30927, type: 2}
   m_HaloStrength: 0.5
@@ -4050,8 +4050,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95f05d97164fdb444835a6ee574adeda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startIntensity: 0.1
-  _maxIntensity: 2
+  _startIntensity: 1.5
+  _maxIntensity: 4
   _flashDuration: 0.3
 --- !u!1 &582850195
 GameObject:
@@ -11286,8 +11286,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95f05d97164fdb444835a6ee574adeda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startIntensity: 0.1
-  _maxIntensity: 2
+  _startIntensity: 1.5
+  _maxIntensity: 4
   _flashDuration: 0.3
 --- !u!1 &948451914
 GameObject:
@@ -11724,8 +11724,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95f05d97164fdb444835a6ee574adeda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startIntensity: 0.1
-  _maxIntensity: 2
+  _startIntensity: 1.5
+  _maxIntensity: 4
   _flashDuration: 0.3
 --- !u!1 &999994662
 GameObject:
@@ -14296,8 +14296,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95f05d97164fdb444835a6ee574adeda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startIntensity: 0.1
-  _maxIntensity: 2
+  _startIntensity: 1.5
+  _maxIntensity: 4
   _flashDuration: 0.3
 --- !u!1 &1391444757
 GameObject:
@@ -14940,8 +14940,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95f05d97164fdb444835a6ee574adeda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startIntensity: 0.1
-  _maxIntensity: 2
+  _startIntensity: 1.5
+  _maxIntensity: 4
   _flashDuration: 0.3
 --- !u!1 &1524649646
 GameObject:
@@ -16420,7 +16420,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh168286
+  m_Name: pb_Mesh65202
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
