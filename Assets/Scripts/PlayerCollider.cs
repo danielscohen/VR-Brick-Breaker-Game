@@ -26,6 +26,7 @@ public class PlayerCollider : MonoBehaviour
             other.gameObject.SetActive(false);
         }
         else if(other.CompareTag("PowerUp")){
+            Debug.Log("PowerUp Entered");
             onPLayerCaughtPowerUp?.Invoke(other.GetComponent<PowerUpController>().Type);
         }
     }

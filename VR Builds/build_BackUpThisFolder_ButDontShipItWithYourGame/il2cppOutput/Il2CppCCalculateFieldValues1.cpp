@@ -18873,6 +18873,14 @@ struct PowerUpController_t231CDCA55E3324CE8428CCFBF06CD67C37F9F95C  : public Mon
 	float ____moveSpeed_6;
 	// System.Collections.Generic.List`1<UnityEngine.Material> PowerUpController::_powerUpMats
 	List_1_t386E09F4F22DDE4D2AC41A8567FFF283C254537B* ____powerUpMats_7;
+	// UnityEngine.GameObject PowerUpController::_expPrefab
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ____expPrefab_8;
+	// UnityEngine.AudioClip PowerUpController::_explosionAudio
+	AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ____explosionAudio_9;
+	// UnityEngine.AudioSource PowerUpController::_audioSource
+	AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* ____audioSource_10;
+	// UnityEngine.ParticleSystem PowerUpController::_explosionPS
+	ParticleSystem_tB19986EE308BD63D36FB6025EEEAFBEDB97C67C1* ____explosionPS_11;
 };
 
 // PowerUpManager
@@ -23567,9 +23575,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4384[4] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4385[4] = 
 {
 	static_cast<int32_t>(offsetof(PlayerPointsManager_tCD06068C78510DF97759A68C8ADA20A41DDFEC59_StaticFields, ___onUpdatePlayerPoints_4)),static_cast<int32_t>(offsetof(PlayerPointsManager_tCD06068C78510DF97759A68C8ADA20A41DDFEC59, ____points_5)),static_cast<int32_t>(offsetof(PlayerPointsManager_tCD06068C78510DF97759A68C8ADA20A41DDFEC59, ____negPoints_6)),static_cast<int32_t>(offsetof(PlayerPointsManager_tCD06068C78510DF97759A68C8ADA20A41DDFEC59, ____negPointsTime_7)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4386[4] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4386[8] = 
 {
-	static_cast<int32_t>(offsetof(PowerUpController_t231CDCA55E3324CE8428CCFBF06CD67C37F9F95C, ___U3CTypeU3Ek__BackingField_4)),static_cast<int32_t>(offsetof(PowerUpController_t231CDCA55E3324CE8428CCFBF06CD67C37F9F95C, ____camPos_5)),static_cast<int32_t>(offsetof(PowerUpController_t231CDCA55E3324CE8428CCFBF06CD67C37F9F95C, ____moveSpeed_6)),static_cast<int32_t>(offsetof(PowerUpController_t231CDCA55E3324CE8428CCFBF06CD67C37F9F95C, ____powerUpMats_7)),};
+	static_cast<int32_t>(offsetof(PowerUpController_t231CDCA55E3324CE8428CCFBF06CD67C37F9F95C, ___U3CTypeU3Ek__BackingField_4)),static_cast<int32_t>(offsetof(PowerUpController_t231CDCA55E3324CE8428CCFBF06CD67C37F9F95C, ____camPos_5)),static_cast<int32_t>(offsetof(PowerUpController_t231CDCA55E3324CE8428CCFBF06CD67C37F9F95C, ____moveSpeed_6)),static_cast<int32_t>(offsetof(PowerUpController_t231CDCA55E3324CE8428CCFBF06CD67C37F9F95C, ____powerUpMats_7)),static_cast<int32_t>(offsetof(PowerUpController_t231CDCA55E3324CE8428CCFBF06CD67C37F9F95C, ____expPrefab_8)),static_cast<int32_t>(offsetof(PowerUpController_t231CDCA55E3324CE8428CCFBF06CD67C37F9F95C, ____explosionAudio_9)),static_cast<int32_t>(offsetof(PowerUpController_t231CDCA55E3324CE8428CCFBF06CD67C37F9F95C, ____audioSource_10)),static_cast<int32_t>(offsetof(PowerUpController_t231CDCA55E3324CE8428CCFBF06CD67C37F9F95C, ____explosionPS_11)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4387[1] = 
 {
 	static_cast<int32_t>(offsetof(PowerUpManager_tD294643D6AF9D9169245781685135AE31C443534, ____powerUpPrefab_4)),};

@@ -10,9 +10,23 @@ public class PowerUpController : MonoBehaviour
     [SerializeField] float _moveSpeed = 1f;
 
     [SerializeField] List<Material> _powerUpMats;
+    [SerializeField] GameObject _expPrefab;
+    [SerializeField] AudioClip _explosionAudio;
+
+    AudioSource _audioSource;
+    ParticleSystem _explosionPS;
+
+    private void OnEnable() {
+        PlayerCollider.onPLayerCaughtPowerUp += PlayerCaughtPawerUpActions;
+    }
+    private void OnDisable() {
+        PlayerCollider.onPLayerCaughtPowerUp -= PlayerCaughtPawerUpActions;
+    }
 
 
     void Awake() {
+        _audioSource = GetComponent<AudioSource>();
+        _explosionPS = Instantiate(_expPrefab, transform).GetComponent<ParticleSystem>();
         var types = Enum.GetValues(typeof(PowerUpType));
         System.Random random = new System.Random();
         Type = (PowerUpType)types.GetValue(random.Next(types.Length));
@@ -26,5 +40,10 @@ public class PowerUpController : MonoBehaviour
     void Update()
     {
         transform.position += Vector3.back * Time.deltaTime * _moveSpeed;
+    }
+
+    void PlayerCaughtPawerUpActions(PowerUpType type){
+        _explosionPS.Play();
+        _audioSource.PlayOneShot(_explosionAudio);
     }
 }

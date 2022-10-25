@@ -37,7 +37,6 @@ public class CharacterMoveBound : MonoBehaviour
 
     void CheckBounds()
     {
-        Debug.Log($"pos: {transform.position}");
         if(transform.position.x < _leftBound) transform.position = new Vector3(_leftBound, transform.position.y, transform.position.z);
         if(transform.position.x > _rightBound) transform.position = new Vector3(_rightBound, transform.position.y, transform.position.z);
         if(transform.position.y < _bottomBound) transform.position = new Vector3(transform.position.x, _bottomBound, transform.position.z);
