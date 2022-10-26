@@ -8,11 +8,11 @@ public class WallMover : MonoBehaviour
 
     Animator _anim;
     void OnEnable() {
-        PlayerCollider.onPLayerCaughtPowerUp += MoveWall;
+        PowerUpController.onPLayerCaughtPowerUp += MoveWall;
     }
 
     void OnDisable() {
-        PlayerCollider.onPLayerCaughtPowerUp -= MoveWall;
+        PowerUpController.onPLayerCaughtPowerUp -= MoveWall;
     }
     void Awake() {
         _anim = GetComponent<Animator>();

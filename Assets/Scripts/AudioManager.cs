@@ -8,10 +8,10 @@ public class AudioManager : MonoBehaviour
     [SerializeField] List<AudioClip> _audioClipsList;
     Dictionary<AudioTypes, AudioClip> _audioClips;
     private void OnEnable() {
-        PlayerCollider.onPLayerCaughtPowerUp += PlayPowerUpCatchAudio;
+        PowerUpController.onPLayerCaughtPowerUp += PlayPowerUpCatchAudio;
     }
     private void OnDisable() {
-        PlayerCollider.onPLayerCaughtPowerUp -= PlayPowerUpCatchAudio;
+        PowerUpController.onPLayerCaughtPowerUp -= PlayPowerUpCatchAudio;
     }
     private void Awake() {
         _audioSource = GetComponent<AudioSource>();

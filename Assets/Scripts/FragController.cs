@@ -26,6 +26,7 @@ public class FragController : MonoBehaviour
     [SerializeField] float _flashDuration = 0.1f;
     [SerializeField] GameObject _expPrefab;
     [SerializeField] AudioClip _explosionAudio;
+    public static event Action<int> onFragCollideWithPlayer;
 
     BrickFrag brickScript;
     public bool toDisable;
@@ -33,12 +34,6 @@ public class FragController : MonoBehaviour
     ParticleSystem _explosionPS;
 
 
-    private void OnEnable() {
-        PlayerCollider.onFragCollideWithPlayer += CollideWithPlayerActions;
-    }
-    private void OnDisable() {
-        PlayerCollider.onFragCollideWithPlayer -= CollideWithPlayerActions;
-    }
     public void Init(int fragSize, Vector3 brickSize, Vector3 collisionPt, float collForce, BrickFrag brickScript) {
         timerOn = true;
         startTime = Time.time;
@@ -79,8 +74,16 @@ public class FragController : MonoBehaviour
         }
 
     }
+    private void OnTriggerEnter(Collider other) {
+        //Debug.Log("Triggered by: " + other.tag);
+        if (other.CompareTag("Player Collider")) {
+            CollideWithPlayerActions();
+            onFragCollideWithPlayer?.Invoke(FragSize);
+            DeleteFrag();
+        }
+    }
 
-    void CollideWithPlayerActions(int i){
+    public void CollideWithPlayerActions(){
         Instantiate(_expPrefab, transform.position, transform.rotation).GetComponent<ParticleSystem>();
         AudioSource.PlayClipAtPoint(_explosionAudio, transform.position, 0.1f);
     }

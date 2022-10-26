@@ -34,14 +34,14 @@ public class BallManager : MonoBehaviour
         DestroyZoneController.onBallLost += ManageBallReturn;
         GameController.onStartGame += SetBallStartingCount;
         GameController.onStartGame += LoadNewBall;
-        PlayerCollider.onPLayerCaughtPowerUp += AddBallPowerUp;
+        PowerUpController.onPLayerCaughtPowerUp += AddBallPowerUp;
     }
 
     void OnDisable() {
         DestroyZoneController.onBallLost -= ManageBallReturn;
         GameController.onStartGame -= SetBallStartingCount;
         GameController.onStartGame -= LoadNewBall;
-        PlayerCollider.onPLayerCaughtPowerUp -= AddBallPowerUp;
+        PowerUpController.onPLayerCaughtPowerUp -= AddBallPowerUp;
     }
 
 

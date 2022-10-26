@@ -11,12 +11,12 @@ public class PlayerPointsManager : MonoBehaviour
     bool _negPoints = false;
     [SerializeField] float _negPointsTime = 20f;
     void OnEnable() {
-        PlayerCollider.onFragCollideWithPlayer += ChangePlayerPts;
-        PlayerCollider.onPLayerCaughtPowerUp += StartNegatingPoints;
+        FragController.onFragCollideWithPlayer += ChangePlayerPts;
+        PowerUpController.onPLayerCaughtPowerUp += StartNegatingPoints;
     }
     private void OnDisable() {
-        PlayerCollider.onFragCollideWithPlayer -= ChangePlayerPts;
-        PlayerCollider.onPLayerCaughtPowerUp -= StartNegatingPoints;
+        FragController.onFragCollideWithPlayer -= ChangePlayerPts;
+        PowerUpController.onPLayerCaughtPowerUp -= StartNegatingPoints;
     }
 
     private void Start() {

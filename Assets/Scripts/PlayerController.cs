@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
 
     bool negativePts = false;
     void OnEnable() {
-        PlayerCollider.onFragCollideWithPlayer += ChangePlayerPts;
+        FragController.onFragCollideWithPlayer += ChangePlayerPts;
     }
 
     void SetStartingHealth() {
@@ -44,7 +44,7 @@ public class PlayerController : MonoBehaviour
     }
 
     private void OnDisable() {
-        PlayerCollider.onFragCollideWithPlayer -= ChangePlayerPts;
+        FragController.onFragCollideWithPlayer -= ChangePlayerPts;
     }
     // Start is called before the first frame update
     void Start()

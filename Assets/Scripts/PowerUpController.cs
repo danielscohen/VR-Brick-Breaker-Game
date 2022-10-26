@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PowerUpController : MonoBehaviour
 {
+    public static event Action<PowerUpType> onPLayerCaughtPowerUp;
     public PowerUpType Type {get; private set;}
     Vector3 _camPos;
     [SerializeField] float _moveSpeed = 1f;
@@ -16,12 +17,6 @@ public class PowerUpController : MonoBehaviour
     AudioSource _audioSource;
     ParticleSystem _explosionPS;
 
-    private void OnEnable() {
-        PlayerCollider.onPLayerCaughtPowerUp += PlayerCaughtPawerUpActions;
-    }
-    private void OnDisable() {
-        PlayerCollider.onPLayerCaughtPowerUp -= PlayerCaughtPawerUpActions;
-    }
 
 
     void Awake() {
@@ -41,8 +36,12 @@ public class PowerUpController : MonoBehaviour
         transform.position += Vector3.back * Time.deltaTime * _moveSpeed;
     }
 
-    void PlayerCaughtPawerUpActions(PowerUpType type){
-        Instantiate(_expPrefab, transform.position, transform.rotation).GetComponent<ParticleSystem>();
-        AudioSource.PlayClipAtPoint(_explosionAudio, transform.position);
+    private void OnTriggerEnter(Collider other) {
+        if(other.CompareTag("Player Collider")){
+            onPLayerCaughtPowerUp?.Invoke(Type);
+            Instantiate(_expPrefab, transform.position, transform.rotation).GetComponent<ParticleSystem>();
+            AudioSource.PlayClipAtPoint(_explosionAudio, transform.position);
+        }
     }
+
 }
