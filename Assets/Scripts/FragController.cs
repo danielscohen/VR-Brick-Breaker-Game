@@ -124,9 +124,9 @@ public class FragController : MonoBehaviour
     }
 
     IEnumerator FadeOutIfStuck() {
-        Vector3 origPos = transform.position;
+        Vector3 origPos = transform.localPosition;
         yield return new WaitForSeconds(2f);
-        if(Vector3.Distance(origPos, transform.position) < 0.2f) {
+        if(Vector3.Distance(origPos, transform.localPosition) < 0.2f) {
             StartCoroutine(FadeOut(fadeDuration, 0, true));
         }
     }

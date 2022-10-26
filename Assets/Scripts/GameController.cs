@@ -16,6 +16,7 @@ public class GameController : MonoBehaviour
     public static GameController Instance { get; private set; }
     public Difficulty GameDifficulty { get; private set; }
     public GameState CurrentGameState { get; private set; }
+    AudioSource _audioSource;
 
     [SerializeField] InputActionReference pauseReference;
 
@@ -49,10 +50,12 @@ public class GameController : MonoBehaviour
 
         CurrentGameState = GameState.Started;
         Time.timeScale = 0;
+        _audioSource = GetComponent<AudioSource>();
     }
 
     void Start() {
         onLoadGame?.Invoke();
+        _audioSource.Play();
     }
 
     void SetGameDifficulty(int difficulty) {
