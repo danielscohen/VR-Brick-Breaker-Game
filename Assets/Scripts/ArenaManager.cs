@@ -11,13 +11,6 @@ public class ArenaManager : MonoBehaviour
 
     Animator _anim;
 
-    void OnEnable() {
-        PlayerCollider.onPLayerCaughtPowerUp += RotateArena;
-    }
-
-    void OnDisable() {
-        PlayerCollider.onPLayerCaughtPowerUp -= RotateArena;
-    }
 
     void Awake() {
         _anim = GetComponent<Animator>();

@@ -26,7 +26,6 @@ public class PowerUpController : MonoBehaviour
 
     void Awake() {
         _audioSource = GetComponent<AudioSource>();
-        _explosionPS = Instantiate(_expPrefab, transform).GetComponent<ParticleSystem>();
         var types = Enum.GetValues(typeof(PowerUpType));
         System.Random random = new System.Random();
         Type = (PowerUpType)types.GetValue(random.Next(types.Length));
@@ -43,7 +42,7 @@ public class PowerUpController : MonoBehaviour
     }
 
     void PlayerCaughtPawerUpActions(PowerUpType type){
-        _explosionPS.Play();
-        _audioSource.PlayOneShot(_explosionAudio);
+        Instantiate(_expPrefab, transform.position, transform.rotation).GetComponent<ParticleSystem>();
+        AudioSource.PlayClipAtPoint(_explosionAudio, transform.position);
     }
 }
