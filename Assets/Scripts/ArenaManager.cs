@@ -28,7 +28,7 @@ public class ArenaManager : MonoBehaviour
     }
 
     void RotateArena(PowerUpType type){
-        if(type == PowerUpType.ArenaSpin && !_anim.isActiveAndEnabled){
+        if(type == PowerUpType.MoveWalls && !_anim.isActiveAndEnabled){
             StartCoroutine(RotateArenaCo());
         }
     }

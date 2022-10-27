@@ -19,7 +19,7 @@ public class WallMover : MonoBehaviour
         _anim.enabled = false;
     }
     void MoveWall(PowerUpType type){
-        if(type == PowerUpType.ArenaSpin && !_anim.isActiveAndEnabled){
+        if(type == PowerUpType.MoveWalls && !_anim.isActiveAndEnabled){
             StartCoroutine(MoveWallCo());
         }
     }

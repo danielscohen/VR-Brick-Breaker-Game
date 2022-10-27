@@ -6,11 +6,10 @@ using UnityEngine;
 public class PowerUpController : MonoBehaviour
 {
     public static event Action<PowerUpType> onPLayerCaughtPowerUp;
-    public PowerUpType Type {get; private set;}
+    public PowerUpType Type {get; set;}
     Vector3 _camPos;
     [SerializeField] float _moveSpeed = 1f;
 
-    [SerializeField] List<Material> _powerUpMats;
     [SerializeField] GameObject _expPrefab;
     [SerializeField] AudioClip _explosionAudio;
 
@@ -21,10 +20,6 @@ public class PowerUpController : MonoBehaviour
 
     void Awake() {
         _audioSource = GetComponent<AudioSource>();
-        var types = Enum.GetValues(typeof(PowerUpType));
-        System.Random random = new System.Random();
-        Type = (PowerUpType)types.GetValue(random.Next(types.Length));
-        GetComponent<Renderer>().material = _powerUpMats[(int)Type];
     }
     void Start() {
         _camPos = Camera.main.transform.position;
