@@ -92,6 +92,8 @@ struct Action_2_tECD5D9B0D67D486B802E231F6C4D4B0870A6FE72;
 struct Action_2_t39F9A40857E06142231322CA3632F32C6926572A;
 // System.Action`2<System.String,System.Boolean>
 struct Action_2_t79388C33CD9A9EDFE5BE17BE73F59AB95415B00A;
+// System.Action`2<System.String,System.Single>
+struct Action_2_t2399F3C34C43EB392520F878CA121755E120498E;
 // System.Action`2<System.UInt64,UnityEngine.Android.AndroidAssetPackState[]>
 struct Action_2_tA064EFF43B3CC220EB8F90E1E95638ADAFE7A6A5;
 // System.Action`3<System.Boolean,System.Boolean,System.Int32>
@@ -19025,14 +19027,16 @@ struct TimerController_t9FACAA69550370472C446690F3AD92032ECE8CC5  : public MonoB
 	GameDifficultySettings_tCDE520CD3D8184A5D053C857727E3CEAF36057DE* ____expertSettings_6;
 	// System.Single TimerController::timeRemaining
 	float ___timeRemaining_8;
+	// System.Single TimerController::timeLimit
+	float ___timeLimit_9;
 	// System.Boolean TimerController::timerIsRunning
-	bool ___timerIsRunning_9;
+	bool ___timerIsRunning_10;
 };
 
 struct TimerController_t9FACAA69550370472C446690F3AD92032ECE8CC5_StaticFields
 {
-	// System.Action`1<System.String> TimerController::onUpdateTimer
-	Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* ___onUpdateTimer_7;
+	// System.Action`2<System.String,System.Single> TimerController::onUpdateTimer
+	Action_2_t2399F3C34C43EB392520F878CA121755E120498E* ___onUpdateTimer_7;
 };
 
 // UnityEngine.SpatialTracking.TrackedPoseDriver
@@ -19093,20 +19097,24 @@ struct UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2  : public MonoBeha
 	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ____ballsRemainingText_7;
 	// TMPro.TextMeshProUGUI UIController::_timerText
 	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ____timerText_8;
+	// UnityEngine.UI.Image UIController::_timerCircle
+	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ____timerCircle_9;
+	// UnityEngine.UI.Image UIController::_redTimerCircle
+	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ____redTimerCircle_10;
 	// TMPro.TextMeshProUGUI UIController::_gameOverText
-	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ____gameOverText_9;
+	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ____gameOverText_11;
 	// UnityEngine.GameObject UIController::_startScreen
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ____startScreen_10;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ____startScreen_12;
 	// UnityEngine.GameObject UIController::_timerPointsUI
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ____timerPointsUI_11;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ____timerPointsUI_13;
 	// UnityEngine.GameObject UIController::_ballsRemainingUI
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ____ballsRemainingUI_12;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ____ballsRemainingUI_14;
 	// UnityEngine.GameObject UIController::_pauseScreen
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ____pauseScreen_13;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ____pauseScreen_15;
 	// UnityEngine.GameObject UIController::_gameOverScreen
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ____gameOverScreen_14;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ____gameOverScreen_16;
 	// UnityEngine.GameObject UIController::_menuUI
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ____menuUI_15;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ____menuUI_17;
 };
 
 // UnityEngine.XR.OpenXR.Features.Interactions.ValveIndexControllerProfile
@@ -23652,12 +23660,12 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4370[8] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4371[3] = 
 {
 	static_cast<int32_t>(offsetof(SwapRacketBall_tC319DDC5E00196FADCFAF8A50A6FE985BEA19480, ____swapReference_4)),static_cast<int32_t>(offsetof(SwapRacketBall_tC319DDC5E00196FADCFAF8A50A6FE985BEA19480, ____racket_5)),static_cast<int32_t>(offsetof(SwapRacketBall_tC319DDC5E00196FADCFAF8A50A6FE985BEA19480, ____ball_6)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4372[6] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4372[7] = 
 {
-	static_cast<int32_t>(offsetof(TimerController_t9FACAA69550370472C446690F3AD92032ECE8CC5, ____beginnerSettings_4)),static_cast<int32_t>(offsetof(TimerController_t9FACAA69550370472C446690F3AD92032ECE8CC5, ____normalSettings_5)),static_cast<int32_t>(offsetof(TimerController_t9FACAA69550370472C446690F3AD92032ECE8CC5, ____expertSettings_6)),static_cast<int32_t>(offsetof(TimerController_t9FACAA69550370472C446690F3AD92032ECE8CC5_StaticFields, ___onUpdateTimer_7)),static_cast<int32_t>(offsetof(TimerController_t9FACAA69550370472C446690F3AD92032ECE8CC5, ___timeRemaining_8)),static_cast<int32_t>(offsetof(TimerController_t9FACAA69550370472C446690F3AD92032ECE8CC5, ___timerIsRunning_9)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4373[12] = 
+	static_cast<int32_t>(offsetof(TimerController_t9FACAA69550370472C446690F3AD92032ECE8CC5, ____beginnerSettings_4)),static_cast<int32_t>(offsetof(TimerController_t9FACAA69550370472C446690F3AD92032ECE8CC5, ____normalSettings_5)),static_cast<int32_t>(offsetof(TimerController_t9FACAA69550370472C446690F3AD92032ECE8CC5, ____expertSettings_6)),static_cast<int32_t>(offsetof(TimerController_t9FACAA69550370472C446690F3AD92032ECE8CC5_StaticFields, ___onUpdateTimer_7)),static_cast<int32_t>(offsetof(TimerController_t9FACAA69550370472C446690F3AD92032ECE8CC5, ___timeRemaining_8)),static_cast<int32_t>(offsetof(TimerController_t9FACAA69550370472C446690F3AD92032ECE8CC5, ___timeLimit_9)),static_cast<int32_t>(offsetof(TimerController_t9FACAA69550370472C446690F3AD92032ECE8CC5, ___timerIsRunning_10)),};
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4373[14] = 
 {
-	static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ___playerHealth_4)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____uIMenuActive_5)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____playerHealthText_6)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____ballsRemainingText_7)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____timerText_8)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____gameOverText_9)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____startScreen_10)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____timerPointsUI_11)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____ballsRemainingUI_12)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____pauseScreen_13)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____gameOverScreen_14)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____menuUI_15)),};
+	static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ___playerHealth_4)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____uIMenuActive_5)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____playerHealthText_6)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____ballsRemainingText_7)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____timerText_8)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____timerCircle_9)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____redTimerCircle_10)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____gameOverText_11)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____startScreen_12)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____timerPointsUI_13)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____ballsRemainingUI_14)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____pauseScreen_15)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____gameOverScreen_16)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____menuUI_17)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4374[2] = 
 {
 	0,0,};

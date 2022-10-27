@@ -26,8 +26,8 @@ public class SwapRacketBall : MonoBehaviour
     void Swap(){
         _racket = GameObject.Find("Racket Socket");
         _ball = GameObject.Find("Ball Socket");
-        Transform temp = _ball.transform;
+        Vector3 temp = _ball.transform.position;
         _ball.transform.position = _racket.transform.position;
-        _racket.transform.position = temp.position;
+        _racket.transform.position = temp;
     }
 }

@@ -8,8 +8,9 @@ public class TimerController : MonoBehaviour
     [SerializeField] GameDifficultySettings _beginnerSettings;
     [SerializeField] GameDifficultySettings _normalSettings;
     [SerializeField] GameDifficultySettings _expertSettings;
-    public static event Action<string> onUpdateTimer;
+    public static event Action<string, float> onUpdateTimer;
     float timeRemaining;
+    float timeLimit;
     bool timerIsRunning = false;
 
     void OnEnable() {
@@ -39,16 +40,17 @@ public class TimerController : MonoBehaviour
     void SetStartingTime() {
         switch (GameController.Instance.GameDifficulty) {
             case Difficulty.Beginner:
-                timeRemaining = _beginnerSettings.timeLimit;
+                timeLimit = _beginnerSettings.timeLimit;
                 break;
             case Difficulty.Normal:
-                timeRemaining = _normalSettings.timeLimit;
+                timeLimit = _normalSettings.timeLimit;
                 break;
             case Difficulty.Expert:
-                timeRemaining = _expertSettings.timeLimit;
+                timeLimit = _expertSettings.timeLimit;
                 break;
         }
 
+        timeRemaining = timeLimit;
         timerIsRunning = true;
         DisplayTime(timeRemaining);
         
@@ -59,6 +61,6 @@ public class TimerController : MonoBehaviour
         float minutes = Mathf.FloorToInt(timeToDisplay / 60); 
         float seconds = Mathf.FloorToInt(timeToDisplay % 60);
         string timerText = string.Format("{0:00}:{1:00}", minutes, seconds);
-        onUpdateTimer?.Invoke(timerText);
+        onUpdateTimer?.Invoke(timerText, timeToDisplay / timeLimit);
     }
 }

@@ -696,10 +696,10 @@ extern void SwapRacketBall_onSwapPressed_m2309A6AB651F3E7E0689623A0605523A5930B6
 extern void SwapRacketBall_Swap_mDAB5A4C61066269C4284F18BCB0781FA9CB2ADE6 (void);
 // 0x00000156 System.Void SwapRacketBall::.ctor()
 extern void SwapRacketBall__ctor_m8433ACF0D79340EB25AB8432970651FCEF48C973 (void);
-// 0x00000157 System.Void TimerController::add_onUpdateTimer(System.Action`1<System.String>)
-extern void TimerController_add_onUpdateTimer_mD094863A7CAF7629C036E2D591ED01EDCC8B0FE0 (void);
-// 0x00000158 System.Void TimerController::remove_onUpdateTimer(System.Action`1<System.String>)
-extern void TimerController_remove_onUpdateTimer_m4C58CA0DCE45DE764A0311FB717BC7C528D5B840 (void);
+// 0x00000157 System.Void TimerController::add_onUpdateTimer(System.Action`2<System.String,System.Single>)
+extern void TimerController_add_onUpdateTimer_m31C4BE97C8D0206A8B123464DC1952F9787C2702 (void);
+// 0x00000158 System.Void TimerController::remove_onUpdateTimer(System.Action`2<System.String,System.Single>)
+extern void TimerController_remove_onUpdateTimer_mE1F9E260F6A55A060312355D951FF03E480AA100 (void);
 // 0x00000159 System.Void TimerController::OnEnable()
 extern void TimerController_OnEnable_mF3D910CA45352D8F75F00361FD24A214D0EBACB0 (void);
 // 0x0000015A System.Void TimerController::OnDisable()
@@ -722,8 +722,8 @@ extern void UIController_Update_m8F538932F53B831D5B82191902ADADACD32B108B (void)
 extern void UIController_UpdatePLayerHealthText_m04451968D79D8AF2BA7B72F409E164842ED006ED (void);
 // 0x00000163 System.Void UIController::UpdateBallsRemainingText(System.Int32)
 extern void UIController_UpdateBallsRemainingText_mB1FF692F489F69149E96F37767ECB44CAD974494 (void);
-// 0x00000164 System.Void UIController::UpdateTimerText(System.String)
-extern void UIController_UpdateTimerText_mCB9CB84B9F3E4D689E1C389B31F1885C5E962C6C (void);
+// 0x00000164 System.Void UIController::UpdateTimerText(System.String,System.Single)
+extern void UIController_UpdateTimerText_m8D85DE87E7C26E203EA1EEB4EF8911D6F9B53BBE (void);
 // 0x00000165 System.Void UIController::ShowScreenOverlay()
 extern void UIController_ShowScreenOverlay_m9DBED0CC673F8F83A2ADC1A6803A76ECF9921614 (void);
 // 0x00000166 System.Void UIController::ShowStartScreen()
@@ -1215,8 +1215,8 @@ static Il2CppMethodPointer s_methodPointers[437] =
 	SwapRacketBall_onSwapPressed_m2309A6AB651F3E7E0689623A0605523A5930B663,
 	SwapRacketBall_Swap_mDAB5A4C61066269C4284F18BCB0781FA9CB2ADE6,
 	SwapRacketBall__ctor_m8433ACF0D79340EB25AB8432970651FCEF48C973,
-	TimerController_add_onUpdateTimer_mD094863A7CAF7629C036E2D591ED01EDCC8B0FE0,
-	TimerController_remove_onUpdateTimer_m4C58CA0DCE45DE764A0311FB717BC7C528D5B840,
+	TimerController_add_onUpdateTimer_m31C4BE97C8D0206A8B123464DC1952F9787C2702,
+	TimerController_remove_onUpdateTimer_mE1F9E260F6A55A060312355D951FF03E480AA100,
 	TimerController_OnEnable_mF3D910CA45352D8F75F00361FD24A214D0EBACB0,
 	TimerController_OnDisable_mEBCEF18E7F1561A15E8BEBAD2F85207459532B57,
 	TimerController_Update_m2358B4DAF3AED5C67A533BC862458DC060CAC893,
@@ -1228,7 +1228,7 @@ static Il2CppMethodPointer s_methodPointers[437] =
 	UIController_Update_m8F538932F53B831D5B82191902ADADACD32B108B,
 	UIController_UpdatePLayerHealthText_m04451968D79D8AF2BA7B72F409E164842ED006ED,
 	UIController_UpdateBallsRemainingText_mB1FF692F489F69149E96F37767ECB44CAD974494,
-	UIController_UpdateTimerText_mCB9CB84B9F3E4D689E1C389B31F1885C5E962C6C,
+	UIController_UpdateTimerText_m8D85DE87E7C26E203EA1EEB4EF8911D6F9B53BBE,
 	UIController_ShowScreenOverlay_m9DBED0CC673F8F83A2ADC1A6803A76ECF9921614,
 	UIController_ShowStartScreen_mB5B1CBB6CB686E1E2D260964A00FC4D5AE41C784,
 	UIController_ShowPauseScreen_mDFF8BB4AD2CF6C99D2A93DE882867220D469AFA0,
@@ -1673,7 +1673,7 @@ static const int32_t s_InvokerIndices[437] =
 	4904,
 	3868,
 	3868,
-	3892,
+	2176,
 	4904,
 	4904,
 	4904,

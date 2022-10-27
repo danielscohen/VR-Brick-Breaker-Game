@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class UIController : MonoBehaviour
@@ -10,6 +11,8 @@ public class UIController : MonoBehaviour
     [SerializeField] TextMeshProUGUI _playerHealthText;
     [SerializeField] TextMeshProUGUI _ballsRemainingText;
     [SerializeField] TextMeshProUGUI _timerText;
+    [SerializeField] Image _timerCircle;
+    [SerializeField] Image _redTimerCircle;
     [SerializeField] TextMeshProUGUI _gameOverText;
     [SerializeField] GameObject _startScreen;
     [SerializeField] GameObject _timerPointsUI;
@@ -55,8 +58,21 @@ public class UIController : MonoBehaviour
     void UpdateBallsRemainingText(int numBalls) {
         _ballsRemainingText.text = $"{numBalls} Orbs Left";
     }
-    void UpdateTimerText(string time) {
+    void UpdateTimerText(string time, float timePer) {
+        Image hiddenTimer;
+        Image timer;
+        if(timePer < 0.25){
+            timer = _redTimerCircle;
+            hiddenTimer = _timerCircle;
+        }
+        else {
+            timer = _timerCircle;
+            hiddenTimer = _redTimerCircle;
+        }
         _timerText.text = time;
+        hiddenTimer.enabled = false;
+        timer.enabled = true;
+        timer.fillAmount = timePer;
     }
 
     void ShowScreenOverlay() {
