@@ -64,8 +64,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _moveSpeed: 1
-  _expPrefab: {fileID: 0}
-  _explosionAudio: {fileID: 0}
+  _expPrefab: {fileID: 1855340746554395461, guid: 49011e57640af4346b984abcfb1cf581,
+    type: 3}
+  _explosionAudio: {fileID: 8300000, guid: 57d96e0355d21364780d4009e3b7057b, type: 3}
 --- !u!95 &4303006514681457840
 Animator:
   serializedVersion: 4

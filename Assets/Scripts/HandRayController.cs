@@ -8,6 +8,7 @@ public class HandRayController : MonoBehaviour
     [SerializeField] GameObject _leftHandRay;
     [SerializeField] GameObject _rightHandRay;
     [SerializeField] GameObject _leftHand;
+    [SerializeField] GameObject _rightHand;
     void OnEnable() {
         GameController.onLoadGame += EnableRays;
         GameController.onPauseGame += EnableRays;
@@ -25,18 +26,26 @@ public class HandRayController : MonoBehaviour
     void EnableRays(){
         _leftHandRay.SetActive(true);
         _rightHandRay.SetActive(true);
+        _leftHand.SetActive(false);
+        _rightHand.SetActive(false);
     }
     void DisableRays(){
         _leftHandRay.SetActive(false);
         _rightHandRay.SetActive(false);
+        _leftHand.SetActive(true);
+        _rightHand.SetActive(true);
     }
     void EnableRays(GameOverReason r){
         _leftHandRay.SetActive(true);
         _rightHandRay.SetActive(true);
+        _leftHand.SetActive(false);
+        _rightHand.SetActive(false);
     }
     void DisableRays(GameOverReason r){
         _leftHandRay.SetActive(false);
         _rightHandRay.SetActive(false);
+        _leftHand.SetActive(true);
+        _rightHand.SetActive(true);
     }
 
     public void DisableLeftHand(SelectEnterEventArgs args){

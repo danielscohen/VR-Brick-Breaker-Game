@@ -25,6 +25,9 @@ public class PlayerPointsManager : MonoBehaviour
     }
     void ChangePlayerPts(int ptDelta) {
         ptDelta = _negPoints ? -ptDelta : ptDelta;
+        if(_doublePts){
+            ptDelta *= 2;
+        }
         _points += ptDelta;
         if(_points < 0) _points = 0;
         onUpdatePlayerPoints?.Invoke(_points);

@@ -2250,10 +2250,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8083bbfddccdd9e4385499a272de352a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _topBound: 0.7
-  _bottomBound: -3
-  _rightBound: 2.2
-  _leftBound: -2.2
+  _topBodyBound: 0.45
+  _bottomBodyBound: -2.86
+  _rightBodyBound: 1.77
+  _leftBodyBound: -1.64
+  _topHandBound: 2.14
+  _bottomHandBound: -2.14
+  _rightHandBound: 2.14
+  _leftHandBound: -2.14
+  _leftHand: {fileID: 777888644}
+  _rightHand: {fileID: 1321856422}
+  _leftHandController: {fileID: 1801898518}
+  _rightHandController: {fileID: 1196449211}
 --- !u!1001 &309123266
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4585,7 +4593,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _leftHandRay: {fileID: 1592988378}
   _rightHandRay: {fileID: 643924256}
-  _leftHand: {fileID: 0}
+  _leftHand: {fileID: 1801898518}
+  _rightHand: {fileID: 1196449211}
 --- !u!1 &643924256
 GameObject:
   m_ObjectHideFlags: 0
@@ -5916,7 +5925,7 @@ GameObject:
   - component: {fileID: 676496883}
   - component: {fileID: 676496882}
   - component: {fileID: 676496885}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Arena Kill Boundry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6233,6 +6242,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f5a24a380916d14db9775daab4fe333, type: 3}
+--- !u!1 &777888644 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 109434732395284509, guid: 65847589f926b734d9eaed6e25f0046b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1989369596}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &786617398
 GameObject:
   m_ObjectHideFlags: 0
@@ -14160,6 +14175,12 @@ Transform:
   m_Father: {fileID: 2101284858}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1321856422 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5686134208185362930, guid: 1fd3a7c43c8190f4d8c167ebde694364,
+    type: 3}
+  m_PrefabInstance: {fileID: 1533541460}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1322139652
 GameObject:
   m_ObjectHideFlags: 0
@@ -17043,7 +17064,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 4
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_CustomReticle: {fileID: 0}

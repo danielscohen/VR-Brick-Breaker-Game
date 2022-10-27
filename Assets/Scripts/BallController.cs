@@ -9,6 +9,7 @@ public class BallController : MonoBehaviour
     public bool JustCollidedWithBrick { get; private set; }
     float _collTime;
     [SerializeField] float _nextCollWaitTime = 0.01f;
+    public static event Action<int> onBallLost;
 
     Rigidbody ballRb;
     Vector3 _camPos;
@@ -29,6 +30,13 @@ public class BallController : MonoBehaviour
 
     void Start() {
         _camPos = Camera.main.transform.position;
+    }
+
+    private void Update() {
+        if(transform.position.z < -0.5){
+            // Debug.Log("Delete Ball");
+            onBallLost?.Invoke(BallID);
+        }
     }
 
     void OnEnable() {

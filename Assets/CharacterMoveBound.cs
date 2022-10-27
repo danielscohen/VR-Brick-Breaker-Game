@@ -14,10 +14,18 @@ public class CharacterMoveBound : MonoBehaviour
     // [SerializeField] float _bottomMargin = 1f;
     // [SerializeField] float _rightMargin = 1f;
     // [SerializeField] float _leftMargin = 1f;
-    [SerializeField] float _topBound;
-    [SerializeField] float _bottomBound;
-    [SerializeField] float _rightBound;
-    [SerializeField] float _leftBound;
+    [SerializeField] float _topBodyBound;
+    [SerializeField] float _bottomBodyBound;
+    [SerializeField] float _rightBodyBound;
+    [SerializeField] float _leftBodyBound;
+    [SerializeField] float _topHandBound;
+    [SerializeField] float _bottomHandBound;
+    [SerializeField] float _rightHandBound;
+    [SerializeField] float _leftHandBound;
+    [SerializeField] GameObject _leftHand;
+    [SerializeField] GameObject _rightHand;
+    [SerializeField] GameObject _leftHandController;
+    [SerializeField] GameObject _rightHandController;
 
     void Start() {
         // _topBound = _arenaWalls.TransformPoint(_topWall.position).y - _topMargin;
@@ -32,14 +40,31 @@ public class CharacterMoveBound : MonoBehaviour
         
     }
     void Update() {
-        CheckBounds();
+        CheckBodyBounds();
+        // CheckLeftHandBounds();
+        // CheckRightHandBounds();
+        // Debug.Log($"Body: {transform.position}\nLeft Hand: {_leftHand.transform.position}\nRight Hand: {_rightHand.transform.position}");
     }
 
-    void CheckBounds()
+    void CheckBodyBounds()
     {
-        if(transform.position.x < _leftBound) transform.position = new Vector3(_leftBound, transform.position.y, transform.position.z);
-        if(transform.position.x > _rightBound) transform.position = new Vector3(_rightBound, transform.position.y, transform.position.z);
-        if(transform.position.y < _bottomBound) transform.position = new Vector3(transform.position.x, _bottomBound, transform.position.z);
-        if(transform.position.y > _topBound) transform.position = new Vector3(transform.position.x, _topBound, transform.position.z);
+        if(transform.position.x < _leftBodyBound) transform.position = new Vector3(_leftBodyBound, transform.position.y, transform.position.z);
+        if(transform.position.x > _rightBodyBound) transform.position = new Vector3(_rightBodyBound, transform.position.y, transform.position.z);
+        if(transform.position.y < _bottomBodyBound) transform.position = new Vector3(transform.position.x, _bottomBodyBound, transform.position.z);
+        if(transform.position.y > _topBodyBound) transform.position = new Vector3(transform.position.x, _topBodyBound, transform.position.z);
     }
+    // void CheckLeftHandBounds()
+    // {
+    //     if(_leftHand.transform.position.x < _leftHandBound || _leftHand.transform.position.x > _rightHandBound
+    //      || _leftHand.transform.position.y < _bottomHandBound || _leftHand.transform.position.y > _topHandBound) {
+    //         _leftHandController.SetActive(false);
+    //      } else _leftHandController.SetActive(true);
+    // }
+    // void CheckRightHandBounds()
+    // {
+    //     if(_rightHand.transform.position.x < _leftHandBound || _rightHand.transform.position.x > _rightHandBound
+    //      || _rightHand.transform.position.y < _bottomHandBound || _rightHand.transform.position.y > _topHandBound) {
+    //         _rightHandController.SetActive(false);
+    //      } else _rightHandController.SetActive(true);
+    // }
 }
