@@ -7,17 +7,20 @@ public class PlayerPointsManager : MonoBehaviour
 {
 
     public static event Action<int> onUpdatePlayerPoints;
+    public static event Action<int> onUpdatePowerUpTime;
     int _points = 0;
     bool _negPoints = false;
     bool _doublePts = false;
     [SerializeField] float _powerUpTime = 20f;
     void OnEnable() {
         FragController.onFragCollideWithPlayer += ChangePlayerPts;
-        PowerUpController.onPLayerCaughtPowerUp += ModifyPoints;
+        PowerUpManager.onStartPowerUp += ApplyPointsModifier;
+        PowerUpManager.onStopPowerUp += RemovePointsModifier;
     }
     private void OnDisable() {
         FragController.onFragCollideWithPlayer -= ChangePlayerPts;
-        PowerUpController.onPLayerCaughtPowerUp -= ModifyPoints;
+        PowerUpManager.onStartPowerUp -= ApplyPointsModifier;
+        PowerUpManager.onStopPowerUp -= RemovePointsModifier;
     }
 
     private void Start() {
@@ -32,36 +35,20 @@ public class PlayerPointsManager : MonoBehaviour
         if(_points < 0) _points = 0;
         onUpdatePlayerPoints?.Invoke(_points);
     }
-    void ModifyPoints(PowerUpType type){
+    void ApplyPointsModifier(PowerUpType type){
         if(type == PowerUpType.NegativePts){
-            StartCoroutine(NegatePoints());
+            _negPoints = true;
         } 
         else if (type == PowerUpType.DoublePoints){
-            StartCoroutine(DoublePoints());
+            _doublePts = true;
         }
     }
-    IEnumerator NegatePoints()
-    {
-        float timePassed = 0;
-
-        _negPoints = true;
-        while(timePassed < _powerUpTime){
-            timePassed += Time.deltaTime;
-
-            yield return null;
+    void RemovePointsModifier(PowerUpType type){
+        if(type == PowerUpType.NegativePts){
+            _negPoints = false;
+        } 
+        else if (type == PowerUpType.DoublePoints){
+            _doublePts = false;
         }
-        _negPoints = false;
-    }
-    IEnumerator DoublePoints()
-    {
-        float timePassed = 0;
-
-        _doublePts = true;
-        while(timePassed < _powerUpTime){
-            timePassed += Time.deltaTime;
-
-            yield return null;
-        }
-        _doublePts = false;
     }
 }

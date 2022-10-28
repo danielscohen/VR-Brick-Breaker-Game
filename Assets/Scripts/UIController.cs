@@ -20,10 +20,17 @@ public class UIController : MonoBehaviour
     [SerializeField] GameObject _pauseScreen;
     [SerializeField] GameObject _gameOverScreen;
     [SerializeField] GameObject _menuUI;
+    [SerializeField] GameObject _doublePointsPanel;
+    [SerializeField] GameObject _negativePointsPanel;
+    [SerializeField] GameObject _movePanel;
+    [SerializeField] Image _doublePointsTimer;
+    [SerializeField] Image _negativePointsTimer;
+    [SerializeField] Image _moveTimer;
     void OnEnable() {
         BallManager.onBallsLeftCountChange += UpdateBallsRemainingText;
         TimerController.onUpdateTimer += UpdateTimerText;
         PlayerPointsManager.onUpdatePlayerPoints += UpdatePLayerHealthText;
+        PowerUpManager.onUpdatePowerUpTime += UpdatePowerUpTimer;
         GameController.onResumeGame += ShowScreenOverlay;
         GameController.onGameOver += ShowGameOverScreen;
         GameController.onLoadGame += ShowStartScreen;
@@ -35,10 +42,17 @@ public class UIController : MonoBehaviour
         BallManager.onBallsLeftCountChange -= UpdateBallsRemainingText;
         TimerController.onUpdateTimer -= UpdateTimerText;
         PlayerPointsManager.onUpdatePlayerPoints -= UpdatePLayerHealthText;
+        PowerUpManager.onUpdatePowerUpTime -= UpdatePowerUpTimer;
         GameController.onResumeGame -= ShowScreenOverlay;
         GameController.onGameOver -= ShowGameOverScreen;
         GameController.onLoadGame -= ShowStartScreen;
         GameController.onPauseGame -= ShowPauseScreen;
+    }
+
+    private void Start() {
+        _doublePointsPanel.SetActive(false);
+        _negativePointsPanel.SetActive(false);
+        _movePanel.SetActive(false);
     }
 
     void Update() {
@@ -73,6 +87,29 @@ public class UIController : MonoBehaviour
         hiddenTimer.enabled = false;
         timer.enabled = true;
         timer.fillAmount = timePer;
+    }
+    void UpdatePowerUpTimer(PowerUpType type, float timePer) {
+        GameObject timer;
+        Image timerImage;
+        switch(type){
+            case PowerUpType.DoublePoints:
+                timer = _doublePointsPanel;
+                timerImage = _doublePointsTimer;
+                break;
+            case PowerUpType.MoveWalls:
+                timer = _movePanel;
+                timerImage = _moveTimer;
+                break;
+            default:
+                timer = _negativePointsPanel;
+                timerImage = _negativePointsTimer;
+                break;
+        }
+        if(timePer <= 0){ timer.SetActive(false);}
+        else{
+            timer.SetActive(true);
+            timerImage.fillAmount = timePer;
+        }
     }
 
     void ShowScreenOverlay() {
