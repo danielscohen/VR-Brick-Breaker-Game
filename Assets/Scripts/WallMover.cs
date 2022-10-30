@@ -17,16 +17,18 @@ public class WallMover : MonoBehaviour
     }
     void Awake() {
         _anim = GetComponent<Animator>();
-        _anim.enabled = false;
+        _anim.enabled = true;
+        _anim.speed = 0;
     }
     void StartMovingWall(PowerUpType type){
-        if(type == PowerUpType.MoveWalls && !_anim.isActiveAndEnabled){
-            _anim.enabled = true;
+        Debug.Log("started moving");
+        if(type == PowerUpType.MoveWalls){
+            _anim.speed = 1.5f;
         }
     }
     void StopMovingWall(PowerUpType type){
-        if(type == PowerUpType.MoveWalls && _anim.isActiveAndEnabled){
-            _anim.enabled = false;
+        if(type == PowerUpType.MoveWalls){
+            _anim.speed = 0;
         }
     }
 

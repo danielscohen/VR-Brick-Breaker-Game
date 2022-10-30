@@ -11,6 +11,8 @@ public class PowerUpManager : MonoBehaviour
     public static event Action<PowerUpType> onStopPowerUp;
     public static event Action<PowerUpType, float> onUpdatePowerUpTime;
     Array _types;
+    Dictionary<PowerUpType, float> _timeRemaining;
+    Dictionary<PowerUpType, bool> _isPowerUpActive;
 
     void OnEnable() {
         BrickFrag.onSpawnPowerUp += CreateNewPowerUp;
@@ -24,7 +26,16 @@ public class PowerUpManager : MonoBehaviour
 
     private void Start() {
         _types = Enum.GetValues(typeof(PowerUpType));
-        
+        _timeRemaining = new Dictionary<PowerUpType, float>{
+            {PowerUpType.MoveWalls, _powerUpTime},
+            {PowerUpType.DoublePoints, _powerUpTime},
+            {PowerUpType.NegativePts, _powerUpTime}
+        };
+        _isPowerUpActive = new Dictionary<PowerUpType, bool>{
+            {PowerUpType.MoveWalls, false},
+            {PowerUpType.DoublePoints, false},
+            {PowerUpType.NegativePts, false}
+        };
     }
 
     void CreateNewPowerUp(Vector3 pos){
@@ -35,19 +46,25 @@ public class PowerUpManager : MonoBehaviour
 
     void ActivatePowerUp(PowerUpType type){
         if(type == PowerUpType.ExtraBall) return;
-        StartCoroutine(StartTimer(type));
+        if(_isPowerUpActive[type]){
+            _timeRemaining[type] = _powerUpTime;
+        } else {
+            StartCoroutine(StartTimer(type));
+        }
     }
     IEnumerator StartTimer(PowerUpType type)
     {
-        float timeRemaining = _powerUpTime;
+        _isPowerUpActive[type] = true;
+        _timeRemaining[type] = _powerUpTime;
         onStartPowerUp?.Invoke(type);
 
-        while(timeRemaining > 0){
-            timeRemaining -= Time.deltaTime;
-            onUpdatePowerUpTime?.Invoke(type, timeRemaining / _powerUpTime);
+        while(_timeRemaining[type] > 0){
+            _timeRemaining[type] -= Time.deltaTime;
+            onUpdatePowerUpTime?.Invoke(type, _timeRemaining[type] / _powerUpTime);
             yield return null;
         }
-        onUpdatePowerUpTime?.Invoke(type, timeRemaining);
+        onUpdatePowerUpTime?.Invoke(type, _timeRemaining[type]);
         onStopPowerUp?.Invoke(type);
+        _isPowerUpActive[type] = false;
     }
 }

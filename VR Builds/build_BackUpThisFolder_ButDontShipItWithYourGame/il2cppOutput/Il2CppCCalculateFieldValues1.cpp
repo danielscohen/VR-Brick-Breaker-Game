@@ -172,6 +172,10 @@ struct Dictionary_2_t1FFEE4C9AF6AF524CAD4FDCEA8F3AB34E585451D;
 struct Dictionary_2_t1351A00592947538540E9B7993C77F1F1FDF11B2;
 // System.Collections.Generic.Dictionary`2<UnityEngine.Rendering.PostProcessing.PostProcessEvent,System.Collections.Generic.List`1<UnityEngine.Rendering.PostProcessing.PostProcessLayer/SerializedBundleRef>>
 struct Dictionary_2_t327487279C961C05344C8D58EBFD0F55DDFBEC92;
+// System.Collections.Generic.Dictionary`2<PowerUpType,System.Boolean>
+struct Dictionary_2_t2BDC04CC8D2895AD76477DED42C9D3388A45C1C3;
+// System.Collections.Generic.Dictionary`2<PowerUpType,System.Single>
+struct Dictionary_2_t149ED1D7FEC466663C88E94E987ACB8DBBF3D55E;
 // System.Collections.Generic.Dictionary`2<UnityEngine.PrimitiveType,UnityEngine.Mesh>
 struct Dictionary_2_tE8F687FE7F52AAE959A60009719D2E4AD27C94FD;
 // System.Collections.Generic.Dictionary`2<UnityEngine.Shader,UnityEngine.Rendering.PostProcessing.PropertySheet>
@@ -5226,19 +5230,17 @@ struct Shaders_t2934A1A9726776BE88E31A97A67A9BD9ACEED86B  : public RuntimeObject
 	Shader_tADC867D36B7876EE22427FAA2CE485105F4EE692* ___screenSpaceReflections_23;
 };
 
-// PowerUpManager/<StartTimer>d__17
-struct U3CStartTimerU3Ed__17_tC14AF08452CDB08202D3473EC730956362E1697C  : public RuntimeObject
+// PowerUpManager/<StartTimer>d__19
+struct U3CStartTimerU3Ed__19_tFBE804A7B45011F9CD73D590AA3094FC9EBC7CE9  : public RuntimeObject
 {
-	// System.Int32 PowerUpManager/<StartTimer>d__17::<>1__state
+	// System.Int32 PowerUpManager/<StartTimer>d__19::<>1__state
 	int32_t ___U3CU3E1__state_0;
-	// System.Object PowerUpManager/<StartTimer>d__17::<>2__current
+	// System.Object PowerUpManager/<StartTimer>d__19::<>2__current
 	RuntimeObject* ___U3CU3E2__current_1;
-	// PowerUpManager PowerUpManager/<StartTimer>d__17::<>4__this
+	// PowerUpManager PowerUpManager/<StartTimer>d__19::<>4__this
 	PowerUpManager_tD294643D6AF9D9169245781685135AE31C443534* ___U3CU3E4__this_2;
-	// PowerUpType PowerUpManager/<StartTimer>d__17::type
+	// PowerUpType PowerUpManager/<StartTimer>d__19::type
 	int32_t ___type_3;
-	// System.Single PowerUpManager/<StartTimer>d__17::<timeRemaining>5__2
-	float ___U3CtimeRemainingU3E5__2_4;
 };
 
 // Readme/Section
@@ -18953,6 +18955,10 @@ struct PowerUpManager_tD294643D6AF9D9169245781685135AE31C443534  : public MonoBe
 	float ____powerUpTime_5;
 	// System.Array PowerUpManager::_types
 	RuntimeArray* ____types_9;
+	// System.Collections.Generic.Dictionary`2<PowerUpType,System.Single> PowerUpManager::_timeRemaining
+	Dictionary_2_t149ED1D7FEC466663C88E94E987ACB8DBBF3D55E* ____timeRemaining_10;
+	// System.Collections.Generic.Dictionary`2<PowerUpType,System.Boolean> PowerUpManager::_isPowerUpActive
+	Dictionary_2_t2BDC04CC8D2895AD76477DED42C9D3388A45C1C3* ____isPowerUpActive_11;
 };
 
 struct PowerUpManager_tD294643D6AF9D9169245781685135AE31C443534_StaticFields
@@ -23638,12 +23644,12 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4362[6] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4363[9] = 
 {
 	static_cast<int32_t>(offsetof(PowerUpController_t231CDCA55E3324CE8428CCFBF06CD67C37F9F95C_StaticFields, ___onPLayerCaughtPowerUp_4)),static_cast<int32_t>(offsetof(PowerUpController_t231CDCA55E3324CE8428CCFBF06CD67C37F9F95C, ___U3CTypeU3Ek__BackingField_5)),static_cast<int32_t>(offsetof(PowerUpController_t231CDCA55E3324CE8428CCFBF06CD67C37F9F95C, ____camPos_6)),static_cast<int32_t>(offsetof(PowerUpController_t231CDCA55E3324CE8428CCFBF06CD67C37F9F95C, ____moveSpeed_7)),static_cast<int32_t>(offsetof(PowerUpController_t231CDCA55E3324CE8428CCFBF06CD67C37F9F95C, ____expPrefab_8)),static_cast<int32_t>(offsetof(PowerUpController_t231CDCA55E3324CE8428CCFBF06CD67C37F9F95C, ____explosionAudio_9)),static_cast<int32_t>(offsetof(PowerUpController_t231CDCA55E3324CE8428CCFBF06CD67C37F9F95C, ____audioSource_10)),static_cast<int32_t>(offsetof(PowerUpController_t231CDCA55E3324CE8428CCFBF06CD67C37F9F95C, ____explosionPS_11)),static_cast<int32_t>(offsetof(PowerUpController_t231CDCA55E3324CE8428CCFBF06CD67C37F9F95C, ____firstTrigger_12)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4364[5] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4364[4] = 
 {
-	static_cast<int32_t>(offsetof(U3CStartTimerU3Ed__17_tC14AF08452CDB08202D3473EC730956362E1697C, ___U3CU3E1__state_0)),static_cast<int32_t>(offsetof(U3CStartTimerU3Ed__17_tC14AF08452CDB08202D3473EC730956362E1697C, ___U3CU3E2__current_1)),static_cast<int32_t>(offsetof(U3CStartTimerU3Ed__17_tC14AF08452CDB08202D3473EC730956362E1697C, ___U3CU3E4__this_2)),static_cast<int32_t>(offsetof(U3CStartTimerU3Ed__17_tC14AF08452CDB08202D3473EC730956362E1697C, ___type_3)),static_cast<int32_t>(offsetof(U3CStartTimerU3Ed__17_tC14AF08452CDB08202D3473EC730956362E1697C, ___U3CtimeRemainingU3E5__2_4)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4365[6] = 
+	static_cast<int32_t>(offsetof(U3CStartTimerU3Ed__19_tFBE804A7B45011F9CD73D590AA3094FC9EBC7CE9, ___U3CU3E1__state_0)),static_cast<int32_t>(offsetof(U3CStartTimerU3Ed__19_tFBE804A7B45011F9CD73D590AA3094FC9EBC7CE9, ___U3CU3E2__current_1)),static_cast<int32_t>(offsetof(U3CStartTimerU3Ed__19_tFBE804A7B45011F9CD73D590AA3094FC9EBC7CE9, ___U3CU3E4__this_2)),static_cast<int32_t>(offsetof(U3CStartTimerU3Ed__19_tFBE804A7B45011F9CD73D590AA3094FC9EBC7CE9, ___type_3)),};
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4365[8] = 
 {
-	static_cast<int32_t>(offsetof(PowerUpManager_tD294643D6AF9D9169245781685135AE31C443534, ____powerUpPrefabs_4)),static_cast<int32_t>(offsetof(PowerUpManager_tD294643D6AF9D9169245781685135AE31C443534, ____powerUpTime_5)),static_cast<int32_t>(offsetof(PowerUpManager_tD294643D6AF9D9169245781685135AE31C443534_StaticFields, ___onStartPowerUp_6)),static_cast<int32_t>(offsetof(PowerUpManager_tD294643D6AF9D9169245781685135AE31C443534_StaticFields, ___onStopPowerUp_7)),static_cast<int32_t>(offsetof(PowerUpManager_tD294643D6AF9D9169245781685135AE31C443534_StaticFields, ___onUpdatePowerUpTime_8)),static_cast<int32_t>(offsetof(PowerUpManager_tD294643D6AF9D9169245781685135AE31C443534, ____types_9)),};
+	static_cast<int32_t>(offsetof(PowerUpManager_tD294643D6AF9D9169245781685135AE31C443534, ____powerUpPrefabs_4)),static_cast<int32_t>(offsetof(PowerUpManager_tD294643D6AF9D9169245781685135AE31C443534, ____powerUpTime_5)),static_cast<int32_t>(offsetof(PowerUpManager_tD294643D6AF9D9169245781685135AE31C443534_StaticFields, ___onStartPowerUp_6)),static_cast<int32_t>(offsetof(PowerUpManager_tD294643D6AF9D9169245781685135AE31C443534_StaticFields, ___onStopPowerUp_7)),static_cast<int32_t>(offsetof(PowerUpManager_tD294643D6AF9D9169245781685135AE31C443534_StaticFields, ___onUpdatePowerUpTime_8)),static_cast<int32_t>(offsetof(PowerUpManager_tD294643D6AF9D9169245781685135AE31C443534, ____types_9)),static_cast<int32_t>(offsetof(PowerUpManager_tD294643D6AF9D9169245781685135AE31C443534, ____timeRemaining_10)),static_cast<int32_t>(offsetof(PowerUpManager_tD294643D6AF9D9169245781685135AE31C443534, ____isPowerUpActive_11)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4366[5] = 
 {
 	static_cast<int32_t>(sizeof(RuntimeObject)),0,0,0,0,};
