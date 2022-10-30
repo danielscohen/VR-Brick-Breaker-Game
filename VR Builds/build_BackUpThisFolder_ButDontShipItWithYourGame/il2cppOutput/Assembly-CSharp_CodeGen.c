@@ -64,8 +64,8 @@ extern void AudioManager_OnDisable_mF2F0E97A76DC5E6A1C2C6CFBCB94181BAD7DC8E3 (vo
 extern void AudioManager_Awake_m8138BCED4D692C83C95626A1A09AB46EA5205569 (void);
 // 0x0000001A System.Void AudioManager::Start()
 extern void AudioManager_Start_m3C0FEAF19F58B6D28A9E6D815B3AAF94FEA21B69 (void);
-// 0x0000001B System.Void AudioManager::PlayPowerUpCatchAudio(PowerUpType)
-extern void AudioManager_PlayPowerUpCatchAudio_mD2EAECC7E980144AD2140FFBB806C5A28D3A1659 (void);
+// 0x0000001B System.Void AudioManager::PlayButtonPressAudio()
+extern void AudioManager_PlayButtonPressAudio_m3C5DE7734C15063F67279F10DD4C2A273FC0C9B6 (void);
 // 0x0000001C System.Void AudioManager::PlayClip(AudioTypes)
 extern void AudioManager_PlayClip_m0DF8C64D3B8F6EC0D7BA65DC3EB753CE4BB89C89 (void);
 // 0x0000001D System.Void AudioManager::.ctor()
@@ -356,18 +356,18 @@ extern void FragController_Awake_m168B44431FDBD84781F5BFF412A1DE10D6608ED3 (void
 extern void FragController_Start_mE45250D00097409B7F4679F26C27964E5E987A4C (void);
 // 0x000000AC System.Void FragController::Update()
 extern void FragController_Update_m9601B41DA691458078753D13FF511E5D729C9C99 (void);
-// 0x000000AD System.Void FragController::FixedUpdate()
-extern void FragController_FixedUpdate_m5856A2F155E7F3348E0C31748115915DEB519AE2 (void);
-// 0x000000AE System.Void FragController::OnTriggerEnter(UnityEngine.Collider)
+// 0x000000AD System.Void FragController::OnTriggerEnter(UnityEngine.Collider)
 extern void FragController_OnTriggerEnter_mE4BB8B275A194B87F953F40EA4757F2CC6DD2820 (void);
-// 0x000000AF System.Void FragController::CollideWithPlayerActions()
+// 0x000000AE System.Void FragController::CollideWithPlayerActions()
 extern void FragController_CollideWithPlayerActions_m9D0123B30CC7535CF8CFAB670D3DE5F8D50ABA28 (void);
-// 0x000000B0 System.Void FragController::EnableGravity()
+// 0x000000AF System.Void FragController::EnableGravity()
 extern void FragController_EnableGravity_m5FEC4BB6923F634E457B52C16DC2F10E7D770922 (void);
-// 0x000000B1 System.Void FragController::DeleteFrag()
+// 0x000000B0 System.Void FragController::DeleteFrag()
 extern void FragController_DeleteFrag_m9E068BB6B89D5FFA74ED3842FA20FD8860C78A44 (void);
-// 0x000000B2 System.Void FragController::MakeFragExplode(System.Collections.Generic.List`1<UnityEngine.Vector3>)
+// 0x000000B1 System.Void FragController::MakeFragExplode(System.Collections.Generic.List`1<UnityEngine.Vector3>)
 extern void FragController_MakeFragExplode_mD4B15697F8DBE1E0E48969EBB733626514E21B61 (void);
+// 0x000000B2 System.Void FragController::ApplyZAxisForces(System.Single)
+extern void FragController_ApplyZAxisForces_m071CB9F68700D296E5DDAAF2F1F0C787520232C3 (void);
 // 0x000000B3 System.Void FragController::MakeFall()
 extern void FragController_MakeFall_m8268D2E9EB1233AE92858DA8FE60C567F261750F (void);
 // 0x000000B4 System.Collections.IEnumerator FragController::FadeOutIfStuck()
@@ -897,7 +897,7 @@ static Il2CppMethodPointer s_methodPointers[436] =
 	AudioManager_OnDisable_mF2F0E97A76DC5E6A1C2C6CFBCB94181BAD7DC8E3,
 	AudioManager_Awake_m8138BCED4D692C83C95626A1A09AB46EA5205569,
 	AudioManager_Start_m3C0FEAF19F58B6D28A9E6D815B3AAF94FEA21B69,
-	AudioManager_PlayPowerUpCatchAudio_mD2EAECC7E980144AD2140FFBB806C5A28D3A1659,
+	AudioManager_PlayButtonPressAudio_m3C5DE7734C15063F67279F10DD4C2A273FC0C9B6,
 	AudioManager_PlayClip_m0DF8C64D3B8F6EC0D7BA65DC3EB753CE4BB89C89,
 	AudioManager__ctor_mA793A9DF6B975D03690B7C953972EFE41AE4D5E6,
 	BallController_get_PrevVelocity_m066D77FEF72EAED77ADE6F012EDBEE22CE1F19A9,
@@ -1043,12 +1043,12 @@ static Il2CppMethodPointer s_methodPointers[436] =
 	FragController_Awake_m168B44431FDBD84781F5BFF412A1DE10D6608ED3,
 	FragController_Start_mE45250D00097409B7F4679F26C27964E5E987A4C,
 	FragController_Update_m9601B41DA691458078753D13FF511E5D729C9C99,
-	FragController_FixedUpdate_m5856A2F155E7F3348E0C31748115915DEB519AE2,
 	FragController_OnTriggerEnter_mE4BB8B275A194B87F953F40EA4757F2CC6DD2820,
 	FragController_CollideWithPlayerActions_m9D0123B30CC7535CF8CFAB670D3DE5F8D50ABA28,
 	FragController_EnableGravity_m5FEC4BB6923F634E457B52C16DC2F10E7D770922,
 	FragController_DeleteFrag_m9E068BB6B89D5FFA74ED3842FA20FD8860C78A44,
 	FragController_MakeFragExplode_mD4B15697F8DBE1E0E48969EBB733626514E21B61,
+	FragController_ApplyZAxisForces_m071CB9F68700D296E5DDAAF2F1F0C787520232C3,
 	FragController_MakeFall_m8268D2E9EB1233AE92858DA8FE60C567F261750F,
 	FragController_FadeOutIfStuck_m9F4A9313A29C5B79DD42C33A75752B38458AF604,
 	FragController_FadeOut_mFD499F676AD188A927CDCD45F801511EAF8582BB,
@@ -1341,7 +1341,7 @@ static const int32_t s_InvokerIndices[436] =
 	4934,
 	4934,
 	4934,
-	3888,
+	4934,
 	3888,
 	4934,
 	4925,
@@ -1487,12 +1487,12 @@ static const int32_t s_InvokerIndices[436] =
 	4934,
 	4934,
 	4934,
-	4934,
 	3912,
 	4934,
 	4934,
 	4934,
 	3912,
+	3947,
 	4934,
 	4827,
 	985,

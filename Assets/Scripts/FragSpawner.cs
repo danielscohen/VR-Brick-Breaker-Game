@@ -17,8 +17,9 @@ public class FragSpawner : MonoBehaviour
     }
 
     void DisableGravity(PoolObject p) {
-        p.gameObject.GetComponent<FragController>().DisableGravity();
+        // p.gameObject.GetComponent<FragController>().DisableGravity();
         p.GetComponent<Rigidbody>().velocity = Vector3.zero;
         p.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+        p.GetComponent<Rigidbody>().useGravity = false;
     }
 }

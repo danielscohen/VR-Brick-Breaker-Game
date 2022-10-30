@@ -138,7 +138,6 @@ public class BrickFrag : MonoBehaviour
         yield return StartCoroutine(FadeVoxels(1f, voxFadeInDur));
         DeleteFracLines();
 
-        GetComponentInParent<Animator>().speed = 1;
 
 
         int maxGroupIndex = generateVoxGroups();

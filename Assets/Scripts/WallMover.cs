@@ -21,7 +21,6 @@ public class WallMover : MonoBehaviour
         _anim.speed = 0;
     }
     void StartMovingWall(PowerUpType type){
-        Debug.Log("started moving");
         if(type == PowerUpType.MoveWalls){
             _anim.speed = 1.5f;
         }

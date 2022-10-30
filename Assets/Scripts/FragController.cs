@@ -67,13 +67,13 @@ public class FragController : MonoBehaviour
         }
     }
 
-    void FixedUpdate() {
-        if (gravityApplied) {
+    // void FixedUpdate() {
+    //     if (gravityApplied) {
         
-            fragRb.AddForce(Vector3.back * Gravity);
-        }
+    //         fragRb.AddForce(Vector3.back * Gravity);
+    //     }
 
-    }
+    // }
     private void OnTriggerEnter(Collider other) {
         //Debug.Log("Triggered by: " + other.tag);
         if (other.CompareTag("Player Collider")) {
@@ -110,12 +110,19 @@ public class FragController : MonoBehaviour
         //Vector3 expForce = ((transform.position - minPt)).normalized * (1 / nDist) * expMag * collForce;
         Vector3 expForce = ((transform.position - minPt)).normalized * expMag * collForce;
         fragRb.AddForce(expForce, ForceMode.Impulse);
+        fragRb.AddForce(expForce, ForceMode.Impulse);
+        ApplyZAxisForces(expMag * collForce);
         StartCoroutine(MakeFragFlash());
         MakeFall();
     }
 
+    void ApplyZAxisForces( float force){
+        fragRb.AddForce(Vector3.back * force, ForceMode.Impulse);
+    }
+
     public void MakeFall() {
-        EnableGravity();
+        // EnableGravity();
+        fragRb.useGravity = true;
         if (FragSize <= maxFragFadeSize && gameObject.activeSelf) {
             StartCoroutine(FadeOut(fadeDuration, 0, true));
         } else if (FragSize > maxFragFadeSize && gameObject.activeSelf) {

@@ -8,24 +8,25 @@ public class AudioManager : MonoBehaviour
     [SerializeField] List<AudioClip> _audioClipsList;
     Dictionary<AudioTypes, AudioClip> _audioClips;
     private void OnEnable() {
-        PowerUpController.onPLayerCaughtPowerUp += PlayPowerUpCatchAudio;
     }
     private void OnDisable() {
-        PowerUpController.onPLayerCaughtPowerUp -= PlayPowerUpCatchAudio;
     }
     private void Awake() {
         _audioSource = GetComponent<AudioSource>();
     }
     void Start()
     {
-        _audioClips.Add(AudioTypes.PowerUpCatch, _audioClipsList[0]);
+        _audioClips = new Dictionary<AudioTypes, AudioClip>(){
+            {AudioTypes.ButtonSelect, _audioClipsList[0]}
+        };
     }
 
-    void PlayPowerUpCatchAudio(PowerUpType type){
-        PlayClip(AudioTypes.PowerUpCatch);
+    public void PlayButtonPressAudio(){
+        PlayClip(AudioTypes.ButtonSelect);
     }
 
     void PlayClip(AudioTypes aType){
+        _audioSource.PlayOneShot(_audioClips[aType]);
     }
 
 }
