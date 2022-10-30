@@ -15,6 +15,7 @@ public class PowerUpController : MonoBehaviour
 
     AudioSource _audioSource;
     ParticleSystem _explosionPS;
+    bool _firstTrigger = true;
 
 
 
@@ -32,7 +33,8 @@ public class PowerUpController : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other) {
-        if(other.CompareTag("Player Collider")){
+        if(other.CompareTag("Player Collider") && _firstTrigger){
+            _firstTrigger = false;
             onPLayerCaughtPowerUp?.Invoke(Type);
             Instantiate(_expPrefab, transform.position, transform.rotation).GetComponent<ParticleSystem>();
             AudioSource.PlayClipAtPoint(_explosionAudio, transform.position);

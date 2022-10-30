@@ -25,7 +25,7 @@ public class WallMover : MonoBehaviour
         }
     }
     void StopMovingWall(PowerUpType type){
-        if(type == PowerUpType.MoveWalls && !_anim.isActiveAndEnabled){
+        if(type == PowerUpType.MoveWalls && _anim.isActiveAndEnabled){
             _anim.enabled = false;
         }
     }
