@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3827227053240911344}
   - component: {fileID: 4100311205927107429}
   - component: {fileID: -3817182848530116699}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Fragment
   m_TagString: Frag
   m_Icon: {fileID: 0}
@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nDist: 0
-  expMag: 4
+  expMag: 4.5
   Gravity: 0.2
   maxFragFadeSize: 5
   fadeDuration: 1.5

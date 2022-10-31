@@ -162,7 +162,7 @@ public class BrickFrag : MonoBehaviour
 
         for (int i = 0; i < frags.Count; i++) {
             frags[i].fragC.MakeFragExplode(GetWorldFracPoints());
-            if (i % 2 == 0) {
+            if (i % 1 == 0) {
                 yield return new WaitForSeconds(fragExpDelay);
             }
         }
@@ -570,7 +570,7 @@ public class BrickFrag : MonoBehaviour
         for (int i = 0; i < MaxGroupIndex; i++) {
             GameObject parent = fragSpawner.GetNewFrag(posSums[i] / groupCounts[i], Quaternion.identity);
             FragController fragC = parent.GetComponent<FragController>();
-            fragC.Init(groupCounts[i], brickSize, collisionPt, ballCollSpeed / 10, GetComponent<BrickFrag>());
+            fragC.Init(groupCounts[i], transform.position, brickSize, collisionPt, ballCollSpeed / 10, GetComponent<BrickFrag>());
             parent.name = "Frag_" + i;
             frags.Add(new Fragment(parent, fragC));
         }

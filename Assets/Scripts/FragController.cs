@@ -32,14 +32,16 @@ public class FragController : MonoBehaviour
     public bool toDisable;
     bool timerOn;
     ParticleSystem _explosionPS;
+    Vector3 _brickPos;
 
 
-    public void Init(int fragSize, Vector3 brickSize, Vector3 collisionPt, float collForce, BrickFrag brickScript) {
+    public void Init(int fragSize, Vector3 brickPos, Vector3 brickSize, Vector3 collisionPt, float collForce, BrickFrag brickScript) {
         timerOn = true;
         startTime = Time.time;
         this.collForce = collForce;
         this.brickScript = brickScript;
         this.FragSize = fragSize;
+        this._brickPos = brickPos;
 
         fragRb = GetComponent<Rigidbody>();
         nDist = UtilFunctions.CalcDistScore(Vector3.Distance(transform.position, collisionPt), brickSize) / 100f;
@@ -67,13 +69,6 @@ public class FragController : MonoBehaviour
         }
     }
 
-    // void FixedUpdate() {
-    //     if (gravityApplied) {
-        
-    //         fragRb.AddForce(Vector3.back * Gravity);
-    //     }
-
-    // }
     private void OnTriggerEnter(Collider other) {
         //Debug.Log("Triggered by: " + other.tag);
         if (other.CompareTag("Player Collider")) {
@@ -109,10 +104,10 @@ public class FragController : MonoBehaviour
         float distFromFracPt = Vector3.Distance(minPt, transform.position);
         //Vector3 expForce = ((transform.position - minPt)).normalized * (1 / nDist) * expMag * collForce;
         Vector3 expForce = ((transform.position - minPt)).normalized * expMag * collForce;
-        fragRb.AddForce(expForce, ForceMode.Impulse);
-        fragRb.AddForce(expForce, ForceMode.Impulse);
-        ApplyZAxisForces(expMag * collForce);
         StartCoroutine(MakeFragFlash());
+        fragRb.AddForce(expForce, ForceMode.Impulse);
+        // fragRb.AddExplosionForce(expMag * collForce, _brickPos, 5f);
+        // ApplyZAxisForces(expMag * collForce);
         MakeFall();
     }
 

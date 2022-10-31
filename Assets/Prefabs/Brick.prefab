@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2390515395319445742}
   - component: {fileID: 2390515395319445729}
   - component: {fileID: 8049432549269837670}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Brick
   m_TagString: Brick
   m_Icon: {fileID: 0}
@@ -120,14 +120,14 @@ MonoBehaviour:
   ptsPerUnit: 50
   coneAngle: 170
   fracBranchDepth: 3
-  fragSizeMult: 0.8
+  fragSizeMult: 0.2
   lineWidth: 0.01
   lineMaterial: {fileID: 2100000, guid: d45b8b46fc886764f9fbc6b86a483474, type: 2}
   fracBranchProb: 4
   craterRadMult: 0.03
-  maxFragDepth: 3
+  maxFragDepth: 2
   fracLineDrawDelay: 0.03
-  fragExpDelay: 0.00001
+  fragExpDelay: 0.01
   voxFadePer: 0.2
   voxFadeOutDur: 0.5
   voxFadeInDur: 0.1

@@ -6729,14 +6729,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 793974007}
-  m_LocalRotation: {x: -0.5075169, y: 0.58296967, z: 0.1656804, w: 0.6124729}
+  m_LocalRotation: {x: -0.031678848, y: -0.6368016, z: -0.023147404, w: 0.7700288}
   m_LocalPosition: {x: 0.029538354, y: -0.02731014, z: -0.03238833}
   m_LocalScale: {x: 1.1000003, y: 1.1000004, z: 1.1000003}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1196449212}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: -125.427, y: -70.358, z: 137.879}
+  m_LocalEulerAnglesHint: {x: -4.489, y: -79.191, z: 0.27}
 --- !u!1 &805392111
 GameObject:
   m_ObjectHideFlags: 0
@@ -15406,14 +15406,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1362982298}
-  m_LocalRotation: {x: -0.34691614, y: -0.29476017, z: -0.23193131, w: -0.85963565}
+  m_LocalRotation: {x: -0.031678848, y: -0.6368016, z: -0.023147404, w: 0.7700288}
   m_LocalPosition: {x: -0.03387755, y: -0.027508862, z: -0.033655047}
   m_LocalScale: {x: 1.1000003, y: 1.0999998, z: 1.1000001}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1801898519}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: -207.369, y: 228.751, z: -137.211}
+  m_LocalEulerAnglesHint: {x: -4.489, y: -79.191, z: 0.27}
 --- !u!1 &1366943140
 GameObject:
   m_ObjectHideFlags: 0
@@ -17952,7 +17952,7 @@ MonoBehaviour:
   m_SmoothRotation: 1
   m_SmoothRotationAmount: 5
   m_TightenRotation: 0.5
-  m_ThrowOnDetach: 1
+  m_ThrowOnDetach: 0
   m_ThrowSmoothingDuration: 0.25
   m_ThrowSmoothingCurve:
     serializedVersion: 2
@@ -20739,7 +20739,7 @@ MonoBehaviour:
   m_OnSelectExited:
     m_PersistentCalls:
       m_Calls: []
-  m_ShowInteractableHoverMeshes: 1
+  m_ShowInteractableHoverMeshes: 0
   m_InteractableHoverMeshMaterial: {fileID: 0}
   m_InteractableCantHoverMeshMaterial: {fileID: 0}
   m_SocketActive: 1

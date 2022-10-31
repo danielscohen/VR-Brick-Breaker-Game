@@ -24,6 +24,7 @@ public class WallController : MonoBehaviour
     [SerializeField] Vector3Int numBricks;
     [SerializeField] Vector3Int numVoxels;
     [SerializeField] GameObject brickPreFab;
+    [SerializeField] List<Material> _brickMats;
     VoxelSpawner voxSpawner;
     [SerializeField] Material voxInternalMat;
     [SerializeField] Material voxEdgeMat;
@@ -132,8 +133,9 @@ public class WallController : MonoBehaviour
             brick.transform.parent = transform;
             brick.transform.localPosition = new Vector3(posX, posY, 0);
             brick.transform.localScale = Vector3.Scale(scale, new Vector3(b.width, b.height, 1));
-            _brickColor = new Color32((byte)Random.Range(0, 256), (byte)Random.Range(0, 256), (byte)Random.Range(0, 256), 255);
-            brick.GetComponent<Renderer>().material.SetColor("_EmissionColor", _brickColor * _intensity);
+            // _brickColor = new Color32((byte)Random.Range(0, 256), (byte)Random.Range(0, 256), (byte)Random.Range(0, 256), 255);
+            // brick.GetComponent<Renderer>().material.SetColor("_EmissionColor", _brickColor * _intensity);
+            brick.GetComponent<Renderer>().material = _brickMats[Random.Range(0, _brickMats.Count)];
             CreateVoxels(brick);
         }
 

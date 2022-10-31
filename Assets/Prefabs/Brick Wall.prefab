@@ -48,6 +48,13 @@ MonoBehaviour:
   numVoxels: {x: 8, y: 8, z: 8}
   brickPreFab: {fileID: 2390515395319445736, guid: 1dc913c3e4d2f3e43ab0e6ce391388fa,
     type: 3}
+  _brickMats:
+  - {fileID: 2100000, guid: 0c2d13c3615510e4a8debaef5c39c3de, type: 2}
+  - {fileID: 2100000, guid: b7bcd7c6b3acb3241b0d5af1a358b19b, type: 2}
+  - {fileID: 2100000, guid: 490c25b2fda35fc4582a9582c4179ad5, type: 2}
+  - {fileID: 2100000, guid: 9c3435b7cf3210044b3a24266d8aebf1, type: 2}
+  - {fileID: 2100000, guid: 67436367136736141b5c7e131555c4d1, type: 2}
+  - {fileID: 2100000, guid: e94c7625cd2e80d4e8fd19b24fc89d93, type: 2}
   voxInternalMat: {fileID: 2100000, guid: ff90269803d411e41bb13863cbaf54c3, type: 2}
   voxEdgeMat: {fileID: 2100000, guid: 58e62ecba9778174082df60105490de1, type: 2}
   _moveSpeed: 1

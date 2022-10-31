@@ -14,7 +14,7 @@ public class BallController : MonoBehaviour
     Rigidbody ballRb;
     Vector3 _camPos;
     [SerializeField] float Gravity = 2.0f;
-    [SerializeField] float maxSpeed = 2.0f;
+    [SerializeField] float _maxSpeedSqrd = 2.0f;
     public int BallID { get; set; }
     public bool GravityEnabled { get; set; }
 
@@ -37,6 +37,16 @@ public class BallController : MonoBehaviour
             // Debug.Log("Delete Ball");
             onBallLost?.Invoke(BallID);
         }
+        if(ballRb.velocity.sqrMagnitude > 0){
+            Debug.Log($"Velocity: {ballRb.velocity.sqrMagnitude}");
+        }
+    }
+
+    private void FixedUpdate() {
+        if(ballRb.velocity.sqrMagnitude > _maxSpeedSqrd){
+            ballRb.velocity *= 0.80f;
+        }
+        
     }
 
     void OnEnable() {
