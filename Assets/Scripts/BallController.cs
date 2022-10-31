@@ -37,9 +37,9 @@ public class BallController : MonoBehaviour
             // Debug.Log("Delete Ball");
             onBallLost?.Invoke(BallID);
         }
-        if(ballRb.velocity.sqrMagnitude > 0){
-            Debug.Log($"Velocity: {ballRb.velocity.sqrMagnitude}");
-        }
+        // if(ballRb.velocity.sqrMagnitude > 0){
+        //     Debug.Log($"Velocity: {ballRb.velocity.sqrMagnitude}");
+        // }
     }
 
     private void FixedUpdate() {

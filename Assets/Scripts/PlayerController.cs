@@ -22,9 +22,9 @@ public class PlayerController : MonoBehaviour
     float cameraPitch = 0.0f;
 
     bool negativePts = false;
-    void OnEnable() {
-        FragController.onFragCollideWithPlayer += ChangePlayerPts;
-    }
+    // void OnEnable() {
+    //     FragController.onFragCollideWithPlayer += ChangePlayerPts;
+    // }
 
     void SetStartingHealth() {
         switch (GameController.Instance.GameDifficulty) {
@@ -43,9 +43,9 @@ public class PlayerController : MonoBehaviour
         
     }
 
-    private void OnDisable() {
-        FragController.onFragCollideWithPlayer -= ChangePlayerPts;
-    }
+    // private void OnDisable() {
+    //     FragController.onFragCollideWithPlayer -= ChangePlayerPts;
+    // }
     // Start is called before the first frame update
     void Start()
     {

@@ -38,6 +38,7 @@ public class PowerUpController : MonoBehaviour
             onPLayerCaughtPowerUp?.Invoke(Type);
             Instantiate(_expPrefab, transform.position, transform.rotation).GetComponent<ParticleSystem>();
             AudioSource.PlayClipAtPoint(_explosionAudio, transform.position);
+            Destroy(gameObject);
         }
     }
 
