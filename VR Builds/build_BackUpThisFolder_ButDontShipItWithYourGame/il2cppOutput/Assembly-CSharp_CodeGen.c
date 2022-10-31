@@ -814,12 +814,12 @@ extern void WallController_ColorVoxelGrad_m5CC44A5847EC16083ADA64028C8CB0FAE3454
 extern void WallController__ctor_m9A987B15E22374F21876CE572727B201F5F120A6 (void);
 // 0x00000191 System.Void WallController/Brick::.ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
 extern void Brick__ctor_mF8CB9AD433CBE5A207CC39327642B8C7CEBFDC9B (void);
-// 0x00000192 System.Void WallController/<>c__DisplayClass22_0::.ctor()
-extern void U3CU3Ec__DisplayClass22_0__ctor_m56FD620092594550CC9AE8EE8EAA0CB8DCDF139A (void);
-// 0x00000193 System.Void WallController/<>c__DisplayClass22_1::.ctor()
-extern void U3CU3Ec__DisplayClass22_1__ctor_m9491E05AA64402F576EA65C857755240E272ED87 (void);
-// 0x00000194 System.Boolean WallController/<>c__DisplayClass22_1::<BuildWall>b__0(WallController/Brick)
-extern void U3CU3Ec__DisplayClass22_1_U3CBuildWallU3Eb__0_m2AD7ACE844DE27294BEC0A8B8D0C266F179F2BCA (void);
+// 0x00000192 System.Void WallController/<>c__DisplayClass23_0::.ctor()
+extern void U3CU3Ec__DisplayClass23_0__ctor_mBFC9BAC21EE76DC723B4F31D9D869344B09621C2 (void);
+// 0x00000193 System.Void WallController/<>c__DisplayClass23_1::.ctor()
+extern void U3CU3Ec__DisplayClass23_1__ctor_m9CD18F81CFD2A8F1AEAF56B2CE32A4E2579AA8AA (void);
+// 0x00000194 System.Boolean WallController/<>c__DisplayClass23_1::<BuildWall>b__0(WallController/Brick)
+extern void U3CU3Ec__DisplayClass23_1_U3CBuildWallU3Eb__0_m129A1F4CC54E602CC39E98210121DBC0E4E95247 (void);
 // 0x00000195 System.Void WallLayerController::Start()
 extern void WallLayerController_Start_mC382E1210FEE3E9C1358DBA3B93C551A8856E9CE (void);
 // 0x00000196 System.Void WallLayerController::Update()
@@ -1274,9 +1274,9 @@ static Il2CppMethodPointer s_methodPointers[437] =
 	WallController_ColorVoxelGrad_m5CC44A5847EC16083ADA64028C8CB0FAE3454726,
 	WallController__ctor_m9A987B15E22374F21876CE572727B201F5F120A6,
 	Brick__ctor_mF8CB9AD433CBE5A207CC39327642B8C7CEBFDC9B,
-	U3CU3Ec__DisplayClass22_0__ctor_m56FD620092594550CC9AE8EE8EAA0CB8DCDF139A,
-	U3CU3Ec__DisplayClass22_1__ctor_m9491E05AA64402F576EA65C857755240E272ED87,
-	U3CU3Ec__DisplayClass22_1_U3CBuildWallU3Eb__0_m2AD7ACE844DE27294BEC0A8B8D0C266F179F2BCA,
+	U3CU3Ec__DisplayClass23_0__ctor_mBFC9BAC21EE76DC723B4F31D9D869344B09621C2,
+	U3CU3Ec__DisplayClass23_1__ctor_m9CD18F81CFD2A8F1AEAF56B2CE32A4E2579AA8AA,
+	U3CU3Ec__DisplayClass23_1_U3CBuildWallU3Eb__0_m129A1F4CC54E602CC39E98210121DBC0E4E95247,
 	WallLayerController_Start_mC382E1210FEE3E9C1358DBA3B93C551A8856E9CE,
 	WallLayerController_Update_m840A95C93DA1C58120E697025147216549E88FA8,
 	WallLayerController__ctor_m9F2E5CC3BFDE3E7DF12499B32021931F732A36D7,

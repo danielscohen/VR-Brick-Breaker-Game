@@ -49,12 +49,19 @@ MonoBehaviour:
   brickPreFab: {fileID: 2390515395319445736, guid: 1dc913c3e4d2f3e43ab0e6ce391388fa,
     type: 3}
   _brickMats:
-  - {fileID: 2100000, guid: 0c2d13c3615510e4a8debaef5c39c3de, type: 2}
-  - {fileID: 2100000, guid: b7bcd7c6b3acb3241b0d5af1a358b19b, type: 2}
-  - {fileID: 2100000, guid: 490c25b2fda35fc4582a9582c4179ad5, type: 2}
-  - {fileID: 2100000, guid: 9c3435b7cf3210044b3a24266d8aebf1, type: 2}
-  - {fileID: 2100000, guid: 67436367136736141b5c7e131555c4d1, type: 2}
-  - {fileID: 2100000, guid: e94c7625cd2e80d4e8fd19b24fc89d93, type: 2}
+  - {fileID: 2100000, guid: a67463af95be9394ebd4ae43296520f8, type: 2}
+  - {fileID: 2100000, guid: 9fedbf44a5ba5a249a252cacf91ec7c5, type: 2}
+  - {fileID: 2100000, guid: a2b9d4b80eeec4a4d824195dbfb98e03, type: 2}
+  - {fileID: 2100000, guid: 6f3ddeb59ed3d4d4c824ebadacdd4952, type: 2}
+  - {fileID: 2100000, guid: 3f66e0b7924fb7441b04cf8de9464a94, type: 2}
+  - {fileID: 2100000, guid: ba105f5b684283e4e9b3b02437123a40, type: 2}
+  _voxMats:
+  - {fileID: 2100000, guid: e5ce50913ed33004fa2fc03751c5598d, type: 2}
+  - {fileID: 2100000, guid: d63d63456641c3247b69b1f38bdf97ba, type: 2}
+  - {fileID: 2100000, guid: 0d5139702d44d14469eca42357dbf98e, type: 2}
+  - {fileID: 2100000, guid: 80f6d16ad4985ff40ac920095f250b3b, type: 2}
+  - {fileID: 2100000, guid: 17cd3b2687063174795e05b016094a8a, type: 2}
+  - {fileID: 2100000, guid: 8bb79d9ee32a58d4f9bb1c3f80ec370d, type: 2}
   voxInternalMat: {fileID: 2100000, guid: ff90269803d411e41bb13863cbaf54c3, type: 2}
   voxEdgeMat: {fileID: 2100000, guid: 58e62ecba9778174082df60105490de1, type: 2}
   _moveSpeed: 1

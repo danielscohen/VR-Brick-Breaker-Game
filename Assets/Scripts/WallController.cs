@@ -25,6 +25,7 @@ public class WallController : MonoBehaviour
     [SerializeField] Vector3Int numVoxels;
     [SerializeField] GameObject brickPreFab;
     [SerializeField] List<Material> _brickMats;
+    [SerializeField] List<Material> _voxMats;
     VoxelSpawner voxSpawner;
     [SerializeField] Material voxInternalMat;
     [SerializeField] Material voxEdgeMat;
@@ -40,7 +41,7 @@ public class WallController : MonoBehaviour
 
     MoveDir _moveDir;
 
-    Color _brickColor;
+    int _brickMatIndex;
     
 
     ArenaManager _arenaManager;
@@ -135,7 +136,8 @@ public class WallController : MonoBehaviour
             brick.transform.localScale = Vector3.Scale(scale, new Vector3(b.width, b.height, 1));
             // _brickColor = new Color32((byte)Random.Range(0, 256), (byte)Random.Range(0, 256), (byte)Random.Range(0, 256), 255);
             // brick.GetComponent<Renderer>().material.SetColor("_EmissionColor", _brickColor * _intensity);
-            brick.GetComponent<Renderer>().material = _brickMats[Random.Range(0, _brickMats.Count)];
+            _brickMatIndex = Random.Range(0, _brickMats.Count);
+            brick.GetComponent<Renderer>().material = _brickMats[_brickMatIndex];
             CreateVoxels(brick);
         }
 
@@ -199,9 +201,14 @@ public class WallController : MonoBehaviour
         float midY = (float)(numVoxels.y - 1) / 2f;
         float midZ = (float)(numVoxels.z - 1) / 2f;
 
+        Renderer voxRen = voxel.GetComponent<Renderer>();
+        voxRen.material = _voxMats[_brickMatIndex];
+
+
         float colorPer = Mathf.Max((float)Mathf.Abs(midX - x) / (midX + 1), (float)Mathf.Abs(midY - y) / (midY + 1), (float)Mathf.Abs(midZ - z) / (midZ + 1));
-        Color color = Color.Lerp(Color.black, _brickColor, colorPer);
-        voxel.GetComponent<Renderer>().material.SetColor("_EmissionColor", color * _intensity);
+        Color startColor = voxRen.material.GetColor("_EmissionColor") / 0.6f;
+        Color color = Color.Lerp(Color.black, startColor, colorPer);
+        voxRen.material.SetColor("_EmissionColor", color * _intensity);
 
 
 
