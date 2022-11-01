@@ -147,16 +147,16 @@ public class UIController : MonoBehaviour
 
         switch (reason) {
             case GameOverReason.GameWon:
-                gameOverText = $"Congrats, You Won!\n You Got a Score of {_playerHealthText.text}";
+                gameOverText = $"Congrats, You Won!\n Your Score: {_playerHealthText.text}";
                 break;
             case GameOverReason.HealthRanOut:
-                gameOverText = "You Ran-Out of Health!";
+                gameOverText = "Game Over\nYou Ran Out of Health";
                 break;
             case GameOverReason.TimeRanOut:
-                gameOverText = "You Ran-Out of Time!";
+                gameOverText = "Game Over\nYou Ran Out of Time";
                 break;
             default:
-                gameOverText = "You Ran-Out of Orbs!";
+                gameOverText = "Game Over\nYou Ran Out of Orbs";
                 break;
         }
 

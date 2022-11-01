@@ -16,7 +16,6 @@ public class GameController : MonoBehaviour
     public static GameController Instance { get; private set; }
     public Difficulty GameDifficulty { get; private set; }
     public GameState CurrentGameState { get; private set; }
-    AudioSource _audioSource;
 
     [SerializeField] InputActionReference pauseReference;
 
@@ -50,12 +49,11 @@ public class GameController : MonoBehaviour
 
         CurrentGameState = GameState.Started;
         Time.timeScale = 0;
-        _audioSource = GetComponent<AudioSource>();
     }
 
     void Start() {
         onLoadGame?.Invoke();
-        _audioSource.Play();
+        AudioManager.Instance.PlayGameMusic();
     }
 
     void SetGameDifficulty(int difficulty) {
@@ -101,6 +99,7 @@ public class GameController : MonoBehaviour
     void PauseGame() {
         Time.timeScale = 0;
         CurrentGameState = GameState.Paused;
+        AudioManager.Instance.PlayAudio(AudioTypes.GamePaused);
         onPauseGame?.Invoke();
     }
 
@@ -115,6 +114,11 @@ public class GameController : MonoBehaviour
         Time.timeScale = 0;
         CurrentGameState = GameState.GameOver;
         onGameOver?.Invoke(reason);
+        if(reason == GameOverReason.GameWon){
+            AudioManager.Instance.PlayAudio(AudioTypes.GameWon);
+        } else{
+            AudioManager.Instance.PlayAudio(AudioTypes.GameLost);
+        }
     }
 
 }

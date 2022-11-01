@@ -4,5 +4,17 @@ using UnityEngine;
 
 public enum AudioTypes
 {
-    ButtonSelect
+    ButtonSelect,
+    GameTheme,
+    GamePaused,
+    GameLost,
+    GameWon,
+    BallHitArenaWall,
+    BallHitBrick1,
+    BallHitBrick2,
+    BallHitBrick3,
+    PowerUp,
+    PosPts,
+    NegPts
+
 }

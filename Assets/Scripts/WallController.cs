@@ -206,7 +206,7 @@ public class WallController : MonoBehaviour
 
 
         float colorPer = Mathf.Max((float)Mathf.Abs(midX - x) / (midX + 1), (float)Mathf.Abs(midY - y) / (midY + 1), (float)Mathf.Abs(midZ - z) / (midZ + 1));
-        Color startColor = voxRen.material.GetColor("_EmissionColor") / 0.6f;
+        Color startColor = voxRen.material.GetColor("_EmissionColor") / _intensity;
         Color color = Color.Lerp(Color.black, startColor, colorPer);
         voxRen.material.SetColor("_EmissionColor", color * _intensity);
 

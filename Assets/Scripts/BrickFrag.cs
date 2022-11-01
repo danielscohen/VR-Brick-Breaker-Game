@@ -121,7 +121,7 @@ public class BrickFrag : MonoBehaviour
     IEnumerator StartCollActions() {
         MakeVoxMap();
 
-        _audioSource.PlayOneShot(_impactAudio);
+        AudioManager.Instance.PlayAudio(AudioTypes.BallHitBrick1, transform.position);
 
         MakeCrater();
 
@@ -132,9 +132,9 @@ public class BrickFrag : MonoBehaviour
         CreateFracLines();
         // Debug.Log($"frac line pts: {fracLinePts.Count}");
         yield return StartCoroutine(FadeVoxels(voxFadePer, voxFadeOutDur));
-        PlayFracAudio();
+        AudioSource source = AudioManager.Instance.StartFracAudio(transform.position);
         yield return StartCoroutine(DrawFracLines());
-        StopFracAudio();
+        AudioManager.Instance.StopFracAudio(source);
         yield return StartCoroutine(FadeVoxels(1f, voxFadeInDur));
         DeleteFracLines();
 
@@ -158,7 +158,7 @@ public class BrickFrag : MonoBehaviour
 
         MakeFlash();
 
-        _audioSource.PlayOneShot(_explosionAudio);
+        AudioManager.Instance.PlayAudio(AudioTypes.BallHitBrick3, transform.position);
 
         for (int i = 0; i < frags.Count; i++) {
             frags[i].fragC.MakeFragExplode(GetWorldFracPoints());
@@ -169,17 +169,6 @@ public class BrickFrag : MonoBehaviour
 
     }
 
-    private void StopFracAudio()
-    {
-        _audioSource.Stop();
-    }
-
-    private void PlayFracAudio()
-    {
-        _audioSource.clip = _fracAudio;
-        _audioSource.loop = true;
-        _audioSource.Play();
-    }
 
     // IEnumerator CreateLightExplosion()
     // {

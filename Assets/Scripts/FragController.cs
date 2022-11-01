@@ -73,16 +73,11 @@ public class FragController : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
         //Debug.Log("Triggered by: " + other.tag);
         if (other.CompareTag("Player Collider")) {
-            CollideWithPlayerActions();
             onFragCollideWithPlayer?.Invoke(FragSize, transform.position);
             DeleteFrag();
         }
     }
 
-    public void CollideWithPlayerActions(){
-        // Instantiate(_expPrefab, transform.position, transform.rotation).GetComponent<ParticleSystem>();
-        AudioSource.PlayClipAtPoint(_explosionAudio, transform.position, 0.1f);
-    }
 
 
     public void EnableGravity() {

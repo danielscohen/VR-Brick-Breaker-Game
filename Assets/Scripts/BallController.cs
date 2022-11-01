@@ -18,14 +18,12 @@ public class BallController : MonoBehaviour
     public int BallID { get; set; }
     public bool GravityEnabled { get; set; }
 
-    AudioSource _audioSource;
 
     void Awake() {
         
         ballRb = GetComponent<Rigidbody>();
         ballRb.useGravity = true;
         GravityEnabled = true;
-        _audioSource = GetComponent<AudioSource>();
     }
 
     void Start() {
@@ -59,14 +57,10 @@ public class BallController : MonoBehaviour
             Physics.IgnoreCollision(collision.collider, GetComponent<Collider>());
         }
         if (collision.collider.CompareTag("Arena Wall")) {
-            PlayArenaWallHitAudio();
+            AudioManager.Instance.PlayAudio(AudioTypes.BallHitArenaWall, transform.position);
         }
     }
 
-    void PlayArenaWallHitAudio()
-    {
-        _audioSource.Play();
-    }
 
     public bool IsCollisionAllowed() {
         if (!JustCollidedWithBrick || (Time.time - _collTime) > _nextCollWaitTime) {

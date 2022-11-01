@@ -38,6 +38,8 @@ public class PlayerPointsManager : MonoBehaviour
         if(_points < 0) _points = 0;
         onUpdatePlayerPoints?.Invoke(_points);
         AnimatePoints(ptDelta, pos);
+        AudioTypes type = _negPoints ? AudioTypes.NegPts : AudioTypes.PosPts;
+        AudioManager.Instance.PlayAudio(type, pos);
     }
     void AnimatePoints(int pts, Vector3 pos){
         GameObject ptsModel;

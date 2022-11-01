@@ -37,7 +37,7 @@ public class PowerUpController : MonoBehaviour
             _firstTrigger = false;
             onPLayerCaughtPowerUp?.Invoke(Type);
             Instantiate(_expPrefab, transform.position, transform.rotation).GetComponent<ParticleSystem>();
-            AudioSource.PlayClipAtPoint(_explosionAudio, transform.position);
+            AudioManager.Instance.PlayAudio(AudioTypes.PowerUp, transform.position);
             Destroy(gameObject);
         }
     }
