@@ -17,6 +17,7 @@ public class UIController : MonoBehaviour
     [SerializeField] TextMeshProUGUI _gameOverText;
     [SerializeField] GameObject _startScreen;
     [SerializeField] GameObject _timerPointsUI;
+    [SerializeField] GameObject _powerUpsUI;
     [SerializeField] GameObject _ballsRemainingUI;
     [SerializeField] GameObject _pauseScreen;
     [SerializeField] GameObject _gameOverScreen;
@@ -24,6 +25,13 @@ public class UIController : MonoBehaviour
     [SerializeField] GameObject _doublePointsPanel;
     [SerializeField] GameObject _negativePointsPanel;
     [SerializeField] GameObject _movePanel;
+    [SerializeField] GameObject _wall1;
+    [SerializeField] GameObject _wall2;
+    [SerializeField] GameObject _racket;
+    [SerializeField] TextMeshPro _gameTitle;
+    [SerializeField] TextMeshPro _pausedText;
+    [SerializeField] TextMeshPro _gameOverBigText;
+    [SerializeField] TextMeshPro _victoryText;
     [SerializeField] Image _doublePointsTimer;
     [SerializeField] Image _negativePointsTimer;
     [SerializeField] Image _moveTimer;
@@ -54,6 +62,13 @@ public class UIController : MonoBehaviour
         _doublePointsPanel.SetActive(false);
         _negativePointsPanel.SetActive(false);
         _movePanel.SetActive(false);
+        _wall1.SetActive(false);
+        _wall2.SetActive(false);
+        _racket.SetActive(false);
+        _gameTitle.enabled = true;
+        _pausedText.enabled = false;
+        _gameOverBigText.enabled = false;
+        _victoryText.enabled = false;
     }
 
     void Update() {
@@ -131,8 +146,16 @@ public class UIController : MonoBehaviour
     }
 
     void ShowScreenOverlay() {
+        _wall1.SetActive(true);
+        _wall2.SetActive(true);
+        _racket.SetActive(true);
+        _gameTitle.enabled = false;
+        _pausedText.enabled = false;
+        _gameOverBigText.enabled = false;
+        _victoryText.enabled = false;
         _uIMenuActive = false;
         _timerPointsUI.SetActive(true);
+        _powerUpsUI.SetActive(true);
         _ballsRemainingUI.SetActive(true);
         _startScreen.SetActive(false);
         _pauseScreen.SetActive(false);
@@ -147,8 +170,12 @@ public class UIController : MonoBehaviour
         _gameOverScreen.SetActive(false);
     }
     void ShowPauseScreen() {
+        _wall1.SetActive(false);
+        _wall2.SetActive(false);
+        _pausedText.enabled = true;
         _uIMenuActive = true;
         _timerPointsUI.SetActive(false);
+        _powerUpsUI.SetActive(false);
         _ballsRemainingUI.SetActive(false);
         _startScreen.SetActive(false);
         _pauseScreen.SetActive(true);
@@ -156,27 +183,35 @@ public class UIController : MonoBehaviour
     }
 
     void ShowGameOverScreen(GameOverReason reason) {
+        _wall1.SetActive(false);
+        _wall2.SetActive(false);
+        _racket.SetActive(false);
         AudioManager.Instance.ResetGameMusicSpeed();
         StopCoroutine(FlashTimer());
         _uIMenuActive = true;
         string gameOverText;
 
         _timerPointsUI.SetActive(false);
+        _powerUpsUI.SetActive(false);
         _ballsRemainingUI.SetActive(false);
         _gameOverScreen.SetActive(true);
 
         switch (reason) {
             case GameOverReason.GameWon:
-                gameOverText = $"Congrats, You Won!\n Your Score: {_playerHealthText.text}";
+                _victoryText.enabled = true;
+                gameOverText = $"Your Score: {_playerHealthText.text}";
                 break;
             case GameOverReason.HealthRanOut:
-                gameOverText = "Game Over\nYou Ran Out of Health";
+                _gameOverBigText.enabled = true;
+                gameOverText = "You Ran Out of Health";
                 break;
             case GameOverReason.TimeRanOut:
-                gameOverText = "Game Over\nYou Ran Out of Time";
+                _gameOverBigText.enabled = true;
+                gameOverText = "You Ran Out of Time";
                 break;
             default:
-                gameOverText = "Game Over\nYou Ran Out of Orbs";
+                _gameOverBigText.enabled = true;
+                gameOverText = "You Ran Out of Orbs";
                 break;
         }
 

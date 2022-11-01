@@ -59,6 +59,9 @@ public class BallController : MonoBehaviour
         if (collision.collider.CompareTag("Arena Wall")) {
             AudioManager.Instance.PlayAudio(AudioTypes.BallHitArenaWall, transform.position);
         }
+        if (collision.collider.CompareTag("Racket")) {
+            AudioManager.Instance.PlayAudio(AudioTypes.RacketHit, transform.position);
+        }
     }
 
 

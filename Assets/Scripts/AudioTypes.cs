@@ -15,6 +15,8 @@ public enum AudioTypes
     PowerUp,
     PosPts,
     NegPts,
-    TimerFlash
+    TimerFlash,
+    LoadNewBall,
+    RacketHit
 
 }

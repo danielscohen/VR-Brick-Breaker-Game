@@ -12,6 +12,7 @@ TagManager:
   - Player Bounds
   - Arena Wall
   - Player Collider
+  - Racket
   layers:
   - Default
   - TransparentFX

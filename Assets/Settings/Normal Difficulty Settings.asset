@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ballLimit: 5
   playerStartHealth: 400
-  timeLimit: 1500
+  timeLimit: 300

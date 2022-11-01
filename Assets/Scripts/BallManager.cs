@@ -121,6 +121,7 @@ public class BallManager : MonoBehaviour
     }
 
     void LoadNewBall() {
+        AudioManager.Instance.PlayAudio(AudioTypes.LoadNewBall, _loadLoc.transform.position);
         GameObject ball = null;
         if (ballPool.Count > 0) {
             ball = ballPool.Pop();

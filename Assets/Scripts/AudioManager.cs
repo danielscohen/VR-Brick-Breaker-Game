@@ -80,7 +80,7 @@ public class AudioManager : MonoBehaviour
             _musicSource.Stop();
             _sFXSource.clip = _audioClips[aType];
             _sFXSource.Play();
-            yield return new WaitForSeconds(4f);
+            yield return new WaitForSeconds(_audioClips[aType].length);
             _musicSource.Play();
         }
     }
