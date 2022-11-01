@@ -5,7 +5,6 @@ using UnityEngine;
 public enum AudioTypes
 {
     ButtonSelect,
-    GameTheme,
     GamePaused,
     GameLost,
     GameWon,

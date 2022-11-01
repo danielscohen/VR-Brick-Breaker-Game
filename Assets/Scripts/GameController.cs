@@ -30,10 +30,12 @@ public class GameController : MonoBehaviour
 
 
     public void Restart() {
+        AudioManager.Instance.PlayAudio(AudioReason.GameRestarted);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void ExitGame() {
+        AudioManager.Instance.PlayAudio(AudioReason.GameQuit);
         Application.Quit();
     }
 
@@ -74,6 +76,7 @@ public class GameController : MonoBehaviour
         SetGameDifficulty(difficulty);
         Time.timeScale = 1;
         CurrentGameState = GameState.Running;
+        AudioManager.Instance.PlayAudio(AudioReason.GameStarted);
         onStartGame?.Invoke();
         onResumeGame?.Invoke();
     }
@@ -94,12 +97,13 @@ public class GameController : MonoBehaviour
     public void ContinueGame() {
         Time.timeScale = 1;
         CurrentGameState = GameState.Running;
+        AudioManager.Instance.PlayAudio(AudioReason.GameResumed);
         onResumeGame?.Invoke();
     }
     void PauseGame() {
         Time.timeScale = 0;
         CurrentGameState = GameState.Paused;
-        AudioManager.Instance.PlayAudio(AudioTypes.GamePaused);
+        AudioManager.Instance.PlayAudio(AudioReason.GamePaused);
         onPauseGame?.Invoke();
     }
 
@@ -115,9 +119,9 @@ public class GameController : MonoBehaviour
         CurrentGameState = GameState.GameOver;
         onGameOver?.Invoke(reason);
         if(reason == GameOverReason.GameWon){
-            AudioManager.Instance.PlayAudio(AudioTypes.GameWon);
+            AudioManager.Instance.PlayAudio(AudioReason.GameWon);
         } else{
-            AudioManager.Instance.PlayAudio(AudioTypes.GameLost);
+            AudioManager.Instance.PlayAudio(AudioReason.GameLost);
         }
     }
 

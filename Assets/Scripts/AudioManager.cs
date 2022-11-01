@@ -19,14 +19,12 @@ public class AudioManager : MonoBehaviour
     }
     void Start()
     {
-        _audioClips = new Dictionary<AudioTypes, AudioClip>(){
-            {AudioTypes.ButtonSelect, _audioClipsList[0]}
-        };
+        _audioClips = new Dictionary<AudioTypes, AudioClip>();
+        for(int i = 0; i < _audioClipsList.Count; i++){
+            _audioClips.Add((AudioTypes)i, _audioClipsList[i]);
+        }
     }
 
-    public void PlayButtonPressAudio(){
-        PlayAudio(AudioTypes.ButtonSelect);
-    }
 
     public void PlayGameMusic(){
         _musicSource.Play();
@@ -42,16 +40,39 @@ public class AudioManager : MonoBehaviour
         Destroy(source.gameObject);
     }
 
-    public void PlayAudio(AudioTypes aType){
-        StartCoroutine(PlayAudioCo(aType));
+    public void PlayAudio(AudioReason reason){
+        StartCoroutine(PlayAudioCo(reason));
     }
 
-    IEnumerator PlayAudioCo(AudioTypes aType){
-        _musicSource.Pause();
-        _sFXSource.clip = _audioClips[aType];
-        _sFXSource.Play();
-        yield return new WaitForSeconds(_audioClips[aType].length);
-        _musicSource.Play();
+    IEnumerator PlayAudioCo(AudioReason reason){
+        if(reason == AudioReason.GamePaused || reason == AudioReason.GameRestarted || reason == AudioReason.GameQuit){
+            _musicSource.Pause();
+            _sFXSource.clip = _audioClips[AudioTypes.GamePaused];
+            _sFXSource.Play();
+        } else if(reason == AudioReason.GameResumed){
+            _sFXSource.clip = _audioClips[AudioTypes.GamePaused];
+            _sFXSource.Play();
+            yield return new WaitForSeconds(_audioClips[AudioTypes.GamePaused].length);
+            _musicSource.UnPause();
+        } else{
+            AudioTypes aType = AudioTypes.ButtonSelect;
+            switch(reason){
+                case AudioReason.GameStarted:
+                    aType = AudioTypes.ButtonSelect;
+                    break;
+                case AudioReason.GameWon:
+                    aType = AudioTypes.GameWon;
+                    break;
+                case AudioReason.GameLost:
+                    aType = AudioTypes.GameLost;
+                    break;
+            }
+            _musicSource.Stop();
+            _sFXSource.clip = _audioClips[aType];
+            _sFXSource.Play();
+            yield return new WaitForSeconds(_audioClips[aType].length);
+            _musicSource.Play();
+        }
     }
     public void PlayAudio(AudioTypes aType, Vector3 pos){
         AudioSource.PlayClipAtPoint(_audioClips[aType], pos);
