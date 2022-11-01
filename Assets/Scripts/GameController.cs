@@ -58,7 +58,7 @@ public class GameController : MonoBehaviour
         AudioManager.Instance.PlayGameMusic();
     }
 
-    void SetGameDifficulty(int difficulty) {
+    public void SetGameDifficulty(int difficulty) {
         switch (difficulty) {
             case 0:
                 GameDifficulty = Difficulty.Beginner;
@@ -72,8 +72,7 @@ public class GameController : MonoBehaviour
         }
     }
 
-    public void StartGame(int difficulty) {
-        SetGameDifficulty(difficulty);
+    public void StartGame() {
         Time.timeScale = 1;
         CurrentGameState = GameState.Running;
         AudioManager.Instance.PlayAudio(AudioReason.GameStarted);

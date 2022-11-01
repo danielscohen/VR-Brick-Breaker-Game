@@ -16,6 +16,8 @@ public class UIController : MonoBehaviour
     [SerializeField] Image _redTimerCircle;
     [SerializeField] TextMeshProUGUI _gameOverText;
     [SerializeField] GameObject _startScreen;
+    [SerializeField] GameObject _settingsScreen;
+    [SerializeField] GameObject _howToPlayScreen;
     [SerializeField] GameObject _timerPointsUI;
     [SerializeField] GameObject _powerUpsUI;
     [SerializeField] GameObject _ballsRemainingUI;
@@ -79,6 +81,16 @@ public class UIController : MonoBehaviour
             Vector3 vRot = Camera.main.transform.eulerAngles; vRot.z = 0;
             _menuUI.transform.eulerAngles = vRot;
         }
+    }
+    
+    public void ShowSettingsScreen(){
+        _startScreen.SetActive(false);
+        _settingsScreen.SetActive(true);
+
+    }
+    public void ShowHowToPlayScreen(){
+        _startScreen.SetActive(false);
+        _howToPlayScreen.SetActive(true);
     }
 
 
@@ -161,13 +173,15 @@ public class UIController : MonoBehaviour
         _pauseScreen.SetActive(false);
         _gameOverScreen.SetActive(false);
     }
-    void ShowStartScreen() {
+    public void ShowStartScreen() {
         _uIMenuActive = true;
         _timerPointsUI.SetActive(false);
         _ballsRemainingUI.SetActive(false);
         _startScreen.SetActive(true);
         _pauseScreen.SetActive(false);
         _gameOverScreen.SetActive(false);
+        _settingsScreen.SetActive(false);
+        _howToPlayScreen.SetActive(false);
     }
     void ShowPauseScreen() {
         _wall1.SetActive(false);
