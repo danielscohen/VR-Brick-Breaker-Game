@@ -14,6 +14,7 @@ public enum AudioTypes
     BallHitBrick3,
     PowerUp,
     PosPts,
-    NegPts
+    NegPts,
+    TimerFlash
 
 }

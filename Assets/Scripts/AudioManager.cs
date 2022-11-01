@@ -43,6 +43,16 @@ public class AudioManager : MonoBehaviour
     public void PlayAudio(AudioReason reason){
         StartCoroutine(PlayAudioCo(reason));
     }
+    public void PlayAudio(AudioTypes aType){
+        _sFXSource.clip = _audioClips[aType];
+        _sFXSource.Play();
+    }
+    public void SpeedUpGameMusic(){
+        _musicSource.pitch = 1.2f;
+    }
+    public void ResetGameMusicSpeed(){
+        _musicSource.pitch = 1f;
+    }
 
     IEnumerator PlayAudioCo(AudioReason reason){
         if(reason == AudioReason.GamePaused || reason == AudioReason.GameRestarted || reason == AudioReason.GameQuit){
@@ -70,12 +80,19 @@ public class AudioManager : MonoBehaviour
             _musicSource.Stop();
             _sFXSource.clip = _audioClips[aType];
             _sFXSource.Play();
-            yield return new WaitForSeconds(_audioClips[aType].length);
+            yield return new WaitForSeconds(4f);
             _musicSource.Play();
         }
     }
     public void PlayAudio(AudioTypes aType, Vector3 pos){
-        AudioSource.PlayClipAtPoint(_audioClips[aType], pos);
+        StartCoroutine(PlayAudioCo(aType, pos));
+    }
+    IEnumerator PlayAudioCo(AudioTypes aType, Vector3 pos){
+        AudioSource source = Instantiate(_posSFXSourcePrefab, pos, Quaternion.identity).GetComponent<AudioSource>();
+        source.clip = _audioClips[aType];
+        source.Play();
+        yield return new WaitForSeconds(_audioClips[aType].length);
+        Destroy(source.gameObject);
     }
 
 }

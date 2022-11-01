@@ -8,6 +8,7 @@ public class UIController : MonoBehaviour
 {
     int playerHealth;
     bool _uIMenuActive;
+    bool _timerFlashCoActive = false;
     [SerializeField] TextMeshProUGUI _playerHealthText;
     [SerializeField] TextMeshProUGUI _ballsRemainingText;
     [SerializeField] TextMeshProUGUI _timerText;
@@ -75,9 +76,14 @@ public class UIController : MonoBehaviour
     void UpdateTimerText(string time, float timePer) {
         Image hiddenTimer;
         Image timer;
-        if(timePer < 0.25){
+        if(timePer < 0.20){
             timer = _redTimerCircle;
             hiddenTimer = _timerCircle;
+            _timerText.color = Color.red;
+            if(!_timerFlashCoActive){
+                AudioManager.Instance.SpeedUpGameMusic();
+                StartCoroutine(FlashTimer());
+            }
         }
         else {
             timer = _timerCircle;
@@ -87,6 +93,18 @@ public class UIController : MonoBehaviour
         hiddenTimer.enabled = false;
         timer.enabled = true;
         timer.fillAmount = timePer;
+    }
+    IEnumerator FlashTimer(){
+        _timerFlashCoActive = true;
+        while(true){
+            AudioManager.Instance.PlayAudio(AudioTypes.TimerFlash);
+            _redTimerCircle.enabled = true;
+            _timerText.enabled = true;
+            yield return new WaitForSeconds(1f);
+            _redTimerCircle.enabled = false;
+            _timerText.enabled = false;
+            yield return new WaitForSeconds(0.5f);
+        }
     }
     void UpdatePowerUpTimer(PowerUpType type, float timePer) {
         GameObject timer;
@@ -138,6 +156,8 @@ public class UIController : MonoBehaviour
     }
 
     void ShowGameOverScreen(GameOverReason reason) {
+        AudioManager.Instance.ResetGameMusicSpeed();
+        StopCoroutine(FlashTimer());
         _uIMenuActive = true;
         string gameOverText;
 

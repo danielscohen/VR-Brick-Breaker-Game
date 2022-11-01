@@ -14489,8 +14489,8 @@ MonoBehaviour:
   _audioClipsList:
   - {fileID: 8300000, guid: d102c08aedf1a7a4ab93401821d69c5d, type: 3}
   - {fileID: 8300000, guid: d102c08aedf1a7a4ab93401821d69c5d, type: 3}
-  - {fileID: 8300000, guid: 05d971fbe92314a4c85dfb7663d3f735, type: 3}
-  - {fileID: 8300000, guid: 52d98ea4963a6b44a99c6813da204b97, type: 3}
+  - {fileID: 8300000, guid: c9a4f6683f5d50e46bac9c98b545ad8f, type: 3}
+  - {fileID: 8300000, guid: 4373100ab3b71f3448d65097967d7a93, type: 3}
   - {fileID: 8300000, guid: 5a65c3ebf3fa9e04ea950ca4955296b0, type: 3}
   - {fileID: 8300000, guid: 69a458f045892a549bbc6dea3120cfbf, type: 3}
   - {fileID: 8300000, guid: e0a923b712a6b6047a97543d13cea64c, type: 3}
@@ -14498,6 +14498,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 57d96e0355d21364780d4009e3b7057b, type: 3}
   - {fileID: 8300000, guid: 06f36cd1a8ccb5a4eaea408c3a895d32, type: 3}
   - {fileID: 8300000, guid: 4e7875da09dcdbc478971813a9e66b61, type: 3}
+  - {fileID: 8300000, guid: 09406575510c06349bf310090c08bb69, type: 3}
 --- !u!4 &1260992105
 Transform:
   m_ObjectHideFlags: 0
