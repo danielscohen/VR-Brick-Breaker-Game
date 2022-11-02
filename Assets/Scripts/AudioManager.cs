@@ -40,6 +40,10 @@ public class AudioManager : MonoBehaviour
         Destroy(source.gameObject);
     }
 
+    public void PlayButtonPressedAudio(){
+        PlayAudio(AudioTypes.ButtonSelect);
+    }
+
     public void PlayAudio(AudioReason reason){
         StartCoroutine(PlayAudioCo(reason));
     }

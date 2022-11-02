@@ -4432,16 +4432,16 @@ struct U3CRotateArenaCoU3Ed__8_tBD80848AA6F93CF6C7D62549CBFE07148B0FA930  : publ
 	float ___U3CtimePassedU3E5__2_3;
 };
 
-// AudioManager/<PlayAudioCo>d__18
-struct U3CPlayAudioCoU3Ed__18_tBCB49610D7CF1C7663CEB9588DBE94B75EF3BF7E  : public RuntimeObject
+// AudioManager/<PlayAudioCo>d__19
+struct U3CPlayAudioCoU3Ed__19_tB75859D48FD5D542496732243F129BC6CB6516B6  : public RuntimeObject
 {
-	// System.Int32 AudioManager/<PlayAudioCo>d__18::<>1__state
+	// System.Int32 AudioManager/<PlayAudioCo>d__19::<>1__state
 	int32_t ___U3CU3E1__state_0;
-	// System.Object AudioManager/<PlayAudioCo>d__18::<>2__current
+	// System.Object AudioManager/<PlayAudioCo>d__19::<>2__current
 	RuntimeObject* ___U3CU3E2__current_1;
-	// AudioReason AudioManager/<PlayAudioCo>d__18::reason
+	// AudioReason AudioManager/<PlayAudioCo>d__19::reason
 	int32_t ___reason_2;
-	// AudioManager AudioManager/<PlayAudioCo>d__18::<>4__this
+	// AudioManager AudioManager/<PlayAudioCo>d__19::<>4__this
 	AudioManager_t4BE66A4A0E184D85AF74C37BC93BFBEC52953C7B* ___U3CU3E4__this_3;
 };
 
@@ -14330,20 +14330,20 @@ struct U3CMakeFragFlashU3Ed__6_tC44372B161E66EADB8D37748CF4A083238B1B589  : publ
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___U3CopaqueColorU3E5__5_6;
 };
 
-// AudioManager/<PlayAudioCo>d__20
-struct U3CPlayAudioCoU3Ed__20_t12CCC64C202F40AA2F0217066CC014182186A241  : public RuntimeObject
+// AudioManager/<PlayAudioCo>d__21
+struct U3CPlayAudioCoU3Ed__21_t7546745B7BD993F9AEF5D34BDC876FF1CF69F2F5  : public RuntimeObject
 {
-	// System.Int32 AudioManager/<PlayAudioCo>d__20::<>1__state
+	// System.Int32 AudioManager/<PlayAudioCo>d__21::<>1__state
 	int32_t ___U3CU3E1__state_0;
-	// System.Object AudioManager/<PlayAudioCo>d__20::<>2__current
+	// System.Object AudioManager/<PlayAudioCo>d__21::<>2__current
 	RuntimeObject* ___U3CU3E2__current_1;
-	// AudioManager AudioManager/<PlayAudioCo>d__20::<>4__this
+	// AudioManager AudioManager/<PlayAudioCo>d__21::<>4__this
 	AudioManager_t4BE66A4A0E184D85AF74C37BC93BFBEC52953C7B* ___U3CU3E4__this_2;
-	// UnityEngine.Vector3 AudioManager/<PlayAudioCo>d__20::pos
+	// UnityEngine.Vector3 AudioManager/<PlayAudioCo>d__21::pos
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___pos_3;
-	// AudioTypes AudioManager/<PlayAudioCo>d__20::aType
+	// AudioTypes AudioManager/<PlayAudioCo>d__21::aType
 	int32_t ___aType_4;
-	// UnityEngine.AudioSource AudioManager/<PlayAudioCo>d__20::<source>5__2
+	// UnityEngine.AudioSource AudioManager/<PlayAudioCo>d__21::<source>5__2
 	AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* ___U3CsourceU3E5__2_5;
 };
 
@@ -23619,10 +23619,10 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4320[4] =
 	static_cast<int32_t>(offsetof(ArenaWallController_t26D7D46ADF6500D5AEC90E1782CC0C6F94EA6B0A, ____wallRen_4)),static_cast<int32_t>(offsetof(ArenaWallController_t26D7D46ADF6500D5AEC90E1782CC0C6F94EA6B0A, ____startIntensity_5)),static_cast<int32_t>(offsetof(ArenaWallController_t26D7D46ADF6500D5AEC90E1782CC0C6F94EA6B0A, ____maxIntensity_6)),static_cast<int32_t>(offsetof(ArenaWallController_t26D7D46ADF6500D5AEC90E1782CC0C6F94EA6B0A, ____flashDuration_7)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4321[4] = 
 {
-	static_cast<int32_t>(offsetof(U3CPlayAudioCoU3Ed__18_tBCB49610D7CF1C7663CEB9588DBE94B75EF3BF7E, ___U3CU3E1__state_0)),static_cast<int32_t>(offsetof(U3CPlayAudioCoU3Ed__18_tBCB49610D7CF1C7663CEB9588DBE94B75EF3BF7E, ___U3CU3E2__current_1)),static_cast<int32_t>(offsetof(U3CPlayAudioCoU3Ed__18_tBCB49610D7CF1C7663CEB9588DBE94B75EF3BF7E, ___reason_2)),static_cast<int32_t>(offsetof(U3CPlayAudioCoU3Ed__18_tBCB49610D7CF1C7663CEB9588DBE94B75EF3BF7E, ___U3CU3E4__this_3)),};
+	static_cast<int32_t>(offsetof(U3CPlayAudioCoU3Ed__19_tB75859D48FD5D542496732243F129BC6CB6516B6, ___U3CU3E1__state_0)),static_cast<int32_t>(offsetof(U3CPlayAudioCoU3Ed__19_tB75859D48FD5D542496732243F129BC6CB6516B6, ___U3CU3E2__current_1)),static_cast<int32_t>(offsetof(U3CPlayAudioCoU3Ed__19_tB75859D48FD5D542496732243F129BC6CB6516B6, ___reason_2)),static_cast<int32_t>(offsetof(U3CPlayAudioCoU3Ed__19_tB75859D48FD5D542496732243F129BC6CB6516B6, ___U3CU3E4__this_3)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4322[6] = 
 {
-	static_cast<int32_t>(offsetof(U3CPlayAudioCoU3Ed__20_t12CCC64C202F40AA2F0217066CC014182186A241, ___U3CU3E1__state_0)),static_cast<int32_t>(offsetof(U3CPlayAudioCoU3Ed__20_t12CCC64C202F40AA2F0217066CC014182186A241, ___U3CU3E2__current_1)),static_cast<int32_t>(offsetof(U3CPlayAudioCoU3Ed__20_t12CCC64C202F40AA2F0217066CC014182186A241, ___U3CU3E4__this_2)),static_cast<int32_t>(offsetof(U3CPlayAudioCoU3Ed__20_t12CCC64C202F40AA2F0217066CC014182186A241, ___pos_3)),static_cast<int32_t>(offsetof(U3CPlayAudioCoU3Ed__20_t12CCC64C202F40AA2F0217066CC014182186A241, ___aType_4)),static_cast<int32_t>(offsetof(U3CPlayAudioCoU3Ed__20_t12CCC64C202F40AA2F0217066CC014182186A241, ___U3CsourceU3E5__2_5)),};
+	static_cast<int32_t>(offsetof(U3CPlayAudioCoU3Ed__21_t7546745B7BD993F9AEF5D34BDC876FF1CF69F2F5, ___U3CU3E1__state_0)),static_cast<int32_t>(offsetof(U3CPlayAudioCoU3Ed__21_t7546745B7BD993F9AEF5D34BDC876FF1CF69F2F5, ___U3CU3E2__current_1)),static_cast<int32_t>(offsetof(U3CPlayAudioCoU3Ed__21_t7546745B7BD993F9AEF5D34BDC876FF1CF69F2F5, ___U3CU3E4__this_2)),static_cast<int32_t>(offsetof(U3CPlayAudioCoU3Ed__21_t7546745B7BD993F9AEF5D34BDC876FF1CF69F2F5, ___pos_3)),static_cast<int32_t>(offsetof(U3CPlayAudioCoU3Ed__21_t7546745B7BD993F9AEF5D34BDC876FF1CF69F2F5, ___aType_4)),static_cast<int32_t>(offsetof(U3CPlayAudioCoU3Ed__21_t7546745B7BD993F9AEF5D34BDC876FF1CF69F2F5, ___U3CsourceU3E5__2_5)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4323[6] = 
 {
 	static_cast<int32_t>(offsetof(AudioManager_t4BE66A4A0E184D85AF74C37BC93BFBEC52953C7B_StaticFields, ___U3CInstanceU3Ek__BackingField_4)),static_cast<int32_t>(offsetof(AudioManager_t4BE66A4A0E184D85AF74C37BC93BFBEC52953C7B, ____musicSource_5)),static_cast<int32_t>(offsetof(AudioManager_t4BE66A4A0E184D85AF74C37BC93BFBEC52953C7B, ____sFXSource_6)),static_cast<int32_t>(offsetof(AudioManager_t4BE66A4A0E184D85AF74C37BC93BFBEC52953C7B, ____posSFXSourcePrefab_7)),static_cast<int32_t>(offsetof(AudioManager_t4BE66A4A0E184D85AF74C37BC93BFBEC52953C7B, ____audioClipsList_8)),static_cast<int32_t>(offsetof(AudioManager_t4BE66A4A0E184D85AF74C37BC93BFBEC52953C7B, ____audioClips_9)),};
