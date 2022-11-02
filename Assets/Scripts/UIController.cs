@@ -18,6 +18,7 @@ public class UIController : MonoBehaviour
     [SerializeField] GameObject _startScreen;
     [SerializeField] GameObject _settingsScreen;
     [SerializeField] GameObject _howToPlayScreen;
+    [SerializeField] GameObject _controllsScreen;
     [SerializeField] GameObject _timerPointsUI;
     [SerializeField] GameObject _powerUpsUI;
     [SerializeField] GameObject _ballsRemainingUI;
@@ -91,6 +92,10 @@ public class UIController : MonoBehaviour
     public void ShowHowToPlayScreen(){
         _startScreen.SetActive(false);
         _howToPlayScreen.SetActive(true);
+    }
+    public void ShowControllsScreen(){
+        _startScreen.SetActive(false);
+        _controllsScreen.SetActive(true);
     }
 
 
@@ -182,6 +187,7 @@ public class UIController : MonoBehaviour
         _gameOverScreen.SetActive(false);
         _settingsScreen.SetActive(false);
         _howToPlayScreen.SetActive(false);
+        _controllsScreen.SetActive(false);
     }
     void ShowPauseScreen() {
         _wall1.SetActive(false);
