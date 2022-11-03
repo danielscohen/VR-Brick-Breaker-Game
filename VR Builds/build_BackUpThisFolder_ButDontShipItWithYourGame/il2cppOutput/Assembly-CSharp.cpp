@@ -668,6 +668,8 @@ struct U3CFadeOutU3Ed__41_t73053DE7DFECBDA40AC167A6272DB5670689A443;
 struct U3CFadeOutIfStuckU3Ed__40_t5948279DE859FA81CBDF87A3B745C1C4C5C13459;
 // FragController/<MakeFragFlash>d__42
 struct U3CMakeFragFlashU3Ed__42_t734E0C2B1E946C78E46E4854ABA9F461606169B1;
+// GameController/<RotatePlayerUpwards>d__38
+struct U3CRotatePlayerUpwardsU3Ed__38_t28CA4E662F9F31B548537580AE78DFC9FFDC1252;
 // GrabHandPose/<SetHandDataRoutine>d__14
 struct U3CSetHandDataRoutineU3Ed__14_tC6827D94239050F6188DC7A47C8C9C09CBF998EE;
 // UnityEngine.UI.MaskableGraphic/CullStateChangedEvent
@@ -778,6 +780,7 @@ IL2CPP_EXTERN_C RuntimeClass* U3CMakeFragFlashU3Ed__6_tC44372B161E66EADB8D37748C
 IL2CPP_EXTERN_C RuntimeClass* U3CPlayAudioCoU3Ed__19_tB75859D48FD5D542496732243F129BC6CB6516B6_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CPlayAudioCoU3Ed__21_t7546745B7BD993F9AEF5D34BDC876FF1CF69F2F5_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CRotateArenaCoU3Ed__8_tBD80848AA6F93CF6C7D62549CBFE07148B0FA930_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* U3CRotatePlayerUpwardsU3Ed__38_t28CA4E662F9F31B548537580AE78DFC9FFDC1252_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CSetHandDataRoutineU3Ed__14_tC6827D94239050F6188DC7A47C8C9C09CBF998EE_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CSpawnOverTimeU3Ed__9_tD36482696FBA1F9F894BAA2DD52A04DDA4165493_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CStartCollActionsU3Ed__53_t12B6BCBF388A5728440049B05F4E63742291C936_il2cpp_TypeInfo_var;
@@ -1005,6 +1008,7 @@ IL2CPP_EXTERN_C const RuntimeMethod* U3CMakeFragFlashU3Ed__6_System_Collections_
 IL2CPP_EXTERN_C const RuntimeMethod* U3CPlayAudioCoU3Ed__19_System_Collections_IEnumerator_Reset_mD126E600D37C372F6C454F870154614F91DA7D18_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CPlayAudioCoU3Ed__21_System_Collections_IEnumerator_Reset_m54AE780EED5CE3B8092E5A5711CEF7EA903434F5_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CRotateArenaCoU3Ed__8_System_Collections_IEnumerator_Reset_m5A42D8841585C99DDCF713835B97030ECF242F45_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* U3CRotatePlayerUpwardsU3Ed__38_System_Collections_IEnumerator_Reset_m64B706C5DB919BDC455F9253946E8F67AD299AFE_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CSetHandDataRoutineU3Ed__14_System_Collections_IEnumerator_Reset_mDFC4562A4D8CA7421D3136528D8C3E6CEAD3AB62_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CSpawnOverTimeU3Ed__9_System_Collections_IEnumerator_Reset_mEF67754BDAD95BD4C502692561607E6711722AB4_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CStartCollActionsU3Ed__53_System_Collections_IEnumerator_Reset_m0936EBB536309333063731D8DE3A6DF0998BD499_RuntimeMethod_var;
@@ -3147,6 +3151,25 @@ struct U3CMakeFragFlashU3Ed__42_t734E0C2B1E946C78E46E4854ABA9F461606169B1  : pub
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___U3CcolorU3E5__4_5;
 };
 
+// GameController/<RotatePlayerUpwards>d__38
+struct U3CRotatePlayerUpwardsU3Ed__38_t28CA4E662F9F31B548537580AE78DFC9FFDC1252  : public RuntimeObject
+{
+	// System.Int32 GameController/<RotatePlayerUpwards>d__38::<>1__state
+	int32_t ___U3CU3E1__state_0;
+	// System.Object GameController/<RotatePlayerUpwards>d__38::<>2__current
+	RuntimeObject* ___U3CU3E2__current_1;
+	// GameController GameController/<RotatePlayerUpwards>d__38::<>4__this
+	GameController_tDA619EE453F7ED2C8297EF928518A0B447E44D09* ___U3CU3E4__this_2;
+	// System.Single GameController/<RotatePlayerUpwards>d__38::<rotDuration>5__2
+	float ___U3CrotDurationU3E5__2_3;
+	// System.Single GameController/<RotatePlayerUpwards>d__38::<time>5__3
+	float ___U3CtimeU3E5__3_4;
+	// UnityEngine.Quaternion GameController/<RotatePlayerUpwards>d__38::<startAngle>5__4
+	Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___U3CstartAngleU3E5__4_5;
+	// UnityEngine.Quaternion GameController/<RotatePlayerUpwards>d__38::<targetAngle>5__5
+	Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___U3CtargetAngleU3E5__5_6;
+};
+
 // GrabHandPose/<SetHandDataRoutine>d__14
 struct U3CSetHandDataRoutineU3Ed__14_tC6827D94239050F6188DC7A47C8C9C09CBF998EE  : public RuntimeObject
 {
@@ -4339,6 +4362,10 @@ struct GameController_tDA619EE453F7ED2C8297EF928518A0B447E44D09  : public MonoBe
 	int32_t ___U3CCurrentGameStateU3Ek__BackingField_11;
 	// UnityEngine.InputSystem.InputActionReference GameController::pauseReference
 	InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* ___pauseReference_12;
+	// UnityEngine.GameObject GameController::_player
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ____player_13;
+	// UnityEngine.GameObject GameController::_camOffset
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ____camOffset_14;
 };
 
 struct GameController_tDA619EE453F7ED2C8297EF928518A0B447E44D09_StaticFields
@@ -7891,25 +7918,33 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Application_Quit_mE304382DB9A6455C2A474C
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void GameController_set_Instance_m4A8BAF965F5537FC39B44D413A3752665727C76C_inline (GameController_tDA619EE453F7ED2C8297EF928518A0B447E44D09* ___value0, const RuntimeMethod* method) ;
 // System.Void GameController::set_CurrentGameState(GameState)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void GameController_set_CurrentGameState_m4A3A98C9D9562519A819ABA7B3F3E789C6FDB256_inline (GameController_tDA619EE453F7ED2C8297EF928518A0B447E44D09* __this, int32_t ___value0, const RuntimeMethod* method) ;
-// System.Void UnityEngine.Time::set_timeScale(System.Single)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Time_set_timeScale_mEF84EE4B2376A458387648079B426B267862D331 (float ___value0, const RuntimeMethod* method) ;
 // System.Void System.Action::Invoke()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Action_Invoke_m7126A54DACA72B845424072887B5F3A51FC3808E_inline (Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* __this, const RuntimeMethod* method) ;
 // System.Void AudioManager::PlayGameMusic()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioManager_PlayGameMusic_m150503FD3F6E4D8235009C58C9F6AB43361EA65E (AudioManager_t4BE66A4A0E184D85AF74C37BC93BFBEC52953C7B* __this, const RuntimeMethod* method) ;
 // System.Void GameController::set_GameDifficulty(Difficulty)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void GameController_set_GameDifficulty_m58A3EA9BE07AA2959D804A8724F536621D1C78F8_inline (GameController_tDA619EE453F7ED2C8297EF928518A0B447E44D09* __this, int32_t ___value0, const RuntimeMethod* method) ;
+// System.Collections.IEnumerator GameController::RotatePlayerUpwards()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* GameController_RotatePlayerUpwards_m268CF8059E497FA3EE0A5F04D122D558209B05E9 (GameController_tDA619EE453F7ED2C8297EF928518A0B447E44D09* __this, const RuntimeMethod* method) ;
+// System.Void GameController/<RotatePlayerUpwards>d__38::.ctor(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRotatePlayerUpwardsU3Ed__38__ctor_mF094BEFEE3ABB3C16A95D2F5A48E8A9809727C21 (U3CRotatePlayerUpwardsU3Ed__38_t28CA4E662F9F31B548537580AE78DFC9FFDC1252* __this, int32_t ___U3CU3E1__state0, const RuntimeMethod* method) ;
 // GameState GameController::get_CurrentGameState()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t GameController_get_CurrentGameState_m57CB1630BCB4C4D627CA1DCE7461E09C2BB2E5DA_inline (GameController_tDA619EE453F7ED2C8297EF928518A0B447E44D09* __this, const RuntimeMethod* method) ;
 // System.Void GameController::PauseGame()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameController_PauseGame_mF758104E831DF1AEEA306B2F31C48C8F665A1BA7 (GameController_tDA619EE453F7ED2C8297EF928518A0B447E44D09* __this, const RuntimeMethod* method) ;
 // System.Void GameController::ContinueGame()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameController_ContinueGame_m5A3F2F7E40731DDA908E491BD43251FC46271F9D (GameController_tDA619EE453F7ED2C8297EF928518A0B447E44D09* __this, const RuntimeMethod* method) ;
+// System.Void UnityEngine.Time::set_timeScale(System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Time_set_timeScale_mEF84EE4B2376A458387648079B426B267862D331 (float ___value0, const RuntimeMethod* method) ;
 // System.Void System.Action`1<GameOverReason>::Invoke(T)
 inline void Action_1_Invoke_m7368233FB7DAAF54EAD8D70129011664D04486BD_inline (Action_1_tB1974422CB036F1C1C64BEAE295B4B3E76EFD98C* __this, int32_t ___obj0, const RuntimeMethod* method)
 {
 	((  void (*) (Action_1_tB1974422CB036F1C1C64BEAE295B4B3E76EFD98C*, int32_t, const RuntimeMethod*))Action_1_Invoke_mBF7DDBCD230E9D28EDF45D3E65F907DE1AE0CCBC_gshared_inline)(__this, ___obj0, method);
 }
+// UnityEngine.Quaternion UnityEngine.Quaternion::Lerp(UnityEngine.Quaternion,UnityEngine.Quaternion,System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 Quaternion_Lerp_m259606226726C2F46E079A5A688B9E24FF7E9A0D (Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___a0, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___b1, float ___t2, const RuntimeMethod* method) ;
+// System.Void UnityEngine.Transform::set_rotation(UnityEngine.Quaternion)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Transform_set_rotation_m61340DE74726CF0F9946743A727C4D444397331D (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* __this, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___value0, const RuntimeMethod* method) ;
 // System.Void UnityEngine.ScriptableObject::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScriptableObject__ctor_mD037FDB0B487295EA47F79A4DB1BF1846C9087FF (ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A* __this, const RuntimeMethod* method) ;
 // T UnityEngine.Component::GetComponent<UnityEngine.XR.Interaction.Toolkit.XRGrabInteractable>()
@@ -7960,8 +7995,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* GrabHandPose_SetHandDataRoutin
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSetHandDataRoutineU3Ed__14__ctor_m79FEF1790BC5B315B23FCD93082E38ABC6F8A8ED (U3CSetHandDataRoutineU3Ed__14_tC6827D94239050F6188DC7A47C8C9C09CBF998EE* __this, int32_t ___U3CU3E1__state0, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Transform::set_localPosition(UnityEngine.Vector3)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Transform_set_localPosition_mDE1C997F7D79C0885210B7732B4BA50EE7D73134 (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___value0, const RuntimeMethod* method) ;
-// UnityEngine.Quaternion UnityEngine.Quaternion::Lerp(UnityEngine.Quaternion,UnityEngine.Quaternion,System.Single)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 Quaternion_Lerp_m259606226726C2F46E079A5A688B9E24FF7E9A0D (Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___a0, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___b1, float ___t2, const RuntimeMethod* method) ;
 // System.Void GameController::add_onLoadGame(System.Action)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameController_add_onLoadGame_mDB48C338AE80A75D85739121B744D0F44C05D36F (Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ___value0, const RuntimeMethod* method) ;
 // System.Void GameController::add_onPauseGame(System.Action)
@@ -8117,8 +8150,6 @@ inline void Action_2_Invoke_mC946E5EB24137DAF3AEB9F34C3B1501893FAFBD4_inline (Ac
 {
 	((  void (*) (Action_2_t0FB5AA83390BCDDEA0C704E1A04FF4F34F0CAC32*, int32_t, float, const RuntimeMethod*))Action_2_Invoke_mF3D5F13C54D2D8C0B653F200A51E8C24586B3873_gshared_inline)(__this, ___arg10, ___arg21, method);
 }
-// System.Void UnityEngine.Transform::set_rotation(UnityEngine.Quaternion)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Transform_set_rotation_m61340DE74726CF0F9946743A727C4D444397331D (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* __this, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___value0, const RuntimeMethod* method) ;
 // System.Void OWS.ObjectPooling.ObjectPool`1<OWS.ObjectPooling.PoolObject>::.ctor(UnityEngine.GameObject,System.Int32)
 inline void ObjectPool_1__ctor_m9B1B5073E182DB646087D87F7A37651873611B70 (ObjectPool_1_t4967CB1D5492F8D62FF817B69284D98F24747373* __this, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___pooledObject0, int32_t ___numToSpawn1, const RuntimeMethod* method)
 {
@@ -20674,8 +20705,6 @@ IL_0028:
 	{
 		// CurrentGameState = GameState.Started;
 		GameController_set_CurrentGameState_m4A3A98C9D9562519A819ABA7B3F3E789C6FDB256_inline(__this, 0, NULL);
-		// Time.timeScale = 0;
-		Time_set_timeScale_mEF84EE4B2376A458387648079B426B267862D331((0.0f), NULL);
 		// }
 		return;
 	}
@@ -20782,57 +20811,80 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameController_StartGame_mFCA6A8FA880B30
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* G_B5_0 = NULL;
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* G_B4_0 = NULL;
 	{
-		// Time.timeScale = 1;
-		Time_set_timeScale_mEF84EE4B2376A458387648079B426B267862D331((1.0f), NULL);
+		// StartCoroutine(RotatePlayerUpwards());
+		RuntimeObject* L_0;
+		L_0 = GameController_RotatePlayerUpwards_m268CF8059E497FA3EE0A5F04D122D558209B05E9(__this, NULL);
+		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_1;
+		L_1 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_0, NULL);
 		// CurrentGameState = GameState.Running;
 		GameController_set_CurrentGameState_m4A3A98C9D9562519A819ABA7B3F3E789C6FDB256_inline(__this, 1, NULL);
 		// AudioManager.Instance.PlayAudio(AudioReason.GameStarted);
-		AudioManager_t4BE66A4A0E184D85AF74C37BC93BFBEC52953C7B* L_0;
-		L_0 = AudioManager_get_Instance_mE470515848AEDD204D9C8CF0F50D6A9785890211_inline(NULL);
-		NullCheck(L_0);
-		AudioManager_PlayAudio_m7F617E376395AE7DCB0BBCB18D9FE3404D2E00AD(L_0, 4, NULL);
+		AudioManager_t4BE66A4A0E184D85AF74C37BC93BFBEC52953C7B* L_2;
+		L_2 = AudioManager_get_Instance_mE470515848AEDD204D9C8CF0F50D6A9785890211_inline(NULL);
+		NullCheck(L_2);
+		AudioManager_PlayAudio_m7F617E376395AE7DCB0BBCB18D9FE3404D2E00AD(L_2, 4, NULL);
 		// onStartGame?.Invoke();
-		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_1 = ((GameController_tDA619EE453F7ED2C8297EF928518A0B447E44D09_StaticFields*)il2cpp_codegen_static_fields_for(GameController_tDA619EE453F7ED2C8297EF928518A0B447E44D09_il2cpp_TypeInfo_var))->___onStartGame_6;
-		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_2 = L_1;
-		G_B1_0 = L_2;
-		if (L_2)
+		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_3 = ((GameController_tDA619EE453F7ED2C8297EF928518A0B447E44D09_StaticFields*)il2cpp_codegen_static_fields_for(GameController_tDA619EE453F7ED2C8297EF928518A0B447E44D09_il2cpp_TypeInfo_var))->___onStartGame_6;
+		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_4 = L_3;
+		G_B1_0 = L_4;
+		if (L_4)
 		{
-			G_B2_0 = L_2;
-			goto IL_0027;
+			G_B2_0 = L_4;
+			goto IL_002a;
 		}
 	}
 	{
-		goto IL_002c;
+		goto IL_002f;
 	}
 
-IL_0027:
+IL_002a:
 	{
 		NullCheck(G_B2_0);
 		Action_Invoke_m7126A54DACA72B845424072887B5F3A51FC3808E_inline(G_B2_0, NULL);
 	}
 
-IL_002c:
+IL_002f:
 	{
 		// onResumeGame?.Invoke();
-		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_3 = ((GameController_tDA619EE453F7ED2C8297EF928518A0B447E44D09_StaticFields*)il2cpp_codegen_static_fields_for(GameController_tDA619EE453F7ED2C8297EF928518A0B447E44D09_il2cpp_TypeInfo_var))->___onResumeGame_5;
-		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_4 = L_3;
-		G_B4_0 = L_4;
-		if (L_4)
+		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_5 = ((GameController_tDA619EE453F7ED2C8297EF928518A0B447E44D09_StaticFields*)il2cpp_codegen_static_fields_for(GameController_tDA619EE453F7ED2C8297EF928518A0B447E44D09_il2cpp_TypeInfo_var))->___onResumeGame_5;
+		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_6 = L_5;
+		G_B4_0 = L_6;
+		if (L_6)
 		{
-			G_B5_0 = L_4;
-			goto IL_0036;
+			G_B5_0 = L_6;
+			goto IL_0039;
 		}
 	}
 	{
 		return;
 	}
 
-IL_0036:
+IL_0039:
 	{
 		NullCheck(G_B5_0);
 		Action_Invoke_m7126A54DACA72B845424072887B5F3A51FC3808E_inline(G_B5_0, NULL);
 		// }
 		return;
+	}
+}
+// System.Collections.IEnumerator GameController::RotatePlayerUpwards()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* GameController_RotatePlayerUpwards_m268CF8059E497FA3EE0A5F04D122D558209B05E9 (GameController_tDA619EE453F7ED2C8297EF928518A0B447E44D09* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CRotatePlayerUpwardsU3Ed__38_t28CA4E662F9F31B548537580AE78DFC9FFDC1252_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		U3CRotatePlayerUpwardsU3Ed__38_t28CA4E662F9F31B548537580AE78DFC9FFDC1252* L_0 = (U3CRotatePlayerUpwardsU3Ed__38_t28CA4E662F9F31B548537580AE78DFC9FFDC1252*)il2cpp_codegen_object_new(U3CRotatePlayerUpwardsU3Ed__38_t28CA4E662F9F31B548537580AE78DFC9FFDC1252_il2cpp_TypeInfo_var);
+		NullCheck(L_0);
+		U3CRotatePlayerUpwardsU3Ed__38__ctor_mF094BEFEE3ABB3C16A95D2F5A48E8A9809727C21(L_0, 0, NULL);
+		U3CRotatePlayerUpwardsU3Ed__38_t28CA4E662F9F31B548537580AE78DFC9FFDC1252* L_1 = L_0;
+		NullCheck(L_1);
+		L_1->___U3CU3E4__this_2 = __this;
+		Il2CppCodeGenWriteBarrier((void**)(&L_1->___U3CU3E4__this_2), (void*)__this);
+		return L_1;
 	}
 }
 // System.Void GameController::SetPLayerStartHealth()
@@ -21060,6 +21112,158 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameController__ctor_mB6369F6C5357D59843
 	{
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void GameController/<RotatePlayerUpwards>d__38::.ctor(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRotatePlayerUpwardsU3Ed__38__ctor_mF094BEFEE3ABB3C16A95D2F5A48E8A9809727C21 (U3CRotatePlayerUpwardsU3Ed__38_t28CA4E662F9F31B548537580AE78DFC9FFDC1252* __this, int32_t ___U3CU3E1__state0, const RuntimeMethod* method) 
+{
+	{
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		int32_t L_0 = ___U3CU3E1__state0;
+		__this->___U3CU3E1__state_0 = L_0;
+		return;
+	}
+}
+// System.Void GameController/<RotatePlayerUpwards>d__38::System.IDisposable.Dispose()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRotatePlayerUpwardsU3Ed__38_System_IDisposable_Dispose_mB885389E0BFE0B9A50D1A58E5191EBF5ADAD510C (U3CRotatePlayerUpwardsU3Ed__38_t28CA4E662F9F31B548537580AE78DFC9FFDC1252* __this, const RuntimeMethod* method) 
+{
+	{
+		return;
+	}
+}
+// System.Boolean GameController/<RotatePlayerUpwards>d__38::MoveNext()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CRotatePlayerUpwardsU3Ed__38_MoveNext_m253D1D7808DD269F120C1098D97CDF645A8CB33C (U3CRotatePlayerUpwardsU3Ed__38_t28CA4E662F9F31B548537580AE78DFC9FFDC1252* __this, const RuntimeMethod* method) 
+{
+	int32_t V_0 = 0;
+	GameController_tDA619EE453F7ED2C8297EF928518A0B447E44D09* V_1 = NULL;
+	{
+		int32_t L_0 = __this->___U3CU3E1__state_0;
+		V_0 = L_0;
+		GameController_tDA619EE453F7ED2C8297EF928518A0B447E44D09* L_1 = __this->___U3CU3E4__this_2;
+		V_1 = L_1;
+		int32_t L_2 = V_0;
+		if (!L_2)
+		{
+			goto IL_001a;
+		}
+	}
+	{
+		int32_t L_3 = V_0;
+		if ((((int32_t)L_3) == ((int32_t)1)))
+		{
+			goto IL_00aa;
+		}
+	}
+	{
+		return (bool)0;
+	}
+
+IL_001a:
+	{
+		__this->___U3CU3E1__state_0 = (-1);
+		// float rotDuration = 4f;
+		__this->___U3CrotDurationU3E5__2_3 = (4.0f);
+		// float time = 0;
+		__this->___U3CtimeU3E5__3_4 = (0.0f);
+		// Quaternion startAngle = _player.transform.rotation;
+		GameController_tDA619EE453F7ED2C8297EF928518A0B447E44D09* L_4 = V_1;
+		NullCheck(L_4);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_5 = L_4->____player_13;
+		NullCheck(L_5);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_6;
+		L_6 = GameObject_get_transform_m0BC10ADFA1632166AE5544BDF9038A2650C2AE56(L_5, NULL);
+		NullCheck(L_6);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_7;
+		L_7 = Transform_get_rotation_m32AF40CA0D50C797DA639A696F8EAEC7524C179C(L_6, NULL);
+		__this->___U3CstartAngleU3E5__4_5 = L_7;
+		// Quaternion targetAngle = Quaternion.identity;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_8;
+		L_8 = Quaternion_get_identity_m7E701AE095ED10FD5EA0B50ABCFDE2EEFF2173A5_inline(NULL);
+		__this->___U3CtargetAngleU3E5__5_6 = L_8;
+		goto IL_00b1;
+	}
+
+IL_005a:
+	{
+		// _player.transform.rotation = Quaternion.Lerp(startAngle, targetAngle, time / rotDuration);
+		GameController_tDA619EE453F7ED2C8297EF928518A0B447E44D09* L_9 = V_1;
+		NullCheck(L_9);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_10 = L_9->____player_13;
+		NullCheck(L_10);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_11;
+		L_11 = GameObject_get_transform_m0BC10ADFA1632166AE5544BDF9038A2650C2AE56(L_10, NULL);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_12 = __this->___U3CstartAngleU3E5__4_5;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_13 = __this->___U3CtargetAngleU3E5__5_6;
+		float L_14 = __this->___U3CtimeU3E5__3_4;
+		float L_15 = __this->___U3CrotDurationU3E5__2_3;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_16;
+		L_16 = Quaternion_Lerp_m259606226726C2F46E079A5A688B9E24FF7E9A0D(L_12, L_13, ((float)(L_14/L_15)), NULL);
+		NullCheck(L_11);
+		Transform_set_rotation_m61340DE74726CF0F9946743A727C4D444397331D(L_11, L_16, NULL);
+		// time += Time.deltaTime;
+		float L_17 = __this->___U3CtimeU3E5__3_4;
+		float L_18;
+		L_18 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
+		__this->___U3CtimeU3E5__3_4 = ((float)il2cpp_codegen_add(L_17, L_18));
+		// yield return null;
+		__this->___U3CU3E2__current_1 = NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current_1), (void*)NULL);
+		__this->___U3CU3E1__state_0 = 1;
+		return (bool)1;
+	}
+
+IL_00aa:
+	{
+		__this->___U3CU3E1__state_0 = (-1);
+	}
+
+IL_00b1:
+	{
+		// while(time < rotDuration){
+		float L_19 = __this->___U3CtimeU3E5__3_4;
+		float L_20 = __this->___U3CrotDurationU3E5__2_3;
+		if ((((float)L_19) < ((float)L_20)))
+		{
+			goto IL_005a;
+		}
+	}
+	{
+		// }
+		return (bool)0;
+	}
+}
+// System.Object GameController/<RotatePlayerUpwards>d__38::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CRotatePlayerUpwardsU3Ed__38_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mF13EFF2AB63827E630DB1CA28CE3281E4EF63F90 (U3CRotatePlayerUpwardsU3Ed__38_t28CA4E662F9F31B548537580AE78DFC9FFDC1252* __this, const RuntimeMethod* method) 
+{
+	{
+		RuntimeObject* L_0 = __this->___U3CU3E2__current_1;
+		return L_0;
+	}
+}
+// System.Void GameController/<RotatePlayerUpwards>d__38::System.Collections.IEnumerator.Reset()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRotatePlayerUpwardsU3Ed__38_System_Collections_IEnumerator_Reset_m64B706C5DB919BDC455F9253946E8F67AD299AFE (U3CRotatePlayerUpwardsU3Ed__38_t28CA4E662F9F31B548537580AE78DFC9FFDC1252* __this, const RuntimeMethod* method) 
+{
+	{
+		NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A* L_0 = (NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A_il2cpp_TypeInfo_var)));
+		NullCheck(L_0);
+		NotSupportedException__ctor_m1398D0CDE19B36AA3DE9392879738C1EA2439CDF(L_0, NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CRotatePlayerUpwardsU3Ed__38_System_Collections_IEnumerator_Reset_m64B706C5DB919BDC455F9253946E8F67AD299AFE_RuntimeMethod_var)));
+	}
+}
+// System.Object GameController/<RotatePlayerUpwards>d__38::System.Collections.IEnumerator.get_Current()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CRotatePlayerUpwardsU3Ed__38_System_Collections_IEnumerator_get_Current_mB25D835F6D1E9B1D10EE1D94B03CB7CB8CB7937D (U3CRotatePlayerUpwardsU3Ed__38_t28CA4E662F9F31B548537580AE78DFC9FFDC1252* __this, const RuntimeMethod* method) 
+{
+	{
+		RuntimeObject* L_0 = __this->___U3CU3E2__current_1;
+		return L_0;
 	}
 }
 #ifdef __clang__
