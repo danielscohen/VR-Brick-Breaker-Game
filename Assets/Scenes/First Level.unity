@@ -7785,7 +7785,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 793974007}
   m_LocalRotation: {x: -0.031678848, y: -0.6368016, z: -0.023147404, w: 0.7700288}
-  m_LocalPosition: {x: 0.029538354, y: -0.02731014, z: -0.03238833}
+  m_LocalPosition: {x: 0.029538354, y: 0, z: -0.03238833}
   m_LocalScale: {x: 1.1000003, y: 1.1000004, z: 1.1000003}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13178,14 +13178,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 193064969, guid: 8458233362fe2f44ba7d662843705370, type: 3}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 797770555271050362, guid: 8458233362fe2f44ba7d662843705370,
         type: 3}
       propertyPath: m_Name
       value: Ball
+      objectReference: {fileID: 0}
+    - target: {fileID: 797770555271050362, guid: 8458233362fe2f44ba7d662843705370,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 797770555271050366, guid: 8458233362fe2f44ba7d662843705370,
         type: 3}
@@ -15127,7 +15128,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.05
+  m_Radius: 0.07
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1196449218
 MonoBehaviour:
@@ -15147,7 +15148,7 @@ MonoBehaviour:
     m_Bits: 4294967295
   m_InteractionLayers:
     m_Bits: 4294967295
-  m_AttachTransform: {fileID: 793974008}
+  m_AttachTransform: {fileID: 0}
   m_KeepSelectedTargetValid: 1
   m_StartingSelectedInteractable: {fileID: 0}
   m_StartingTargetFilter: {fileID: 0}
@@ -21839,7 +21840,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.05
+  m_Radius: 0.07
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1801898525
 MonoBehaviour:
@@ -21859,7 +21860,7 @@ MonoBehaviour:
     m_Bits: 4294967295
   m_InteractionLayers:
     m_Bits: 4294967295
-  m_AttachTransform: {fileID: 1362982299}
+  m_AttachTransform: {fileID: 0}
   m_KeepSelectedTargetValid: 1
   m_StartingSelectedInteractable: {fileID: 0}
   m_StartingTargetFilter: {fileID: 0}
