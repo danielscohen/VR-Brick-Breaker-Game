@@ -12,6 +12,7 @@ public class GrabHandPose : MonoBehaviour
     public HandData _rightHandPose;
     public HandData _leftHandPose;
     public float poseTransitionDuration = 1f;
+    public Transform _attachPoint;
     Vector3 startingHandPosition;
     Vector3 finalHandPosition;
     Quaternion startingHandRotation;
@@ -34,9 +35,16 @@ public class GrabHandPose : MonoBehaviour
             HandData handData = arg.interactorObject.transform.GetComponentInChildren<HandData>();
             handData.animator.enabled = false;
             if(handData.handType == HandData.HandModelType.Right){
+                Quaternion origRot = _attachPoint.localRotation;
+                origRot.y = Mathf.Abs(origRot.y);
+                _attachPoint.localRotation = origRot;
                 SetHandDataValues(handData, _rightHandPose);
             }
             else{
+                Quaternion origRot = _attachPoint.localRotation;
+                origRot.y *= -1;
+                _attachPoint.localRotation = origRot;
+                
                 SetHandDataValues(handData, _leftHandPose);
             }
             StartCoroutine(SetHandDataRoutine(handData, finalHandPosition, finalHandRotation, finalFingerRotation, startingHandPosition, startingHandRotation, startingFingerRotation));

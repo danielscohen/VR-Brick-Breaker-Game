@@ -668,8 +668,8 @@ struct U3CFadeOutU3Ed__41_t73053DE7DFECBDA40AC167A6272DB5670689A443;
 struct U3CFadeOutIfStuckU3Ed__40_t5948279DE859FA81CBDF87A3B745C1C4C5C13459;
 // FragController/<MakeFragFlash>d__42
 struct U3CMakeFragFlashU3Ed__42_t734E0C2B1E946C78E46E4854ABA9F461606169B1;
-// GrabHandPose/<SetHandDataRoutine>d__13
-struct U3CSetHandDataRoutineU3Ed__13_t00EBBE346D4218990D3068A5B9DC9834EF6D133B;
+// GrabHandPose/<SetHandDataRoutine>d__14
+struct U3CSetHandDataRoutineU3Ed__14_tC6827D94239050F6188DC7A47C8C9C09CBF998EE;
 // UnityEngine.UI.MaskableGraphic/CullStateChangedEvent
 struct CullStateChangedEvent_t6073CD0D951EC1256BF74B8F9107D68FC89B99B8;
 // ParticleController/<FadeOut>d__7
@@ -778,7 +778,7 @@ IL2CPP_EXTERN_C RuntimeClass* U3CMakeFragFlashU3Ed__6_tC44372B161E66EADB8D37748C
 IL2CPP_EXTERN_C RuntimeClass* U3CPlayAudioCoU3Ed__19_tB75859D48FD5D542496732243F129BC6CB6516B6_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CPlayAudioCoU3Ed__21_t7546745B7BD993F9AEF5D34BDC876FF1CF69F2F5_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CRotateArenaCoU3Ed__8_tBD80848AA6F93CF6C7D62549CBFE07148B0FA930_il2cpp_TypeInfo_var;
-IL2CPP_EXTERN_C RuntimeClass* U3CSetHandDataRoutineU3Ed__13_t00EBBE346D4218990D3068A5B9DC9834EF6D133B_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* U3CSetHandDataRoutineU3Ed__14_tC6827D94239050F6188DC7A47C8C9C09CBF998EE_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CSpawnOverTimeU3Ed__9_tD36482696FBA1F9F894BAA2DD52A04DDA4165493_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CStartCollActionsU3Ed__52_t84F4D8528CB97BDE310F56110288640AD60445BE_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CStartTimerU3Ed__19_tFBE804A7B45011F9CD73D590AA3094FC9EBC7CE9_il2cpp_TypeInfo_var;
@@ -1005,7 +1005,7 @@ IL2CPP_EXTERN_C const RuntimeMethod* U3CMakeFragFlashU3Ed__6_System_Collections_
 IL2CPP_EXTERN_C const RuntimeMethod* U3CPlayAudioCoU3Ed__19_System_Collections_IEnumerator_Reset_mD126E600D37C372F6C454F870154614F91DA7D18_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CPlayAudioCoU3Ed__21_System_Collections_IEnumerator_Reset_m54AE780EED5CE3B8092E5A5711CEF7EA903434F5_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CRotateArenaCoU3Ed__8_System_Collections_IEnumerator_Reset_m5A42D8841585C99DDCF713835B97030ECF242F45_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* U3CSetHandDataRoutineU3Ed__13_System_Collections_IEnumerator_Reset_mB1861B5FAF8A65E3992ADD86A46C177498C292D1_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* U3CSetHandDataRoutineU3Ed__14_System_Collections_IEnumerator_Reset_mDFC4562A4D8CA7421D3136528D8C3E6CEAD3AB62_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CSpawnOverTimeU3Ed__9_System_Collections_IEnumerator_Reset_mEF67754BDAD95BD4C502692561607E6711722AB4_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CStartCollActionsU3Ed__52_System_Collections_IEnumerator_Reset_m6D1B588F04B55E5348C4BEFE6F2A7B5E2F01BF05_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CStartTimerU3Ed__19_System_Collections_IEnumerator_Reset_m1732EA4EF5C128E750055A2F6A90F2E44DFA578D_RuntimeMethod_var;
@@ -3145,30 +3145,30 @@ struct U3CMakeFragFlashU3Ed__42_t734E0C2B1E946C78E46E4854ABA9F461606169B1  : pub
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___U3CcolorU3E5__4_5;
 };
 
-// GrabHandPose/<SetHandDataRoutine>d__13
-struct U3CSetHandDataRoutineU3Ed__13_t00EBBE346D4218990D3068A5B9DC9834EF6D133B  : public RuntimeObject
+// GrabHandPose/<SetHandDataRoutine>d__14
+struct U3CSetHandDataRoutineU3Ed__14_tC6827D94239050F6188DC7A47C8C9C09CBF998EE  : public RuntimeObject
 {
-	// System.Int32 GrabHandPose/<SetHandDataRoutine>d__13::<>1__state
+	// System.Int32 GrabHandPose/<SetHandDataRoutine>d__14::<>1__state
 	int32_t ___U3CU3E1__state_0;
-	// System.Object GrabHandPose/<SetHandDataRoutine>d__13::<>2__current
+	// System.Object GrabHandPose/<SetHandDataRoutine>d__14::<>2__current
 	RuntimeObject* ___U3CU3E2__current_1;
-	// UnityEngine.Vector3 GrabHandPose/<SetHandDataRoutine>d__13::startingPosition
+	// UnityEngine.Vector3 GrabHandPose/<SetHandDataRoutine>d__14::startingPosition
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___startingPosition_2;
-	// UnityEngine.Vector3 GrabHandPose/<SetHandDataRoutine>d__13::newPosition
+	// UnityEngine.Vector3 GrabHandPose/<SetHandDataRoutine>d__14::newPosition
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___newPosition_3;
-	// GrabHandPose GrabHandPose/<SetHandDataRoutine>d__13::<>4__this
+	// GrabHandPose GrabHandPose/<SetHandDataRoutine>d__14::<>4__this
 	GrabHandPose_t4BBF992835E6460BDC351BB50E23C5AA15EB3FD0* ___U3CU3E4__this_4;
-	// UnityEngine.Quaternion GrabHandPose/<SetHandDataRoutine>d__13::startingRotation
+	// UnityEngine.Quaternion GrabHandPose/<SetHandDataRoutine>d__14::startingRotation
 	Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___startingRotation_5;
-	// UnityEngine.Quaternion GrabHandPose/<SetHandDataRoutine>d__13::newRotation
+	// UnityEngine.Quaternion GrabHandPose/<SetHandDataRoutine>d__14::newRotation
 	Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___newRotation_6;
-	// HandData GrabHandPose/<SetHandDataRoutine>d__13::h
+	// HandData GrabHandPose/<SetHandDataRoutine>d__14::h
 	HandData_t9770188F47C128FAEE7D393EA1DA0AE7057E1BA6* ___h_7;
-	// UnityEngine.Quaternion[] GrabHandPose/<SetHandDataRoutine>d__13::startingBonesRotation
+	// UnityEngine.Quaternion[] GrabHandPose/<SetHandDataRoutine>d__14::startingBonesRotation
 	QuaternionU5BU5D_t3C088AFB0F3D2763228C9CAB227021C5DC462AF7* ___startingBonesRotation_8;
-	// UnityEngine.Quaternion[] GrabHandPose/<SetHandDataRoutine>d__13::newBonesRotation
+	// UnityEngine.Quaternion[] GrabHandPose/<SetHandDataRoutine>d__14::newBonesRotation
 	QuaternionU5BU5D_t3C088AFB0F3D2763228C9CAB227021C5DC462AF7* ___newBonesRotation_9;
-	// System.Single GrabHandPose/<SetHandDataRoutine>d__13::<timer>5__2
+	// System.Single GrabHandPose/<SetHandDataRoutine>d__14::<timer>5__2
 	float ___U3CtimerU3E5__2_10;
 };
 
@@ -4360,18 +4360,20 @@ struct GrabHandPose_t4BBF992835E6460BDC351BB50E23C5AA15EB3FD0  : public MonoBeha
 	HandData_t9770188F47C128FAEE7D393EA1DA0AE7057E1BA6* ____leftHandPose_5;
 	// System.Single GrabHandPose::poseTransitionDuration
 	float ___poseTransitionDuration_6;
+	// UnityEngine.Transform GrabHandPose::_attachPoint
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ____attachPoint_7;
 	// UnityEngine.Vector3 GrabHandPose::startingHandPosition
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___startingHandPosition_7;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___startingHandPosition_8;
 	// UnityEngine.Vector3 GrabHandPose::finalHandPosition
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___finalHandPosition_8;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___finalHandPosition_9;
 	// UnityEngine.Quaternion GrabHandPose::startingHandRotation
-	Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___startingHandRotation_9;
+	Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___startingHandRotation_10;
 	// UnityEngine.Quaternion GrabHandPose::finalHandRotation
-	Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___finalHandRotation_10;
+	Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___finalHandRotation_11;
 	// UnityEngine.Quaternion[] GrabHandPose::startingFingerRotation
-	QuaternionU5BU5D_t3C088AFB0F3D2763228C9CAB227021C5DC462AF7* ___startingFingerRotation_11;
+	QuaternionU5BU5D_t3C088AFB0F3D2763228C9CAB227021C5DC462AF7* ___startingFingerRotation_12;
 	// UnityEngine.Quaternion[] GrabHandPose::finalFingerRotation
-	QuaternionU5BU5D_t3C088AFB0F3D2763228C9CAB227021C5DC462AF7* ___finalFingerRotation_12;
+	QuaternionU5BU5D_t3C088AFB0F3D2763228C9CAB227021C5DC462AF7* ___finalFingerRotation_13;
 };
 
 // HandData
@@ -7940,18 +7942,18 @@ inline HandData_t9770188F47C128FAEE7D393EA1DA0AE7057E1BA6* Component_GetComponen
 {
 	return ((  HandData_t9770188F47C128FAEE7D393EA1DA0AE7057E1BA6* (*) (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3*, const RuntimeMethod*))Component_GetComponentInChildren_TisRuntimeObject_mE483A27E876DE8E4E6901D6814837F81D7C42F65_gshared)(__this, method);
 }
+// UnityEngine.Quaternion UnityEngine.Transform::get_localRotation()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 Transform_get_localRotation_mD53D37611A5DAE93EC6C7BBCAC337408C5CACA77 (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* __this, const RuntimeMethod* method) ;
+// System.Void UnityEngine.Transform::set_localRotation(UnityEngine.Quaternion)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Transform_set_localRotation_mAB4A011D134BA58AB780BECC0025CA65F16185FA (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* __this, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___value0, const RuntimeMethod* method) ;
 // System.Void GrabHandPose::SetHandDataValues(HandData,HandData)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GrabHandPose_SetHandDataValues_mAA9B581A39C411C92176C907DAC64E243B570635 (GrabHandPose_t4BBF992835E6460BDC351BB50E23C5AA15EB3FD0* __this, HandData_t9770188F47C128FAEE7D393EA1DA0AE7057E1BA6* ___h10, HandData_t9770188F47C128FAEE7D393EA1DA0AE7057E1BA6* ___h21, const RuntimeMethod* method) ;
 // System.Collections.IEnumerator GrabHandPose::SetHandDataRoutine(HandData,UnityEngine.Vector3,UnityEngine.Quaternion,UnityEngine.Quaternion[],UnityEngine.Vector3,UnityEngine.Quaternion,UnityEngine.Quaternion[])
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* GrabHandPose_SetHandDataRoutine_mE4D060BD4FC5BE125AB081428E75DADF7D1C3AAB (GrabHandPose_t4BBF992835E6460BDC351BB50E23C5AA15EB3FD0* __this, HandData_t9770188F47C128FAEE7D393EA1DA0AE7057E1BA6* ___h0, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___newPosition1, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___newRotation2, QuaternionU5BU5D_t3C088AFB0F3D2763228C9CAB227021C5DC462AF7* ___newBonesRotation3, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___startingPosition4, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___startingRotation5, QuaternionU5BU5D_t3C088AFB0F3D2763228C9CAB227021C5DC462AF7* ___startingBonesRotation6, const RuntimeMethod* method) ;
-// UnityEngine.Quaternion UnityEngine.Transform::get_localRotation()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 Transform_get_localRotation_mD53D37611A5DAE93EC6C7BBCAC337408C5CACA77 (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* __this, const RuntimeMethod* method) ;
-// System.Void GrabHandPose/<SetHandDataRoutine>d__13::.ctor(System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSetHandDataRoutineU3Ed__13__ctor_mE0248CCD375495557F360711EBC38DD121C39D8A (U3CSetHandDataRoutineU3Ed__13_t00EBBE346D4218990D3068A5B9DC9834EF6D133B* __this, int32_t ___U3CU3E1__state0, const RuntimeMethod* method) ;
+// System.Void GrabHandPose/<SetHandDataRoutine>d__14::.ctor(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSetHandDataRoutineU3Ed__14__ctor_m79FEF1790BC5B315B23FCD93082E38ABC6F8A8ED (U3CSetHandDataRoutineU3Ed__14_tC6827D94239050F6188DC7A47C8C9C09CBF998EE* __this, int32_t ___U3CU3E1__state0, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Transform::set_localPosition(UnityEngine.Vector3)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Transform_set_localPosition_mDE1C997F7D79C0885210B7732B4BA50EE7D73134 (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___value0, const RuntimeMethod* method) ;
-// System.Void UnityEngine.Transform::set_localRotation(UnityEngine.Quaternion)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Transform_set_localRotation_mAB4A011D134BA58AB780BECC0025CA65F16185FA (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* __this, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___value0, const RuntimeMethod* method) ;
 // UnityEngine.Quaternion UnityEngine.Quaternion::Lerp(UnityEngine.Quaternion,UnityEngine.Quaternion,System.Single)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 Quaternion_Lerp_m259606226726C2F46E079A5A688B9E24FF7E9A0D (Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___a0, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___b1, float ___t2, const RuntimeMethod* method) ;
 // System.Void GameController::add_onLoadGame(System.Action)
@@ -21082,6 +21084,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GrabHandPose_SetupPose_mBC86CD2F213B0830
 		s_Il2CppMethodInitialized = true;
 	}
 	HandData_t9770188F47C128FAEE7D393EA1DA0AE7057E1BA6* V_0 = NULL;
+	Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 V_1;
+	memset((&V_1), 0, sizeof(V_1));
+	Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 V_2;
+	memset((&V_2), 0, sizeof(V_2));
 	{
 		// if(arg.interactorObject is XRDirectInteractor){
 		BaseInteractionEventArgs_t8B38B6C63C6C9EA4BD179EF5FD40106872B82D7E* L_0 = ___arg0;
@@ -21090,7 +21096,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GrabHandPose_SetupPose_mBC86CD2F213B0830
 		L_1 = BaseInteractionEventArgs_get_interactorObject_mDC483F1AAA1267A774B677E14189A3EDD1040864_inline(L_0, NULL);
 		if (!((XRDirectInteractor_t1901BC018A818AE3059663EDCC68EDFFE1A8925B*)IsInstClass((RuntimeObject*)L_1, XRDirectInteractor_t1901BC018A818AE3059663EDCC68EDFFE1A8925B_il2cpp_TypeInfo_var)))
 		{
-			goto IL_0081;
+			goto IL_00d6;
 		}
 	}
 	{
@@ -21118,42 +21124,75 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GrabHandPose_SetupPose_mBC86CD2F213B0830
 		int32_t L_9 = L_8->___handType_4;
 		if ((!(((uint32_t)L_9) == ((uint32_t)1))))
 		{
-			goto IL_0042;
+			goto IL_006f;
 		}
 	}
 	{
+		// Quaternion origRot = _attachPoint.localRotation;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_10 = __this->____attachPoint_7;
+		NullCheck(L_10);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_11;
+		L_11 = Transform_get_localRotation_mD53D37611A5DAE93EC6C7BBCAC337408C5CACA77(L_10, NULL);
+		V_1 = L_11;
+		// origRot.y = Mathf.Abs(origRot.y);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_12 = V_1;
+		float L_13 = L_12.___y_1;
+		float L_14;
+		L_14 = fabsf(L_13);
+		(&V_1)->___y_1 = L_14;
+		// _attachPoint.localRotation = origRot;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_15 = __this->____attachPoint_7;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_16 = V_1;
+		NullCheck(L_15);
+		Transform_set_localRotation_mAB4A011D134BA58AB780BECC0025CA65F16185FA(L_15, L_16, NULL);
 		// SetHandDataValues(handData, _rightHandPose);
-		HandData_t9770188F47C128FAEE7D393EA1DA0AE7057E1BA6* L_10 = V_0;
-		HandData_t9770188F47C128FAEE7D393EA1DA0AE7057E1BA6* L_11 = __this->____rightHandPose_4;
-		GrabHandPose_SetHandDataValues_mAA9B581A39C411C92176C907DAC64E243B570635(__this, L_10, L_11, NULL);
-		goto IL_004f;
+		HandData_t9770188F47C128FAEE7D393EA1DA0AE7057E1BA6* L_17 = V_0;
+		HandData_t9770188F47C128FAEE7D393EA1DA0AE7057E1BA6* L_18 = __this->____rightHandPose_4;
+		GrabHandPose_SetHandDataValues_mAA9B581A39C411C92176C907DAC64E243B570635(__this, L_17, L_18, NULL);
+		goto IL_00a4;
 	}
 
-IL_0042:
+IL_006f:
 	{
+		// Quaternion origRot = _attachPoint.localRotation;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_19 = __this->____attachPoint_7;
+		NullCheck(L_19);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_20;
+		L_20 = Transform_get_localRotation_mD53D37611A5DAE93EC6C7BBCAC337408C5CACA77(L_19, NULL);
+		V_2 = L_20;
+		// origRot.y *= -1;
+		float* L_21 = (&(&V_2)->___y_1);
+		float* L_22 = L_21;
+		float L_23 = *((float*)L_22);
+		*((float*)L_22) = (float)((float)il2cpp_codegen_multiply(L_23, (-1.0f)));
+		// _attachPoint.localRotation = origRot;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_24 = __this->____attachPoint_7;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_25 = V_2;
+		NullCheck(L_24);
+		Transform_set_localRotation_mAB4A011D134BA58AB780BECC0025CA65F16185FA(L_24, L_25, NULL);
 		// SetHandDataValues(handData, _leftHandPose);
-		HandData_t9770188F47C128FAEE7D393EA1DA0AE7057E1BA6* L_12 = V_0;
-		HandData_t9770188F47C128FAEE7D393EA1DA0AE7057E1BA6* L_13 = __this->____leftHandPose_5;
-		GrabHandPose_SetHandDataValues_mAA9B581A39C411C92176C907DAC64E243B570635(__this, L_12, L_13, NULL);
+		HandData_t9770188F47C128FAEE7D393EA1DA0AE7057E1BA6* L_26 = V_0;
+		HandData_t9770188F47C128FAEE7D393EA1DA0AE7057E1BA6* L_27 = __this->____leftHandPose_5;
+		GrabHandPose_SetHandDataValues_mAA9B581A39C411C92176C907DAC64E243B570635(__this, L_26, L_27, NULL);
 	}
 
-IL_004f:
+IL_00a4:
 	{
 		// StartCoroutine(SetHandDataRoutine(handData, finalHandPosition, finalHandRotation, finalFingerRotation, startingHandPosition, startingHandRotation, startingFingerRotation));
-		HandData_t9770188F47C128FAEE7D393EA1DA0AE7057E1BA6* L_14 = V_0;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_15 = __this->___finalHandPosition_8;
-		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_16 = __this->___finalHandRotation_10;
-		QuaternionU5BU5D_t3C088AFB0F3D2763228C9CAB227021C5DC462AF7* L_17 = __this->___finalFingerRotation_12;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_18 = __this->___startingHandPosition_7;
-		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_19 = __this->___startingHandRotation_9;
-		QuaternionU5BU5D_t3C088AFB0F3D2763228C9CAB227021C5DC462AF7* L_20 = __this->___startingFingerRotation_11;
-		RuntimeObject* L_21;
-		L_21 = GrabHandPose_SetHandDataRoutine_mE4D060BD4FC5BE125AB081428E75DADF7D1C3AAB(__this, L_14, L_15, L_16, L_17, L_18, L_19, L_20, NULL);
-		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_22;
-		L_22 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_21, NULL);
+		HandData_t9770188F47C128FAEE7D393EA1DA0AE7057E1BA6* L_28 = V_0;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_29 = __this->___finalHandPosition_9;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_30 = __this->___finalHandRotation_11;
+		QuaternionU5BU5D_t3C088AFB0F3D2763228C9CAB227021C5DC462AF7* L_31 = __this->___finalFingerRotation_13;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_32 = __this->___startingHandPosition_8;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_33 = __this->___startingHandRotation_10;
+		QuaternionU5BU5D_t3C088AFB0F3D2763228C9CAB227021C5DC462AF7* L_34 = __this->___startingFingerRotation_12;
+		RuntimeObject* L_35;
+		L_35 = GrabHandPose_SetHandDataRoutine_mE4D060BD4FC5BE125AB081428E75DADF7D1C3AAB(__this, L_28, L_29, L_30, L_31, L_32, L_33, L_34, NULL);
+		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_36;
+		L_36 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_35, NULL);
 	}
 
-IL_0081:
+IL_00d6:
 	{
 		// }
 		return;
@@ -21203,12 +21242,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GrabHandPose_UnSetPose_m6E88523C6F6B0AE6
 		Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A(L_7, (bool)1, NULL);
 		// StartCoroutine(SetHandDataRoutine(handData, startingHandPosition, startingHandRotation, startingFingerRotation, finalHandPosition, finalHandRotation, finalFingerRotation));
 		HandData_t9770188F47C128FAEE7D393EA1DA0AE7057E1BA6* L_8 = V_0;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_9 = __this->___startingHandPosition_7;
-		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_10 = __this->___startingHandRotation_9;
-		QuaternionU5BU5D_t3C088AFB0F3D2763228C9CAB227021C5DC462AF7* L_11 = __this->___startingFingerRotation_11;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_12 = __this->___finalHandPosition_8;
-		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_13 = __this->___finalHandRotation_10;
-		QuaternionU5BU5D_t3C088AFB0F3D2763228C9CAB227021C5DC462AF7* L_14 = __this->___finalFingerRotation_12;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_9 = __this->___startingHandPosition_8;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_10 = __this->___startingHandRotation_10;
+		QuaternionU5BU5D_t3C088AFB0F3D2763228C9CAB227021C5DC462AF7* L_11 = __this->___startingFingerRotation_12;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_12 = __this->___finalHandPosition_9;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_13 = __this->___finalHandRotation_11;
+		QuaternionU5BU5D_t3C088AFB0F3D2763228C9CAB227021C5DC462AF7* L_14 = __this->___finalFingerRotation_13;
 		RuntimeObject* L_15;
 		L_15 = GrabHandPose_SetHandDataRoutine_mE4D060BD4FC5BE125AB081428E75DADF7D1C3AAB(__this, L_8, L_9, L_10, L_11, L_12, L_13, L_14, NULL);
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_16;
@@ -21278,7 +21317,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GrabHandPose_SetHandDataValues_mAA9B581A
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_24;
 		memset((&L_24), 0, sizeof(L_24));
 		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_24), ((float)(L_3/L_7)), ((float)(L_11/L_15)), ((float)(L_19/L_23)), /*hidden argument*/NULL);
-		__this->___startingHandPosition_7 = L_24;
+		__this->___startingHandPosition_8 = L_24;
 		// finalHandPosition = new Vector3(h2.root.localPosition.x / h2.root.localScale.x, h2.root.localPosition.y / h2.root.localScale.y, h2.root.localPosition.z / h2.root.localScale.z );
 		HandData_t9770188F47C128FAEE7D393EA1DA0AE7057E1BA6* L_25 = ___h21;
 		NullCheck(L_25);
@@ -21325,7 +21364,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GrabHandPose_SetHandDataValues_mAA9B581A
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_49;
 		memset((&L_49), 0, sizeof(L_49));
 		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_49), ((float)(L_28/L_32)), ((float)(L_36/L_40)), ((float)(L_44/L_48)), /*hidden argument*/NULL);
-		__this->___finalHandPosition_8 = L_49;
+		__this->___finalHandPosition_9 = L_49;
 		// startingHandRotation = h1.root.localRotation;
 		HandData_t9770188F47C128FAEE7D393EA1DA0AE7057E1BA6* L_50 = ___h10;
 		NullCheck(L_50);
@@ -21333,7 +21372,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GrabHandPose_SetHandDataValues_mAA9B581A
 		NullCheck(L_51);
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_52;
 		L_52 = Transform_get_localRotation_mD53D37611A5DAE93EC6C7BBCAC337408C5CACA77(L_51, NULL);
-		__this->___startingHandRotation_9 = L_52;
+		__this->___startingHandRotation_10 = L_52;
 		// finalHandRotation = h2.root.localRotation;
 		HandData_t9770188F47C128FAEE7D393EA1DA0AE7057E1BA6* L_53 = ___h21;
 		NullCheck(L_53);
@@ -21341,23 +21380,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GrabHandPose_SetHandDataValues_mAA9B581A
 		NullCheck(L_54);
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_55;
 		L_55 = Transform_get_localRotation_mD53D37611A5DAE93EC6C7BBCAC337408C5CACA77(L_54, NULL);
-		__this->___finalHandRotation_10 = L_55;
+		__this->___finalHandRotation_11 = L_55;
 		// startingFingerRotation = new Quaternion[h1.fingerBones.Length];
 		HandData_t9770188F47C128FAEE7D393EA1DA0AE7057E1BA6* L_56 = ___h10;
 		NullCheck(L_56);
 		TransformU5BU5D_tBB9C5F5686CAE82E3D97D43DF0F3D68ABF75EC24* L_57 = L_56->___fingerBones_7;
 		NullCheck(L_57);
 		QuaternionU5BU5D_t3C088AFB0F3D2763228C9CAB227021C5DC462AF7* L_58 = (QuaternionU5BU5D_t3C088AFB0F3D2763228C9CAB227021C5DC462AF7*)(QuaternionU5BU5D_t3C088AFB0F3D2763228C9CAB227021C5DC462AF7*)SZArrayNew(QuaternionU5BU5D_t3C088AFB0F3D2763228C9CAB227021C5DC462AF7_il2cpp_TypeInfo_var, (uint32_t)((int32_t)(((RuntimeArray*)L_57)->max_length)));
-		__this->___startingFingerRotation_11 = L_58;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___startingFingerRotation_11), (void*)L_58);
+		__this->___startingFingerRotation_12 = L_58;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___startingFingerRotation_12), (void*)L_58);
 		// finalFingerRotation = new Quaternion[h1.fingerBones.Length];
 		HandData_t9770188F47C128FAEE7D393EA1DA0AE7057E1BA6* L_59 = ___h10;
 		NullCheck(L_59);
 		TransformU5BU5D_tBB9C5F5686CAE82E3D97D43DF0F3D68ABF75EC24* L_60 = L_59->___fingerBones_7;
 		NullCheck(L_60);
 		QuaternionU5BU5D_t3C088AFB0F3D2763228C9CAB227021C5DC462AF7* L_61 = (QuaternionU5BU5D_t3C088AFB0F3D2763228C9CAB227021C5DC462AF7*)(QuaternionU5BU5D_t3C088AFB0F3D2763228C9CAB227021C5DC462AF7*)SZArrayNew(QuaternionU5BU5D_t3C088AFB0F3D2763228C9CAB227021C5DC462AF7_il2cpp_TypeInfo_var, (uint32_t)((int32_t)(((RuntimeArray*)L_60)->max_length)));
-		__this->___finalFingerRotation_12 = L_61;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___finalFingerRotation_12), (void*)L_61);
+		__this->___finalFingerRotation_13 = L_61;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___finalFingerRotation_13), (void*)L_61);
 		// for(int i = 0; i < h1.fingerBones.Length; i++){
 		V_0 = 0;
 		goto IL_015e;
@@ -21366,7 +21405,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GrabHandPose_SetHandDataValues_mAA9B581A
 IL_0128:
 	{
 		// startingFingerRotation[i] = h1.fingerBones[i].localRotation;
-		QuaternionU5BU5D_t3C088AFB0F3D2763228C9CAB227021C5DC462AF7* L_62 = __this->___startingFingerRotation_11;
+		QuaternionU5BU5D_t3C088AFB0F3D2763228C9CAB227021C5DC462AF7* L_62 = __this->___startingFingerRotation_12;
 		int32_t L_63 = V_0;
 		HandData_t9770188F47C128FAEE7D393EA1DA0AE7057E1BA6* L_64 = ___h10;
 		NullCheck(L_64);
@@ -21381,7 +21420,7 @@ IL_0128:
 		NullCheck(L_62);
 		(L_62)->SetAt(static_cast<il2cpp_array_size_t>(L_63), (Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974)L_69);
 		// finalFingerRotation[i] = h2.fingerBones[i].localRotation;
-		QuaternionU5BU5D_t3C088AFB0F3D2763228C9CAB227021C5DC462AF7* L_70 = __this->___finalFingerRotation_12;
+		QuaternionU5BU5D_t3C088AFB0F3D2763228C9CAB227021C5DC462AF7* L_70 = __this->___finalFingerRotation_13;
 		int32_t L_71 = V_0;
 		HandData_t9770188F47C128FAEE7D393EA1DA0AE7057E1BA6* L_72 = ___h21;
 		NullCheck(L_72);
@@ -21424,44 +21463,44 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* GrabHandPose_SetHandDataRoutin
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CSetHandDataRoutineU3Ed__13_t00EBBE346D4218990D3068A5B9DC9834EF6D133B_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CSetHandDataRoutineU3Ed__14_tC6827D94239050F6188DC7A47C8C9C09CBF998EE_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		U3CSetHandDataRoutineU3Ed__13_t00EBBE346D4218990D3068A5B9DC9834EF6D133B* L_0 = (U3CSetHandDataRoutineU3Ed__13_t00EBBE346D4218990D3068A5B9DC9834EF6D133B*)il2cpp_codegen_object_new(U3CSetHandDataRoutineU3Ed__13_t00EBBE346D4218990D3068A5B9DC9834EF6D133B_il2cpp_TypeInfo_var);
+		U3CSetHandDataRoutineU3Ed__14_tC6827D94239050F6188DC7A47C8C9C09CBF998EE* L_0 = (U3CSetHandDataRoutineU3Ed__14_tC6827D94239050F6188DC7A47C8C9C09CBF998EE*)il2cpp_codegen_object_new(U3CSetHandDataRoutineU3Ed__14_tC6827D94239050F6188DC7A47C8C9C09CBF998EE_il2cpp_TypeInfo_var);
 		NullCheck(L_0);
-		U3CSetHandDataRoutineU3Ed__13__ctor_mE0248CCD375495557F360711EBC38DD121C39D8A(L_0, 0, NULL);
-		U3CSetHandDataRoutineU3Ed__13_t00EBBE346D4218990D3068A5B9DC9834EF6D133B* L_1 = L_0;
+		U3CSetHandDataRoutineU3Ed__14__ctor_m79FEF1790BC5B315B23FCD93082E38ABC6F8A8ED(L_0, 0, NULL);
+		U3CSetHandDataRoutineU3Ed__14_tC6827D94239050F6188DC7A47C8C9C09CBF998EE* L_1 = L_0;
 		NullCheck(L_1);
 		L_1->___U3CU3E4__this_4 = __this;
 		Il2CppCodeGenWriteBarrier((void**)(&L_1->___U3CU3E4__this_4), (void*)__this);
-		U3CSetHandDataRoutineU3Ed__13_t00EBBE346D4218990D3068A5B9DC9834EF6D133B* L_2 = L_1;
+		U3CSetHandDataRoutineU3Ed__14_tC6827D94239050F6188DC7A47C8C9C09CBF998EE* L_2 = L_1;
 		HandData_t9770188F47C128FAEE7D393EA1DA0AE7057E1BA6* L_3 = ___h0;
 		NullCheck(L_2);
 		L_2->___h_7 = L_3;
 		Il2CppCodeGenWriteBarrier((void**)(&L_2->___h_7), (void*)L_3);
-		U3CSetHandDataRoutineU3Ed__13_t00EBBE346D4218990D3068A5B9DC9834EF6D133B* L_4 = L_2;
+		U3CSetHandDataRoutineU3Ed__14_tC6827D94239050F6188DC7A47C8C9C09CBF998EE* L_4 = L_2;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_5 = ___newPosition1;
 		NullCheck(L_4);
 		L_4->___newPosition_3 = L_5;
-		U3CSetHandDataRoutineU3Ed__13_t00EBBE346D4218990D3068A5B9DC9834EF6D133B* L_6 = L_4;
+		U3CSetHandDataRoutineU3Ed__14_tC6827D94239050F6188DC7A47C8C9C09CBF998EE* L_6 = L_4;
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_7 = ___newRotation2;
 		NullCheck(L_6);
 		L_6->___newRotation_6 = L_7;
-		U3CSetHandDataRoutineU3Ed__13_t00EBBE346D4218990D3068A5B9DC9834EF6D133B* L_8 = L_6;
+		U3CSetHandDataRoutineU3Ed__14_tC6827D94239050F6188DC7A47C8C9C09CBF998EE* L_8 = L_6;
 		QuaternionU5BU5D_t3C088AFB0F3D2763228C9CAB227021C5DC462AF7* L_9 = ___newBonesRotation3;
 		NullCheck(L_8);
 		L_8->___newBonesRotation_9 = L_9;
 		Il2CppCodeGenWriteBarrier((void**)(&L_8->___newBonesRotation_9), (void*)L_9);
-		U3CSetHandDataRoutineU3Ed__13_t00EBBE346D4218990D3068A5B9DC9834EF6D133B* L_10 = L_8;
+		U3CSetHandDataRoutineU3Ed__14_tC6827D94239050F6188DC7A47C8C9C09CBF998EE* L_10 = L_8;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_11 = ___startingPosition4;
 		NullCheck(L_10);
 		L_10->___startingPosition_2 = L_11;
-		U3CSetHandDataRoutineU3Ed__13_t00EBBE346D4218990D3068A5B9DC9834EF6D133B* L_12 = L_10;
+		U3CSetHandDataRoutineU3Ed__14_tC6827D94239050F6188DC7A47C8C9C09CBF998EE* L_12 = L_10;
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_13 = ___startingRotation5;
 		NullCheck(L_12);
 		L_12->___startingRotation_5 = L_13;
-		U3CSetHandDataRoutineU3Ed__13_t00EBBE346D4218990D3068A5B9DC9834EF6D133B* L_14 = L_12;
+		U3CSetHandDataRoutineU3Ed__14_tC6827D94239050F6188DC7A47C8C9C09CBF998EE* L_14 = L_12;
 		QuaternionU5BU5D_t3C088AFB0F3D2763228C9CAB227021C5DC462AF7* L_15 = ___startingBonesRotation6;
 		NullCheck(L_14);
 		L_14->___startingBonesRotation_8 = L_15;
@@ -21591,8 +21630,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GrabHandPose__ctor_m3C12060134C82C5AA1A6
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// System.Void GrabHandPose/<SetHandDataRoutine>d__13::.ctor(System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSetHandDataRoutineU3Ed__13__ctor_mE0248CCD375495557F360711EBC38DD121C39D8A (U3CSetHandDataRoutineU3Ed__13_t00EBBE346D4218990D3068A5B9DC9834EF6D133B* __this, int32_t ___U3CU3E1__state0, const RuntimeMethod* method) 
+// System.Void GrabHandPose/<SetHandDataRoutine>d__14::.ctor(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSetHandDataRoutineU3Ed__14__ctor_m79FEF1790BC5B315B23FCD93082E38ABC6F8A8ED (U3CSetHandDataRoutineU3Ed__14_tC6827D94239050F6188DC7A47C8C9C09CBF998EE* __this, int32_t ___U3CU3E1__state0, const RuntimeMethod* method) 
 {
 	{
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
@@ -21601,15 +21640,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSetHandDataRoutineU3Ed__13__ctor_mE02
 		return;
 	}
 }
-// System.Void GrabHandPose/<SetHandDataRoutine>d__13::System.IDisposable.Dispose()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSetHandDataRoutineU3Ed__13_System_IDisposable_Dispose_mAE0FE4830905EAF50C40D54153BD947478CBD1AA (U3CSetHandDataRoutineU3Ed__13_t00EBBE346D4218990D3068A5B9DC9834EF6D133B* __this, const RuntimeMethod* method) 
+// System.Void GrabHandPose/<SetHandDataRoutine>d__14::System.IDisposable.Dispose()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSetHandDataRoutineU3Ed__14_System_IDisposable_Dispose_m64E754D3EB37D3128F85DBD0120F02552CB842D1 (U3CSetHandDataRoutineU3Ed__14_tC6827D94239050F6188DC7A47C8C9C09CBF998EE* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// System.Boolean GrabHandPose/<SetHandDataRoutine>d__13::MoveNext()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CSetHandDataRoutineU3Ed__13_MoveNext_m10E44E81533DF851C9484E49635919FDD7E32263 (U3CSetHandDataRoutineU3Ed__13_t00EBBE346D4218990D3068A5B9DC9834EF6D133B* __this, const RuntimeMethod* method) 
+// System.Boolean GrabHandPose/<SetHandDataRoutine>d__14::MoveNext()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CSetHandDataRoutineU3Ed__14_MoveNext_m3D587B4EFDE2C5004A5916715ACCE33414F150B7 (U3CSetHandDataRoutineU3Ed__14_tC6827D94239050F6188DC7A47C8C9C09CBF998EE* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
 	GrabHandPose_t4BBF992835E6460BDC351BB50E23C5AA15EB3FD0* V_1 = NULL;
@@ -21768,26 +21807,26 @@ IL_0110:
 		return (bool)0;
 	}
 }
-// System.Object GrabHandPose/<SetHandDataRoutine>d__13::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CSetHandDataRoutineU3Ed__13_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m168FF24066112963B9154F3F92D6FAAFCEDF2EF9 (U3CSetHandDataRoutineU3Ed__13_t00EBBE346D4218990D3068A5B9DC9834EF6D133B* __this, const RuntimeMethod* method) 
+// System.Object GrabHandPose/<SetHandDataRoutine>d__14::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CSetHandDataRoutineU3Ed__14_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m65EFFD70F5AE4198A70D44B46B322C9B28C7D263 (U3CSetHandDataRoutineU3Ed__14_tC6827D94239050F6188DC7A47C8C9C09CBF998EE* __this, const RuntimeMethod* method) 
 {
 	{
 		RuntimeObject* L_0 = __this->___U3CU3E2__current_1;
 		return L_0;
 	}
 }
-// System.Void GrabHandPose/<SetHandDataRoutine>d__13::System.Collections.IEnumerator.Reset()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSetHandDataRoutineU3Ed__13_System_Collections_IEnumerator_Reset_mB1861B5FAF8A65E3992ADD86A46C177498C292D1 (U3CSetHandDataRoutineU3Ed__13_t00EBBE346D4218990D3068A5B9DC9834EF6D133B* __this, const RuntimeMethod* method) 
+// System.Void GrabHandPose/<SetHandDataRoutine>d__14::System.Collections.IEnumerator.Reset()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSetHandDataRoutineU3Ed__14_System_Collections_IEnumerator_Reset_mDFC4562A4D8CA7421D3136528D8C3E6CEAD3AB62 (U3CSetHandDataRoutineU3Ed__14_tC6827D94239050F6188DC7A47C8C9C09CBF998EE* __this, const RuntimeMethod* method) 
 {
 	{
 		NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A* L_0 = (NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A_il2cpp_TypeInfo_var)));
 		NullCheck(L_0);
 		NotSupportedException__ctor_m1398D0CDE19B36AA3DE9392879738C1EA2439CDF(L_0, NULL);
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CSetHandDataRoutineU3Ed__13_System_Collections_IEnumerator_Reset_mB1861B5FAF8A65E3992ADD86A46C177498C292D1_RuntimeMethod_var)));
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CSetHandDataRoutineU3Ed__14_System_Collections_IEnumerator_Reset_mDFC4562A4D8CA7421D3136528D8C3E6CEAD3AB62_RuntimeMethod_var)));
 	}
 }
-// System.Object GrabHandPose/<SetHandDataRoutine>d__13::System.Collections.IEnumerator.get_Current()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CSetHandDataRoutineU3Ed__13_System_Collections_IEnumerator_get_Current_m245BDAA1D05D33BAB2215766D81FBAC4BD00B160 (U3CSetHandDataRoutineU3Ed__13_t00EBBE346D4218990D3068A5B9DC9834EF6D133B* __this, const RuntimeMethod* method) 
+// System.Object GrabHandPose/<SetHandDataRoutine>d__14::System.Collections.IEnumerator.get_Current()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CSetHandDataRoutineU3Ed__14_System_Collections_IEnumerator_get_Current_mB809B05C2E995F6CFAC7600F516DB88F94490B7D (U3CSetHandDataRoutineU3Ed__14_tC6827D94239050F6188DC7A47C8C9C09CBF998EE* __this, const RuntimeMethod* method) 
 {
 	{
 		RuntimeObject* L_0 = __this->___U3CU3E2__current_1;

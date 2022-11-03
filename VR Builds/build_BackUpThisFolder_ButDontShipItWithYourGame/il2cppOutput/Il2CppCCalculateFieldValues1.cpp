@@ -14419,30 +14419,30 @@ struct U3CMakeFragFlashU3Ed__42_t734E0C2B1E946C78E46E4854ABA9F461606169B1  : pub
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___U3CcolorU3E5__4_5;
 };
 
-// GrabHandPose/<SetHandDataRoutine>d__13
-struct U3CSetHandDataRoutineU3Ed__13_t00EBBE346D4218990D3068A5B9DC9834EF6D133B  : public RuntimeObject
+// GrabHandPose/<SetHandDataRoutine>d__14
+struct U3CSetHandDataRoutineU3Ed__14_tC6827D94239050F6188DC7A47C8C9C09CBF998EE  : public RuntimeObject
 {
-	// System.Int32 GrabHandPose/<SetHandDataRoutine>d__13::<>1__state
+	// System.Int32 GrabHandPose/<SetHandDataRoutine>d__14::<>1__state
 	int32_t ___U3CU3E1__state_0;
-	// System.Object GrabHandPose/<SetHandDataRoutine>d__13::<>2__current
+	// System.Object GrabHandPose/<SetHandDataRoutine>d__14::<>2__current
 	RuntimeObject* ___U3CU3E2__current_1;
-	// UnityEngine.Vector3 GrabHandPose/<SetHandDataRoutine>d__13::startingPosition
+	// UnityEngine.Vector3 GrabHandPose/<SetHandDataRoutine>d__14::startingPosition
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___startingPosition_2;
-	// UnityEngine.Vector3 GrabHandPose/<SetHandDataRoutine>d__13::newPosition
+	// UnityEngine.Vector3 GrabHandPose/<SetHandDataRoutine>d__14::newPosition
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___newPosition_3;
-	// GrabHandPose GrabHandPose/<SetHandDataRoutine>d__13::<>4__this
+	// GrabHandPose GrabHandPose/<SetHandDataRoutine>d__14::<>4__this
 	GrabHandPose_t4BBF992835E6460BDC351BB50E23C5AA15EB3FD0* ___U3CU3E4__this_4;
-	// UnityEngine.Quaternion GrabHandPose/<SetHandDataRoutine>d__13::startingRotation
+	// UnityEngine.Quaternion GrabHandPose/<SetHandDataRoutine>d__14::startingRotation
 	Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___startingRotation_5;
-	// UnityEngine.Quaternion GrabHandPose/<SetHandDataRoutine>d__13::newRotation
+	// UnityEngine.Quaternion GrabHandPose/<SetHandDataRoutine>d__14::newRotation
 	Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___newRotation_6;
-	// HandData GrabHandPose/<SetHandDataRoutine>d__13::h
+	// HandData GrabHandPose/<SetHandDataRoutine>d__14::h
 	HandData_t9770188F47C128FAEE7D393EA1DA0AE7057E1BA6* ___h_7;
-	// UnityEngine.Quaternion[] GrabHandPose/<SetHandDataRoutine>d__13::startingBonesRotation
+	// UnityEngine.Quaternion[] GrabHandPose/<SetHandDataRoutine>d__14::startingBonesRotation
 	QuaternionU5BU5D_t3C088AFB0F3D2763228C9CAB227021C5DC462AF7* ___startingBonesRotation_8;
-	// UnityEngine.Quaternion[] GrabHandPose/<SetHandDataRoutine>d__13::newBonesRotation
+	// UnityEngine.Quaternion[] GrabHandPose/<SetHandDataRoutine>d__14::newBonesRotation
 	QuaternionU5BU5D_t3C088AFB0F3D2763228C9CAB227021C5DC462AF7* ___newBonesRotation_9;
-	// System.Single GrabHandPose/<SetHandDataRoutine>d__13::<timer>5__2
+	// System.Single GrabHandPose/<SetHandDataRoutine>d__14::<timer>5__2
 	float ___U3CtimerU3E5__2_10;
 };
 
@@ -18676,18 +18676,20 @@ struct GrabHandPose_t4BBF992835E6460BDC351BB50E23C5AA15EB3FD0  : public MonoBeha
 	HandData_t9770188F47C128FAEE7D393EA1DA0AE7057E1BA6* ____leftHandPose_5;
 	// System.Single GrabHandPose::poseTransitionDuration
 	float ___poseTransitionDuration_6;
+	// UnityEngine.Transform GrabHandPose::_attachPoint
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ____attachPoint_7;
 	// UnityEngine.Vector3 GrabHandPose::startingHandPosition
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___startingHandPosition_7;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___startingHandPosition_8;
 	// UnityEngine.Vector3 GrabHandPose::finalHandPosition
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___finalHandPosition_8;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___finalHandPosition_9;
 	// UnityEngine.Quaternion GrabHandPose::startingHandRotation
-	Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___startingHandRotation_9;
+	Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___startingHandRotation_10;
 	// UnityEngine.Quaternion GrabHandPose::finalHandRotation
-	Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___finalHandRotation_10;
+	Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___finalHandRotation_11;
 	// UnityEngine.Quaternion[] GrabHandPose::startingFingerRotation
-	QuaternionU5BU5D_t3C088AFB0F3D2763228C9CAB227021C5DC462AF7* ___startingFingerRotation_11;
+	QuaternionU5BU5D_t3C088AFB0F3D2763228C9CAB227021C5DC462AF7* ___startingFingerRotation_12;
 	// UnityEngine.Quaternion[] GrabHandPose::finalFingerRotation
-	QuaternionU5BU5D_t3C088AFB0F3D2763228C9CAB227021C5DC462AF7* ___finalFingerRotation_12;
+	QuaternionU5BU5D_t3C088AFB0F3D2763228C9CAB227021C5DC462AF7* ___finalFingerRotation_13;
 };
 
 // UnityEngine.XR.OpenXR.Features.Interactions.HTCViveControllerProfile
@@ -23798,10 +23800,10 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4358[5] =
 	static_cast<int32_t>(sizeof(RuntimeObject)),0,0,0,0,};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4359[11] = 
 {
-	static_cast<int32_t>(offsetof(U3CSetHandDataRoutineU3Ed__13_t00EBBE346D4218990D3068A5B9DC9834EF6D133B, ___U3CU3E1__state_0)),static_cast<int32_t>(offsetof(U3CSetHandDataRoutineU3Ed__13_t00EBBE346D4218990D3068A5B9DC9834EF6D133B, ___U3CU3E2__current_1)),static_cast<int32_t>(offsetof(U3CSetHandDataRoutineU3Ed__13_t00EBBE346D4218990D3068A5B9DC9834EF6D133B, ___startingPosition_2)),static_cast<int32_t>(offsetof(U3CSetHandDataRoutineU3Ed__13_t00EBBE346D4218990D3068A5B9DC9834EF6D133B, ___newPosition_3)),static_cast<int32_t>(offsetof(U3CSetHandDataRoutineU3Ed__13_t00EBBE346D4218990D3068A5B9DC9834EF6D133B, ___U3CU3E4__this_4)),static_cast<int32_t>(offsetof(U3CSetHandDataRoutineU3Ed__13_t00EBBE346D4218990D3068A5B9DC9834EF6D133B, ___startingRotation_5)),static_cast<int32_t>(offsetof(U3CSetHandDataRoutineU3Ed__13_t00EBBE346D4218990D3068A5B9DC9834EF6D133B, ___newRotation_6)),static_cast<int32_t>(offsetof(U3CSetHandDataRoutineU3Ed__13_t00EBBE346D4218990D3068A5B9DC9834EF6D133B, ___h_7)),static_cast<int32_t>(offsetof(U3CSetHandDataRoutineU3Ed__13_t00EBBE346D4218990D3068A5B9DC9834EF6D133B, ___startingBonesRotation_8)),static_cast<int32_t>(offsetof(U3CSetHandDataRoutineU3Ed__13_t00EBBE346D4218990D3068A5B9DC9834EF6D133B, ___newBonesRotation_9)),static_cast<int32_t>(offsetof(U3CSetHandDataRoutineU3Ed__13_t00EBBE346D4218990D3068A5B9DC9834EF6D133B, ___U3CtimerU3E5__2_10)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4360[9] = 
+	static_cast<int32_t>(offsetof(U3CSetHandDataRoutineU3Ed__14_tC6827D94239050F6188DC7A47C8C9C09CBF998EE, ___U3CU3E1__state_0)),static_cast<int32_t>(offsetof(U3CSetHandDataRoutineU3Ed__14_tC6827D94239050F6188DC7A47C8C9C09CBF998EE, ___U3CU3E2__current_1)),static_cast<int32_t>(offsetof(U3CSetHandDataRoutineU3Ed__14_tC6827D94239050F6188DC7A47C8C9C09CBF998EE, ___startingPosition_2)),static_cast<int32_t>(offsetof(U3CSetHandDataRoutineU3Ed__14_tC6827D94239050F6188DC7A47C8C9C09CBF998EE, ___newPosition_3)),static_cast<int32_t>(offsetof(U3CSetHandDataRoutineU3Ed__14_tC6827D94239050F6188DC7A47C8C9C09CBF998EE, ___U3CU3E4__this_4)),static_cast<int32_t>(offsetof(U3CSetHandDataRoutineU3Ed__14_tC6827D94239050F6188DC7A47C8C9C09CBF998EE, ___startingRotation_5)),static_cast<int32_t>(offsetof(U3CSetHandDataRoutineU3Ed__14_tC6827D94239050F6188DC7A47C8C9C09CBF998EE, ___newRotation_6)),static_cast<int32_t>(offsetof(U3CSetHandDataRoutineU3Ed__14_tC6827D94239050F6188DC7A47C8C9C09CBF998EE, ___h_7)),static_cast<int32_t>(offsetof(U3CSetHandDataRoutineU3Ed__14_tC6827D94239050F6188DC7A47C8C9C09CBF998EE, ___startingBonesRotation_8)),static_cast<int32_t>(offsetof(U3CSetHandDataRoutineU3Ed__14_tC6827D94239050F6188DC7A47C8C9C09CBF998EE, ___newBonesRotation_9)),static_cast<int32_t>(offsetof(U3CSetHandDataRoutineU3Ed__14_tC6827D94239050F6188DC7A47C8C9C09CBF998EE, ___U3CtimerU3E5__2_10)),};
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4360[10] = 
 {
-	static_cast<int32_t>(offsetof(GrabHandPose_t4BBF992835E6460BDC351BB50E23C5AA15EB3FD0, ____rightHandPose_4)),static_cast<int32_t>(offsetof(GrabHandPose_t4BBF992835E6460BDC351BB50E23C5AA15EB3FD0, ____leftHandPose_5)),static_cast<int32_t>(offsetof(GrabHandPose_t4BBF992835E6460BDC351BB50E23C5AA15EB3FD0, ___poseTransitionDuration_6)),static_cast<int32_t>(offsetof(GrabHandPose_t4BBF992835E6460BDC351BB50E23C5AA15EB3FD0, ___startingHandPosition_7)),static_cast<int32_t>(offsetof(GrabHandPose_t4BBF992835E6460BDC351BB50E23C5AA15EB3FD0, ___finalHandPosition_8)),static_cast<int32_t>(offsetof(GrabHandPose_t4BBF992835E6460BDC351BB50E23C5AA15EB3FD0, ___startingHandRotation_9)),static_cast<int32_t>(offsetof(GrabHandPose_t4BBF992835E6460BDC351BB50E23C5AA15EB3FD0, ___finalHandRotation_10)),static_cast<int32_t>(offsetof(GrabHandPose_t4BBF992835E6460BDC351BB50E23C5AA15EB3FD0, ___startingFingerRotation_11)),static_cast<int32_t>(offsetof(GrabHandPose_t4BBF992835E6460BDC351BB50E23C5AA15EB3FD0, ___finalFingerRotation_12)),};
+	static_cast<int32_t>(offsetof(GrabHandPose_t4BBF992835E6460BDC351BB50E23C5AA15EB3FD0, ____rightHandPose_4)),static_cast<int32_t>(offsetof(GrabHandPose_t4BBF992835E6460BDC351BB50E23C5AA15EB3FD0, ____leftHandPose_5)),static_cast<int32_t>(offsetof(GrabHandPose_t4BBF992835E6460BDC351BB50E23C5AA15EB3FD0, ___poseTransitionDuration_6)),static_cast<int32_t>(offsetof(GrabHandPose_t4BBF992835E6460BDC351BB50E23C5AA15EB3FD0, ____attachPoint_7)),static_cast<int32_t>(offsetof(GrabHandPose_t4BBF992835E6460BDC351BB50E23C5AA15EB3FD0, ___startingHandPosition_8)),static_cast<int32_t>(offsetof(GrabHandPose_t4BBF992835E6460BDC351BB50E23C5AA15EB3FD0, ___finalHandPosition_9)),static_cast<int32_t>(offsetof(GrabHandPose_t4BBF992835E6460BDC351BB50E23C5AA15EB3FD0, ___startingHandRotation_10)),static_cast<int32_t>(offsetof(GrabHandPose_t4BBF992835E6460BDC351BB50E23C5AA15EB3FD0, ___finalHandRotation_11)),static_cast<int32_t>(offsetof(GrabHandPose_t4BBF992835E6460BDC351BB50E23C5AA15EB3FD0, ___startingFingerRotation_12)),static_cast<int32_t>(offsetof(GrabHandPose_t4BBF992835E6460BDC351BB50E23C5AA15EB3FD0, ___finalFingerRotation_13)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4361[3] = 
 {
 	static_cast<int32_t>(sizeof(RuntimeObject)),0,0,};
