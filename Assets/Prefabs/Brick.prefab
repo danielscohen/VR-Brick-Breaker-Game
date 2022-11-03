@@ -123,7 +123,7 @@ MonoBehaviour:
   fragSizeMult: 0.2
   lineWidth: 0.01
   lineMaterial: {fileID: 2100000, guid: d45b8b46fc886764f9fbc6b86a483474, type: 2}
-  fracBranchProb: 3
+  fracBranchProb: 4
   craterRadMult: 0.03
   maxFragDepth: 2
   fracLineDrawDelay: 0.03
@@ -138,6 +138,7 @@ MonoBehaviour:
   _fracAudio: {fileID: 8300000, guid: e0a923b712a6b6047a97543d13cea64c, type: 3}
   _explosionAudio: {fileID: 8300000, guid: 65d61f9b9070ac34a99c2acfa192ce7f, type: 3}
   _explosionPrefab: {fileID: 100012, guid: 06cff0f24d5664781859b6da3e421fa4, type: 3}
+  _sparkPrefab: {fileID: 163064, guid: 2bdc186a2c521f1488fe14cb4a745323, type: 3}
 --- !u!54 &2390515395319445729
 Rigidbody:
   m_ObjectHideFlags: 0

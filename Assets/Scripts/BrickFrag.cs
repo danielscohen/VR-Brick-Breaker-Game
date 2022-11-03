@@ -53,6 +53,7 @@ public class BrickFrag : MonoBehaviour
     [SerializeField] AudioClip _fracAudio;
     [SerializeField] AudioClip _explosionAudio;
     [SerializeField] GameObject _explosionPrefab;
+    [SerializeField] GameObject _sparkPrefab;
     public static event System.Action<Vector3> onSpawnPowerUp;
     
     int[,,] voxMap;
@@ -308,19 +309,26 @@ public class BrickFrag : MonoBehaviour
             lineR.endWidth = lineWidth;
             lineR.positionCount = 0;
         }
+
+        GameObject spark = Instantiate(_sparkPrefab);
+        
         int max = GetMaxEpoch();
         for (int i = 0; i < max; i++) {
             for (int j = 0; j < fracDrawPts.Count; j++) {
                 var index = fracDrawPts[j].FindIndex(x => x.epoch == i);
                 if (index != -1) {
                     fracRenderers[j].positionCount = index + 1;
-                    fracRenderers[j].SetPosition(index, fracRenderers[j].transform.InverseTransformPoint(transform.TransformPoint(fracDrawPts[j][index].pt)));
+                    Vector3 loc = transform.TransformPoint(fracDrawPts[j][index].pt);
+                    spark.transform.position = loc;
+                    fracRenderers[j].SetPosition(index, fracRenderers[j].transform.InverseTransformPoint(loc));
                 }
             }
             if (i % 1 == 0) {
                 yield return new WaitForSeconds(fracLineDrawDelay);
             }  
         }
+
+        Destroy(spark);
 
 
     }
