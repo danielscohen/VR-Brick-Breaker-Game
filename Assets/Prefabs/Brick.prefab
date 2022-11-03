@@ -128,7 +128,7 @@ MonoBehaviour:
   maxFragDepth: 2
   fracLineDrawDelay: 0.03
   fragExpDelay: 0.01
-  voxFadePer: 0.1
+  voxFadePer: 0.4
   voxFadeOutDur: 0.5
   voxFadeInDur: 0.1
   minFragSizeKeep: 1
