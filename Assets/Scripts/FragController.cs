@@ -135,13 +135,14 @@ public class FragController : MonoBehaviour
         List<Material> childMats = GetFragMats();
 
         float time = 0f;
-        Color startColor = childMats[0].color;
+        Color startColor = childMats[0].GetColor("_EmissionColor") / _startIntensity;
         Color endColor = startColor;
         endColor.a = tranPer;
        
         while(time < duration) {
             foreach (Material mat in childMats) {
-                mat.color = Color.Lerp(startColor, endColor, time / duration);
+                Color color = Color.Lerp(startColor, endColor, time / duration);
+                mat.SetColor("_EmissionColor", color * _startIntensity);
             }
             time += Time.deltaTime;
             yield return null;

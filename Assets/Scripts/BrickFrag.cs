@@ -88,7 +88,7 @@ public class BrickFrag : MonoBehaviour
 
     private void Awake() {
         _audioSource = GetComponent<AudioSource>();
-        _explosionPS = Instantiate(_explosionPrefab, transform).GetComponent<ParticleSystem>();
+        // _explosionPS = Instantiate(_explosionPrefab, transform).GetComponent<ParticleSystem>();
     }
     private void Start() {
         cam = Camera.main.gameObject;
@@ -177,7 +177,7 @@ public class BrickFrag : MonoBehaviour
     // }
 
     void MakeFlash(){
-        _explosionPS.Play();
+        Instantiate(_explosionPrefab, transform);
     }
 
     void CreateFracLines() {

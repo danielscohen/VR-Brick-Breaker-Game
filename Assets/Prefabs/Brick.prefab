@@ -123,12 +123,12 @@ MonoBehaviour:
   fragSizeMult: 0.2
   lineWidth: 0.01
   lineMaterial: {fileID: 2100000, guid: d45b8b46fc886764f9fbc6b86a483474, type: 2}
-  fracBranchProb: 4
+  fracBranchProb: 3
   craterRadMult: 0.03
   maxFragDepth: 2
   fracLineDrawDelay: 0.03
   fragExpDelay: 0.01
-  voxFadePer: 0.2
+  voxFadePer: 0.1
   voxFadeOutDur: 0.5
   voxFadeInDur: 0.1
   minFragSizeKeep: 1
@@ -137,8 +137,7 @@ MonoBehaviour:
   _impactAudio: {fileID: 8300000, guid: 69a458f045892a549bbc6dea3120cfbf, type: 3}
   _fracAudio: {fileID: 8300000, guid: e0a923b712a6b6047a97543d13cea64c, type: 3}
   _explosionAudio: {fileID: 8300000, guid: 65d61f9b9070ac34a99c2acfa192ce7f, type: 3}
-  _explosionPrefab: {fileID: 3546456114893272985, guid: 389b7bc57f5b8304c8a9da9a86b14d15,
-    type: 3}
+  _explosionPrefab: {fileID: 100012, guid: 06cff0f24d5664781859b6da3e421fa4, type: 3}
 --- !u!54 &2390515395319445729
 Rigidbody:
   m_ObjectHideFlags: 0

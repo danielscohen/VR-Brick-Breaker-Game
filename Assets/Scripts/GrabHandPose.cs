@@ -42,7 +42,7 @@ public class GrabHandPose : MonoBehaviour
             }
             else{
                 Quaternion origRot = _attachPoint.localRotation;
-                origRot.y *= -1;
+                origRot.y = Mathf.Abs(origRot.y) * -1;
                 _attachPoint.localRotation = origRot;
                 
                 SetHandDataValues(handData, _leftHandPose);

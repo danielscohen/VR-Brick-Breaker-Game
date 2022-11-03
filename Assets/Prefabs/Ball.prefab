@@ -165,6 +165,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _nextCollWaitTime: 0.01
+  _effectPrefab: {fileID: 5024009746357069194, guid: ec3f674830402cc45bce805cf6493db7,
+    type: 3}
   Gravity: 5
   _maxSpeedSqrd: 25
 --- !u!114 &-1306474586484663332
@@ -407,6 +409,7 @@ MonoBehaviour:
   _rightHandPose: {fileID: 193064969}
   _leftHandPose: {fileID: 875216005}
   poseTransitionDuration: 0.2
+  _attachPoint: {fileID: 744564117}
 --- !u!1001 &1119478394
 PrefabInstance:
   m_ObjectHideFlags: 0

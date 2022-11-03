@@ -94,6 +94,7 @@ public class AudioManager : MonoBehaviour
     IEnumerator PlayAudioCo(AudioTypes aType, Vector3 pos){
         AudioSource source = Instantiate(_posSFXSourcePrefab, pos, Quaternion.identity).GetComponent<AudioSource>();
         source.clip = _audioClips[aType];
+        source.volume = 0.5f;
         source.Play();
         yield return new WaitForSeconds(_audioClips[aType].length);
         Destroy(source.gameObject);

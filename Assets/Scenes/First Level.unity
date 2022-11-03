@@ -4090,7 +4090,7 @@ GameObject:
   - component: {fileID: 393925679}
   m_Layer: 8
   m_Name: Handle
-  m_TagString: Untagged
+  m_TagString: Racket
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4450,7 +4450,7 @@ PrefabInstance:
     - target: {fileID: 6762678556200436388, guid: 90e0d3044fa1ffc4c8d32ac79838ca2f,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6762678556200436388, guid: 90e0d3044fa1ffc4c8d32ac79838ca2f,
         type: 3}
@@ -4501,6 +4501,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6762678556200436392, guid: 90e0d3044fa1ffc4c8d32ac79838ca2f,
+        type: 3}
+      propertyPath: _intensity
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6762678556200436392, guid: 90e0d3044fa1ffc4c8d32ac79838ca2f,
         type: 3}
@@ -9196,7 +9201,7 @@ PrefabInstance:
     - target: {fileID: 6762678556200436388, guid: 90e0d3044fa1ffc4c8d32ac79838ca2f,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6762678556200436388, guid: 90e0d3044fa1ffc4c8d32ac79838ca2f,
         type: 3}
@@ -9250,6 +9255,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6762678556200436392, guid: 90e0d3044fa1ffc4c8d32ac79838ca2f,
         type: 3}
+      propertyPath: _intensity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6762678556200436392, guid: 90e0d3044fa1ffc4c8d32ac79838ca2f,
+        type: 3}
       propertyPath: numBricks.x
       value: 6
       objectReference: {fileID: 0}
@@ -9257,6 +9267,21 @@ PrefabInstance:
         type: 3}
       propertyPath: numBricks.y
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6762678556200436392, guid: 90e0d3044fa1ffc4c8d32ac79838ca2f,
+        type: 3}
+      propertyPath: numVoxels.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6762678556200436392, guid: 90e0d3044fa1ffc4c8d32ac79838ca2f,
+        type: 3}
+      propertyPath: numVoxels.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6762678556200436392, guid: 90e0d3044fa1ffc4c8d32ac79838ca2f,
+        type: 3}
+      propertyPath: numVoxels.z
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6762678556200436395, guid: 90e0d3044fa1ffc4c8d32ac79838ca2f,
         type: 3}
@@ -18098,8 +18123,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 45
-  m_fontSizeBase: 45
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -22190,7 +22215,7 @@ GameObject:
   - component: {fileID: 1739689731}
   m_Layer: 8
   m_Name: Paddle
-  m_TagString: Untagged
+  m_TagString: Racket
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

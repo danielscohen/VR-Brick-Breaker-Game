@@ -9,6 +9,7 @@ public class BallController : MonoBehaviour
     public bool JustCollidedWithBrick { get; private set; }
     float _collTime;
     [SerializeField] float _nextCollWaitTime = 0.01f;
+    [SerializeField] GameObject _effectPrefab;
     public static event Action<int> onBallLost;
 
     Rigidbody ballRb;
@@ -61,6 +62,7 @@ public class BallController : MonoBehaviour
         }
         if (collision.collider.CompareTag("Racket")) {
             AudioManager.Instance.PlayAudio(AudioTypes.RacketHit, transform.position);
+            Instantiate(_effectPrefab, transform.position, transform.rotation).GetComponent<ParticleSystem>();
         }
     }
 
