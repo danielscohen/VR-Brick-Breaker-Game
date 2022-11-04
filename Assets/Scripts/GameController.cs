@@ -51,6 +51,9 @@ public class GameController : MonoBehaviour
             Instance = this;
         }
 
+        DontDestroyOnLoad(this);
+
+
         CurrentGameState = GameState.Started;
         Time.timeScale = 0;
     }
