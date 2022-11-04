@@ -1110,6 +1110,8 @@ struct Selectable_t3251808068A17B8E92FB33590A4C2FA66D456712;
 struct SendOrPostCallback_t5C292A12062F24027A98492F52ECFE9802AA6F0E;
 // UnityEngine.Shader
 struct Shader_tADC867D36B7876EE22427FAA2CE485105F4EE692;
+// UnityEngine.UI.Slider
+struct Slider_t87EA570E3D6556CABF57456C2F3873FFD86E652F;
 // Spawner
 struct Spawner_t387EDFC7BADAEFFD3305FD31D1E8DDE8998FCDD7;
 // UnityEngine.Rendering.PostProcessing.SplineParameter
@@ -4442,16 +4444,16 @@ struct U3CRotateArenaCoU3Ed__8_tBD80848AA6F93CF6C7D62549CBFE07148B0FA930  : publ
 	float ___U3CtimePassedU3E5__2_3;
 };
 
-// AudioManager/<PlayAudioCo>d__19
-struct U3CPlayAudioCoU3Ed__19_tB75859D48FD5D542496732243F129BC6CB6516B6  : public RuntimeObject
+// AudioManager/<PlayAudioCo>d__23
+struct U3CPlayAudioCoU3Ed__23_tC95EEBF2482404772486EB2D87F4E13AC1F69A84  : public RuntimeObject
 {
-	// System.Int32 AudioManager/<PlayAudioCo>d__19::<>1__state
+	// System.Int32 AudioManager/<PlayAudioCo>d__23::<>1__state
 	int32_t ___U3CU3E1__state_0;
-	// System.Object AudioManager/<PlayAudioCo>d__19::<>2__current
+	// System.Object AudioManager/<PlayAudioCo>d__23::<>2__current
 	RuntimeObject* ___U3CU3E2__current_1;
-	// AudioReason AudioManager/<PlayAudioCo>d__19::reason
+	// AudioReason AudioManager/<PlayAudioCo>d__23::reason
 	int32_t ___reason_2;
-	// AudioManager AudioManager/<PlayAudioCo>d__19::<>4__this
+	// AudioManager AudioManager/<PlayAudioCo>d__23::<>4__this
 	AudioManager_t4BE66A4A0E184D85AF74C37BC93BFBEC52953C7B* ___U3CU3E4__this_3;
 };
 
@@ -5468,14 +5470,14 @@ struct U3CU3Ec__DisplayClass2_0_tD60DE89B6555743ED66098792CA1D181CE991AEE  : pub
 	List_1_t4B77DB8D00EC6CC4705EB5F2FCC506472734EA72* ___list_2;
 };
 
-// UIController/<FlashTimer>d__42
-struct U3CFlashTimerU3Ed__42_tDCFB7AC329888874F5FEE109D2833FE6B8F98598  : public RuntimeObject
+// UIController/<FlashTimer>d__44
+struct U3CFlashTimerU3Ed__44_tA5B4E84B77903EBDA87923979C0EF5A3129F44B1  : public RuntimeObject
 {
-	// System.Int32 UIController/<FlashTimer>d__42::<>1__state
+	// System.Int32 UIController/<FlashTimer>d__44::<>1__state
 	int32_t ___U3CU3E1__state_0;
-	// System.Object UIController/<FlashTimer>d__42::<>2__current
+	// System.Object UIController/<FlashTimer>d__44::<>2__current
 	RuntimeObject* ___U3CU3E2__current_1;
-	// UIController UIController/<FlashTimer>d__42::<>4__this
+	// UIController UIController/<FlashTimer>d__44::<>4__this
 	UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2* ___U3CU3E4__this_2;
 };
 
@@ -14342,20 +14344,20 @@ struct U3CMakeFragFlashU3Ed__6_tC44372B161E66EADB8D37748CF4A083238B1B589  : publ
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___U3CopaqueColorU3E5__5_6;
 };
 
-// AudioManager/<PlayAudioCo>d__21
-struct U3CPlayAudioCoU3Ed__21_t7546745B7BD993F9AEF5D34BDC876FF1CF69F2F5  : public RuntimeObject
+// AudioManager/<PlayAudioCo>d__25
+struct U3CPlayAudioCoU3Ed__25_tC526DDA2016D9F9E5471E36B788F2F52FD932711  : public RuntimeObject
 {
-	// System.Int32 AudioManager/<PlayAudioCo>d__21::<>1__state
+	// System.Int32 AudioManager/<PlayAudioCo>d__25::<>1__state
 	int32_t ___U3CU3E1__state_0;
-	// System.Object AudioManager/<PlayAudioCo>d__21::<>2__current
+	// System.Object AudioManager/<PlayAudioCo>d__25::<>2__current
 	RuntimeObject* ___U3CU3E2__current_1;
-	// AudioManager AudioManager/<PlayAudioCo>d__21::<>4__this
+	// AudioManager AudioManager/<PlayAudioCo>d__25::<>4__this
 	AudioManager_t4BE66A4A0E184D85AF74C37BC93BFBEC52953C7B* ___U3CU3E4__this_2;
-	// UnityEngine.Vector3 AudioManager/<PlayAudioCo>d__21::pos
+	// UnityEngine.Vector3 AudioManager/<PlayAudioCo>d__25::pos
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___pos_3;
-	// AudioTypes AudioManager/<PlayAudioCo>d__21::aType
+	// AudioTypes AudioManager/<PlayAudioCo>d__25::aType
 	int32_t ___aType_4;
-	// UnityEngine.AudioSource AudioManager/<PlayAudioCo>d__21::<source>5__2
+	// UnityEngine.AudioSource AudioManager/<PlayAudioCo>d__25::<source>5__2
 	AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* ___U3CsourceU3E5__2_5;
 };
 
@@ -19318,6 +19320,10 @@ struct UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2  : public MonoBeha
 	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ____negativePointsTimer_34;
 	// UnityEngine.UI.Image UIController::_moveTimer
 	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ____moveTimer_35;
+	// UnityEngine.UI.Slider UIController::_musicVolumeSlider
+	Slider_t87EA570E3D6556CABF57456C2F3873FFD86E652F* ____musicVolumeSlider_36;
+	// UnityEngine.UI.Slider UIController::_sFXVolumeSlider
+	Slider_t87EA570E3D6556CABF57456C2F3873FFD86E652F* ____sFXVolumeSlider_37;
 };
 
 // UnityEngine.XR.OpenXR.Features.Interactions.ValveIndexControllerProfile
@@ -23723,10 +23729,10 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4320[4] =
 	static_cast<int32_t>(offsetof(ArenaWallController_t26D7D46ADF6500D5AEC90E1782CC0C6F94EA6B0A, ____wallRen_4)),static_cast<int32_t>(offsetof(ArenaWallController_t26D7D46ADF6500D5AEC90E1782CC0C6F94EA6B0A, ____startIntensity_5)),static_cast<int32_t>(offsetof(ArenaWallController_t26D7D46ADF6500D5AEC90E1782CC0C6F94EA6B0A, ____maxIntensity_6)),static_cast<int32_t>(offsetof(ArenaWallController_t26D7D46ADF6500D5AEC90E1782CC0C6F94EA6B0A, ____flashDuration_7)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4321[4] = 
 {
-	static_cast<int32_t>(offsetof(U3CPlayAudioCoU3Ed__19_tB75859D48FD5D542496732243F129BC6CB6516B6, ___U3CU3E1__state_0)),static_cast<int32_t>(offsetof(U3CPlayAudioCoU3Ed__19_tB75859D48FD5D542496732243F129BC6CB6516B6, ___U3CU3E2__current_1)),static_cast<int32_t>(offsetof(U3CPlayAudioCoU3Ed__19_tB75859D48FD5D542496732243F129BC6CB6516B6, ___reason_2)),static_cast<int32_t>(offsetof(U3CPlayAudioCoU3Ed__19_tB75859D48FD5D542496732243F129BC6CB6516B6, ___U3CU3E4__this_3)),};
+	static_cast<int32_t>(offsetof(U3CPlayAudioCoU3Ed__23_tC95EEBF2482404772486EB2D87F4E13AC1F69A84, ___U3CU3E1__state_0)),static_cast<int32_t>(offsetof(U3CPlayAudioCoU3Ed__23_tC95EEBF2482404772486EB2D87F4E13AC1F69A84, ___U3CU3E2__current_1)),static_cast<int32_t>(offsetof(U3CPlayAudioCoU3Ed__23_tC95EEBF2482404772486EB2D87F4E13AC1F69A84, ___reason_2)),static_cast<int32_t>(offsetof(U3CPlayAudioCoU3Ed__23_tC95EEBF2482404772486EB2D87F4E13AC1F69A84, ___U3CU3E4__this_3)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4322[6] = 
 {
-	static_cast<int32_t>(offsetof(U3CPlayAudioCoU3Ed__21_t7546745B7BD993F9AEF5D34BDC876FF1CF69F2F5, ___U3CU3E1__state_0)),static_cast<int32_t>(offsetof(U3CPlayAudioCoU3Ed__21_t7546745B7BD993F9AEF5D34BDC876FF1CF69F2F5, ___U3CU3E2__current_1)),static_cast<int32_t>(offsetof(U3CPlayAudioCoU3Ed__21_t7546745B7BD993F9AEF5D34BDC876FF1CF69F2F5, ___U3CU3E4__this_2)),static_cast<int32_t>(offsetof(U3CPlayAudioCoU3Ed__21_t7546745B7BD993F9AEF5D34BDC876FF1CF69F2F5, ___pos_3)),static_cast<int32_t>(offsetof(U3CPlayAudioCoU3Ed__21_t7546745B7BD993F9AEF5D34BDC876FF1CF69F2F5, ___aType_4)),static_cast<int32_t>(offsetof(U3CPlayAudioCoU3Ed__21_t7546745B7BD993F9AEF5D34BDC876FF1CF69F2F5, ___U3CsourceU3E5__2_5)),};
+	static_cast<int32_t>(offsetof(U3CPlayAudioCoU3Ed__25_tC526DDA2016D9F9E5471E36B788F2F52FD932711, ___U3CU3E1__state_0)),static_cast<int32_t>(offsetof(U3CPlayAudioCoU3Ed__25_tC526DDA2016D9F9E5471E36B788F2F52FD932711, ___U3CU3E2__current_1)),static_cast<int32_t>(offsetof(U3CPlayAudioCoU3Ed__25_tC526DDA2016D9F9E5471E36B788F2F52FD932711, ___U3CU3E4__this_2)),static_cast<int32_t>(offsetof(U3CPlayAudioCoU3Ed__25_tC526DDA2016D9F9E5471E36B788F2F52FD932711, ___pos_3)),static_cast<int32_t>(offsetof(U3CPlayAudioCoU3Ed__25_tC526DDA2016D9F9E5471E36B788F2F52FD932711, ___aType_4)),static_cast<int32_t>(offsetof(U3CPlayAudioCoU3Ed__25_tC526DDA2016D9F9E5471E36B788F2F52FD932711, ___U3CsourceU3E5__2_5)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4323[6] = 
 {
 	static_cast<int32_t>(offsetof(AudioManager_t4BE66A4A0E184D85AF74C37BC93BFBEC52953C7B_StaticFields, ___U3CInstanceU3Ek__BackingField_4)),static_cast<int32_t>(offsetof(AudioManager_t4BE66A4A0E184D85AF74C37BC93BFBEC52953C7B, ____musicSource_5)),static_cast<int32_t>(offsetof(AudioManager_t4BE66A4A0E184D85AF74C37BC93BFBEC52953C7B, ____sFXSource_6)),static_cast<int32_t>(offsetof(AudioManager_t4BE66A4A0E184D85AF74C37BC93BFBEC52953C7B, ____posSFXSourcePrefab_7)),static_cast<int32_t>(offsetof(AudioManager_t4BE66A4A0E184D85AF74C37BC93BFBEC52953C7B, ____audioClipsList_8)),static_cast<int32_t>(offsetof(AudioManager_t4BE66A4A0E184D85AF74C37BC93BFBEC52953C7B, ____audioClips_9)),};
@@ -23891,10 +23897,10 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4380[7] =
 	static_cast<int32_t>(offsetof(TimerController_t9FACAA69550370472C446690F3AD92032ECE8CC5, ____beginnerSettings_4)),static_cast<int32_t>(offsetof(TimerController_t9FACAA69550370472C446690F3AD92032ECE8CC5, ____normalSettings_5)),static_cast<int32_t>(offsetof(TimerController_t9FACAA69550370472C446690F3AD92032ECE8CC5, ____expertSettings_6)),static_cast<int32_t>(offsetof(TimerController_t9FACAA69550370472C446690F3AD92032ECE8CC5_StaticFields, ___onUpdateTimer_7)),static_cast<int32_t>(offsetof(TimerController_t9FACAA69550370472C446690F3AD92032ECE8CC5, ___timeRemaining_8)),static_cast<int32_t>(offsetof(TimerController_t9FACAA69550370472C446690F3AD92032ECE8CC5, ___timeLimit_9)),static_cast<int32_t>(offsetof(TimerController_t9FACAA69550370472C446690F3AD92032ECE8CC5, ___timerIsRunning_10)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4381[3] = 
 {
-	static_cast<int32_t>(offsetof(U3CFlashTimerU3Ed__42_tDCFB7AC329888874F5FEE109D2833FE6B8F98598, ___U3CU3E1__state_0)),static_cast<int32_t>(offsetof(U3CFlashTimerU3Ed__42_tDCFB7AC329888874F5FEE109D2833FE6B8F98598, ___U3CU3E2__current_1)),static_cast<int32_t>(offsetof(U3CFlashTimerU3Ed__42_tDCFB7AC329888874F5FEE109D2833FE6B8F98598, ___U3CU3E4__this_2)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4382[32] = 
+	static_cast<int32_t>(offsetof(U3CFlashTimerU3Ed__44_tA5B4E84B77903EBDA87923979C0EF5A3129F44B1, ___U3CU3E1__state_0)),static_cast<int32_t>(offsetof(U3CFlashTimerU3Ed__44_tA5B4E84B77903EBDA87923979C0EF5A3129F44B1, ___U3CU3E2__current_1)),static_cast<int32_t>(offsetof(U3CFlashTimerU3Ed__44_tA5B4E84B77903EBDA87923979C0EF5A3129F44B1, ___U3CU3E4__this_2)),};
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4382[34] = 
 {
-	static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ___playerHealth_4)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____uIMenuActive_5)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____timerFlashCoActive_6)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____playerHealthText_7)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____ballsRemainingText_8)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____timerText_9)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____timerCircle_10)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____redTimerCircle_11)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____gameOverText_12)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____startScreen_13)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____settingsScreen_14)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____howToPlayScreen_15)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____controllsScreen_16)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____timerPointsUI_17)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____powerUpsUI_18)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____ballsRemainingUI_19)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____pauseScreen_20)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____gameOverScreen_21)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____menuUI_22)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____doublePointsPanel_23)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____negativePointsPanel_24)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____movePanel_25)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____wall1_26)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____wall2_27)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____racket_28)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____gameTitle_29)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____pausedText_30)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____gameOverBigText_31)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____victoryText_32)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____doublePointsTimer_33)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____negativePointsTimer_34)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____moveTimer_35)),};
+	static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ___playerHealth_4)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____uIMenuActive_5)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____timerFlashCoActive_6)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____playerHealthText_7)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____ballsRemainingText_8)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____timerText_9)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____timerCircle_10)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____redTimerCircle_11)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____gameOverText_12)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____startScreen_13)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____settingsScreen_14)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____howToPlayScreen_15)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____controllsScreen_16)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____timerPointsUI_17)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____powerUpsUI_18)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____ballsRemainingUI_19)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____pauseScreen_20)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____gameOverScreen_21)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____menuUI_22)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____doublePointsPanel_23)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____negativePointsPanel_24)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____movePanel_25)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____wall1_26)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____wall2_27)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____racket_28)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____gameTitle_29)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____pausedText_30)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____gameOverBigText_31)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____victoryText_32)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____doublePointsTimer_33)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____negativePointsTimer_34)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____moveTimer_35)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____musicVolumeSlider_36)),static_cast<int32_t>(offsetof(UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2, ____sFXVolumeSlider_37)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4383[2] = 
 {
 	0,0,};

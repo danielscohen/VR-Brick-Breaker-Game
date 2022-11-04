@@ -52,7 +52,7 @@ public class GameController : MonoBehaviour
         }
 
         CurrentGameState = GameState.Started;
-        // Time.timeScale = 0;
+        Time.timeScale = 0;
     }
 
     void Start() {
@@ -75,8 +75,8 @@ public class GameController : MonoBehaviour
     }
 
     public void StartGame() {
-        // Time.timeScale = 1;
-        StartCoroutine(RotatePlayerUpwards());
+        Time.timeScale = 1;
+        // StartCoroutine(RotatePlayerUpwards());
         CurrentGameState = GameState.Running;
         AudioManager.Instance.PlayAudio(AudioReason.GameStarted);
         onStartGame?.Invoke();
@@ -87,7 +87,7 @@ public class GameController : MonoBehaviour
         float rotDuration = 4f;
         float time = 0;
         Quaternion startAngle = _player.transform.rotation;
-        Quaternion targetAngle = Quaternion.identity;
+        Quaternion targetAngle = Quaternion.Euler(-90, 0, 0);
         yield return new WaitForSeconds(2f);
         while(time < rotDuration){
             _player.transform.rotation = Quaternion.Lerp(startAngle, targetAngle, time / rotDuration);
@@ -95,11 +95,6 @@ public class GameController : MonoBehaviour
             yield return null;
         }
         yield return new WaitForSeconds(2f);
-        _player.transform.rotation = Quaternion.Euler(270, 0, 0);
-        _camOffset.transform.rotation = Quaternion.Euler(90, 0, 0);
-
-
-
     }
 
     void SetPLayerStartHealth() {

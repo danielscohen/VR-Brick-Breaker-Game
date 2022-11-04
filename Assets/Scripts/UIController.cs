@@ -38,6 +38,8 @@ public class UIController : MonoBehaviour
     [SerializeField] Image _doublePointsTimer;
     [SerializeField] Image _negativePointsTimer;
     [SerializeField] Image _moveTimer;
+    [SerializeField] Slider _musicVolumeSlider;
+    [SerializeField] Slider _sFXVolumeSlider;
     void OnEnable() {
         BallManager.onBallsLeftCountChange += UpdateBallsRemainingText;
         TimerController.onUpdateTimer += UpdateTimerText;
@@ -72,6 +74,9 @@ public class UIController : MonoBehaviour
         _pausedText.enabled = false;
         _gameOverBigText.enabled = false;
         _victoryText.enabled = false;
+        _musicVolumeSlider.value = AudioManager.Instance.GetMusicVolume();
+        _sFXVolumeSlider.value = AudioManager.Instance.GetSFXVolume();
+
     }
 
     void Update() {
@@ -79,7 +84,11 @@ public class UIController : MonoBehaviour
             Vector3 vHeadPos = Camera.main.transform.position;
             Vector3 vGazeDir = Camera.main.transform.forward;
             _menuUI.transform.position = (vHeadPos + vGazeDir * 2.5f) + new Vector3(0.0f, -.40f, 0.0f);
-            Vector3 vRot = Camera.main.transform.eulerAngles; vRot.z = 0;
+            Vector3 vRot = Camera.main.transform.eulerAngles;
+            vRot.z = 0;
+            // if(GameController.Instance.CurrentGameState == GameState.Started){
+            //     vRot.y *= -1;
+            // }
             _menuUI.transform.eulerAngles = vRot;
         }
     }
@@ -96,6 +105,17 @@ public class UIController : MonoBehaviour
     public void ShowControllsScreen(){
         _startScreen.SetActive(false);
         _controllsScreen.SetActive(true);
+    }
+
+    public void OnMusicVolumeSliderChanged(float vol){
+        if(_settingsScreen.activeSelf){
+            AudioManager.Instance.SetMusicVolume(vol);
+        }
+    }
+    public void OnSFXVolumeSliderChanged(float vol){
+        if(_settingsScreen.activeSelf){
+            AudioManager.Instance.SetSFXVolume(vol);
+        }
     }
 
 

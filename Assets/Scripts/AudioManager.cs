@@ -29,6 +29,19 @@ public class AudioManager : MonoBehaviour
     public void PlayGameMusic(){
         _musicSource.Play();
     }
+
+    public void SetMusicVolume(float vol){
+        _musicSource.volume = vol;
+    }
+    public float GetMusicVolume(){
+        return _musicSource.volume;
+    }
+    public void SetSFXVolume(float vol){
+        _sFXSource.volume = vol;
+    }
+    public float GetSFXVolume(){
+        return _sFXSource.volume;
+    }
     public AudioSource StartFracAudio(Vector3 pos){
         AudioSource source = Instantiate(_posSFXSourcePrefab, pos, Quaternion.identity).GetComponent<AudioSource>();
         source.clip = _audioClips[AudioTypes.BallHitBrick2];
@@ -94,7 +107,7 @@ public class AudioManager : MonoBehaviour
     IEnumerator PlayAudioCo(AudioTypes aType, Vector3 pos){
         AudioSource source = Instantiate(_posSFXSourcePrefab, pos, Quaternion.identity).GetComponent<AudioSource>();
         source.clip = _audioClips[aType];
-        source.volume = 0.5f;
+        source.volume = GetSFXVolume();
         source.Play();
         yield return new WaitForSeconds(_audioClips[aType].length);
         Destroy(source.gameObject);
