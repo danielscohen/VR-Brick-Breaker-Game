@@ -19,6 +19,7 @@ public class GameController : MonoBehaviour
     public GameState CurrentGameState { get; private set; }
 
     [SerializeField] InputActionReference pauseReference;
+    [SerializeField] InputActionReference endGameRef;
     [SerializeField] GameObject _player;
     [SerializeField] GameObject _camOffset;
     List<HighScore> _highScores;
@@ -27,9 +28,11 @@ public class GameController : MonoBehaviour
 
     private void OnEnable() {
         pauseReference.action.started += OnPausePressed;
+        endGameRef.action.started += onEndGame;
     }
     private void OnDisable() {
         pauseReference.action.started -= OnPausePressed;
+        endGameRef.action.started -= onEndGame;
     }
 
 
@@ -119,6 +122,9 @@ public class GameController : MonoBehaviour
             ContinueGame();
         }
     }
+    void onEndGame(InputAction.CallbackContext context){
+        EndGame(GameOverReason.GameWon);
+    }
 
     public void ContinueGame() {
         Time.timeScale = 1;
@@ -138,6 +144,10 @@ public class GameController : MonoBehaviour
     }
     void SetTimeScaleToOne() {
         Time.timeScale = 1;
+    }
+
+    public void DebugEndGame(){
+        EndGame(GameOverReason.GameWon);
     }
 
     public void EndGame(GameOverReason reason) {

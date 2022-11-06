@@ -11,6 +11,7 @@ public class UIController : MonoBehaviour
     bool _uIMenuActive;
     bool _timerFlashCoActive = false;
     string _highScoreName;
+    TouchScreenKeyboard keyboard;
     [SerializeField] TextMeshProUGUI _playerHealthText;
     [SerializeField] TextMeshProUGUI _ballsRemainingText;
     [SerializeField] TextMeshProUGUI _timerText;
@@ -191,7 +192,8 @@ public class UIController : MonoBehaviour
     IEnumerator FlashTimer(){
         _timerFlashCoActive = true;
         while(true){
-            AudioManager.Instance.PlayAudio(AudioTypes.TimerFlash);
+            // AudioManager.Instance.PlayAudio(AudioTypes.TimerFlash);
+            yield return new WaitForSeconds(0.5f);
             _redTimerCircle.enabled = true;
             _timerText.enabled = true;
             yield return new WaitForSeconds(1f);
@@ -366,6 +368,9 @@ public class UIController : MonoBehaviour
     }
     public void ShowExpertHighScoresScreen(){
         SetOnlyScreenActive(_expertHighScoreScreen);
+    }
+    public void ShowKeyBoard(){
+        keyboard = TouchScreenKeyboard.Open("", TouchScreenKeyboardType.Default);
     }
     
 }

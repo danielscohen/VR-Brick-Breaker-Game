@@ -1395,6 +1395,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "End Game",
+                    "type": "Button",
+                    "id": "7eac496f-902c-4439-8dbc-0b877fdf21ea",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -1428,6 +1437,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Swap Sides",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0b58cae4-c563-47cb-bc40-f1a959d42c9f",
+                    "path": "<OculusTouchController>{RightHand}/secondaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "End Game",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
