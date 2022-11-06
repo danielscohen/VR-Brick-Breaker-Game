@@ -13,6 +13,7 @@ public class GameController : MonoBehaviour
     public static event Action onStartGame;
     public static event Action onLoadGame;
     public static event Action onPauseGame;
+    public static event Action onHighScore;
     public static GameController Instance { get; private set; }
     public Difficulty GameDifficulty { get; private set; }
     public GameState CurrentGameState { get; private set; }
@@ -33,6 +34,10 @@ public class GameController : MonoBehaviour
 
     public void Restart() {
         AudioManager.Instance.PlayAudio(AudioReason.GameRestarted);
+        PersistentValues.IsFirstScene = false;
+        PersistentValues.MusicVolume = AudioManager.Instance.GetMusicVolume();
+        PersistentValues.SFXVolume = AudioManager.Instance.GetSFXVolume();
+        PersistentValues.GameDifficulty = GameDifficulty;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
@@ -51,10 +56,14 @@ public class GameController : MonoBehaviour
             Instance = this;
         }
 
-        DontDestroyOnLoad(this);
-
 
         CurrentGameState = GameState.Started;
+        if(PersistentValues.IsFirstScene){
+            GameDifficulty = Difficulty.Normal;
+        } 
+        else{
+            GameDifficulty = PersistentValues.GameDifficulty;
+        }
         Time.timeScale = 0;
     }
 
@@ -100,10 +109,6 @@ public class GameController : MonoBehaviour
         yield return new WaitForSeconds(2f);
     }
 
-    void SetPLayerStartHealth() {
-
-
-    }
 
     void OnPausePressed(InputAction.CallbackContext context){
         if(CurrentGameState == GameState.Running){
@@ -139,9 +144,41 @@ public class GameController : MonoBehaviour
         onGameOver?.Invoke(reason);
         if(reason == GameOverReason.GameWon){
             AudioManager.Instance.PlayAudio(AudioReason.GameWon);
+            ManageHighScore();
         } else{
             AudioManager.Instance.PlayAudio(AudioReason.GameLost);
         }
+
     }
+
+    int CheckIfHighScore(int score, List<HighScore> scores){
+        for(int i = 9; i > -2; i--){
+            if(i == -1){
+                return 0;
+            }
+            if(score < scores[i].score && i < 9){
+                return i + 1;
+            }
+        }
+
+        return -1;
+    }
+
+    void ManageHighScore(){
+        int score = GameObject.Find("Player Points Manager").GetComponent<PlayerPointsManager>().GetScore();
+        List<HighScore> scores = HighScoresManager.LoadHighScores(GameDifficulty);
+
+        int index = CheckIfHighScore(score, scores);
+
+        if(index == -1) return;
+
+        
+
+        
+
+
+
+    }
+
 
 }

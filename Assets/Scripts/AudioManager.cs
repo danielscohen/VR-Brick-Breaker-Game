@@ -16,13 +16,17 @@ public class AudioManager : MonoBehaviour
         } else {
             Instance = this;
         }
-        DontDestroyOnLoad(this);
     }
     void Start()
     {
         _audioClips = new Dictionary<AudioTypes, AudioClip>();
         for(int i = 0; i < _audioClipsList.Count; i++){
             _audioClips.Add((AudioTypes)i, _audioClipsList[i]);
+        }
+
+        if(!PersistentValues.IsFirstScene){
+            SetMusicVolume(PersistentValues.MusicVolume);
+            SetSFXVolume(PersistentValues.SFXVolume);
         }
     }
 

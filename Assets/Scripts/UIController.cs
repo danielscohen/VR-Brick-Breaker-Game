@@ -6,6 +6,7 @@ using TMPro;
 
 public class UIController : MonoBehaviour
 {
+    public static UIController Instance { get; private set; }
     int playerHealth;
     bool _uIMenuActive;
     bool _timerFlashCoActive = false;
@@ -62,6 +63,13 @@ public class UIController : MonoBehaviour
         GameController.onLoadGame -= ShowStartScreen;
         GameController.onPauseGame -= ShowPauseScreen;
     }
+    private void Awake() {
+        if(Instance != null && Instance != this){
+            Destroy(this);
+        } else {
+            Instance = this;
+        }
+    }
 
     private void Start() {
         _doublePointsPanel.SetActive(false);
@@ -74,8 +82,6 @@ public class UIController : MonoBehaviour
         _pausedText.enabled = false;
         _gameOverBigText.enabled = false;
         _victoryText.enabled = false;
-        _musicVolumeSlider.value = AudioManager.Instance.GetMusicVolume();
-        _sFXVolumeSlider.value = AudioManager.Instance.GetSFXVolume();
 
     }
 
@@ -96,7 +102,8 @@ public class UIController : MonoBehaviour
     public void ShowSettingsScreen(){
         _startScreen.SetActive(false);
         _settingsScreen.SetActive(true);
-
+        _musicVolumeSlider.value = AudioManager.Instance.GetMusicVolume();
+        _sFXVolumeSlider.value = AudioManager.Instance.GetSFXVolume();
     }
     public void ShowHowToPlayScreen(){
         _startScreen.SetActive(false);

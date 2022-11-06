@@ -68,4 +68,7 @@ public class PlayerPointsManager : MonoBehaviour
             _doublePts = false;
         }
     }
+    public int GetScore(){
+        return _points;
+    }
 }
