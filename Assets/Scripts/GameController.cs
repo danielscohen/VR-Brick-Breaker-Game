@@ -8,7 +8,7 @@ using UnityEngine.InputSystem;
 public class GameController : MonoBehaviour
 {
 
-    public static event Action<GameOverReason> onGameOver;
+    public static event Action onGameOver;
     public static event Action onResumeGame;
     public static event Action onStartGame;
     public static event Action onLoadGame;
@@ -21,6 +21,8 @@ public class GameController : MonoBehaviour
     [SerializeField] InputActionReference pauseReference;
     [SerializeField] GameObject _player;
     [SerializeField] GameObject _camOffset;
+    List<HighScore> _highScores;
+    int _score;
 
 
     private void OnEnable() {
@@ -141,12 +143,22 @@ public class GameController : MonoBehaviour
     public void EndGame(GameOverReason reason) {
         Time.timeScale = 0;
         CurrentGameState = GameState.GameOver;
-        onGameOver?.Invoke(reason);
+        onGameOver?.Invoke();
         if(reason == GameOverReason.GameWon){
             AudioManager.Instance.PlayAudio(AudioReason.GameWon);
-            ManageHighScore();
+            _score = GameObject.Find("Player Points Manager").GetComponent<PlayerPointsManager>().GetScore();
+            _highScores = HighScoresManager.LoadHighScores(GameDifficulty);
+
+            int index = CheckIfHighScore(_score, _highScores);
+
+            if(index == -1){
+                UIController.Instance.ShowGameOverScreen(GameOverReason.GameWon);
+            } else {
+                UIController.Instance.ShowHighScorePromptScreen();
+            }
         } else{
             AudioManager.Instance.PlayAudio(AudioReason.GameLost);
+            UIController.Instance.ShowGameOverScreen(reason);
         }
 
     }
@@ -164,20 +176,14 @@ public class GameController : MonoBehaviour
         return -1;
     }
 
-    void ManageHighScore(){
-        int score = GameObject.Find("Player Points Manager").GetComponent<PlayerPointsManager>().GetScore();
-        List<HighScore> scores = HighScoresManager.LoadHighScores(GameDifficulty);
-
-        int index = CheckIfHighScore(score, scores);
-
-        if(index == -1) return;
-
-        
-
-        
-
-
-
+    public void SubmitHighScore(string name){
+        int index = CheckIfHighScore(_score, _highScores);
+        HighScore newHighScore = new HighScore{name = name, date = DateTime.Now.ToShortDateString(), score = _score};
+        _highScores.Insert(index, newHighScore);
+        if(_highScores.Count > 10){
+            _highScores.RemoveAt(10);
+        }
+        HighScoresManager.SaveHighScores(GameDifficulty, _highScores);
     }
 
 

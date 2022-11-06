@@ -35,18 +35,6 @@ public class HandRayController : MonoBehaviour
         _leftHand.SetActive(true);
         _rightHand.SetActive(true);
     }
-    void EnableRays(GameOverReason r){
-        _leftHandRay.SetActive(true);
-        _rightHandRay.SetActive(true);
-        _leftHand.SetActive(false);
-        _rightHand.SetActive(false);
-    }
-    void DisableRays(GameOverReason r){
-        _leftHandRay.SetActive(false);
-        _rightHandRay.SetActive(false);
-        _leftHand.SetActive(true);
-        _rightHand.SetActive(true);
-    }
 
     public void DisableLeftHand(SelectEnterEventArgs args){
         _leftHand.SetActive(false);
