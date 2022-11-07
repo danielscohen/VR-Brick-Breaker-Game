@@ -75,7 +75,12 @@ public class GameController : MonoBehaviour
     void Start() {
         onLoadGame?.Invoke();
         AudioManager.Instance.PlayGameMusic();
+        // TestPLayerPrefs();
     }
+
+    // private void Update() {
+    //     Debug.Log($"var: {GameDifficulty}, Persist: {PersistentValues.GameDifficulty}");
+    // }
 
     public void SetGameDifficulty(int difficulty) {
         switch (difficulty) {
@@ -98,6 +103,17 @@ public class GameController : MonoBehaviour
         AudioManager.Instance.PlayAudio(AudioReason.GameStarted);
         onStartGame?.Invoke();
         onResumeGame?.Invoke();
+    }
+
+    void TestPLayerPrefs(){
+        HighScore newHighScore = new HighScore{name = "dan", date = DateTime.Now.ToString("d-M-yyyy"), score = 5};
+        List<HighScore> hs = new List<HighScore>();
+        hs.Add(newHighScore);
+        for(int i = 0; i < 9; i++){
+            hs.Add(new HighScore{name = "a", date = "a", score = -1});
+        }
+
+        HighScoresManager.SaveHighScores(GameDifficulty, hs);
     }
 
     IEnumerator RotatePlayerUpwards(){
@@ -164,7 +180,7 @@ public class GameController : MonoBehaviour
             if(index == -1){
                 UIController.Instance.ShowGameOverScreen(GameOverReason.GameWon);
             } else {
-                UIController.Instance.ShowHighScorePromptScreen();
+                StartCoroutine(UIController.Instance.ShowGameOverScreenHS());
             }
         } else{
             AudioManager.Instance.PlayAudio(AudioReason.GameLost);
@@ -194,6 +210,7 @@ public class GameController : MonoBehaviour
             _highScores.RemoveAt(10);
         }
         HighScoresManager.SaveHighScores(GameDifficulty, _highScores);
+        UIController.Instance.ShowHighScoresScreens();
     }
 
 

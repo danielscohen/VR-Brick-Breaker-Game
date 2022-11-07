@@ -28,6 +28,7 @@ public static class HighScoresManager
             PlayerPrefs.SetString($"date_{diff}_{i}", scores[i].date);
             PlayerPrefs.SetInt($"score_{diff}_{i}", scores[i].score);
         }
+        PlayerPrefs.Save();
 
     }
 }

@@ -46,9 +46,9 @@ public class BallManager : MonoBehaviour
         PowerUpController.onPLayerCaughtPowerUp -= AddBallPowerUp;
     }
 
-    private void Update() {
-        Debug.Log($"balls remaining: {_ballsRemaining}");
-    }
+    // private void Update() {
+    //     Debug.Log($"balls remaining: {_ballsRemaining}");
+    // }
 
 
     void Start() {

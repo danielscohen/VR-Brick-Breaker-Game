@@ -27,6 +27,7 @@ public class UIController : MonoBehaviour
     [SerializeField] GameObject _ballsRemainingUI;
     [SerializeField] GameObject _pauseScreen;
     [SerializeField] GameObject _gameOverScreen;
+    [SerializeField] GameObject _gameOverScreenHS;
     [SerializeField] GameObject _menuUI;
     [SerializeField] GameObject _doublePointsPanel;
     [SerializeField] GameObject _negativePointsPanel;
@@ -43,6 +44,7 @@ public class UIController : MonoBehaviour
     [SerializeField] Image _moveTimer;
     [SerializeField] Slider _musicVolumeSlider;
     [SerializeField] Slider _sFXVolumeSlider;
+    [SerializeField] TMP_Dropdown _diffDropDown;
     [SerializeField] GameObject _highScorePromptScreen;
     [SerializeField] GameObject _highScoreInputScreen;
     [SerializeField] GameObject _beginnerHighScoreScreen;
@@ -104,6 +106,7 @@ public class UIController : MonoBehaviour
         _gameScreens.Add(_controllsScreen);
         _gameScreens.Add(_pauseScreen);
         _gameScreens.Add(_gameOverScreen);
+        _gameScreens.Add(_gameOverScreenHS);
         _gameScreens.Add(_settingsScreen);
         _gameScreens.Add(_howToPlayScreen);
         _gameScreens.Add(_highScoreInputScreen);
@@ -112,6 +115,7 @@ public class UIController : MonoBehaviour
         _gameScreens.Add(_normalHighScoreScreen);
         _gameScreens.Add(_beginnerHighScoreScreen);
     }
+
     void SetOnlyScreenActive(GameObject screen){
         foreach(GameObject s in _gameScreens){
             s.SetActive(false);
@@ -137,11 +141,22 @@ public class UIController : MonoBehaviour
             _menuUI.transform.eulerAngles = vRot;
         }
     }
+
+    public void LeaveHighScoresScreen(){
+        if(GameController.Instance.CurrentGameState == GameState.GameOver){
+            GameController.Instance.Restart();
+        }
+        else {
+            ShowStartScreen();
+        }
+    }
     
     public void ShowSettingsScreen(){
         SetOnlyScreenActive(_settingsScreen);
         _musicVolumeSlider.value = AudioManager.Instance.GetMusicVolume();
         _sFXVolumeSlider.value = AudioManager.Instance.GetSFXVolume();
+        _diffDropDown.value = (int)GameController.Instance.GameDifficulty;
+
     }
     public void ShowHowToPlayScreen(){
         SetOnlyScreenActive(_howToPlayScreen);
@@ -296,6 +311,21 @@ public class UIController : MonoBehaviour
 
         _gameOverText.text = gameOverText;
     }
+    public IEnumerator ShowGameOverScreenHS() {
+        _uIMenuActive = true;
+        string gameOverText;
+
+        SetOnlyScreenActive(_gameOverScreenHS);
+
+        _victoryText.enabled = true;
+        gameOverText = $"Your Score: {_playerHealthText.text}";
+
+        _gameOverText.text = gameOverText;
+
+        yield return new WaitForSecondsRealtime(3f);
+
+        ShowHighScorePromptScreen();
+    }
 
     public void ShowHighScorePromptScreen(){
         _uIMenuActive = true;
@@ -318,6 +348,12 @@ public class UIController : MonoBehaviour
         highScoreData[1] = HighScoresManager.LoadHighScores(Difficulty.Normal);
         highScoreData[2] = HighScoresManager.LoadHighScores(Difficulty.Expert);
 
+        foreach(Transform container in _highScoreContainer){
+            foreach(Transform entry in container){
+                Destroy(entry.gameObject);
+            }
+        }
+
         float templateHeight = 10f;
 
         for(int j = 0; j < 3; j++){
@@ -330,17 +366,20 @@ public class UIController : MonoBehaviour
                 int rank = i + 1;
 
                 if(highScoreData[j][i].score == -1){
-                entryTransform.Find("Rank Text").GetComponent<TextMeshProUGUI>().text = rank.ToString();
+                entryTransform.Find("Rank Text").GetComponent<TextMeshProUGUI>().text = "";
                 entryTransform.Find("Name Text").GetComponent<TextMeshProUGUI>().text = "";
                 entryTransform.Find("Date Text").GetComponent<TextMeshProUGUI>().text = "";
                 entryTransform.Find("Score Text").GetComponent<TextMeshProUGUI>().text = "";
-                return;
+                // Debug.Log("got to return");
+                continue;
                 }
 
                 entryTransform.Find("Rank Text").GetComponent<TextMeshProUGUI>().text = rank.ToString();
                 entryTransform.Find("Name Text").GetComponent<TextMeshProUGUI>().text = highScoreData[j][i].name;
                 entryTransform.Find("Date Text").GetComponent<TextMeshProUGUI>().text = highScoreData[j][i].date;
                 entryTransform.Find("Score Text").GetComponent<TextMeshProUGUI>().text = highScoreData[j][i].score.ToString();
+
+                // Debug.Log($"{highScoreData[j][i].name} {highScoreData[j][i].date} {highScoreData[j][i].score.ToString()}");
             }
         }
     }

@@ -4924,6 +4924,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* DateTimeFormat_Format_m8F8FA6A9F8BD
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* DateTime_ToShortDateString_m8863B024FF293DF625932CCA2E35A095C6FCBDCB (DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D* __this, const RuntimeMethod* method) ;
 // System.String System.DateTime::ToString()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* DateTime_ToString_m447C83E1F8FFFFF4D20C0F7D5C18DEB160F9833A (DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D* __this, const RuntimeMethod* method) ;
+// System.String System.DateTime::ToString(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* DateTime_ToString_m6963A84785C320DA776C9FCFFEDAF26C8F1A8D78 (DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D* __this, String_t* ___format0, const RuntimeMethod* method) ;
 // System.String System.DateTime::ToString(System.IFormatProvider)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* DateTime_ToString_m66457C11C42C07E2F437A9D899E6E3FB9FD77B50 (DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D* __this, RuntimeObject* ___provider0, const RuntimeMethod* method) ;
 // System.String System.DateTime::ToString(System.String,System.IFormatProvider)
@@ -34316,6 +34318,33 @@ IL2CPP_EXTERN_C  String_t* DateTime_ToString_m447C83E1F8FFFFF4D20C0F7D5C18DEB160
 	_thisAdjusted = reinterpret_cast<DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D*>(__this + _offset);
 	String_t* _returnValue;
 	_returnValue = DateTime_ToString_m447C83E1F8FFFFF4D20C0F7D5C18DEB160F9833A(_thisAdjusted, method);
+	return _returnValue;
+}
+// System.String System.DateTime::ToString(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* DateTime_ToString_m6963A84785C320DA776C9FCFFEDAF26C8F1A8D78 (DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D* __this, String_t* ___format0, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&DateTimeFormat_tE5F9F8059A3910CA0E37935312AAEDC297D907A2_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_0 = (*(DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D*)__this);
+		String_t* L_1 = ___format0;
+		il2cpp_codegen_runtime_class_init_inline(DateTimeFormat_tE5F9F8059A3910CA0E37935312AAEDC297D907A2_il2cpp_TypeInfo_var);
+		String_t* L_2;
+		L_2 = DateTimeFormat_Format_m8F8FA6A9F8BD8EDCC502540B4CF79EF7A43FF7F4(L_0, L_1, (RuntimeObject*)NULL, NULL);
+		return L_2;
+	}
+}
+IL2CPP_EXTERN_C  String_t* DateTime_ToString_m6963A84785C320DA776C9FCFFEDAF26C8F1A8D78_AdjustorThunk (RuntimeObject* __this, String_t* ___format0, const RuntimeMethod* method)
+{
+	DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D*>(__this + _offset);
+	String_t* _returnValue;
+	_returnValue = DateTime_ToString_m6963A84785C320DA776C9FCFFEDAF26C8F1A8D78(_thisAdjusted, ___format0, method);
 	return _returnValue;
 }
 // System.String System.DateTime::ToString(System.IFormatProvider)
