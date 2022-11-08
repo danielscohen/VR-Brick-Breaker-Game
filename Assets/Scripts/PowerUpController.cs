@@ -15,17 +15,19 @@ public class PowerUpController : MonoBehaviour
 
     AudioSource _audioSource;
     ParticleSystem _explosionPS;
+
+    Renderer[] _powerUpRens;
     bool _firstTrigger = true;
     void OnEnable() {
-        GameController.onPauseGame += DisablePowerUp;
-        GameController.onResumeGame += EnablePowerUp;
-        GameController.onGameOver += DisablePowerUp;
+        GameController.onPauseGame += SetPowerUpInvisible;
+        GameController.onResumeGame += SetPowerUpVisible;
+        GameController.onGameOver += SetPowerUpInvisible;
     }
 
     void OnDisable() {
-        GameController.onPauseGame -= DisablePowerUp;
-        GameController.onResumeGame -= EnablePowerUp;
-        GameController.onGameOver -= DisablePowerUp;
+        GameController.onPauseGame -= SetPowerUpInvisible;
+        GameController.onResumeGame -= SetPowerUpVisible;
+        GameController.onGameOver -= SetPowerUpInvisible;
     }
 
 
@@ -35,6 +37,7 @@ public class PowerUpController : MonoBehaviour
     }
     void Start() {
         _camPos = Camera.main.transform.position;
+        _powerUpRens = GetComponentsInChildren<Renderer>();
     }
 
     // Update is called once per frame
@@ -56,11 +59,15 @@ public class PowerUpController : MonoBehaviour
         }
     }
 
-    void DisablePowerUp(){
-        gameObject.SetActive(false);
+    void SetPowerUpInvisible(){
+        foreach(Renderer ren in _powerUpRens){
+            ren.enabled = false;
+        }
     }
-    void EnablePowerUp(){
-        gameObject.SetActive(true);
+    void SetPowerUpVisible(){
+        foreach(Renderer ren in _powerUpRens){
+            ren.enabled = true;
+        }
     }
 
 }

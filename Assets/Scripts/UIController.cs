@@ -18,6 +18,7 @@ public class UIController : MonoBehaviour
     [SerializeField] Image _timerCircle;
     [SerializeField] Image _redTimerCircle;
     [SerializeField] TextMeshProUGUI _gameOverText;
+    [SerializeField] TextMeshProUGUI _gameOverTextHS;
     [SerializeField] GameObject _startScreen;
     [SerializeField] GameObject _settingsScreen;
     [SerializeField] GameObject _howToPlayScreen;
@@ -92,7 +93,6 @@ public class UIController : MonoBehaviour
         _movePanel.SetActive(false);
         _wall1.SetActive(false);
         _wall2.SetActive(false);
-        _racket.SetActive(false);
         _gameTitle.enabled = true;
         _pausedText.enabled = false;
         _gameOverBigText.enabled = false;
@@ -211,7 +211,7 @@ public class UIController : MonoBehaviour
             yield return new WaitForSeconds(0.5f);
             _redTimerCircle.enabled = true;
             _timerText.enabled = true;
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.5f);
             _redTimerCircle.enabled = false;
             _timerText.enabled = false;
             yield return new WaitForSeconds(0.5f);
@@ -307,34 +307,35 @@ public class UIController : MonoBehaviour
         switch (reason) {
             case GameOverReason.GameWon:
                 _victoryText.enabled = true;
-                gameOverText = $"Your Score: {_playerHealthText.text}";
+                gameOverText = $"You Got a Score of: {_playerHealthText.text}!";
+                break;
+            case GameOverReason.GameWonHS:
+                SetOnlyScreenActive(_gameOverScreenHS);
+                _victoryText.enabled = true;
+                gameOverText = $"You Got a Highscore of {_playerHealthText.text}!";
                 break;
             case GameOverReason.HealthRanOut:
                 _gameOverBigText.enabled = true;
-                gameOverText = "You Ran Out of Health";
+                gameOverText = "You Ran Out of Health!";
                 break;
             case GameOverReason.TimeRanOut:
                 _gameOverBigText.enabled = true;
-                gameOverText = "You Ran Out of Time";
+                gameOverText = "You Ran Out of Time!";
                 break;
             default:
                 _gameOverBigText.enabled = true;
-                gameOverText = "You Ran Out of Orbs";
+                gameOverText = "You Ran Out of Orbs!";
                 break;
         }
 
         _gameOverText.text = gameOverText;
+        if(reason == GameOverReason.GameWonHS){
+            _gameOverTextHS.text = gameOverText;
+            StartCoroutine(ShowGameOverScreenHS());
+        }
     }
     public IEnumerator ShowGameOverScreenHS() {
-        _uIMenuActive = true;
-        string gameOverText;
 
-        SetOnlyScreenActive(_gameOverScreenHS);
-
-        _victoryText.enabled = true;
-        gameOverText = $"Your Score: {_playerHealthText.text}";
-
-        _gameOverText.text = gameOverText;
 
         yield return new WaitForSecondsRealtime(3f);
 

@@ -29,12 +29,16 @@ public class RacketController : MonoBehaviour
     }
     void SetRacketInvisible(){
         foreach(Transform child in gameObject.transform){
-            child.gameObject.GetComponent<Renderer>().enabled = false;
+            if(child.CompareTag("Racket")){
+                child.gameObject.GetComponent<Renderer>().enabled = false;
+            }
         }
     }
     void SetRacketVisible(){
         foreach(Transform child in gameObject.transform){
-            child.gameObject.GetComponent<Renderer>().enabled = true;
+            if(child.CompareTag("Racket")){
+                child.gameObject.GetComponent<Renderer>().enabled = true;
+            }
         }
     }
     void EnableRacket(){

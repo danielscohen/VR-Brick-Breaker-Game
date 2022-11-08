@@ -20587,6 +20587,7 @@ MonoBehaviour:
   _timerCircle: {fileID: 0}
   _redTimerCircle: {fileID: 0}
   _gameOverText: {fileID: 1141562018}
+  _gameOverTextHS: {fileID: 0}
   _startScreen: {fileID: 0}
   _settingsScreen: {fileID: 0}
   _howToPlayScreen: {fileID: 0}
@@ -26932,6 +26933,7 @@ MonoBehaviour:
   _timerCircle: {fileID: 0}
   _redTimerCircle: {fileID: 0}
   _gameOverText: {fileID: 0}
+  _gameOverTextHS: {fileID: 0}
   _startScreen: {fileID: 1474357643}
   _settingsScreen: {fileID: 0}
   _howToPlayScreen: {fileID: 0}
@@ -28167,6 +28169,7 @@ MonoBehaviour:
   _timerCircle: {fileID: 2098831941}
   _redTimerCircle: {fileID: 1038310876}
   _gameOverText: {fileID: 1096127606}
+  _gameOverTextHS: {fileID: 899121889}
   _startScreen: {fileID: 1080541218}
   _settingsScreen: {fileID: 1599944844}
   _howToPlayScreen: {fileID: 1989229226}

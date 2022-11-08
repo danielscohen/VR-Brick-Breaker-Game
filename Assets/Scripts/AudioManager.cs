@@ -115,7 +115,7 @@ public class AudioManager : MonoBehaviour
         source.clip = _audioClips[aType];
         source.volume = GetSFXVolume();
         if(aType == AudioTypes.RacketHit){
-            source.volume = 0.6f * GetSFXVolume();
+            source.volume = 0.3f * GetSFXVolume();
         }
         source.Play();
         yield return new WaitForSeconds(_audioClips[aType].length);

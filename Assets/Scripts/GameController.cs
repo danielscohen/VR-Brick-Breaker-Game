@@ -180,7 +180,7 @@ public class GameController : MonoBehaviour
             if(index == -1){
                 UIController.Instance.ShowGameOverScreen(GameOverReason.GameWon);
             } else {
-                StartCoroutine(UIController.Instance.ShowGameOverScreenHS());
+                UIController.Instance.ShowGameOverScreen(GameOverReason.GameWonHS);
             }
         } else{
             AudioManager.Instance.PlayAudio(AudioReason.GameLost);
