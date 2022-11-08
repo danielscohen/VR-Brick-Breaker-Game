@@ -18,11 +18,13 @@ public class BallController : MonoBehaviour
     [SerializeField] float _maxSpeedSqrd = 2.0f;
     public int BallID { get; set; }
     public bool GravityEnabled { get; set; }
+    Renderer _ballRen;
 
 
     void Awake() {
         
         ballRb = GetComponent<Rigidbody>();
+        _ballRen = GetComponent<Renderer>();
         ballRb.useGravity = true;
         GravityEnabled = true;
     }
@@ -39,7 +41,7 @@ public class BallController : MonoBehaviour
         // if(ballRb.velocity.sqrMagnitude > 0){
         //     Debug.Log($"Velocity: {ballRb.velocity.sqrMagnitude}");
         // }
-        Debug.Log($"ball loc: {transform.position}");
+        // Debug.Log($"ball loc: {transform.position}");
     }
 
     private void FixedUpdate() {
@@ -47,6 +49,13 @@ public class BallController : MonoBehaviour
             ballRb.velocity *= 0.80f;
         }
         
+    }
+
+    public void SetBallVisible(){
+        _ballRen.enabled = true;
+    }
+    public void SetBallInvisible(){
+        _ballRen.enabled = false;
     }
 
     void OnEnable() {

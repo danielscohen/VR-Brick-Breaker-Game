@@ -16,6 +16,17 @@ public class PowerUpController : MonoBehaviour
     AudioSource _audioSource;
     ParticleSystem _explosionPS;
     bool _firstTrigger = true;
+    void OnEnable() {
+        GameController.onPauseGame += DisablePowerUp;
+        GameController.onResumeGame += EnablePowerUp;
+        GameController.onGameOver += DisablePowerUp;
+    }
+
+    void OnDisable() {
+        GameController.onPauseGame -= DisablePowerUp;
+        GameController.onResumeGame -= EnablePowerUp;
+        GameController.onGameOver -= DisablePowerUp;
+    }
 
 
 
@@ -40,6 +51,16 @@ public class PowerUpController : MonoBehaviour
             AudioManager.Instance.PlayAudio(AudioTypes.PowerUp, transform.position);
             Destroy(gameObject);
         }
+        else if(other.CompareTag("Destroy Zone")){
+            Destroy(gameObject);
+        }
+    }
+
+    void DisablePowerUp(){
+        gameObject.SetActive(false);
+    }
+    void EnablePowerUp(){
+        gameObject.SetActive(true);
     }
 
 }

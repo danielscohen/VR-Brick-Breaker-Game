@@ -85,6 +85,10 @@ public class BrickFrag : MonoBehaviour
 
     bool brickAlreadyHit = false;
 
+    AudioSource _fracAudioSource;
+
+    bool _isPLayingFracAudio = false;
+
     void OnEnable() {
         GameController.onPauseGame += SetBrickInvisible;
         GameController.onResumeGame += SetBrickVisible;
@@ -115,6 +119,17 @@ public class BrickFrag : MonoBehaviour
     }
     void SetBrickInvisible(){
         gameObject.GetComponent<Renderer>().enabled = false;
+    }
+
+    void PauseFracAudio(){
+        if(_isPLayingFracAudio){
+            _fracAudioSource.Pause();
+        }
+    }
+    void ResumeFracAudio(){
+        if(_isPLayingFracAudio){
+            _fracAudioSource.Play();
+        }
     }
 
 
@@ -153,9 +168,11 @@ public class BrickFrag : MonoBehaviour
         CreateFracLines();
         // Debug.Log($"frac line pts: {fracLinePts.Count}");
         yield return StartCoroutine(FadeVoxels(voxFadePer, voxFadeOutDur));
-        AudioSource source = AudioManager.Instance.StartFracAudio(transform.position);
+        _fracAudioSource = AudioManager.Instance.StartFracAudio(transform.position);
+        _isPLayingFracAudio = true;
         yield return StartCoroutine(DrawFracLines());
-        AudioManager.Instance.StopFracAudio(source);
+        _isPLayingFracAudio = false;
+        AudioManager.Instance.StopFracAudio(_fracAudioSource);
         yield return StartCoroutine(FadeVoxels(1f, voxFadeInDur));
         DeleteFracLines();
 

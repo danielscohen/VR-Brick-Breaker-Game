@@ -13,6 +13,7 @@ TagManager:
   - Arena Wall
   - Player Collider
   - Racket
+  - Destroy Zone
   layers:
   - Default
   - TransparentFX

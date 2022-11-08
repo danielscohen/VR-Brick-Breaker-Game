@@ -23,6 +23,7 @@ public class AudioManager : MonoBehaviour
         for(int i = 0; i < _audioClipsList.Count; i++){
             _audioClips.Add((AudioTypes)i, _audioClipsList[i]);
         }
+        
 
         if(!PersistentValues.IsFirstScene){
             SetMusicVolume(PersistentValues.MusicVolume);
@@ -113,6 +114,9 @@ public class AudioManager : MonoBehaviour
         AudioSource source = Instantiate(_posSFXSourcePrefab, pos, Quaternion.identity).GetComponent<AudioSource>();
         source.clip = _audioClips[aType];
         source.volume = GetSFXVolume();
+        if(aType == AudioTypes.RacketHit){
+            source.volume = 0.6f * GetSFXVolume();
+        }
         source.Play();
         yield return new WaitForSeconds(_audioClips[aType].length);
         Destroy(source.gameObject);

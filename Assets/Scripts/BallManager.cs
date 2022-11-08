@@ -30,14 +30,15 @@ public class BallManager : MonoBehaviour
     bool keyPressed = false;
     bool readyToThrow = true;
 
+
     void OnEnable() {
         DestroyZoneController.onBallLost += ManageBallReturn;
         BallController.onBallLost += ManageBallReturn;
         GameController.onStartGame += SetBallStartingCount;
         GameController.onStartGame += LoadNewBall;
         PowerUpController.onPLayerCaughtPowerUp += AddBallPowerUp;
-        GameController.onPauseGame += DisableAllActiveBalls;
-        GameController.onResumeGame += EnableAllActiveBalls;
+        GameController.onPauseGame += SetActiveBallsInvisible;
+        GameController.onResumeGame += SetActiveBallsVisible;
     }
 
     void OnDisable() {
@@ -46,14 +47,13 @@ public class BallManager : MonoBehaviour
         GameController.onStartGame -= SetBallStartingCount;
         GameController.onStartGame -= LoadNewBall;
         PowerUpController.onPLayerCaughtPowerUp -= AddBallPowerUp;
-        GameController.onPauseGame -= DisableAllActiveBalls;
-        GameController.onResumeGame -= EnableAllActiveBalls;
+        GameController.onPauseGame -= SetActiveBallsInvisible;
+        GameController.onResumeGame -= SetActiveBallsVisible;
     }
 
     // private void Update() {
     //     Debug.Log($"ball remaining: {_ballsRemaining}");
     // }
-
 
     void Start() {
         onBallThrowPowerChange?.Invoke(0f);
@@ -118,14 +118,14 @@ public class BallManager : MonoBehaviour
         }
     }
 
-    public void DisableAllActiveBalls(){
+    public void SetActiveBallsInvisible(){
         foreach(GameObject ball in activeBalls){
-            ball.SetActive(false);
+            ball.GetComponent<BallController>().SetBallInvisible();
         }
     }
-    public void EnableAllActiveBalls(){
+    public void SetActiveBallsVisible(){
         foreach(GameObject ball in activeBalls){
-            ball.SetActive(true);
+            ball.GetComponent<BallController>().SetBallVisible();
         }
     }
 
