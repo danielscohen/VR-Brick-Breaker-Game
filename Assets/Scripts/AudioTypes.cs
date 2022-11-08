@@ -17,6 +17,7 @@ public enum AudioTypes
     NegPts,
     TimerFlash,
     LoadNewBall,
-    RacketHit
+    RacketHit,
+    Fireworks
 
 }

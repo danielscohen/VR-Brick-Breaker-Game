@@ -51,6 +51,7 @@ public class UIController : MonoBehaviour
     [SerializeField] GameObject _beginnerHighScoreScreen;
     [SerializeField] GameObject _normalHighScoreScreen;
     [SerializeField] GameObject _expertHighScoreScreen;
+    [SerializeField] GameObject _fireworks;
     [SerializeField] TMP_InputField _highScoreNameInput;
     [SerializeField] Transform _highScoreEntry;
     [SerializeField] Transform[] _highScoreContainer;
@@ -149,6 +150,18 @@ public class UIController : MonoBehaviour
         else {
             ShowStartScreen();
         }
+    }
+    
+    public IEnumerator PlayFireworks(){
+        for(int i = 0; i < 8; i++){
+            float x = Random.Range(-2f, 2f);
+            float y = Random.Range(-1.7f, 1.7f);
+            float z = Random.Range(4.7f, 8f);
+            Instantiate(_fireworks, new Vector3(x, y, z), Quaternion.identity);
+            AudioManager.Instance.PlayAudio(AudioTypes.Fireworks, new Vector3(x, y, z));
+            yield return new WaitForSecondsRealtime(0.2f);
+        }
+
     }
     
     public void ShowSettingsScreen(){

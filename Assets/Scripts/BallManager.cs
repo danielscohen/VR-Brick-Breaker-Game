@@ -39,6 +39,7 @@ public class BallManager : MonoBehaviour
         PowerUpController.onPLayerCaughtPowerUp += AddBallPowerUp;
         GameController.onPauseGame += SetActiveBallsInvisible;
         GameController.onResumeGame += SetActiveBallsVisible;
+        GameController.onGameOver += SetActiveBallsInvisible;
     }
 
     void OnDisable() {
@@ -49,6 +50,7 @@ public class BallManager : MonoBehaviour
         PowerUpController.onPLayerCaughtPowerUp -= AddBallPowerUp;
         GameController.onPauseGame -= SetActiveBallsInvisible;
         GameController.onResumeGame -= SetActiveBallsVisible;
+        GameController.onGameOver -= SetActiveBallsInvisible;
     }
 
     // private void Update() {
@@ -103,7 +105,7 @@ public class BallManager : MonoBehaviour
         }
         var ball = activeBalls[index];
         activeBalls.RemoveAt(index);
-        DisableBall(ball);
+        Destroy(ball);
         if (activeBalls.Count == 0 && _ballsRemaining == 0) {
             GameController.Instance.EndGame(GameOverReason.BallsRanOut);
             return;
@@ -142,14 +144,9 @@ public class BallManager : MonoBehaviour
     void LoadNewBall() {
         AudioManager.Instance.PlayAudio(AudioTypes.LoadNewBall, _loadLoc.transform.position);
         GameObject ball = null;
-        if (ballPool.Count > 0) {
-            ball = ballPool.Pop();
-            ball.SetActive(true);
-        } else {
-            ball = Instantiate(_ballPrefab);
-            ball.GetComponent<BallController>().BallID = _maxBallID;
-            _maxBallID++;
-        }
+        ball = Instantiate(_ballPrefab);
+        ball.GetComponent<BallController>().BallID = _maxBallID;
+        _maxBallID++;
 
         ball.transform.position = _loadLoc.position;
         ball.SetActive(true);

@@ -2217,6 +2217,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1260992104}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayButtonPressedAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1627728253}
         m_TargetAssemblyTypeName: UIController, Assembly-CSharp
         m_MethodName: ShowNormalHighScoresScreen
@@ -2960,6 +2972,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1260992104}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayButtonPressedAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1627728253}
         m_TargetAssemblyTypeName: UIController, Assembly-CSharp
         m_MethodName: ShowNormalHighScoresScreen
@@ -4864,7 +4888,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 305419364}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 1.95}
+  m_LocalPosition: {x: 0, y: -0.39, z: 1.95}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6263,10 +6287,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'You Got a HIgh Score!
-
-
-    Do You Want to Add It To the Leaderboard?'
+  m_text: Do You Want to Add Your Score To the Leaderboard?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4dd324da81ac0344f9af12111c5eea83, type: 2}
   m_sharedMaterial: {fileID: -1109333902305745644, guid: 4dd324da81ac0344f9af12111c5eea83,
@@ -6752,6 +6773,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1260992104}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayButtonPressedAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1627728253}
         m_TargetAssemblyTypeName: UIController, Assembly-CSharp
         m_MethodName: LeaveHighScoresScreen
@@ -7059,6 +7092,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1260992104}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayButtonPressedAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1627728253}
         m_TargetAssemblyTypeName: UIController, Assembly-CSharp
         m_MethodName: OnHighScoreNameSubmitted
@@ -9113,7 +9158,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 4294967295
+    m_Bits: 4294967289
   m_AttachTransform: {fileID: 0}
   m_KeepSelectedTargetValid: 1
   m_StartingSelectedInteractable: {fileID: 0}
@@ -11529,6 +11574,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1260992104}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayButtonPressedAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1627728253}
         m_TargetAssemblyTypeName: UIController, Assembly-CSharp
         m_MethodName: ShowExpertHighScoresScreen
@@ -11663,6 +11720,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1260992104}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayButtonPressedAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1627728253}
         m_TargetAssemblyTypeName: UIController, Assembly-CSharp
         m_MethodName: ShowHighScoreInputScreen
@@ -11877,6 +11946,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1260992104}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayButtonPressedAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1627728253}
         m_TargetAssemblyTypeName: UIController, Assembly-CSharp
         m_MethodName: ShowExpertHighScoresScreen
@@ -17613,9 +17694,9 @@ RectTransform:
   m_Father: {fileID: 279921700}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -30}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &899121889
@@ -17993,6 +18074,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1260992104}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayButtonPressedAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1627728253}
         m_TargetAssemblyTypeName: UIController, Assembly-CSharp
         m_MethodName: ShowBeginnerHighScoresScreen
@@ -20620,6 +20713,7 @@ MonoBehaviour:
   _beginnerHighScoreScreen: {fileID: 0}
   _normalHighScoreScreen: {fileID: 0}
   _expertHighScoreScreen: {fileID: 0}
+  _fireworks: {fileID: 0}
   _highScoreNameInput: {fileID: 0}
   _highScoreEntry: {fileID: 0}
   _highScoreContainer: []
@@ -20873,6 +20967,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1260992104}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayButtonPressedAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1627728253}
         m_TargetAssemblyTypeName: UIController, Assembly-CSharp
         m_MethodName: LeaveHighScoresScreen
@@ -23030,6 +23136,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 09406575510c06349bf310090c08bb69, type: 3}
   - {fileID: 8300000, guid: e0c227b46c0217444872b7c4a4092ca6, type: 3}
   - {fileID: 8300000, guid: cc7373af9f9fe5347bb053e02eb0b6f8, type: 3}
+  - {fileID: 8300000, guid: 8e415537c729b924a927195655aadf93, type: 3}
 --- !u!4 &1260992105
 Transform:
   m_ObjectHideFlags: 0
@@ -26057,7 +26164,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1542272422
 RectTransform:
   m_ObjectHideFlags: 0
@@ -26739,6 +26846,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1260992104}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayButtonPressedAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1627728253}
         m_TargetAssemblyTypeName: UIController, Assembly-CSharp
         m_MethodName: LeaveHighScoresScreen
@@ -26966,6 +27085,7 @@ MonoBehaviour:
   _beginnerHighScoreScreen: {fileID: 0}
   _normalHighScoreScreen: {fileID: 0}
   _expertHighScoreScreen: {fileID: 0}
+  _fireworks: {fileID: 0}
   _highScoreNameInput: {fileID: 0}
   _highScoreEntry: {fileID: 0}
   _highScoreContainer: []
@@ -27222,7 +27342,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 4294967295
+    m_Bits: 4294967289
   m_AttachTransform: {fileID: 0}
   m_KeepSelectedTargetValid: 1
   m_StartingSelectedInteractable: {fileID: 0}
@@ -28202,6 +28322,8 @@ MonoBehaviour:
   _beginnerHighScoreScreen: {fileID: 1542272421}
   _normalHighScoreScreen: {fileID: 2146749582}
   _expertHighScoreScreen: {fileID: 1031992049}
+  _fireworks: {fileID: 3576924614362489592, guid: 4a919ff208278c347a4582e77e55ed83,
+    type: 3}
   _highScoreNameInput: {fileID: 1194482527}
   _highScoreEntry: {fileID: 1986208727595456681, guid: d9c0ffa3c4fc5b542ae55e22405f5888,
     type: 3}
@@ -29223,6 +29345,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1260992104}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayButtonPressedAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1627728253}
         m_TargetAssemblyTypeName: UIController, Assembly-CSharp
         m_MethodName: ShowBeginnerHighScoresScreen
@@ -30162,7 +30296,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1753080833}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 5.81}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -30816,6 +30950,37 @@ MonoBehaviour:
   m_PlayHapticsOnHoverCanceled: 0
   m_HapticHoverCancelIntensity: 0
   m_HapticHoverCancelDuration: 0
+--- !u!1 &1823446209
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1823446210}
+  m_Layer: 0
+  m_Name: Title Text Parent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1823446210
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823446209}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 35
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1836214031
 GameObject:
   m_ObjectHideFlags: 0
@@ -31359,10 +31524,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
+  m_Radius: 0.3795436
+  m_Height: 0.7835167
   m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+  m_Center: {x: -0.03843227, y: 0.6082417, z: -0.00000011920926}
 --- !u!33 &1866018306
 MeshFilter:
   m_ObjectHideFlags: 0

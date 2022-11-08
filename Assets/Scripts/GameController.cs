@@ -25,6 +25,9 @@ public class GameController : MonoBehaviour
     List<HighScore> _highScores;
     int _score;
 
+    Vector3 _playerStartPos;
+    Vector3 _playerLastPos;
+
 
     private void OnEnable() {
         pauseReference.action.started += OnPausePressed;
@@ -51,6 +54,14 @@ public class GameController : MonoBehaviour
         Application.Quit();
     }
 
+    void ResetPlayerPosition(){
+        _playerLastPos = _player.transform.position;
+        _player.transform.position = _playerStartPos;
+    }
+    void RestorePlayerPosition(){
+        _player.transform.position = _playerLastPos;
+    }
+
 
 
 
@@ -74,6 +85,7 @@ public class GameController : MonoBehaviour
 
     void Start() {
         onLoadGame?.Invoke();
+        _playerStartPos = _player.transform.position;
         AudioManager.Instance.PlayGameMusic();
         // TestPLayerPrefs();
     }
@@ -144,12 +156,14 @@ public class GameController : MonoBehaviour
 
     public void ContinueGame() {
         Time.timeScale = 1;
+        RestorePlayerPosition();
         CurrentGameState = GameState.Running;
         AudioManager.Instance.PlayAudio(AudioReason.GameResumed);
         onResumeGame?.Invoke();
     }
     void PauseGame() {
         Time.timeScale = 0;
+        ResetPlayerPosition();
         CurrentGameState = GameState.Paused;
         AudioManager.Instance.PlayAudio(AudioReason.GamePaused);
         onPauseGame?.Invoke();
@@ -168,10 +182,12 @@ public class GameController : MonoBehaviour
 
     public void EndGame(GameOverReason reason) {
         Time.timeScale = 0;
+        ResetPlayerPosition();
         CurrentGameState = GameState.GameOver;
         onGameOver?.Invoke();
         if(reason == GameOverReason.GameWon){
             AudioManager.Instance.PlayAudio(AudioReason.GameWon);
+            StartCoroutine(UIController.Instance.PlayFireworks());
             _score = GameObject.Find("Player Points Manager").GetComponent<PlayerPointsManager>().GetScore();
             _highScores = HighScoresManager.LoadHighScores(GameDifficulty);
 
