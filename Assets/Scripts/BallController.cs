@@ -39,6 +39,7 @@ public class BallController : MonoBehaviour
         // if(ballRb.velocity.sqrMagnitude > 0){
         //     Debug.Log($"Velocity: {ballRb.velocity.sqrMagnitude}");
         // }
+        Debug.Log($"ball loc: {transform.position}");
     }
 
     private void FixedUpdate() {

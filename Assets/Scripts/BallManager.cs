@@ -36,6 +36,8 @@ public class BallManager : MonoBehaviour
         GameController.onStartGame += SetBallStartingCount;
         GameController.onStartGame += LoadNewBall;
         PowerUpController.onPLayerCaughtPowerUp += AddBallPowerUp;
+        GameController.onPauseGame += DisableAllActiveBalls;
+        GameController.onResumeGame += EnableAllActiveBalls;
     }
 
     void OnDisable() {
@@ -44,10 +46,12 @@ public class BallManager : MonoBehaviour
         GameController.onStartGame -= SetBallStartingCount;
         GameController.onStartGame -= LoadNewBall;
         PowerUpController.onPLayerCaughtPowerUp -= AddBallPowerUp;
+        GameController.onPauseGame -= DisableAllActiveBalls;
+        GameController.onResumeGame -= EnableAllActiveBalls;
     }
 
     // private void Update() {
-    //     Debug.Log($"balls remaining: {_ballsRemaining}");
+    //     Debug.Log($"ball remaining: {_ballsRemaining}");
     // }
 
 
@@ -114,6 +118,17 @@ public class BallManager : MonoBehaviour
         }
     }
 
+    public void DisableAllActiveBalls(){
+        foreach(GameObject ball in activeBalls){
+            ball.SetActive(false);
+        }
+    }
+    public void EnableAllActiveBalls(){
+        foreach(GameObject ball in activeBalls){
+            ball.SetActive(true);
+        }
+    }
+
 
     void DisableBall(GameObject ball) {
         var ballRB = ball.GetComponent<Rigidbody>();
@@ -129,6 +144,7 @@ public class BallManager : MonoBehaviour
         GameObject ball = null;
         if (ballPool.Count > 0) {
             ball = ballPool.Pop();
+            ball.SetActive(true);
         } else {
             ball = Instantiate(_ballPrefab);
             ball.GetComponent<BallController>().BallID = _maxBallID;

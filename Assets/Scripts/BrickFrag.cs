@@ -85,6 +85,18 @@ public class BrickFrag : MonoBehaviour
 
     bool brickAlreadyHit = false;
 
+    void OnEnable() {
+        GameController.onPauseGame += SetBrickInvisible;
+        GameController.onResumeGame += SetBrickVisible;
+        GameController.onGameOver += SetBrickInvisible;
+    }
+
+    void OnDisable() {
+        GameController.onPauseGame -= SetBrickInvisible;
+        GameController.onResumeGame -= SetBrickVisible;
+        GameController.onGameOver -= SetBrickInvisible;
+    }
+
 
 
     private void Awake() {
@@ -95,6 +107,14 @@ public class BrickFrag : MonoBehaviour
         cam = Camera.main.gameObject;
         fragSpawner = GameObject.Find("Frag Spawner").GetComponent<FragSpawner>();
         _arenaManager = GameObject.Find("Arena").GetComponent<ArenaManager>();
+    }
+
+    void SetBrickVisible(){
+        if(brickAlreadyHit) return;
+        gameObject.GetComponent<Renderer>().enabled = true;
+    }
+    void SetBrickInvisible(){
+        gameObject.GetComponent<Renderer>().enabled = false;
     }
 
 

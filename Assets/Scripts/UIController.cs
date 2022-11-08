@@ -244,7 +244,8 @@ public class UIController : MonoBehaviour
     void ShowRunningGameUI() {
         _wall1.SetActive(true);
         _wall2.SetActive(true);
-        _racket.SetActive(true);
+        // SetTargetVisible(_wall1);
+        // SetTargetVisible(_wall2);
         _gameTitle.enabled = false;
         _pausedText.enabled = false;
         _gameOverBigText.enabled = false;
@@ -262,8 +263,8 @@ public class UIController : MonoBehaviour
         SetOnlyScreenActive(_startScreen);
     }
     void ShowPauseScreen() {
-        _wall1.SetActive(false);
-        _wall2.SetActive(false);
+        // SetTargetInvisible(_wall1);
+        // SetTargetInvisible(_wall2);
         _pausedText.enabled = true;
         _uIMenuActive = true;
         _timerPointsUI.SetActive(false);
@@ -271,11 +272,24 @@ public class UIController : MonoBehaviour
         _ballsRemainingUI.SetActive(false);
         SetOnlyScreenActive(_pauseScreen);
     }
+    void SetTargetInvisible(GameObject Target)
+    {
+        foreach (Transform child in Target.transform)
+        {
+            child.gameObject.GetComponent<Renderer>().enabled = false;
+        }
+    }
+    void SetTargetVisible(GameObject Target)
+    {
+        foreach (Transform child in Target.transform)
+        {
+            child.gameObject.GetComponent<Renderer>().enabled = true;
+        }
+    }
 
     void GameOverUIActions(){
         _wall1.SetActive(false);
         _wall2.SetActive(false);
-        _racket.SetActive(false);
         _timerPointsUI.SetActive(false);
         _powerUpsUI.SetActive(false);
         _ballsRemainingUI.SetActive(false);
