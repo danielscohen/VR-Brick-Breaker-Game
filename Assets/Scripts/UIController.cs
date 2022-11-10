@@ -51,6 +51,7 @@ public class UIController : MonoBehaviour
     [SerializeField] GameObject _beginnerHighScoreScreen;
     [SerializeField] GameObject _normalHighScoreScreen;
     [SerializeField] GameObject _expertHighScoreScreen;
+    [SerializeField] GameObject _BallHeldPauseScreen;
     [SerializeField] GameObject _fireworks;
     [SerializeField] TMP_InputField _highScoreNameInput;
     [SerializeField] Transform _highScoreEntry;
@@ -309,6 +310,14 @@ public class UIController : MonoBehaviour
         AudioManager.Instance.ResetGameMusicSpeed();
         StopCoroutine(FlashTimer());
 
+    }
+
+    public IEnumerator ShowBallHeldPauseScreen(){
+        _uIMenuActive = true;
+        _BallHeldPauseScreen.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        _BallHeldPauseScreen.SetActive(false);
+        _uIMenuActive = false;
     }
 
     public void ShowGameOverScreen(GameOverReason reason) {

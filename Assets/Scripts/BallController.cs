@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class BallController : MonoBehaviour
 {
@@ -49,6 +50,16 @@ public class BallController : MonoBehaviour
             ballRb.velocity *= 0.80f;
         }
         
+    }
+    public void OnBallStartBeingHeld(SelectEnterEventArgs args){
+        if(args.interactorObject is XRDirectInteractor){
+            GameController.Instance.BallIsBeingHeld = true;
+        }
+    }
+    public void OnBallStoppedBeingHeld(SelectExitEventArgs args){
+        if(args.interactorObject is XRDirectInteractor){
+            GameController.Instance.BallIsBeingHeld = false;
+        }
     }
 
     public void SetBallVisible(){

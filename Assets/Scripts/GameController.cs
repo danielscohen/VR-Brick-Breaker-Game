@@ -17,6 +17,7 @@ public class GameController : MonoBehaviour
     public static GameController Instance { get; private set; }
     public Difficulty GameDifficulty { get; private set; }
     public GameState CurrentGameState { get; private set; }
+    public bool BallIsBeingHeld { get; set; }
 
     [SerializeField] InputActionReference pauseReference;
     [SerializeField] InputActionReference endGameRef;
@@ -74,6 +75,7 @@ public class GameController : MonoBehaviour
 
 
         CurrentGameState = GameState.Started;
+        BallIsBeingHeld = false;
         if(PersistentValues.IsFirstScene){
             GameDifficulty = Difficulty.Normal;
         } 
@@ -115,6 +117,7 @@ public class GameController : MonoBehaviour
         AudioManager.Instance.PlayAudio(AudioReason.GameStarted);
         onStartGame?.Invoke();
         onResumeGame?.Invoke();
+        BallIsBeingHeld = false;
     }
 
     void TestPLayerPrefs(){
@@ -162,12 +165,17 @@ public class GameController : MonoBehaviour
         onResumeGame?.Invoke();
     }
     void PauseGame() {
-        Time.timeScale = 0;
+        if(BallIsBeingHeld){
+            StartCoroutine(UIController.Instance.ShowBallHeldPauseScreen());
+            return;
+        }
         ResetPlayerPosition();
         CurrentGameState = GameState.Paused;
         AudioManager.Instance.PlayAudio(AudioReason.GamePaused);
         onPauseGame?.Invoke();
+        Time.timeScale = 0;
     }
+
 
     void SetTimeScaleToZero() {
         Time.timeScale = 0;

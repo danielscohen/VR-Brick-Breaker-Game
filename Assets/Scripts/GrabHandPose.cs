@@ -20,6 +20,11 @@ public class GrabHandPose : MonoBehaviour
     Quaternion[] startingFingerRotation;
     Quaternion[] finalFingerRotation;
     // Start is called before the first frame update
+    void OnEnable() {
+    }
+
+    void OnDisable() {
+    }
     void Start()
     {
         XRGrabInteractable grabInteractable = GetComponent<XRGrabInteractable>();

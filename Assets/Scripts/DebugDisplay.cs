@@ -15,6 +15,6 @@ public class DebugDisplay : MonoBehaviour
     }
 
     void HandleLog(string logString, string stackTrace, LogType type){
-        display.text = logString;
+        display.text = $"{logString}\n{stackTrace}";
     }
 }
