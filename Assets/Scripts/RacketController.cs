@@ -27,6 +27,14 @@ public class RacketController : MonoBehaviour
         transform.position = _socketLoc.position;
         transform.rotation = Quaternion.identity;
     }
+
+    public void EnableCollisionsWithBalls(SelectExitEventArgs args){
+        Physics.IgnoreLayerCollision(3, 8, false);
+    }
+    public void DisableCollisionsWithBalls(SelectEnterEventArgs args){
+        Physics.IgnoreLayerCollision(3, 8, true);
+    }
+
     void SetRacketInvisible(){
         foreach(Transform child in gameObject.transform){
             if(child.CompareTag("Racket")){

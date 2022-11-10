@@ -88,17 +88,33 @@ public class BrickFrag : MonoBehaviour
     AudioSource _fracAudioSource;
 
     bool _isPLayingFracAudio = false;
+    GameObject _fracSpark;
+    bool _fracSparkIsActive = false;
 
     void OnEnable() {
         GameController.onPauseGame += SetBrickInvisible;
+        GameController.onPauseGame += PauseFracAudio;
+        GameController.onPauseGame += SetFracLinesInvisible;
         GameController.onResumeGame += SetBrickVisible;
+        GameController.onResumeGame += ResumeFracAudio;
+        GameController.onResumeGame += SetFracLinesVisible;
         GameController.onGameOver += SetBrickInvisible;
+        GameController.onGameOver += PauseFracAudio;
+        GameController.onGameOver += SetFracLinesInvisible;
+        GameController.onGameOver += DeleteFracSpark;
     }
 
     void OnDisable() {
         GameController.onPauseGame -= SetBrickInvisible;
+        GameController.onPauseGame -= PauseFracAudio;
+        GameController.onPauseGame -= SetFracLinesInvisible;
         GameController.onResumeGame -= SetBrickVisible;
+        GameController.onResumeGame -= ResumeFracAudio;
+        GameController.onResumeGame -= SetFracLinesVisible;
         GameController.onGameOver -= SetBrickInvisible;
+        GameController.onGameOver -= PauseFracAudio;
+        GameController.onGameOver -= SetFracLinesInvisible;
+        GameController.onGameOver -= DeleteFracSpark;
     }
 
 
@@ -129,6 +145,22 @@ public class BrickFrag : MonoBehaviour
     void ResumeFracAudio(){
         if(_isPLayingFracAudio){
             _fracAudioSource.Play();
+        }
+    }
+    void DeleteFracSpark(){
+        if(_fracSparkIsActive){
+            Destroy(_fracSpark);
+        }
+    }
+
+    void SetFracLinesInvisible(){
+        foreach(LineRenderer lineRen in fracRenderers){
+            lineRen.enabled = false;
+        }
+    }
+    void SetFracLinesVisible(){
+        foreach(LineRenderer lineRen in fracRenderers){
+            lineRen.enabled = true;
         }
     }
 
@@ -347,7 +379,8 @@ public class BrickFrag : MonoBehaviour
             lineR.positionCount = 0;
         }
 
-        GameObject spark = Instantiate(_sparkPrefab);
+        _fracSpark = Instantiate(_sparkPrefab);
+        _fracSparkIsActive = true;
         
         int max = GetMaxEpoch();
         for (int i = 0; i < max; i++) {
@@ -356,7 +389,7 @@ public class BrickFrag : MonoBehaviour
                 if (index != -1) {
                     fracRenderers[j].positionCount = index + 1;
                     Vector3 loc = transform.TransformPoint(fracDrawPts[j][index].pt);
-                    spark.transform.position = loc;
+                    _fracSpark.transform.position = loc;
                     fracRenderers[j].SetPosition(index, fracRenderers[j].transform.InverseTransformPoint(loc));
                 }
             }
@@ -365,7 +398,8 @@ public class BrickFrag : MonoBehaviour
             }  
         }
 
-        Destroy(spark);
+        _fracSparkIsActive = false;
+        Destroy(_fracSpark);
 
 
     }

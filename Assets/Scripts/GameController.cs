@@ -82,7 +82,7 @@ public class GameController : MonoBehaviour
         else{
             GameDifficulty = PersistentValues.GameDifficulty;
         }
-        Time.timeScale = 0;
+        // Time.timeScale = 0;
     }
 
     void Start() {
@@ -111,7 +111,7 @@ public class GameController : MonoBehaviour
     }
 
     public void StartGame() {
-        Time.timeScale = 1;
+        // Time.timeScale = 1;
         // StartCoroutine(RotatePlayerUpwards());
         CurrentGameState = GameState.Running;
         AudioManager.Instance.PlayAudio(AudioReason.GameStarted);
@@ -189,7 +189,7 @@ public class GameController : MonoBehaviour
     }
 
     public void EndGame(GameOverReason reason) {
-        Time.timeScale = 0;
+        // Time.timeScale = 0;
         ResetPlayerPosition();
         CurrentGameState = GameState.GameOver;
         onGameOver?.Invoke();
