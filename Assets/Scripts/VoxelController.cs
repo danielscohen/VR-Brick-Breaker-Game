@@ -9,15 +9,15 @@ public class VoxelController : MonoBehaviour
     Renderer voxRen;
 
     void OnEnable() {
-        GameController.onPauseGame += SetVoxInvisible;
-        GameController.onResumeGame += SetVoxVisible;
-        GameController.onGameOver += SetVoxInvisible;
+        // GameController.onPauseGame += SetVoxInvisible;
+        // GameController.onResumeGame += SetVoxVisible;
+        // GameController.onGameOver += SetVoxInvisible;
     }
 
     void OnDisable() {
-        GameController.onPauseGame -= SetVoxInvisible;
-        GameController.onResumeGame -= SetVoxVisible;
-        GameController.onGameOver -= SetVoxInvisible;
+        // GameController.onPauseGame -= SetVoxInvisible;
+        // GameController.onResumeGame -= SetVoxVisible;
+        // GameController.onGameOver -= SetVoxInvisible;
         _visibleInScene = false;
     }
     private void Awake() {

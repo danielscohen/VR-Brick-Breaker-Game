@@ -41,6 +41,7 @@ public class RacketController : MonoBehaviour
                 child.gameObject.GetComponent<Renderer>().enabled = false;
             }
         }
+        transform.position = new Vector3(-1000f, -1000f, -1000f);
     }
     void SetRacketVisible(){
         foreach(Transform child in gameObject.transform){
@@ -48,8 +49,13 @@ public class RacketController : MonoBehaviour
                 child.gameObject.GetComponent<Renderer>().enabled = true;
             }
         }
+        transform.position = _socketLoc.position;
+
     }
     void EnableRacket(){
         gameObject.SetActive(true);
+    }
+    void DisableRacket(){
+        gameObject.SetActive(false);
     }
 }

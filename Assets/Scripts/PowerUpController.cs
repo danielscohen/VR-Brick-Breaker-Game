@@ -19,15 +19,15 @@ public class PowerUpController : MonoBehaviour
     Renderer[] _powerUpRens;
     bool _firstTrigger = true;
     void OnEnable() {
-        GameController.onPauseGame += SetPowerUpInvisible;
-        GameController.onResumeGame += SetPowerUpVisible;
-        GameController.onGameOver += SetPowerUpInvisible;
+        // GameController.onPauseGame += SetPowerUpInvisible;
+        // GameController.onResumeGame += SetPowerUpVisible;
+        // GameController.onGameOver += SetPowerUpInvisible;
     }
 
     void OnDisable() {
-        GameController.onPauseGame -= SetPowerUpInvisible;
-        GameController.onResumeGame -= SetPowerUpVisible;
-        GameController.onGameOver -= SetPowerUpInvisible;
+        // GameController.onPauseGame -= SetPowerUpInvisible;
+        // GameController.onResumeGame -= SetPowerUpVisible;
+        // GameController.onGameOver -= SetPowerUpInvisible;
     }
 
 

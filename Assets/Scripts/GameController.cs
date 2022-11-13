@@ -27,6 +27,7 @@ public class GameController : MonoBehaviour
     int _score;
 
     Vector3 _playerStartPos;
+    Vector3 _playerMenuPos;
     Vector3 _playerLastPos;
 
 
@@ -37,6 +38,10 @@ public class GameController : MonoBehaviour
     private void OnDisable() {
         pauseReference.action.started -= OnPausePressed;
         endGameRef.action.started -= onEndGame;
+    }
+
+    private void Update() {
+        Debug.Log(_player.transform.position);
     }
 
 
@@ -57,7 +62,7 @@ public class GameController : MonoBehaviour
 
     void ResetPlayerPosition(){
         _playerLastPos = _player.transform.position;
-        _player.transform.position = _playerStartPos;
+        _player.transform.position = _playerMenuPos;
     }
     void RestorePlayerPosition(){
         _player.transform.position = _playerLastPos;
@@ -82,12 +87,12 @@ public class GameController : MonoBehaviour
         else{
             GameDifficulty = PersistentValues.GameDifficulty;
         }
-        // Time.timeScale = 0;
+        Time.timeScale = 0;
     }
 
     void Start() {
         onLoadGame?.Invoke();
-        _playerStartPos = _player.transform.position;
+        _playerMenuPos = _player.transform.position;
         AudioManager.Instance.PlayGameMusic();
         // TestPLayerPrefs();
     }
@@ -111,10 +116,11 @@ public class GameController : MonoBehaviour
     }
 
     public void StartGame() {
-        // Time.timeScale = 1;
+        Time.timeScale = 1;
         // StartCoroutine(RotatePlayerUpwards());
         CurrentGameState = GameState.Running;
         AudioManager.Instance.PlayAudio(AudioReason.GameStarted);
+        _player.transform.position = new Vector3(_playerMenuPos.x, _playerMenuPos.y, _playerMenuPos.z - 1000f);
         onStartGame?.Invoke();
         onResumeGame?.Invoke();
         BallIsBeingHeld = false;
@@ -189,7 +195,7 @@ public class GameController : MonoBehaviour
     }
 
     public void EndGame(GameOverReason reason) {
-        // Time.timeScale = 0;
+        Time.timeScale = 0;
         ResetPlayerPosition();
         CurrentGameState = GameState.GameOver;
         onGameOver?.Invoke();

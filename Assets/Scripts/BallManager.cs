@@ -153,11 +153,11 @@ public class BallManager : MonoBehaviour
 
 
         activeBalls.Add(ball);
-        _ballsRemaining--;
-        onBallsLeftCountChange?.Invoke(_ballsRemaining);
     }
 
     public void OnBallRemovedFromLoader(SelectExitEventArgs args){
+        _ballsRemaining--;
+        onBallsLeftCountChange?.Invoke(_ballsRemaining);
         if(_ballsRemaining > 0){
             LoadNewBall();
         }

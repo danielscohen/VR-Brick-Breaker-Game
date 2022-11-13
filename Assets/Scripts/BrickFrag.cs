@@ -92,29 +92,29 @@ public class BrickFrag : MonoBehaviour
     bool _fracSparkIsActive = false;
 
     void OnEnable() {
-        GameController.onPauseGame += SetBrickInvisible;
+        // GameController.onPauseGame += SetBrickInvisible;
         GameController.onPauseGame += PauseFracAudio;
-        GameController.onPauseGame += SetFracLinesInvisible;
-        GameController.onResumeGame += SetBrickVisible;
+        // GameController.onPauseGame += SetFracLinesInvisible;
+        // GameController.onResumeGame += SetBrickVisible;
         GameController.onResumeGame += ResumeFracAudio;
-        GameController.onResumeGame += SetFracLinesVisible;
-        GameController.onGameOver += SetBrickInvisible;
+        // GameController.onResumeGame += SetFracLinesVisible;
+        // GameController.onGameOver += SetBrickInvisible;
         GameController.onGameOver += PauseFracAudio;
-        GameController.onGameOver += SetFracLinesInvisible;
-        GameController.onGameOver += DeleteFracSpark;
+        // GameController.onGameOver += SetFracLinesInvisible;
+        // GameController.onGameOver += DeleteFracSpark;
     }
 
     void OnDisable() {
-        GameController.onPauseGame -= SetBrickInvisible;
+        // GameController.onPauseGame -= SetBrickInvisible;
         GameController.onPauseGame -= PauseFracAudio;
-        GameController.onPauseGame -= SetFracLinesInvisible;
-        GameController.onResumeGame -= SetBrickVisible;
+        // GameController.onPauseGame -= SetFracLinesInvisible;
+        // GameController.onResumeGame -= SetBrickVisible;
         GameController.onResumeGame -= ResumeFracAudio;
-        GameController.onResumeGame -= SetFracLinesVisible;
-        GameController.onGameOver -= SetBrickInvisible;
+        // GameController.onResumeGame -= SetFracLinesVisible;
+        // GameController.onGameOver -= SetBrickInvisible;
         GameController.onGameOver -= PauseFracAudio;
-        GameController.onGameOver -= SetFracLinesInvisible;
-        GameController.onGameOver -= DeleteFracSpark;
+        // GameController.onGameOver -= SetFracLinesInvisible;
+        // GameController.onGameOver -= DeleteFracSpark;
     }
 
 

@@ -157,7 +157,7 @@ public class UIController : MonoBehaviour
         for(int i = 0; i < 8; i++){
             float x = Random.Range(-2f, 2f);
             float y = Random.Range(-1.7f, 1.7f);
-            float z = Random.Range(4.7f, 8f);
+            float z = Random.Range(1004.7f, 1008f);
             Instantiate(_fireworks, new Vector3(x, y, z), Quaternion.identity);
             AudioManager.Instance.PlayAudio(AudioTypes.Fireworks, new Vector3(x, y, z));
             yield return new WaitForSecondsRealtime(0.2f);
@@ -272,8 +272,8 @@ public class UIController : MonoBehaviour
     }
     public void ShowStartScreen() {
         _uIMenuActive = true;
-        _timerPointsUI.SetActive(false);
-        _ballsRemainingUI.SetActive(false);
+        // _timerPointsUI.SetActive(false);
+        // _ballsRemainingUI.SetActive(false);
         SetOnlyScreenActive(_startScreen);
     }
     void ShowPauseScreen() {
@@ -281,9 +281,9 @@ public class UIController : MonoBehaviour
         // SetTargetInvisible(_wall2);
         _pausedText.enabled = true;
         _uIMenuActive = true;
-        _timerPointsUI.SetActive(false);
-        _powerUpsUI.SetActive(false);
-        _ballsRemainingUI.SetActive(false);
+        // _timerPointsUI.SetActive(false);
+        // _powerUpsUI.SetActive(false);
+        // _ballsRemainingUI.SetActive(false);
         SetOnlyScreenActive(_pauseScreen);
     }
     void SetTargetInvisible(GameObject Target)
@@ -302,11 +302,11 @@ public class UIController : MonoBehaviour
     }
 
     void GameOverUIActions(){
-        _wall1.SetActive(false);
-        _wall2.SetActive(false);
-        _timerPointsUI.SetActive(false);
-        _powerUpsUI.SetActive(false);
-        _ballsRemainingUI.SetActive(false);
+        // _wall1.SetActive(false);
+        // _wall2.SetActive(false);
+        // _timerPointsUI.SetActive(false);
+        // _powerUpsUI.SetActive(false);
+        // _ballsRemainingUI.SetActive(false);
         AudioManager.Instance.ResetGameMusicSpeed();
         StopCoroutine(FlashTimer());
 
