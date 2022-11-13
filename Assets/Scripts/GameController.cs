@@ -40,9 +40,9 @@ public class GameController : MonoBehaviour
         endGameRef.action.started -= onEndGame;
     }
 
-    private void Update() {
-        Debug.Log(_player.transform.position);
-    }
+    // private void Update() {
+    //     Debug.Log(_player.transform.position);
+    // }
 
 
 
@@ -87,14 +87,20 @@ public class GameController : MonoBehaviour
         else{
             GameDifficulty = PersistentValues.GameDifficulty;
         }
-        Time.timeScale = 0;
+        // Time.timeScale = 0;
     }
 
     void Start() {
+        StartCoroutine(LoadGame());
+    }
+
+    IEnumerator LoadGame(){
+        AudioManager.Instance.PlayGameMusic();
+        yield return StartCoroutine(UIController.Instance.AnimateEnterTitleText());
         onLoadGame?.Invoke();
         _playerMenuPos = _player.transform.position;
-        AudioManager.Instance.PlayGameMusic();
         // TestPLayerPrefs();
+
     }
 
     // private void Update() {
@@ -116,8 +122,13 @@ public class GameController : MonoBehaviour
     }
 
     public void StartGame() {
-        Time.timeScale = 1;
+        // Time.timeScale = 1;
         // StartCoroutine(RotatePlayerUpwards());
+        StartCoroutine(StartGameCo());
+    }
+
+    IEnumerator StartGameCo(){
+        yield return StartCoroutine(UIController.Instance.AnimateExitTitleText());
         CurrentGameState = GameState.Running;
         AudioManager.Instance.PlayAudio(AudioReason.GameStarted);
         _player.transform.position = new Vector3(_playerMenuPos.x, _playerMenuPos.y, _playerMenuPos.z - 1000f);
@@ -195,12 +206,16 @@ public class GameController : MonoBehaviour
     }
 
     public void EndGame(GameOverReason reason) {
-        Time.timeScale = 0;
+        StartCoroutine(EndGameCo(reason));
+    }
+
+    IEnumerator EndGameCo(GameOverReason reason){
         ResetPlayerPosition();
         CurrentGameState = GameState.GameOver;
         onGameOver?.Invoke();
         if(reason == GameOverReason.GameWon){
             AudioManager.Instance.PlayAudio(AudioReason.GameWon);
+            yield return StartCoroutine(UIController.Instance.AnimateEnterGameWonText());
             StartCoroutine(UIController.Instance.PlayFireworks());
             _score = GameObject.Find("Player Points Manager").GetComponent<PlayerPointsManager>().GetScore();
             _highScores = HighScoresManager.LoadHighScores(GameDifficulty);
@@ -214,8 +229,10 @@ public class GameController : MonoBehaviour
             }
         } else{
             AudioManager.Instance.PlayAudio(AudioReason.GameLost);
+            yield return StartCoroutine(UIController.Instance.AnimateEnterGameLostText());
             UIController.Instance.ShowGameOverScreen(reason);
         }
+
 
     }
 

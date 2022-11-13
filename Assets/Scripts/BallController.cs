@@ -36,7 +36,7 @@ public class BallController : MonoBehaviour
 
     private void Update() {
         if(transform.position.z < -0.5){
-            // Debug.Log("Delete Ball");
+            Debug.Log("Delete Ball");
             onBallLost?.Invoke(BallID);
         }
         // if(ballRb.velocity.sqrMagnitude > 0){

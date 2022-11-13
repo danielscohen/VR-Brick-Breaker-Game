@@ -36,10 +36,10 @@ public class UIController : MonoBehaviour
     [SerializeField] GameObject _wall1;
     [SerializeField] GameObject _wall2;
     [SerializeField] GameObject _racket;
-    [SerializeField] TextMeshPro _gameTitle;
-    [SerializeField] TextMeshPro _pausedText;
-    [SerializeField] TextMeshPro _gameOverBigText;
-    [SerializeField] TextMeshPro _victoryText;
+    [SerializeField] GameObject _gameTitle;
+    [SerializeField] GameObject _pausedText;
+    [SerializeField] GameObject _gameOverBigText;
+    [SerializeField] GameObject _victoryText;
     [SerializeField] Image _doublePointsTimer;
     [SerializeField] Image _negativePointsTimer;
     [SerializeField] Image _moveTimer;
@@ -95,12 +95,9 @@ public class UIController : MonoBehaviour
         _movePanel.SetActive(false);
         _wall1.SetActive(false);
         _wall2.SetActive(false);
-        _gameTitle.enabled = true;
-        _pausedText.enabled = false;
-        _gameOverBigText.enabled = false;
-        _victoryText.enabled = false;
 
     }
+
 
     void CollectGameScreens(){
         _gameScreens = new List<GameObject>();
@@ -256,19 +253,44 @@ public class UIController : MonoBehaviour
     }
 
     void ShowRunningGameUI() {
+        _pausedText.transform.GetChild(0).transform.gameObject.SetActive(false);
         _wall1.SetActive(true);
         _wall2.SetActive(true);
         // SetTargetVisible(_wall1);
         // SetTargetVisible(_wall2);
-        _gameTitle.enabled = false;
-        _pausedText.enabled = false;
-        _gameOverBigText.enabled = false;
-        _victoryText.enabled = false;
+        _gameTitle.SetActive(true);
         _uIMenuActive = false;
         _timerPointsUI.SetActive(true);
         _powerUpsUI.SetActive(true);
         _ballsRemainingUI.SetActive(true);
         DeactivateAllScreens();
+    }
+
+    public IEnumerator AnimateEnterTitleText(){
+        yield return StartCoroutine(AnimateEnterBigText(_gameTitle));
+    }
+    public IEnumerator AnimateExitTitleText(){
+        yield return StartCoroutine(AnimateExitBigText(_gameTitle));
+    }
+
+    public IEnumerator AnimateEnterGameWonText(){
+        yield return StartCoroutine(AnimateEnterBigText(_victoryText));
+    }
+    public IEnumerator AnimateExitGameWonText(){
+        yield return StartCoroutine(AnimateExitBigText(_victoryText));
+    }
+    public IEnumerator AnimateEnterGameLostText(){
+        yield return StartCoroutine(AnimateEnterBigText(_gameOverBigText));
+    }
+    public IEnumerator AnimateExitGameLostText(){
+        yield return StartCoroutine(AnimateExitBigText(_gameOverBigText));
+    }
+    IEnumerator AnimateEnterBigText(GameObject text){
+        text.SetActive(true);
+        yield return StartCoroutine(text.GetComponent<BigTextAnimator>().AnimateEnter());
+    }
+    IEnumerator AnimateExitBigText(GameObject text){
+        yield return StartCoroutine(text.GetComponent<BigTextAnimator>().AnimateExit());
     }
     public void ShowStartScreen() {
         _uIMenuActive = true;
@@ -279,7 +301,7 @@ public class UIController : MonoBehaviour
     void ShowPauseScreen() {
         // SetTargetInvisible(_wall1);
         // SetTargetInvisible(_wall2);
-        _pausedText.enabled = true;
+        _pausedText.transform.GetChild(0).transform.gameObject.SetActive(true);
         _uIMenuActive = true;
         // _timerPointsUI.SetActive(false);
         // _powerUpsUI.SetActive(false);
@@ -328,24 +350,19 @@ public class UIController : MonoBehaviour
 
         switch (reason) {
             case GameOverReason.GameWon:
-                _victoryText.enabled = true;
                 gameOverText = $"You Got a Score of: {_playerHealthText.text}!";
                 break;
             case GameOverReason.GameWonHS:
                 SetOnlyScreenActive(_gameOverScreenHS);
-                _victoryText.enabled = true;
                 gameOverText = $"You Got a Highscore of {_playerHealthText.text}!";
                 break;
             case GameOverReason.HealthRanOut:
-                _gameOverBigText.enabled = true;
                 gameOverText = "You Ran Out of Health!";
                 break;
             case GameOverReason.TimeRanOut:
-                _gameOverBigText.enabled = true;
                 gameOverText = "You Ran Out of Time!";
                 break;
             default:
-                _gameOverBigText.enabled = true;
                 gameOverText = "You Ran Out of Orbs!";
                 break;
         }

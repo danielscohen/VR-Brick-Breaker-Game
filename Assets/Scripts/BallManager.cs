@@ -12,6 +12,7 @@ public class BallManager : MonoBehaviour
     [SerializeField] GameObject _ballPrefab;
     [SerializeField] GameObject _throwPt;
     [SerializeField] Transform _loadLoc;
+    [SerializeField] GameObject _ballSocket;
     [SerializeField] float throwForce;
     [SerializeField] float throwUpwordForce;
 
@@ -160,6 +161,8 @@ public class BallManager : MonoBehaviour
         onBallsLeftCountChange?.Invoke(_ballsRemaining);
         if(_ballsRemaining > 0){
             LoadNewBall();
+        } else {
+            _ballSocket.SetActive(false);
         }
     }
     // private void Throw(float timePressed) {
