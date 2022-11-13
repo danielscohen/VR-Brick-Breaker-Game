@@ -28074,6 +28074,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PowerUpManager_Start_m7F3413FDDEEF362EB4
 		Il2CppCodeGenWriteBarrier((void**)(&__this->____types_9), (void*)L_2);
 		// _timeRemaining = new Dictionary<PowerUpType, float>{
 		//     {PowerUpType.MoveWalls, _powerUpTime},
+		//     {PowerUpType.RotateWalls, _powerUpTime},
 		//     {PowerUpType.DoublePoints, _powerUpTime},
 		//     {PowerUpType.NegativePts, _powerUpTime}
 		// };
@@ -28087,32 +28088,40 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PowerUpManager_Start_m7F3413FDDEEF362EB4
 		Dictionary_2_t149ED1D7FEC466663C88E94E987ACB8DBBF3D55E* L_6 = L_4;
 		float L_7 = __this->____powerUpTime_5;
 		NullCheck(L_6);
-		Dictionary_2_Add_mFC969ED7F36F1B5BCE66AA4DFA9E8F1DF2EB857E(L_6, 1, L_7, Dictionary_2_Add_mFC969ED7F36F1B5BCE66AA4DFA9E8F1DF2EB857E_RuntimeMethod_var);
+		Dictionary_2_Add_mFC969ED7F36F1B5BCE66AA4DFA9E8F1DF2EB857E(L_6, 4, L_7, Dictionary_2_Add_mFC969ED7F36F1B5BCE66AA4DFA9E8F1DF2EB857E_RuntimeMethod_var);
 		Dictionary_2_t149ED1D7FEC466663C88E94E987ACB8DBBF3D55E* L_8 = L_6;
 		float L_9 = __this->____powerUpTime_5;
 		NullCheck(L_8);
-		Dictionary_2_Add_mFC969ED7F36F1B5BCE66AA4DFA9E8F1DF2EB857E(L_8, 2, L_9, Dictionary_2_Add_mFC969ED7F36F1B5BCE66AA4DFA9E8F1DF2EB857E_RuntimeMethod_var);
-		__this->____timeRemaining_10 = L_8;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->____timeRemaining_10), (void*)L_8);
+		Dictionary_2_Add_mFC969ED7F36F1B5BCE66AA4DFA9E8F1DF2EB857E(L_8, 1, L_9, Dictionary_2_Add_mFC969ED7F36F1B5BCE66AA4DFA9E8F1DF2EB857E_RuntimeMethod_var);
+		Dictionary_2_t149ED1D7FEC466663C88E94E987ACB8DBBF3D55E* L_10 = L_8;
+		float L_11 = __this->____powerUpTime_5;
+		NullCheck(L_10);
+		Dictionary_2_Add_mFC969ED7F36F1B5BCE66AA4DFA9E8F1DF2EB857E(L_10, 2, L_11, Dictionary_2_Add_mFC969ED7F36F1B5BCE66AA4DFA9E8F1DF2EB857E_RuntimeMethod_var);
+		__this->____timeRemaining_10 = L_10;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->____timeRemaining_10), (void*)L_10);
 		// _isPowerUpActive = new Dictionary<PowerUpType, bool>{
 		//     {PowerUpType.MoveWalls, false},
+		//     {PowerUpType.RotateWalls, false},
 		//     {PowerUpType.DoublePoints, false},
 		//     {PowerUpType.NegativePts, false}
 		// };
-		Dictionary_2_t2BDC04CC8D2895AD76477DED42C9D3388A45C1C3* L_10 = (Dictionary_2_t2BDC04CC8D2895AD76477DED42C9D3388A45C1C3*)il2cpp_codegen_object_new(Dictionary_2_t2BDC04CC8D2895AD76477DED42C9D3388A45C1C3_il2cpp_TypeInfo_var);
-		NullCheck(L_10);
-		Dictionary_2__ctor_m2B777EF134B57EA697C1F86C96B7318E2E8AB0FB(L_10, Dictionary_2__ctor_m2B777EF134B57EA697C1F86C96B7318E2E8AB0FB_RuntimeMethod_var);
-		Dictionary_2_t2BDC04CC8D2895AD76477DED42C9D3388A45C1C3* L_11 = L_10;
-		NullCheck(L_11);
-		Dictionary_2_Add_mC1D96E9D414E427BA4E0477003CBD16E0E8FFE8B(L_11, 3, (bool)0, Dictionary_2_Add_mC1D96E9D414E427BA4E0477003CBD16E0E8FFE8B_RuntimeMethod_var);
-		Dictionary_2_t2BDC04CC8D2895AD76477DED42C9D3388A45C1C3* L_12 = L_11;
+		Dictionary_2_t2BDC04CC8D2895AD76477DED42C9D3388A45C1C3* L_12 = (Dictionary_2_t2BDC04CC8D2895AD76477DED42C9D3388A45C1C3*)il2cpp_codegen_object_new(Dictionary_2_t2BDC04CC8D2895AD76477DED42C9D3388A45C1C3_il2cpp_TypeInfo_var);
 		NullCheck(L_12);
-		Dictionary_2_Add_mC1D96E9D414E427BA4E0477003CBD16E0E8FFE8B(L_12, 1, (bool)0, Dictionary_2_Add_mC1D96E9D414E427BA4E0477003CBD16E0E8FFE8B_RuntimeMethod_var);
+		Dictionary_2__ctor_m2B777EF134B57EA697C1F86C96B7318E2E8AB0FB(L_12, Dictionary_2__ctor_m2B777EF134B57EA697C1F86C96B7318E2E8AB0FB_RuntimeMethod_var);
 		Dictionary_2_t2BDC04CC8D2895AD76477DED42C9D3388A45C1C3* L_13 = L_12;
 		NullCheck(L_13);
-		Dictionary_2_Add_mC1D96E9D414E427BA4E0477003CBD16E0E8FFE8B(L_13, 2, (bool)0, Dictionary_2_Add_mC1D96E9D414E427BA4E0477003CBD16E0E8FFE8B_RuntimeMethod_var);
-		__this->____isPowerUpActive_11 = L_13;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->____isPowerUpActive_11), (void*)L_13);
+		Dictionary_2_Add_mC1D96E9D414E427BA4E0477003CBD16E0E8FFE8B(L_13, 3, (bool)0, Dictionary_2_Add_mC1D96E9D414E427BA4E0477003CBD16E0E8FFE8B_RuntimeMethod_var);
+		Dictionary_2_t2BDC04CC8D2895AD76477DED42C9D3388A45C1C3* L_14 = L_13;
+		NullCheck(L_14);
+		Dictionary_2_Add_mC1D96E9D414E427BA4E0477003CBD16E0E8FFE8B(L_14, 4, (bool)0, Dictionary_2_Add_mC1D96E9D414E427BA4E0477003CBD16E0E8FFE8B_RuntimeMethod_var);
+		Dictionary_2_t2BDC04CC8D2895AD76477DED42C9D3388A45C1C3* L_15 = L_14;
+		NullCheck(L_15);
+		Dictionary_2_Add_mC1D96E9D414E427BA4E0477003CBD16E0E8FFE8B(L_15, 1, (bool)0, Dictionary_2_Add_mC1D96E9D414E427BA4E0477003CBD16E0E8FFE8B_RuntimeMethod_var);
+		Dictionary_2_t2BDC04CC8D2895AD76477DED42C9D3388A45C1C3* L_16 = L_15;
+		NullCheck(L_16);
+		Dictionary_2_Add_mC1D96E9D414E427BA4E0477003CBD16E0E8FFE8B(L_16, 2, (bool)0, Dictionary_2_Add_mC1D96E9D414E427BA4E0477003CBD16E0E8FFE8B_RuntimeMethod_var);
+		__this->____isPowerUpActive_11 = L_16;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->____isPowerUpActive_11), (void*)L_16);
 		// }
 		return;
 	}

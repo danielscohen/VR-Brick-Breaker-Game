@@ -1348,52 +1348,60 @@ extern void WallLayerController_Start_mC382E1210FEE3E9C1358DBA3B93C551A8856E9CE 
 extern void WallLayerController_Update_m840A95C93DA1C58120E697025147216549E88FA8 (void);
 // 0x0000029C System.Void WallLayerController::.ctor()
 extern void WallLayerController__ctor_m9F2E5CC3BFDE3E7DF12499B32021931F732A36D7 (void);
-// 0x0000029D System.Void WallMover::OnEnable()
+// 0x0000029D System.Void WallMover::Start()
+extern void WallMover_Start_mB2B9E5CD0ACA40B653D393EA6B86128F980C60B5 (void);
+// 0x0000029E System.Void WallMover::Update()
+extern void WallMover_Update_m72B8791EAC0BFA933D802CE68CF2EF39735B3478 (void);
+// 0x0000029F System.Void WallMover::OnEnable()
 extern void WallMover_OnEnable_m311200F695A06EE852FF22794BB6525895FDA7CB (void);
-// 0x0000029E System.Void WallMover::OnDisable()
+// 0x000002A0 System.Void WallMover::OnDisable()
 extern void WallMover_OnDisable_m0843CA86DE98D36ABB6FD011E74ACB1538A56A4B (void);
-// 0x0000029F System.Void WallMover::Awake()
+// 0x000002A1 System.Void WallMover::Awake()
 extern void WallMover_Awake_m2D3973A2F35051668497B5051690FC09A9D5618C (void);
-// 0x000002A0 System.Void WallMover::StartMovingWall(PowerUpType)
+// 0x000002A2 System.Void WallMover::StartMovingWall(PowerUpType)
 extern void WallMover_StartMovingWall_m8B1AA03A43C43392E57752EE98EB72DF5F3A8219 (void);
-// 0x000002A1 System.Void WallMover::StopMovingWall(PowerUpType)
+// 0x000002A3 System.Void WallMover::StopMovingWall(PowerUpType)
 extern void WallMover_StopMovingWall_m894DB448AADAB024776373EF4B21DDD4D67196C1 (void);
-// 0x000002A2 System.Void WallMover::.ctor()
+// 0x000002A4 System.Void WallMover::StartRotatingWall(PowerUpType)
+extern void WallMover_StartRotatingWall_m1B6AC93DED950B4FB29872E1BAC59015FD69C1E4 (void);
+// 0x000002A5 System.Void WallMover::StopRotatingWall(PowerUpType)
+extern void WallMover_StopRotatingWall_mACFCF30EF5D94CC5B51731C1F44F38F2543492F4 (void);
+// 0x000002A6 System.Void WallMover::.ctor()
 extern void WallMover__ctor_m576FCAA120E828D3736FD7E942541226610FB0D5 (void);
-// 0x000002A3 System.Void LookCamera::Start()
+// 0x000002A7 System.Void LookCamera::Start()
 extern void LookCamera_Start_mE9289E1E6CB37C5254B8BCAA97DEF20F5B8E3D7B (void);
-// 0x000002A4 System.Void LookCamera::Update()
+// 0x000002A8 System.Void LookCamera::Update()
 extern void LookCamera_Update_m68E69B1B5A7045536596C77570DDBB111AC6DEE0 (void);
-// 0x000002A5 System.Void LookCamera::.ctor()
+// 0x000002A9 System.Void LookCamera::.ctor()
 extern void LookCamera__ctor_m14F0C4DDA1FF55558C400791F6361D35EA975CB4 (void);
-// 0x000002A6 System.Void Readme::.ctor()
+// 0x000002AA System.Void Readme::.ctor()
 extern void Readme__ctor_m69C325C4C171DCB0312B646A9034AA91EA8C39C6 (void);
-// 0x000002A7 System.Void Readme/Section::.ctor()
+// 0x000002AB System.Void Readme/Section::.ctor()
 extern void Section__ctor_m5F732533E4DFC0167D965E5F5DB332E46055399B (void);
-// 0x000002A8 System.Void OWS.ObjectPooling.ObjectPool`1::.ctor(UnityEngine.GameObject,System.Int32)
-// 0x000002A9 System.Void OWS.ObjectPooling.ObjectPool`1::.ctor(UnityEngine.GameObject,System.Action`1<T>,System.Action`1<T>,System.Int32)
-// 0x000002AA System.Int32 OWS.ObjectPooling.ObjectPool`1::get_pooledCount()
-// 0x000002AB T OWS.ObjectPooling.ObjectPool`1::Pull()
-// 0x000002AC T OWS.ObjectPooling.ObjectPool`1::Pull(UnityEngine.Vector3)
-// 0x000002AD T OWS.ObjectPooling.ObjectPool`1::Pull(UnityEngine.Vector3,UnityEngine.Quaternion)
-// 0x000002AE UnityEngine.GameObject OWS.ObjectPooling.ObjectPool`1::PullGameObject()
-// 0x000002AF UnityEngine.GameObject OWS.ObjectPooling.ObjectPool`1::PullGameObject(UnityEngine.Vector3)
-// 0x000002B0 UnityEngine.GameObject OWS.ObjectPooling.ObjectPool`1::PullGameObject(UnityEngine.Vector3,UnityEngine.Quaternion)
-// 0x000002B1 System.Void OWS.ObjectPooling.ObjectPool`1::Push(T)
-// 0x000002B2 System.Void OWS.ObjectPooling.ObjectPool`1::Spawn(System.Int32)
-// 0x000002B3 T OWS.ObjectPooling.IPool`1::Pull()
-// 0x000002B4 System.Void OWS.ObjectPooling.IPool`1::Push(T)
-// 0x000002B5 System.Void OWS.ObjectPooling.IPoolable`1::Initialize(System.Action`1<T>)
-// 0x000002B6 System.Void OWS.ObjectPooling.IPoolable`1::ReturnToPool()
-// 0x000002B7 System.Void OWS.ObjectPooling.PoolObject::OnDisable()
+// 0x000002AC System.Void OWS.ObjectPooling.ObjectPool`1::.ctor(UnityEngine.GameObject,System.Int32)
+// 0x000002AD System.Void OWS.ObjectPooling.ObjectPool`1::.ctor(UnityEngine.GameObject,System.Action`1<T>,System.Action`1<T>,System.Int32)
+// 0x000002AE System.Int32 OWS.ObjectPooling.ObjectPool`1::get_pooledCount()
+// 0x000002AF T OWS.ObjectPooling.ObjectPool`1::Pull()
+// 0x000002B0 T OWS.ObjectPooling.ObjectPool`1::Pull(UnityEngine.Vector3)
+// 0x000002B1 T OWS.ObjectPooling.ObjectPool`1::Pull(UnityEngine.Vector3,UnityEngine.Quaternion)
+// 0x000002B2 UnityEngine.GameObject OWS.ObjectPooling.ObjectPool`1::PullGameObject()
+// 0x000002B3 UnityEngine.GameObject OWS.ObjectPooling.ObjectPool`1::PullGameObject(UnityEngine.Vector3)
+// 0x000002B4 UnityEngine.GameObject OWS.ObjectPooling.ObjectPool`1::PullGameObject(UnityEngine.Vector3,UnityEngine.Quaternion)
+// 0x000002B5 System.Void OWS.ObjectPooling.ObjectPool`1::Push(T)
+// 0x000002B6 System.Void OWS.ObjectPooling.ObjectPool`1::Spawn(System.Int32)
+// 0x000002B7 T OWS.ObjectPooling.IPool`1::Pull()
+// 0x000002B8 System.Void OWS.ObjectPooling.IPool`1::Push(T)
+// 0x000002B9 System.Void OWS.ObjectPooling.IPoolable`1::Initialize(System.Action`1<T>)
+// 0x000002BA System.Void OWS.ObjectPooling.IPoolable`1::ReturnToPool()
+// 0x000002BB System.Void OWS.ObjectPooling.PoolObject::OnDisable()
 extern void PoolObject_OnDisable_m80F9DD52284DAF13C7FA352F5F57ABE0A23D36B0 (void);
-// 0x000002B8 System.Void OWS.ObjectPooling.PoolObject::Initialize(System.Action`1<OWS.ObjectPooling.PoolObject>)
+// 0x000002BC System.Void OWS.ObjectPooling.PoolObject::Initialize(System.Action`1<OWS.ObjectPooling.PoolObject>)
 extern void PoolObject_Initialize_m64C04717404D32FBD08EC31E71FDA99E1E5A3B55 (void);
-// 0x000002B9 System.Void OWS.ObjectPooling.PoolObject::ReturnToPool()
+// 0x000002BD System.Void OWS.ObjectPooling.PoolObject::ReturnToPool()
 extern void PoolObject_ReturnToPool_m88AB00D6782AC38A04655F25AB4AE2B159EDD4D2 (void);
-// 0x000002BA System.Void OWS.ObjectPooling.PoolObject::.ctor()
+// 0x000002BE System.Void OWS.ObjectPooling.PoolObject::.ctor()
 extern void PoolObject__ctor_m17E637A918E2AA22CA132300E36119B4C37381EA (void);
-static Il2CppMethodPointer s_methodPointers[698] = 
+static Il2CppMethodPointer s_methodPointers[702] = 
 {
 	ArenaManager_Awake_m290DA93A4B3835392DEAFA80C30F6309E576D366,
 	ArenaManager_get_NumBricksRemaining_mFA60339CD2122B9946D25F3F87DF7E3FAF312F74,
@@ -2063,11 +2071,15 @@ static Il2CppMethodPointer s_methodPointers[698] =
 	WallLayerController_Start_mC382E1210FEE3E9C1358DBA3B93C551A8856E9CE,
 	WallLayerController_Update_m840A95C93DA1C58120E697025147216549E88FA8,
 	WallLayerController__ctor_m9F2E5CC3BFDE3E7DF12499B32021931F732A36D7,
+	WallMover_Start_mB2B9E5CD0ACA40B653D393EA6B86128F980C60B5,
+	WallMover_Update_m72B8791EAC0BFA933D802CE68CF2EF39735B3478,
 	WallMover_OnEnable_m311200F695A06EE852FF22794BB6525895FDA7CB,
 	WallMover_OnDisable_m0843CA86DE98D36ABB6FD011E74ACB1538A56A4B,
 	WallMover_Awake_m2D3973A2F35051668497B5051690FC09A9D5618C,
 	WallMover_StartMovingWall_m8B1AA03A43C43392E57752EE98EB72DF5F3A8219,
 	WallMover_StopMovingWall_m894DB448AADAB024776373EF4B21DDD4D67196C1,
+	WallMover_StartRotatingWall_m1B6AC93DED950B4FB29872E1BAC59015FD69C1E4,
+	WallMover_StopRotatingWall_mACFCF30EF5D94CC5B51731C1F44F38F2543492F4,
 	WallMover__ctor_m576FCAA120E828D3736FD7E942541226610FB0D5,
 	LookCamera_Start_mE9289E1E6CB37C5254B8BCAA97DEF20F5B8E3D7B,
 	LookCamera_Update_m68E69B1B5A7045536596C77570DDBB111AC6DEE0,
@@ -2099,7 +2111,7 @@ static Il2CppTokenAdjustorThunkPair s_adjustorThunks[1] =
 {
 	{ 0x06000280, DataCoordinate__ctor_m7E8D2C9FF0E204D3A810B7FCA47DD5657CB59C21_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[698] = 
+static const int32_t s_InvokerIndices[702] = 
 {
 	4953,
 	4819,
@@ -2772,6 +2784,10 @@ static const int32_t s_InvokerIndices[698] =
 	4953,
 	4953,
 	4953,
+	4953,
+	4953,
+	3905,
+	3905,
 	3905,
 	3905,
 	4953,
@@ -2843,7 +2859,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	698,
+	702,
 	s_methodPointers,
 	1,
 	s_adjustorThunks,

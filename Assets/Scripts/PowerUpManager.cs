@@ -28,11 +28,13 @@ public class PowerUpManager : MonoBehaviour
         _types = Enum.GetValues(typeof(PowerUpType));
         _timeRemaining = new Dictionary<PowerUpType, float>{
             {PowerUpType.MoveWalls, _powerUpTime},
+            {PowerUpType.RotateWalls, _powerUpTime},
             {PowerUpType.DoublePoints, _powerUpTime},
             {PowerUpType.NegativePts, _powerUpTime}
         };
         _isPowerUpActive = new Dictionary<PowerUpType, bool>{
             {PowerUpType.MoveWalls, false},
+            {PowerUpType.RotateWalls, false},
             {PowerUpType.DoublePoints, false},
             {PowerUpType.NegativePts, false}
         };

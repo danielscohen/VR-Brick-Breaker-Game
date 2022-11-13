@@ -19765,6 +19765,12 @@ struct WallMover_t5D8105CFFD1F0C45F6F3E39661D2F291BB6BFFF9  : public MonoBehavio
 {
 	// UnityEngine.Animator WallMover::_anim
 	Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* ____anim_4;
+	// UnityEngine.Transform WallMover::_wall
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ____wall_5;
+	// System.Single WallMover::_rotSpeed
+	float ____rotSpeed_6;
+	// System.Boolean WallMover::_wallIsRotating
+	bool ____wallIsRotating_7;
 };
 
 // UnityEngine.XR.Interaction.Toolkit.XRBaseInteractable
@@ -24000,9 +24006,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4280[4] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4281[8] = 
 {
 	static_cast<int32_t>(offsetof(PowerUpManager_tD294643D6AF9D9169245781685135AE31C443534, ____powerUpPrefabs_4)),static_cast<int32_t>(offsetof(PowerUpManager_tD294643D6AF9D9169245781685135AE31C443534, ____powerUpTime_5)),static_cast<int32_t>(offsetof(PowerUpManager_tD294643D6AF9D9169245781685135AE31C443534_StaticFields, ___onStartPowerUp_6)),static_cast<int32_t>(offsetof(PowerUpManager_tD294643D6AF9D9169245781685135AE31C443534_StaticFields, ___onStopPowerUp_7)),static_cast<int32_t>(offsetof(PowerUpManager_tD294643D6AF9D9169245781685135AE31C443534_StaticFields, ___onUpdatePowerUpTime_8)),static_cast<int32_t>(offsetof(PowerUpManager_tD294643D6AF9D9169245781685135AE31C443534, ____types_9)),static_cast<int32_t>(offsetof(PowerUpManager_tD294643D6AF9D9169245781685135AE31C443534, ____timeRemaining_10)),static_cast<int32_t>(offsetof(PowerUpManager_tD294643D6AF9D9169245781685135AE31C443534, ____isPowerUpActive_11)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4282[5] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4282[6] = 
 {
-	static_cast<int32_t>(sizeof(RuntimeObject)),0,0,0,0,};
+	static_cast<int32_t>(sizeof(RuntimeObject)),0,0,0,0,0,};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4283[1] = 
 {
 	static_cast<int32_t>(offsetof(RacketController_tC889C128B159B8EDFD9BFB0016F9F31CFD441CC9, ____socketLoc_4)),};
@@ -24093,9 +24099,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4311[2] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4312[18] = 
 {
 	static_cast<int32_t>(offsetof(WallController_t02C65E7F2765F8CBE99879014FF9118374FE40BA, ___numBricks_4)),static_cast<int32_t>(offsetof(WallController_t02C65E7F2765F8CBE99879014FF9118374FE40BA, ___numVoxels_5)),static_cast<int32_t>(offsetof(WallController_t02C65E7F2765F8CBE99879014FF9118374FE40BA, ___brickPreFab_6)),static_cast<int32_t>(offsetof(WallController_t02C65E7F2765F8CBE99879014FF9118374FE40BA, ____brickMats_7)),static_cast<int32_t>(offsetof(WallController_t02C65E7F2765F8CBE99879014FF9118374FE40BA, ____voxMats_8)),static_cast<int32_t>(offsetof(WallController_t02C65E7F2765F8CBE99879014FF9118374FE40BA, ___voxSpawner_9)),static_cast<int32_t>(offsetof(WallController_t02C65E7F2765F8CBE99879014FF9118374FE40BA, ___voxInternalMat_10)),static_cast<int32_t>(offsetof(WallController_t02C65E7F2765F8CBE99879014FF9118374FE40BA, ___voxEdgeMat_11)),static_cast<int32_t>(offsetof(WallController_t02C65E7F2765F8CBE99879014FF9118374FE40BA, ____moveSpeed_12)),static_cast<int32_t>(offsetof(WallController_t02C65E7F2765F8CBE99879014FF9118374FE40BA, ____intensity_13)),static_cast<int32_t>(offsetof(WallController_t02C65E7F2765F8CBE99879014FF9118374FE40BA, ___wallMap_14)),static_cast<int32_t>(offsetof(WallController_t02C65E7F2765F8CBE99879014FF9118374FE40BA, ____leftMovePos_15)),static_cast<int32_t>(offsetof(WallController_t02C65E7F2765F8CBE99879014FF9118374FE40BA, ____rightMovePos_16)),static_cast<int32_t>(offsetof(WallController_t02C65E7F2765F8CBE99879014FF9118374FE40BA, ____upMovePos_17)),static_cast<int32_t>(offsetof(WallController_t02C65E7F2765F8CBE99879014FF9118374FE40BA, ____downMovePos_18)),static_cast<int32_t>(offsetof(WallController_t02C65E7F2765F8CBE99879014FF9118374FE40BA, ____moveDir_19)),static_cast<int32_t>(offsetof(WallController_t02C65E7F2765F8CBE99879014FF9118374FE40BA, ____brickMatIndex_20)),static_cast<int32_t>(offsetof(WallController_t02C65E7F2765F8CBE99879014FF9118374FE40BA, ____arenaManager_21)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4314[1] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4314[4] = 
 {
-	static_cast<int32_t>(offsetof(WallMover_t5D8105CFFD1F0C45F6F3E39661D2F291BB6BFFF9, ____anim_4)),};
+	static_cast<int32_t>(offsetof(WallMover_t5D8105CFFD1F0C45F6F3E39661D2F291BB6BFFF9, ____anim_4)),static_cast<int32_t>(offsetof(WallMover_t5D8105CFFD1F0C45F6F3E39661D2F291BB6BFFF9, ____wall_5)),static_cast<int32_t>(offsetof(WallMover_t5D8105CFFD1F0C45F6F3E39661D2F291BB6BFFF9, ____rotSpeed_6)),static_cast<int32_t>(offsetof(WallMover_t5D8105CFFD1F0C45F6F3E39661D2F291BB6BFFF9, ____wallIsRotating_7)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4315[5] = 
 {
 	static_cast<int32_t>(offsetof(LookCamera_tA4F0603492EBAE87D7EE5DD8710A788E6118CAEA, ___speedNormal_4)),static_cast<int32_t>(offsetof(LookCamera_tA4F0603492EBAE87D7EE5DD8710A788E6118CAEA, ___speedFast_5)),static_cast<int32_t>(offsetof(LookCamera_tA4F0603492EBAE87D7EE5DD8710A788E6118CAEA, ___mouseSensitivityX_6)),static_cast<int32_t>(offsetof(LookCamera_tA4F0603492EBAE87D7EE5DD8710A788E6118CAEA, ___mouseSensitivityY_7)),static_cast<int32_t>(offsetof(LookCamera_tA4F0603492EBAE87D7EE5DD8710A788E6118CAEA, ___rotY_8)),};

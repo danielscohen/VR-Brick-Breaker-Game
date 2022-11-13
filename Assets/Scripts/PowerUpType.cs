@@ -7,5 +7,6 @@ public enum PowerUpType
     ExtraBall,
     DoublePoints,
     NegativePts,
-    MoveWalls
+    MoveWalls,
+    RotateWalls
 }
