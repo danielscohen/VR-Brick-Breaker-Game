@@ -22,6 +22,7 @@ public class RacketController : MonoBehaviour
     }
     private void Start() {
         transform.position = _socketLoc.position;
+        SetRacketInvisible();
     }
     public void ReturnRacketToSocket(SelectExitEventArgs args){
         transform.position = _socketLoc.position;

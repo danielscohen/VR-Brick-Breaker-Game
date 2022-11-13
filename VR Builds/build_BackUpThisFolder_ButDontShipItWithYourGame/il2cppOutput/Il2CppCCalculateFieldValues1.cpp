@@ -4506,10 +4506,10 @@ struct U3CVelocityCacherU3Ed__38_t558C81A6F70C0A0AD282C5D0ADDD41C402ED0A36  : pu
 	BallController_tE8E7F4DFB0572A5167A880744EB68B67E4FAE58C* ___U3CU3E4__this_2;
 };
 
-// BallManager/<>c__DisplayClass27_0
-struct U3CU3Ec__DisplayClass27_0_tB82AE84D5924F20BBB9390AF340349FB88D467B9  : public RuntimeObject
+// BallManager/<>c__DisplayClass28_0
+struct U3CU3Ec__DisplayClass28_0_tE4B9C1213BFCA1B0E92E3560FE745254F062B0D1  : public RuntimeObject
 {
-	// System.Int32 BallManager/<>c__DisplayClass27_0::ballID
+	// System.Int32 BallManager/<>c__DisplayClass28_0::ballID
 	int32_t ___ballID_0;
 };
 
@@ -18632,36 +18632,38 @@ struct BallManager_t81337400CCAB0A19AD4E3558C3BE320533A97E45  : public MonoBehav
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ____throwPt_8;
 	// UnityEngine.Transform BallManager::_loadLoc
 	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ____loadLoc_9;
+	// UnityEngine.GameObject BallManager::_ballSocket
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ____ballSocket_10;
 	// System.Single BallManager::throwForce
-	float ___throwForce_10;
+	float ___throwForce_11;
 	// System.Single BallManager::throwUpwordForce
-	float ___throwUpwordForce_11;
+	float ___throwUpwordForce_12;
 	// System.Collections.Generic.List`1<UnityEngine.GameObject> BallManager::activeBalls
-	List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* ___activeBalls_12;
+	List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* ___activeBalls_13;
 	// System.Collections.Generic.Stack`1<UnityEngine.GameObject> BallManager::ballPool
-	Stack_1_tEDA6555F162AE2CC5394B19622F8A10CD078C7AF* ___ballPool_13;
+	Stack_1_tEDA6555F162AE2CC5394B19622F8A10CD078C7AF* ___ballPool_14;
 	// System.Int32 BallManager::_ballsRemaining
-	int32_t ____ballsRemaining_16;
+	int32_t ____ballsRemaining_17;
 	// System.Int32 BallManager::_maxBallID
-	int32_t ____maxBallID_17;
+	int32_t ____maxBallID_18;
 	// UnityEngine.KeyCode BallManager::throwKey
-	int32_t ___throwKey_18;
+	int32_t ___throwKey_19;
 	// System.Single BallManager::timeDown
-	float ___timeDown_19;
+	float ___timeDown_20;
 	// System.Single BallManager::timePressed
-	float ___timePressed_20;
+	float ___timePressed_21;
 	// System.Boolean BallManager::keyPressed
-	bool ___keyPressed_21;
+	bool ___keyPressed_22;
 	// System.Boolean BallManager::readyToThrow
-	bool ___readyToThrow_22;
+	bool ___readyToThrow_23;
 };
 
 struct BallManager_t81337400CCAB0A19AD4E3558C3BE320533A97E45_StaticFields
 {
 	// System.Action`1<System.Single> BallManager::onBallThrowPowerChange
-	Action_1_t310F18CB4338A2740CA701F160C62E2C3198E66A* ___onBallThrowPowerChange_14;
+	Action_1_t310F18CB4338A2740CA701F160C62E2C3198E66A* ___onBallThrowPowerChange_15;
 	// System.Action`1<System.Int32> BallManager::onBallsLeftCountChange
-	Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404* ___onBallsLeftCountChange_15;
+	Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404* ___onBallsLeftCountChange_16;
 };
 
 // BallThrower
@@ -23841,10 +23843,10 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4222[13] =
 	static_cast<int32_t>(offsetof(BallController_tE8E7F4DFB0572A5167A880744EB68B67E4FAE58C, ___U3CPrevVelocityU3Ek__BackingField_4)),static_cast<int32_t>(offsetof(BallController_tE8E7F4DFB0572A5167A880744EB68B67E4FAE58C, ___U3CJustCollidedWithBrickU3Ek__BackingField_5)),static_cast<int32_t>(offsetof(BallController_tE8E7F4DFB0572A5167A880744EB68B67E4FAE58C, ____collTime_6)),static_cast<int32_t>(offsetof(BallController_tE8E7F4DFB0572A5167A880744EB68B67E4FAE58C, ____nextCollWaitTime_7)),static_cast<int32_t>(offsetof(BallController_tE8E7F4DFB0572A5167A880744EB68B67E4FAE58C, ____effectPrefab_8)),static_cast<int32_t>(offsetof(BallController_tE8E7F4DFB0572A5167A880744EB68B67E4FAE58C_StaticFields, ___onBallLost_9)),static_cast<int32_t>(offsetof(BallController_tE8E7F4DFB0572A5167A880744EB68B67E4FAE58C, ___ballRb_10)),static_cast<int32_t>(offsetof(BallController_tE8E7F4DFB0572A5167A880744EB68B67E4FAE58C, ____camPos_11)),static_cast<int32_t>(offsetof(BallController_tE8E7F4DFB0572A5167A880744EB68B67E4FAE58C, ___Gravity_12)),static_cast<int32_t>(offsetof(BallController_tE8E7F4DFB0572A5167A880744EB68B67E4FAE58C, ____maxSpeedSqrd_13)),static_cast<int32_t>(offsetof(BallController_tE8E7F4DFB0572A5167A880744EB68B67E4FAE58C, ___U3CBallIDU3Ek__BackingField_14)),static_cast<int32_t>(offsetof(BallController_tE8E7F4DFB0572A5167A880744EB68B67E4FAE58C, ___U3CGravityEnabledU3Ek__BackingField_15)),static_cast<int32_t>(offsetof(BallController_tE8E7F4DFB0572A5167A880744EB68B67E4FAE58C, ____ballRen_16)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4223[1] = 
 {
-	static_cast<int32_t>(offsetof(U3CU3Ec__DisplayClass27_0_tB82AE84D5924F20BBB9390AF340349FB88D467B9, ___ballID_0)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4224[19] = 
+	static_cast<int32_t>(offsetof(U3CU3Ec__DisplayClass28_0_tE4B9C1213BFCA1B0E92E3560FE745254F062B0D1, ___ballID_0)),};
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4224[20] = 
 {
-	static_cast<int32_t>(offsetof(BallManager_t81337400CCAB0A19AD4E3558C3BE320533A97E45, ____beginnerSettings_4)),static_cast<int32_t>(offsetof(BallManager_t81337400CCAB0A19AD4E3558C3BE320533A97E45, ____normalSettings_5)),static_cast<int32_t>(offsetof(BallManager_t81337400CCAB0A19AD4E3558C3BE320533A97E45, ____expertSettings_6)),static_cast<int32_t>(offsetof(BallManager_t81337400CCAB0A19AD4E3558C3BE320533A97E45, ____ballPrefab_7)),static_cast<int32_t>(offsetof(BallManager_t81337400CCAB0A19AD4E3558C3BE320533A97E45, ____throwPt_8)),static_cast<int32_t>(offsetof(BallManager_t81337400CCAB0A19AD4E3558C3BE320533A97E45, ____loadLoc_9)),static_cast<int32_t>(offsetof(BallManager_t81337400CCAB0A19AD4E3558C3BE320533A97E45, ___throwForce_10)),static_cast<int32_t>(offsetof(BallManager_t81337400CCAB0A19AD4E3558C3BE320533A97E45, ___throwUpwordForce_11)),static_cast<int32_t>(offsetof(BallManager_t81337400CCAB0A19AD4E3558C3BE320533A97E45, ___activeBalls_12)),static_cast<int32_t>(offsetof(BallManager_t81337400CCAB0A19AD4E3558C3BE320533A97E45, ___ballPool_13)),static_cast<int32_t>(offsetof(BallManager_t81337400CCAB0A19AD4E3558C3BE320533A97E45_StaticFields, ___onBallThrowPowerChange_14)),static_cast<int32_t>(offsetof(BallManager_t81337400CCAB0A19AD4E3558C3BE320533A97E45_StaticFields, ___onBallsLeftCountChange_15)),static_cast<int32_t>(offsetof(BallManager_t81337400CCAB0A19AD4E3558C3BE320533A97E45, ____ballsRemaining_16)),static_cast<int32_t>(offsetof(BallManager_t81337400CCAB0A19AD4E3558C3BE320533A97E45, ____maxBallID_17)),static_cast<int32_t>(offsetof(BallManager_t81337400CCAB0A19AD4E3558C3BE320533A97E45, ___throwKey_18)),static_cast<int32_t>(offsetof(BallManager_t81337400CCAB0A19AD4E3558C3BE320533A97E45, ___timeDown_19)),static_cast<int32_t>(offsetof(BallManager_t81337400CCAB0A19AD4E3558C3BE320533A97E45, ___timePressed_20)),static_cast<int32_t>(offsetof(BallManager_t81337400CCAB0A19AD4E3558C3BE320533A97E45, ___keyPressed_21)),static_cast<int32_t>(offsetof(BallManager_t81337400CCAB0A19AD4E3558C3BE320533A97E45, ___readyToThrow_22)),};
+	static_cast<int32_t>(offsetof(BallManager_t81337400CCAB0A19AD4E3558C3BE320533A97E45, ____beginnerSettings_4)),static_cast<int32_t>(offsetof(BallManager_t81337400CCAB0A19AD4E3558C3BE320533A97E45, ____normalSettings_5)),static_cast<int32_t>(offsetof(BallManager_t81337400CCAB0A19AD4E3558C3BE320533A97E45, ____expertSettings_6)),static_cast<int32_t>(offsetof(BallManager_t81337400CCAB0A19AD4E3558C3BE320533A97E45, ____ballPrefab_7)),static_cast<int32_t>(offsetof(BallManager_t81337400CCAB0A19AD4E3558C3BE320533A97E45, ____throwPt_8)),static_cast<int32_t>(offsetof(BallManager_t81337400CCAB0A19AD4E3558C3BE320533A97E45, ____loadLoc_9)),static_cast<int32_t>(offsetof(BallManager_t81337400CCAB0A19AD4E3558C3BE320533A97E45, ____ballSocket_10)),static_cast<int32_t>(offsetof(BallManager_t81337400CCAB0A19AD4E3558C3BE320533A97E45, ___throwForce_11)),static_cast<int32_t>(offsetof(BallManager_t81337400CCAB0A19AD4E3558C3BE320533A97E45, ___throwUpwordForce_12)),static_cast<int32_t>(offsetof(BallManager_t81337400CCAB0A19AD4E3558C3BE320533A97E45, ___activeBalls_13)),static_cast<int32_t>(offsetof(BallManager_t81337400CCAB0A19AD4E3558C3BE320533A97E45, ___ballPool_14)),static_cast<int32_t>(offsetof(BallManager_t81337400CCAB0A19AD4E3558C3BE320533A97E45_StaticFields, ___onBallThrowPowerChange_15)),static_cast<int32_t>(offsetof(BallManager_t81337400CCAB0A19AD4E3558C3BE320533A97E45_StaticFields, ___onBallsLeftCountChange_16)),static_cast<int32_t>(offsetof(BallManager_t81337400CCAB0A19AD4E3558C3BE320533A97E45, ____ballsRemaining_17)),static_cast<int32_t>(offsetof(BallManager_t81337400CCAB0A19AD4E3558C3BE320533A97E45, ____maxBallID_18)),static_cast<int32_t>(offsetof(BallManager_t81337400CCAB0A19AD4E3558C3BE320533A97E45, ___throwKey_19)),static_cast<int32_t>(offsetof(BallManager_t81337400CCAB0A19AD4E3558C3BE320533A97E45, ___timeDown_20)),static_cast<int32_t>(offsetof(BallManager_t81337400CCAB0A19AD4E3558C3BE320533A97E45, ___timePressed_21)),static_cast<int32_t>(offsetof(BallManager_t81337400CCAB0A19AD4E3558C3BE320533A97E45, ___keyPressed_22)),static_cast<int32_t>(offsetof(BallManager_t81337400CCAB0A19AD4E3558C3BE320533A97E45, ___readyToThrow_23)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4225[3] = 
 {
 	static_cast<int32_t>(sizeof(RuntimeObject)),0,0,};

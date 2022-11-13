@@ -214,10 +214,10 @@ extern void BallManager_LoadNewBall_mBF4EC969B8785BC4D1C304C83BF6A5DD6809B8B1 (v
 extern void BallManager_OnBallRemovedFromLoader_m75704ADB4CC363A07B984B0646EE380F48CB2D41 (void);
 // 0x00000065 System.Void BallManager::.ctor()
 extern void BallManager__ctor_m208049DB73581F1FABD61F99870B451917D0D260 (void);
-// 0x00000066 System.Void BallManager/<>c__DisplayClass27_0::.ctor()
-extern void U3CU3Ec__DisplayClass27_0__ctor_m3C159C88704B4A136146D945463E8EE7A5AC9DE8 (void);
-// 0x00000067 System.Boolean BallManager/<>c__DisplayClass27_0::<ManageBallReturn>b__0(UnityEngine.GameObject)
-extern void U3CU3Ec__DisplayClass27_0_U3CManageBallReturnU3Eb__0_m63A54FF9EF39C2ABD597D2599A965558BC7A8AD8 (void);
+// 0x00000066 System.Void BallManager/<>c__DisplayClass28_0::.ctor()
+extern void U3CU3Ec__DisplayClass28_0__ctor_m1F69D982BE701C9345217E00FA78A98052A98695 (void);
+// 0x00000067 System.Boolean BallManager/<>c__DisplayClass28_0::<ManageBallReturn>b__0(UnityEngine.GameObject)
+extern void U3CU3Ec__DisplayClass28_0_U3CManageBallReturnU3Eb__0_mFC53ADEBFC812F4F57C0A74E9F212107411B3C0D (void);
 // 0x00000068 System.Void BallSocketController::OnEnable()
 extern void BallSocketController_OnEnable_m74B9AD1FFF6CCC0A710FEB7388693BD6909D7056 (void);
 // 0x00000069 System.Void BallSocketController::OnDisable()
@@ -1496,8 +1496,8 @@ static Il2CppMethodPointer s_methodPointers[698] =
 	BallManager_LoadNewBall_mBF4EC969B8785BC4D1C304C83BF6A5DD6809B8B1,
 	BallManager_OnBallRemovedFromLoader_m75704ADB4CC363A07B984B0646EE380F48CB2D41,
 	BallManager__ctor_m208049DB73581F1FABD61F99870B451917D0D260,
-	U3CU3Ec__DisplayClass27_0__ctor_m3C159C88704B4A136146D945463E8EE7A5AC9DE8,
-	U3CU3Ec__DisplayClass27_0_U3CManageBallReturnU3Eb__0_m63A54FF9EF39C2ABD597D2599A965558BC7A8AD8,
+	U3CU3Ec__DisplayClass28_0__ctor_m1F69D982BE701C9345217E00FA78A98052A98695,
+	U3CU3Ec__DisplayClass28_0_U3CManageBallReturnU3Eb__0_mFC53ADEBFC812F4F57C0A74E9F212107411B3C0D,
 	BallSocketController_OnEnable_m74B9AD1FFF6CCC0A710FEB7388693BD6909D7056,
 	BallSocketController_OnDisable_mAE3AB7AE90FF925B69799074A50B4F74DAE9D351,
 	BallSocketController_DisableSocket_m766D5D7019917F1EC87724BA44E6C3CEECA0C623,
