@@ -33,6 +33,7 @@ public class UIController : MonoBehaviour
     [SerializeField] GameObject _doublePointsPanel;
     [SerializeField] GameObject _negativePointsPanel;
     [SerializeField] GameObject _movePanel;
+    [SerializeField] GameObject _rotatePanel;
     [SerializeField] GameObject _wall1;
     [SerializeField] GameObject _wall2;
     [SerializeField] GameObject _racket;
@@ -43,6 +44,7 @@ public class UIController : MonoBehaviour
     [SerializeField] Image _doublePointsTimer;
     [SerializeField] Image _negativePointsTimer;
     [SerializeField] Image _moveTimer;
+    [SerializeField] Image _rotateTimer;
     [SerializeField] Slider _musicVolumeSlider;
     [SerializeField] Slider _sFXVolumeSlider;
     [SerializeField] TMP_Dropdown _diffDropDown;
@@ -93,6 +95,7 @@ public class UIController : MonoBehaviour
         _doublePointsPanel.SetActive(false);
         _negativePointsPanel.SetActive(false);
         _movePanel.SetActive(false);
+        _rotatePanel.SetActive(false);
         _wall1.SetActive(false);
         _wall2.SetActive(false);
 
@@ -239,6 +242,10 @@ public class UIController : MonoBehaviour
             case PowerUpType.MoveWalls:
                 timer = _movePanel;
                 timerImage = _moveTimer;
+                break;
+            case PowerUpType.RotateWalls:
+                timer = _rotatePanel;
+                timerImage = _rotateTimer;
                 break;
             default:
                 timer = _negativePointsPanel;

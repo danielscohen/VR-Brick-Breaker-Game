@@ -1116,150 +1116,150 @@ extern void UIController_ShowExpertHighScoresScreen_mC7FC153180A89A732F8025087A4
 extern void UIController_ShowKeyBoard_m4B1C0E50ADAEA5271F4A1FDFC8BEC9862919F83B (void);
 // 0x00000228 System.Void UIController::.ctor()
 extern void UIController__ctor_mFF218DBC8CCEFE36AAC295D2376501658CD8B7A2 (void);
-// 0x00000229 System.Void UIController/<PlayFireworks>d__63::.ctor(System.Int32)
-extern void U3CPlayFireworksU3Ed__63__ctor_mC31D99EA2FD8544197C7478FDE257AE7A3FE3198 (void);
-// 0x0000022A System.Void UIController/<PlayFireworks>d__63::System.IDisposable.Dispose()
-extern void U3CPlayFireworksU3Ed__63_System_IDisposable_Dispose_m67112C7FA9C3F69D90C807A90B1C3914231FDF50 (void);
-// 0x0000022B System.Boolean UIController/<PlayFireworks>d__63::MoveNext()
-extern void U3CPlayFireworksU3Ed__63_MoveNext_mBC1289116FF7E06E87A3FA66F764BFFEA3335BB4 (void);
-// 0x0000022C System.Object UIController/<PlayFireworks>d__63::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
-extern void U3CPlayFireworksU3Ed__63_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m295A91C6BE7A189D26988B63B0DDFC13175525EA (void);
-// 0x0000022D System.Void UIController/<PlayFireworks>d__63::System.Collections.IEnumerator.Reset()
-extern void U3CPlayFireworksU3Ed__63_System_Collections_IEnumerator_Reset_m48CC9BC6E75C9F0246A1340DFEF12A6430BA2CA3 (void);
-// 0x0000022E System.Object UIController/<PlayFireworks>d__63::System.Collections.IEnumerator.get_Current()
-extern void U3CPlayFireworksU3Ed__63_System_Collections_IEnumerator_get_Current_m1D1CF52C4208EDB3A0A101E5EE79BFC010C2BF21 (void);
-// 0x0000022F System.Void UIController/<FlashTimer>d__72::.ctor(System.Int32)
-extern void U3CFlashTimerU3Ed__72__ctor_m90BB3FD37925BE05B4DDEA74EFFB4F005616C311 (void);
-// 0x00000230 System.Void UIController/<FlashTimer>d__72::System.IDisposable.Dispose()
-extern void U3CFlashTimerU3Ed__72_System_IDisposable_Dispose_mD1CF0D5F5FCDBDC85FBCCFE56F6814B466DCE839 (void);
-// 0x00000231 System.Boolean UIController/<FlashTimer>d__72::MoveNext()
-extern void U3CFlashTimerU3Ed__72_MoveNext_mDEE17EBA3D75DF13D77D30673A0A56575A9CC842 (void);
-// 0x00000232 System.Object UIController/<FlashTimer>d__72::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
-extern void U3CFlashTimerU3Ed__72_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m232AF143AA33D13BBA473ED219E193C1FC2DC272 (void);
-// 0x00000233 System.Void UIController/<FlashTimer>d__72::System.Collections.IEnumerator.Reset()
-extern void U3CFlashTimerU3Ed__72_System_Collections_IEnumerator_Reset_m556063BBD7A6715720644003A1BCD730ADE4832F (void);
-// 0x00000234 System.Object UIController/<FlashTimer>d__72::System.Collections.IEnumerator.get_Current()
-extern void U3CFlashTimerU3Ed__72_System_Collections_IEnumerator_get_Current_m62FAF756517B874F2072CF6D40F751246EEF429F (void);
-// 0x00000235 System.Void UIController/<AnimateEnterTitleText>d__75::.ctor(System.Int32)
-extern void U3CAnimateEnterTitleTextU3Ed__75__ctor_m6452F8DB2CAA4627DF4147C5515336DB00536ADC (void);
-// 0x00000236 System.Void UIController/<AnimateEnterTitleText>d__75::System.IDisposable.Dispose()
-extern void U3CAnimateEnterTitleTextU3Ed__75_System_IDisposable_Dispose_mB813EC28A6845348FDE658029E33D6A23363BB75 (void);
-// 0x00000237 System.Boolean UIController/<AnimateEnterTitleText>d__75::MoveNext()
-extern void U3CAnimateEnterTitleTextU3Ed__75_MoveNext_mE7DEE1143020605A68CDD9568CEDF56F2FE461D3 (void);
-// 0x00000238 System.Object UIController/<AnimateEnterTitleText>d__75::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
-extern void U3CAnimateEnterTitleTextU3Ed__75_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mF6C3AB8BC6223B7E18B3E6E0E76A0A5786B3CD37 (void);
-// 0x00000239 System.Void UIController/<AnimateEnterTitleText>d__75::System.Collections.IEnumerator.Reset()
-extern void U3CAnimateEnterTitleTextU3Ed__75_System_Collections_IEnumerator_Reset_m70DB2768D8F0EFF5A8C3E8422DB5A929F0D965CA (void);
-// 0x0000023A System.Object UIController/<AnimateEnterTitleText>d__75::System.Collections.IEnumerator.get_Current()
-extern void U3CAnimateEnterTitleTextU3Ed__75_System_Collections_IEnumerator_get_Current_m4D245FA08906EE9AC20A8DB31BC0A9B47DA6340A (void);
-// 0x0000023B System.Void UIController/<AnimateExitTitleText>d__76::.ctor(System.Int32)
-extern void U3CAnimateExitTitleTextU3Ed__76__ctor_m5E496003E7C9AB2BE0DE75BADA4EF4BA736D6004 (void);
-// 0x0000023C System.Void UIController/<AnimateExitTitleText>d__76::System.IDisposable.Dispose()
-extern void U3CAnimateExitTitleTextU3Ed__76_System_IDisposable_Dispose_m828D8924DDADF8D8AD37E226BC4BAFA925C8CABB (void);
-// 0x0000023D System.Boolean UIController/<AnimateExitTitleText>d__76::MoveNext()
-extern void U3CAnimateExitTitleTextU3Ed__76_MoveNext_mBD48EF548285C0532738FE9E0751F7CA75FE7A3A (void);
-// 0x0000023E System.Object UIController/<AnimateExitTitleText>d__76::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
-extern void U3CAnimateExitTitleTextU3Ed__76_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mA8683D785D7F716987EE0850161DBCA322CED3A4 (void);
-// 0x0000023F System.Void UIController/<AnimateExitTitleText>d__76::System.Collections.IEnumerator.Reset()
-extern void U3CAnimateExitTitleTextU3Ed__76_System_Collections_IEnumerator_Reset_m8CF0B5C95C11735FD2629EF6EB2B49C0D8CFF4F6 (void);
-// 0x00000240 System.Object UIController/<AnimateExitTitleText>d__76::System.Collections.IEnumerator.get_Current()
-extern void U3CAnimateExitTitleTextU3Ed__76_System_Collections_IEnumerator_get_Current_m5E89917893645A47BD707DFCF1FD255E67054357 (void);
-// 0x00000241 System.Void UIController/<AnimateEnterGameWonText>d__77::.ctor(System.Int32)
-extern void U3CAnimateEnterGameWonTextU3Ed__77__ctor_mD0D1823CA7E0768EE45150A80E29869745CF64BF (void);
-// 0x00000242 System.Void UIController/<AnimateEnterGameWonText>d__77::System.IDisposable.Dispose()
-extern void U3CAnimateEnterGameWonTextU3Ed__77_System_IDisposable_Dispose_m8CFD61E03CB981E3E6FB12FBE417DD35F8861B99 (void);
-// 0x00000243 System.Boolean UIController/<AnimateEnterGameWonText>d__77::MoveNext()
-extern void U3CAnimateEnterGameWonTextU3Ed__77_MoveNext_m22DEF140B73ED56FD992445B0ECA8EBBCCF94784 (void);
-// 0x00000244 System.Object UIController/<AnimateEnterGameWonText>d__77::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
-extern void U3CAnimateEnterGameWonTextU3Ed__77_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m8F612D81A77AAC201AF792F2C3E11980EB3BCF91 (void);
-// 0x00000245 System.Void UIController/<AnimateEnterGameWonText>d__77::System.Collections.IEnumerator.Reset()
-extern void U3CAnimateEnterGameWonTextU3Ed__77_System_Collections_IEnumerator_Reset_m1498E3A3BEA47BB134B6E892A7250559C392CF32 (void);
-// 0x00000246 System.Object UIController/<AnimateEnterGameWonText>d__77::System.Collections.IEnumerator.get_Current()
-extern void U3CAnimateEnterGameWonTextU3Ed__77_System_Collections_IEnumerator_get_Current_mFA3F3736EE61190EC5AA2B52287CEE8A3C651F3D (void);
-// 0x00000247 System.Void UIController/<AnimateExitGameWonText>d__78::.ctor(System.Int32)
-extern void U3CAnimateExitGameWonTextU3Ed__78__ctor_mF75601190C41F573C1903C2D39DA051B1A6CC96A (void);
-// 0x00000248 System.Void UIController/<AnimateExitGameWonText>d__78::System.IDisposable.Dispose()
-extern void U3CAnimateExitGameWonTextU3Ed__78_System_IDisposable_Dispose_m2CD5C150DCEBB7069A24A7FDE47EB9426D8392CB (void);
-// 0x00000249 System.Boolean UIController/<AnimateExitGameWonText>d__78::MoveNext()
-extern void U3CAnimateExitGameWonTextU3Ed__78_MoveNext_mB14290A10508AB89A062EE0AD4F464015EFFE54D (void);
-// 0x0000024A System.Object UIController/<AnimateExitGameWonText>d__78::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
-extern void U3CAnimateExitGameWonTextU3Ed__78_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m3A7A7D3DC0872788D50A60CE4EE18F50BB7780CA (void);
-// 0x0000024B System.Void UIController/<AnimateExitGameWonText>d__78::System.Collections.IEnumerator.Reset()
-extern void U3CAnimateExitGameWonTextU3Ed__78_System_Collections_IEnumerator_Reset_m9AFF9EB13ABAD624CEBED115C78B90B8F36BA367 (void);
-// 0x0000024C System.Object UIController/<AnimateExitGameWonText>d__78::System.Collections.IEnumerator.get_Current()
-extern void U3CAnimateExitGameWonTextU3Ed__78_System_Collections_IEnumerator_get_Current_m7B06FBC495F7B079D91D27099C8435555CA024D3 (void);
-// 0x0000024D System.Void UIController/<AnimateEnterGameLostText>d__79::.ctor(System.Int32)
-extern void U3CAnimateEnterGameLostTextU3Ed__79__ctor_m9527C44BB3B3AE6CD5C9E5E42048DA7DC60E0802 (void);
-// 0x0000024E System.Void UIController/<AnimateEnterGameLostText>d__79::System.IDisposable.Dispose()
-extern void U3CAnimateEnterGameLostTextU3Ed__79_System_IDisposable_Dispose_mC70475D11695770A2C5984C1CEFFC6B97E42D685 (void);
-// 0x0000024F System.Boolean UIController/<AnimateEnterGameLostText>d__79::MoveNext()
-extern void U3CAnimateEnterGameLostTextU3Ed__79_MoveNext_mD652385C20D9522E97D7264C91EA26165DF5D282 (void);
-// 0x00000250 System.Object UIController/<AnimateEnterGameLostText>d__79::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
-extern void U3CAnimateEnterGameLostTextU3Ed__79_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m36298EFF7195C3D9EF8D6CFB397F002D5283905B (void);
-// 0x00000251 System.Void UIController/<AnimateEnterGameLostText>d__79::System.Collections.IEnumerator.Reset()
-extern void U3CAnimateEnterGameLostTextU3Ed__79_System_Collections_IEnumerator_Reset_mCF7C271A93DEDBB805C7D2C5B2BA6DAB164C4FD8 (void);
-// 0x00000252 System.Object UIController/<AnimateEnterGameLostText>d__79::System.Collections.IEnumerator.get_Current()
-extern void U3CAnimateEnterGameLostTextU3Ed__79_System_Collections_IEnumerator_get_Current_mF3CC722C0E74A0885E1B064C0420728A074B9AE7 (void);
-// 0x00000253 System.Void UIController/<AnimateExitGameLostText>d__80::.ctor(System.Int32)
-extern void U3CAnimateExitGameLostTextU3Ed__80__ctor_m3EEFCE3F1F70FF1A54D57EA77580E51C445A27E4 (void);
-// 0x00000254 System.Void UIController/<AnimateExitGameLostText>d__80::System.IDisposable.Dispose()
-extern void U3CAnimateExitGameLostTextU3Ed__80_System_IDisposable_Dispose_mF920577A05B928D61213248909DA45E42E4A0228 (void);
-// 0x00000255 System.Boolean UIController/<AnimateExitGameLostText>d__80::MoveNext()
-extern void U3CAnimateExitGameLostTextU3Ed__80_MoveNext_m01890E37F77FA7613A2B00D8E91F28F2C1DC5917 (void);
-// 0x00000256 System.Object UIController/<AnimateExitGameLostText>d__80::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
-extern void U3CAnimateExitGameLostTextU3Ed__80_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mBD75BE7812E502E108CB6E0F1EE1197671AE4560 (void);
-// 0x00000257 System.Void UIController/<AnimateExitGameLostText>d__80::System.Collections.IEnumerator.Reset()
-extern void U3CAnimateExitGameLostTextU3Ed__80_System_Collections_IEnumerator_Reset_m4900D4A86CB6704D4A8F930B98B3A759CE852193 (void);
-// 0x00000258 System.Object UIController/<AnimateExitGameLostText>d__80::System.Collections.IEnumerator.get_Current()
-extern void U3CAnimateExitGameLostTextU3Ed__80_System_Collections_IEnumerator_get_Current_m682959925283073B0D21FF63CEE68F158F218D5B (void);
-// 0x00000259 System.Void UIController/<AnimateEnterBigText>d__81::.ctor(System.Int32)
-extern void U3CAnimateEnterBigTextU3Ed__81__ctor_mB5957FC5F695AC8DAC329A60613578154F3213BF (void);
-// 0x0000025A System.Void UIController/<AnimateEnterBigText>d__81::System.IDisposable.Dispose()
-extern void U3CAnimateEnterBigTextU3Ed__81_System_IDisposable_Dispose_m7C05AA4A1B8FBB8423DEF5B714DC92769111CE39 (void);
-// 0x0000025B System.Boolean UIController/<AnimateEnterBigText>d__81::MoveNext()
-extern void U3CAnimateEnterBigTextU3Ed__81_MoveNext_m70D25F13ACA79BB5E7C59107F79A889851F36D33 (void);
-// 0x0000025C System.Object UIController/<AnimateEnterBigText>d__81::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
-extern void U3CAnimateEnterBigTextU3Ed__81_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m9BA4564191171C46AB708AA86DB372862CCE7BF2 (void);
-// 0x0000025D System.Void UIController/<AnimateEnterBigText>d__81::System.Collections.IEnumerator.Reset()
-extern void U3CAnimateEnterBigTextU3Ed__81_System_Collections_IEnumerator_Reset_mD7221A3FE440F933281B7A894FE81E835358F100 (void);
-// 0x0000025E System.Object UIController/<AnimateEnterBigText>d__81::System.Collections.IEnumerator.get_Current()
-extern void U3CAnimateEnterBigTextU3Ed__81_System_Collections_IEnumerator_get_Current_mA4AFE8A7CC43A5662957C125FE4B042D5706FF61 (void);
-// 0x0000025F System.Void UIController/<AnimateExitBigText>d__82::.ctor(System.Int32)
-extern void U3CAnimateExitBigTextU3Ed__82__ctor_m7ED04FFAFF53E0DD0AFEF21AE4A4D52D30AAF495 (void);
-// 0x00000260 System.Void UIController/<AnimateExitBigText>d__82::System.IDisposable.Dispose()
-extern void U3CAnimateExitBigTextU3Ed__82_System_IDisposable_Dispose_m3736E8906377568709D5B9EF86EC93FCA247E02B (void);
-// 0x00000261 System.Boolean UIController/<AnimateExitBigText>d__82::MoveNext()
-extern void U3CAnimateExitBigTextU3Ed__82_MoveNext_m4000ADF506A37112B174D477D4B9D19F7884AE28 (void);
-// 0x00000262 System.Object UIController/<AnimateExitBigText>d__82::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
-extern void U3CAnimateExitBigTextU3Ed__82_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mD254226BF6B01D0263FB65BE0C400AD316BEA9D4 (void);
-// 0x00000263 System.Void UIController/<AnimateExitBigText>d__82::System.Collections.IEnumerator.Reset()
-extern void U3CAnimateExitBigTextU3Ed__82_System_Collections_IEnumerator_Reset_m4DB572267794EBDF9D21A8E79803D1178CB39EDC (void);
-// 0x00000264 System.Object UIController/<AnimateExitBigText>d__82::System.Collections.IEnumerator.get_Current()
-extern void U3CAnimateExitBigTextU3Ed__82_System_Collections_IEnumerator_get_Current_m15673C214B18C7825CFCD06BDCE8580D1B3B1824 (void);
-// 0x00000265 System.Void UIController/<ShowBallHeldPauseScreen>d__88::.ctor(System.Int32)
-extern void U3CShowBallHeldPauseScreenU3Ed__88__ctor_m72FD21BBFFF9AC2350BE552FE55EEB612942A637 (void);
-// 0x00000266 System.Void UIController/<ShowBallHeldPauseScreen>d__88::System.IDisposable.Dispose()
-extern void U3CShowBallHeldPauseScreenU3Ed__88_System_IDisposable_Dispose_m2CEC04B6023F9B15E48D6D44959EE77720031B19 (void);
-// 0x00000267 System.Boolean UIController/<ShowBallHeldPauseScreen>d__88::MoveNext()
-extern void U3CShowBallHeldPauseScreenU3Ed__88_MoveNext_mBE4A8EC30EE4B71221C919177463BAB12C90D8C2 (void);
-// 0x00000268 System.Object UIController/<ShowBallHeldPauseScreen>d__88::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
-extern void U3CShowBallHeldPauseScreenU3Ed__88_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mCF7542E0A6D5A4B3777370F95508C0F4AEE34EAF (void);
-// 0x00000269 System.Void UIController/<ShowBallHeldPauseScreen>d__88::System.Collections.IEnumerator.Reset()
-extern void U3CShowBallHeldPauseScreenU3Ed__88_System_Collections_IEnumerator_Reset_m44341532EACF0637B8527F5D2AC7E44B88B19B86 (void);
-// 0x0000026A System.Object UIController/<ShowBallHeldPauseScreen>d__88::System.Collections.IEnumerator.get_Current()
-extern void U3CShowBallHeldPauseScreenU3Ed__88_System_Collections_IEnumerator_get_Current_m283B51A7BEA821139BF8D13C4C2B425EAFD4C1CA (void);
-// 0x0000026B System.Void UIController/<ShowGameOverScreenHS>d__90::.ctor(System.Int32)
-extern void U3CShowGameOverScreenHSU3Ed__90__ctor_m66575BB73C6E018B3F62DE2E032C035EEAA65316 (void);
-// 0x0000026C System.Void UIController/<ShowGameOverScreenHS>d__90::System.IDisposable.Dispose()
-extern void U3CShowGameOverScreenHSU3Ed__90_System_IDisposable_Dispose_m1BE52C1B6F8482E99B57D99985335C5A27C16F0E (void);
-// 0x0000026D System.Boolean UIController/<ShowGameOverScreenHS>d__90::MoveNext()
-extern void U3CShowGameOverScreenHSU3Ed__90_MoveNext_m5AC899A0B54729A5C3D67F6AE1173FAD1271280E (void);
-// 0x0000026E System.Object UIController/<ShowGameOverScreenHS>d__90::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
-extern void U3CShowGameOverScreenHSU3Ed__90_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m2DE72A7C919069F4D99D90B144EACFF37E4A71AA (void);
-// 0x0000026F System.Void UIController/<ShowGameOverScreenHS>d__90::System.Collections.IEnumerator.Reset()
-extern void U3CShowGameOverScreenHSU3Ed__90_System_Collections_IEnumerator_Reset_m434C7650625135425D598A69414CB02C67AB29AE (void);
-// 0x00000270 System.Object UIController/<ShowGameOverScreenHS>d__90::System.Collections.IEnumerator.get_Current()
-extern void U3CShowGameOverScreenHSU3Ed__90_System_Collections_IEnumerator_get_Current_mCA75B3C9CCB1A16884BC6016F9649D0309242C82 (void);
+// 0x00000229 System.Void UIController/<PlayFireworks>d__65::.ctor(System.Int32)
+extern void U3CPlayFireworksU3Ed__65__ctor_m617A4586F413DB67142D75C49A268EECDC2CD187 (void);
+// 0x0000022A System.Void UIController/<PlayFireworks>d__65::System.IDisposable.Dispose()
+extern void U3CPlayFireworksU3Ed__65_System_IDisposable_Dispose_mAC250E77ECFAD75282310C84D5B83FEBA06827D9 (void);
+// 0x0000022B System.Boolean UIController/<PlayFireworks>d__65::MoveNext()
+extern void U3CPlayFireworksU3Ed__65_MoveNext_m5794D2EE10A6F30834E7E20022AAEF144E41D0ED (void);
+// 0x0000022C System.Object UIController/<PlayFireworks>d__65::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CPlayFireworksU3Ed__65_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m2D474EA54C0EF5D16B12C843564A9165411EEC7C (void);
+// 0x0000022D System.Void UIController/<PlayFireworks>d__65::System.Collections.IEnumerator.Reset()
+extern void U3CPlayFireworksU3Ed__65_System_Collections_IEnumerator_Reset_mAEBD1BAE91F7453048A429D2ADE220C153994C73 (void);
+// 0x0000022E System.Object UIController/<PlayFireworks>d__65::System.Collections.IEnumerator.get_Current()
+extern void U3CPlayFireworksU3Ed__65_System_Collections_IEnumerator_get_Current_mE5867C987E6F42F88A4E4E1FE07E8A0DDFFBEB84 (void);
+// 0x0000022F System.Void UIController/<FlashTimer>d__74::.ctor(System.Int32)
+extern void U3CFlashTimerU3Ed__74__ctor_mE4ED405A3D1FC0BF6E42EC2AB8E8C54D27FB7AAB (void);
+// 0x00000230 System.Void UIController/<FlashTimer>d__74::System.IDisposable.Dispose()
+extern void U3CFlashTimerU3Ed__74_System_IDisposable_Dispose_mB20933FB50204867B6A94595B5427B1630A45229 (void);
+// 0x00000231 System.Boolean UIController/<FlashTimer>d__74::MoveNext()
+extern void U3CFlashTimerU3Ed__74_MoveNext_m84D2FBE3C0D232F0EFDAB7FFF4FCEC3EFC1953E9 (void);
+// 0x00000232 System.Object UIController/<FlashTimer>d__74::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CFlashTimerU3Ed__74_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mDD16BCA268728C28902AB5B513E0372F85B03E83 (void);
+// 0x00000233 System.Void UIController/<FlashTimer>d__74::System.Collections.IEnumerator.Reset()
+extern void U3CFlashTimerU3Ed__74_System_Collections_IEnumerator_Reset_m8A2B7B84ECC8AB36AE20E842C0CF1D87533102CD (void);
+// 0x00000234 System.Object UIController/<FlashTimer>d__74::System.Collections.IEnumerator.get_Current()
+extern void U3CFlashTimerU3Ed__74_System_Collections_IEnumerator_get_Current_m72D4008A256C45B42D6749F2CE0C11E58C92CED2 (void);
+// 0x00000235 System.Void UIController/<AnimateEnterTitleText>d__77::.ctor(System.Int32)
+extern void U3CAnimateEnterTitleTextU3Ed__77__ctor_mD23A54B3352F61E459BDA6E485B044F02BBE3870 (void);
+// 0x00000236 System.Void UIController/<AnimateEnterTitleText>d__77::System.IDisposable.Dispose()
+extern void U3CAnimateEnterTitleTextU3Ed__77_System_IDisposable_Dispose_m20DE784AB823DBA4CCD0E70E3B9C2B868374BC61 (void);
+// 0x00000237 System.Boolean UIController/<AnimateEnterTitleText>d__77::MoveNext()
+extern void U3CAnimateEnterTitleTextU3Ed__77_MoveNext_mE7DCC59CE7AE930CBF90933BD95AE36BC4216D8F (void);
+// 0x00000238 System.Object UIController/<AnimateEnterTitleText>d__77::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CAnimateEnterTitleTextU3Ed__77_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m83E0C00CD1CB627700E2105D3014DDF3F3112759 (void);
+// 0x00000239 System.Void UIController/<AnimateEnterTitleText>d__77::System.Collections.IEnumerator.Reset()
+extern void U3CAnimateEnterTitleTextU3Ed__77_System_Collections_IEnumerator_Reset_m301A2922990C3ECB23A81A09CF8713AA5335E466 (void);
+// 0x0000023A System.Object UIController/<AnimateEnterTitleText>d__77::System.Collections.IEnumerator.get_Current()
+extern void U3CAnimateEnterTitleTextU3Ed__77_System_Collections_IEnumerator_get_Current_mB0740E94D1812C8CDC8E91295BBEE38F64F28783 (void);
+// 0x0000023B System.Void UIController/<AnimateExitTitleText>d__78::.ctor(System.Int32)
+extern void U3CAnimateExitTitleTextU3Ed__78__ctor_m8ED1A98B457A4076CAFECB92762250220E7EFE53 (void);
+// 0x0000023C System.Void UIController/<AnimateExitTitleText>d__78::System.IDisposable.Dispose()
+extern void U3CAnimateExitTitleTextU3Ed__78_System_IDisposable_Dispose_m4EDC00D2C84FA8CC186A86B54747798FF2F6B244 (void);
+// 0x0000023D System.Boolean UIController/<AnimateExitTitleText>d__78::MoveNext()
+extern void U3CAnimateExitTitleTextU3Ed__78_MoveNext_m281FE3DD641B2643BED153AFBC78C5945809C30A (void);
+// 0x0000023E System.Object UIController/<AnimateExitTitleText>d__78::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CAnimateExitTitleTextU3Ed__78_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m4E2F3D9D281EC0A96C7EFE5D09BC73A474F46741 (void);
+// 0x0000023F System.Void UIController/<AnimateExitTitleText>d__78::System.Collections.IEnumerator.Reset()
+extern void U3CAnimateExitTitleTextU3Ed__78_System_Collections_IEnumerator_Reset_m50E7BF9BDF8E29194C291095C8938EB76DB6B064 (void);
+// 0x00000240 System.Object UIController/<AnimateExitTitleText>d__78::System.Collections.IEnumerator.get_Current()
+extern void U3CAnimateExitTitleTextU3Ed__78_System_Collections_IEnumerator_get_Current_mA2AEA1B8F9734933AA579E4FD0C56508928A3294 (void);
+// 0x00000241 System.Void UIController/<AnimateEnterGameWonText>d__79::.ctor(System.Int32)
+extern void U3CAnimateEnterGameWonTextU3Ed__79__ctor_mACFFF00C41D30527ECA4496FD7B17582BA9E9385 (void);
+// 0x00000242 System.Void UIController/<AnimateEnterGameWonText>d__79::System.IDisposable.Dispose()
+extern void U3CAnimateEnterGameWonTextU3Ed__79_System_IDisposable_Dispose_mA6EF8C96BE042645473BFA1B0733A1FBF5A378BB (void);
+// 0x00000243 System.Boolean UIController/<AnimateEnterGameWonText>d__79::MoveNext()
+extern void U3CAnimateEnterGameWonTextU3Ed__79_MoveNext_m8F0C6C030138FA9A48D832ABA6CC050506128500 (void);
+// 0x00000244 System.Object UIController/<AnimateEnterGameWonText>d__79::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CAnimateEnterGameWonTextU3Ed__79_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mF9389E681E3388E0124F1E9A21AEFD31C029BC7D (void);
+// 0x00000245 System.Void UIController/<AnimateEnterGameWonText>d__79::System.Collections.IEnumerator.Reset()
+extern void U3CAnimateEnterGameWonTextU3Ed__79_System_Collections_IEnumerator_Reset_m9BC6F8F7445E61538502E1D36F4727B04372F02C (void);
+// 0x00000246 System.Object UIController/<AnimateEnterGameWonText>d__79::System.Collections.IEnumerator.get_Current()
+extern void U3CAnimateEnterGameWonTextU3Ed__79_System_Collections_IEnumerator_get_Current_m2585F25F66AC4C49D06438766884B9A6D8C133F8 (void);
+// 0x00000247 System.Void UIController/<AnimateExitGameWonText>d__80::.ctor(System.Int32)
+extern void U3CAnimateExitGameWonTextU3Ed__80__ctor_m1E4704A3A737F2DC9464336C021A9BA154476C2B (void);
+// 0x00000248 System.Void UIController/<AnimateExitGameWonText>d__80::System.IDisposable.Dispose()
+extern void U3CAnimateExitGameWonTextU3Ed__80_System_IDisposable_Dispose_m1D6F301433956D495788EADF91823E3F978B2165 (void);
+// 0x00000249 System.Boolean UIController/<AnimateExitGameWonText>d__80::MoveNext()
+extern void U3CAnimateExitGameWonTextU3Ed__80_MoveNext_m3B9705FE3CE0A8E97855C87879E2B8614C4A5CB7 (void);
+// 0x0000024A System.Object UIController/<AnimateExitGameWonText>d__80::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CAnimateExitGameWonTextU3Ed__80_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m4DF1420A70991003035431F94FD46DF2E98264D2 (void);
+// 0x0000024B System.Void UIController/<AnimateExitGameWonText>d__80::System.Collections.IEnumerator.Reset()
+extern void U3CAnimateExitGameWonTextU3Ed__80_System_Collections_IEnumerator_Reset_mD58BCEAF6566D281AECEB8B9D33AC644F62B47B9 (void);
+// 0x0000024C System.Object UIController/<AnimateExitGameWonText>d__80::System.Collections.IEnumerator.get_Current()
+extern void U3CAnimateExitGameWonTextU3Ed__80_System_Collections_IEnumerator_get_Current_mE9BE9A6FB2D5B645921CFA6C1EED459A68CF37F9 (void);
+// 0x0000024D System.Void UIController/<AnimateEnterGameLostText>d__81::.ctor(System.Int32)
+extern void U3CAnimateEnterGameLostTextU3Ed__81__ctor_m472AFAFC282677D02D227BA068349243CFD8B223 (void);
+// 0x0000024E System.Void UIController/<AnimateEnterGameLostText>d__81::System.IDisposable.Dispose()
+extern void U3CAnimateEnterGameLostTextU3Ed__81_System_IDisposable_Dispose_mE7843A1C9069F3E595441B5CA75614D7248790F8 (void);
+// 0x0000024F System.Boolean UIController/<AnimateEnterGameLostText>d__81::MoveNext()
+extern void U3CAnimateEnterGameLostTextU3Ed__81_MoveNext_mFBB3014605578AB70E797A8E3DF4CEBA9BDCE871 (void);
+// 0x00000250 System.Object UIController/<AnimateEnterGameLostText>d__81::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CAnimateEnterGameLostTextU3Ed__81_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m717281C4FAD69592F234A0A4CA3D65F5737056A1 (void);
+// 0x00000251 System.Void UIController/<AnimateEnterGameLostText>d__81::System.Collections.IEnumerator.Reset()
+extern void U3CAnimateEnterGameLostTextU3Ed__81_System_Collections_IEnumerator_Reset_mDF1A332F6F1F91991E553872B5445EAD852AE30D (void);
+// 0x00000252 System.Object UIController/<AnimateEnterGameLostText>d__81::System.Collections.IEnumerator.get_Current()
+extern void U3CAnimateEnterGameLostTextU3Ed__81_System_Collections_IEnumerator_get_Current_m7F5981EC48C8850A6501D4BDDC325D9C567E5A4C (void);
+// 0x00000253 System.Void UIController/<AnimateExitGameLostText>d__82::.ctor(System.Int32)
+extern void U3CAnimateExitGameLostTextU3Ed__82__ctor_m002D146309DDCC3848ECEFA21118C0D13FB5DDCD (void);
+// 0x00000254 System.Void UIController/<AnimateExitGameLostText>d__82::System.IDisposable.Dispose()
+extern void U3CAnimateExitGameLostTextU3Ed__82_System_IDisposable_Dispose_m9CCE194CFEBC76C7D2DFC9AE0231DA192C7AD81C (void);
+// 0x00000255 System.Boolean UIController/<AnimateExitGameLostText>d__82::MoveNext()
+extern void U3CAnimateExitGameLostTextU3Ed__82_MoveNext_mE633A933B117A743EE99F4976C45A15C2877C85C (void);
+// 0x00000256 System.Object UIController/<AnimateExitGameLostText>d__82::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CAnimateExitGameLostTextU3Ed__82_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mA1B12622BC395C038C8272B06EF4F01F5B463810 (void);
+// 0x00000257 System.Void UIController/<AnimateExitGameLostText>d__82::System.Collections.IEnumerator.Reset()
+extern void U3CAnimateExitGameLostTextU3Ed__82_System_Collections_IEnumerator_Reset_mCCA0F41F8A48BC1C2AE64BC2CC979376E5EBB7F7 (void);
+// 0x00000258 System.Object UIController/<AnimateExitGameLostText>d__82::System.Collections.IEnumerator.get_Current()
+extern void U3CAnimateExitGameLostTextU3Ed__82_System_Collections_IEnumerator_get_Current_m029E3D20816EEB460F003E7CFD94E91112FF442B (void);
+// 0x00000259 System.Void UIController/<AnimateEnterBigText>d__83::.ctor(System.Int32)
+extern void U3CAnimateEnterBigTextU3Ed__83__ctor_m2EDCB86DBD94172512DFBDF70B80DD729B26CFD2 (void);
+// 0x0000025A System.Void UIController/<AnimateEnterBigText>d__83::System.IDisposable.Dispose()
+extern void U3CAnimateEnterBigTextU3Ed__83_System_IDisposable_Dispose_m32728B1DF7D25041BD32B4D70B1CFE17A19DC153 (void);
+// 0x0000025B System.Boolean UIController/<AnimateEnterBigText>d__83::MoveNext()
+extern void U3CAnimateEnterBigTextU3Ed__83_MoveNext_m001285A324A51FC7BE53CA21A5B2EB67018D1705 (void);
+// 0x0000025C System.Object UIController/<AnimateEnterBigText>d__83::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CAnimateEnterBigTextU3Ed__83_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mD89A9B5FE2D0F25250E75AE0A894FDB8D91D90D9 (void);
+// 0x0000025D System.Void UIController/<AnimateEnterBigText>d__83::System.Collections.IEnumerator.Reset()
+extern void U3CAnimateEnterBigTextU3Ed__83_System_Collections_IEnumerator_Reset_mD93D8E61B22C7DDADBFE654C4903D99AF72F7CAE (void);
+// 0x0000025E System.Object UIController/<AnimateEnterBigText>d__83::System.Collections.IEnumerator.get_Current()
+extern void U3CAnimateEnterBigTextU3Ed__83_System_Collections_IEnumerator_get_Current_mE78EAD0FDACBBEB423F5329BC7F4F467E98E9EB8 (void);
+// 0x0000025F System.Void UIController/<AnimateExitBigText>d__84::.ctor(System.Int32)
+extern void U3CAnimateExitBigTextU3Ed__84__ctor_m31B62A13841A75798858131DEB6CD13DA4F3C298 (void);
+// 0x00000260 System.Void UIController/<AnimateExitBigText>d__84::System.IDisposable.Dispose()
+extern void U3CAnimateExitBigTextU3Ed__84_System_IDisposable_Dispose_m2E236FC66FF7D06F775C353636B65C5F7A33B1A9 (void);
+// 0x00000261 System.Boolean UIController/<AnimateExitBigText>d__84::MoveNext()
+extern void U3CAnimateExitBigTextU3Ed__84_MoveNext_m3A5B72A93D82DC897BAAC65C7B8C518007013E44 (void);
+// 0x00000262 System.Object UIController/<AnimateExitBigText>d__84::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CAnimateExitBigTextU3Ed__84_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m121E3CE5AFE132A0FBAB6D11D67C313EE89A16A6 (void);
+// 0x00000263 System.Void UIController/<AnimateExitBigText>d__84::System.Collections.IEnumerator.Reset()
+extern void U3CAnimateExitBigTextU3Ed__84_System_Collections_IEnumerator_Reset_m517248BD3B111EAB0A88E0E981E3EABFCC94D446 (void);
+// 0x00000264 System.Object UIController/<AnimateExitBigText>d__84::System.Collections.IEnumerator.get_Current()
+extern void U3CAnimateExitBigTextU3Ed__84_System_Collections_IEnumerator_get_Current_mE0BB9573F9AE4C86508854C3D60A66D960E4432D (void);
+// 0x00000265 System.Void UIController/<ShowBallHeldPauseScreen>d__90::.ctor(System.Int32)
+extern void U3CShowBallHeldPauseScreenU3Ed__90__ctor_mC4B78209490FA1E10D4026E77F282BA429F152BC (void);
+// 0x00000266 System.Void UIController/<ShowBallHeldPauseScreen>d__90::System.IDisposable.Dispose()
+extern void U3CShowBallHeldPauseScreenU3Ed__90_System_IDisposable_Dispose_m3AA4C8D52DE356DD93D57CDF115EBA84089AFDBA (void);
+// 0x00000267 System.Boolean UIController/<ShowBallHeldPauseScreen>d__90::MoveNext()
+extern void U3CShowBallHeldPauseScreenU3Ed__90_MoveNext_mF781FB75A315E91D7DEC34F8F2DCEB3A8AEF3CF6 (void);
+// 0x00000268 System.Object UIController/<ShowBallHeldPauseScreen>d__90::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CShowBallHeldPauseScreenU3Ed__90_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mF0E62F2C705B319CEEB6EA0C3518842DCBA53E79 (void);
+// 0x00000269 System.Void UIController/<ShowBallHeldPauseScreen>d__90::System.Collections.IEnumerator.Reset()
+extern void U3CShowBallHeldPauseScreenU3Ed__90_System_Collections_IEnumerator_Reset_m9A440924029B00A858F1A5CB6701C528EABBF30F (void);
+// 0x0000026A System.Object UIController/<ShowBallHeldPauseScreen>d__90::System.Collections.IEnumerator.get_Current()
+extern void U3CShowBallHeldPauseScreenU3Ed__90_System_Collections_IEnumerator_get_Current_m561DBFD1C4B5AE3330486C3C534A8244DC8CE80F (void);
+// 0x0000026B System.Void UIController/<ShowGameOverScreenHS>d__92::.ctor(System.Int32)
+extern void U3CShowGameOverScreenHSU3Ed__92__ctor_m848575DFA2927F457F7E9B1EC6576FFE2B81C766 (void);
+// 0x0000026C System.Void UIController/<ShowGameOverScreenHS>d__92::System.IDisposable.Dispose()
+extern void U3CShowGameOverScreenHSU3Ed__92_System_IDisposable_Dispose_mEFC11A2A80D27752F050D1E15C8EE43B54BCD11E (void);
+// 0x0000026D System.Boolean UIController/<ShowGameOverScreenHS>d__92::MoveNext()
+extern void U3CShowGameOverScreenHSU3Ed__92_MoveNext_m23F534406A45B44CCBB1F497402CE11BCC73D342 (void);
+// 0x0000026E System.Object UIController/<ShowGameOverScreenHS>d__92::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CShowGameOverScreenHSU3Ed__92_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m6F552262E5E33343C9EA5160654D3F93D94A5660 (void);
+// 0x0000026F System.Void UIController/<ShowGameOverScreenHS>d__92::System.Collections.IEnumerator.Reset()
+extern void U3CShowGameOverScreenHSU3Ed__92_System_Collections_IEnumerator_Reset_m96FD8C931F033249372467DB9C93DD2D8795C306 (void);
+// 0x00000270 System.Object UIController/<ShowGameOverScreenHS>d__92::System.Collections.IEnumerator.get_Current()
+extern void U3CShowGameOverScreenHSU3Ed__92_System_Collections_IEnumerator_get_Current_m4E8C9193FBB79CB93F3DFE54C1729931EDA00F99 (void);
 // 0x00000271 System.Int32 UtilFunctions::CalcDistScore(System.Single,UnityEngine.Vector3)
 extern void UtilFunctions_CalcDistScore_m38C026AC95AF8DDCFE4CBA9EE235482759BFBB6A (void);
 // 0x00000272 UnityEngine.Vector3 UtilFunctions::RectToSphereCoordinates(UnityEngine.Vector3)
@@ -1955,78 +1955,78 @@ static Il2CppMethodPointer s_methodPointers[702] =
 	UIController_ShowExpertHighScoresScreen_mC7FC153180A89A732F8025087A476F7ED5B73E9B,
 	UIController_ShowKeyBoard_m4B1C0E50ADAEA5271F4A1FDFC8BEC9862919F83B,
 	UIController__ctor_mFF218DBC8CCEFE36AAC295D2376501658CD8B7A2,
-	U3CPlayFireworksU3Ed__63__ctor_mC31D99EA2FD8544197C7478FDE257AE7A3FE3198,
-	U3CPlayFireworksU3Ed__63_System_IDisposable_Dispose_m67112C7FA9C3F69D90C807A90B1C3914231FDF50,
-	U3CPlayFireworksU3Ed__63_MoveNext_mBC1289116FF7E06E87A3FA66F764BFFEA3335BB4,
-	U3CPlayFireworksU3Ed__63_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m295A91C6BE7A189D26988B63B0DDFC13175525EA,
-	U3CPlayFireworksU3Ed__63_System_Collections_IEnumerator_Reset_m48CC9BC6E75C9F0246A1340DFEF12A6430BA2CA3,
-	U3CPlayFireworksU3Ed__63_System_Collections_IEnumerator_get_Current_m1D1CF52C4208EDB3A0A101E5EE79BFC010C2BF21,
-	U3CFlashTimerU3Ed__72__ctor_m90BB3FD37925BE05B4DDEA74EFFB4F005616C311,
-	U3CFlashTimerU3Ed__72_System_IDisposable_Dispose_mD1CF0D5F5FCDBDC85FBCCFE56F6814B466DCE839,
-	U3CFlashTimerU3Ed__72_MoveNext_mDEE17EBA3D75DF13D77D30673A0A56575A9CC842,
-	U3CFlashTimerU3Ed__72_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m232AF143AA33D13BBA473ED219E193C1FC2DC272,
-	U3CFlashTimerU3Ed__72_System_Collections_IEnumerator_Reset_m556063BBD7A6715720644003A1BCD730ADE4832F,
-	U3CFlashTimerU3Ed__72_System_Collections_IEnumerator_get_Current_m62FAF756517B874F2072CF6D40F751246EEF429F,
-	U3CAnimateEnterTitleTextU3Ed__75__ctor_m6452F8DB2CAA4627DF4147C5515336DB00536ADC,
-	U3CAnimateEnterTitleTextU3Ed__75_System_IDisposable_Dispose_mB813EC28A6845348FDE658029E33D6A23363BB75,
-	U3CAnimateEnterTitleTextU3Ed__75_MoveNext_mE7DEE1143020605A68CDD9568CEDF56F2FE461D3,
-	U3CAnimateEnterTitleTextU3Ed__75_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mF6C3AB8BC6223B7E18B3E6E0E76A0A5786B3CD37,
-	U3CAnimateEnterTitleTextU3Ed__75_System_Collections_IEnumerator_Reset_m70DB2768D8F0EFF5A8C3E8422DB5A929F0D965CA,
-	U3CAnimateEnterTitleTextU3Ed__75_System_Collections_IEnumerator_get_Current_m4D245FA08906EE9AC20A8DB31BC0A9B47DA6340A,
-	U3CAnimateExitTitleTextU3Ed__76__ctor_m5E496003E7C9AB2BE0DE75BADA4EF4BA736D6004,
-	U3CAnimateExitTitleTextU3Ed__76_System_IDisposable_Dispose_m828D8924DDADF8D8AD37E226BC4BAFA925C8CABB,
-	U3CAnimateExitTitleTextU3Ed__76_MoveNext_mBD48EF548285C0532738FE9E0751F7CA75FE7A3A,
-	U3CAnimateExitTitleTextU3Ed__76_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mA8683D785D7F716987EE0850161DBCA322CED3A4,
-	U3CAnimateExitTitleTextU3Ed__76_System_Collections_IEnumerator_Reset_m8CF0B5C95C11735FD2629EF6EB2B49C0D8CFF4F6,
-	U3CAnimateExitTitleTextU3Ed__76_System_Collections_IEnumerator_get_Current_m5E89917893645A47BD707DFCF1FD255E67054357,
-	U3CAnimateEnterGameWonTextU3Ed__77__ctor_mD0D1823CA7E0768EE45150A80E29869745CF64BF,
-	U3CAnimateEnterGameWonTextU3Ed__77_System_IDisposable_Dispose_m8CFD61E03CB981E3E6FB12FBE417DD35F8861B99,
-	U3CAnimateEnterGameWonTextU3Ed__77_MoveNext_m22DEF140B73ED56FD992445B0ECA8EBBCCF94784,
-	U3CAnimateEnterGameWonTextU3Ed__77_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m8F612D81A77AAC201AF792F2C3E11980EB3BCF91,
-	U3CAnimateEnterGameWonTextU3Ed__77_System_Collections_IEnumerator_Reset_m1498E3A3BEA47BB134B6E892A7250559C392CF32,
-	U3CAnimateEnterGameWonTextU3Ed__77_System_Collections_IEnumerator_get_Current_mFA3F3736EE61190EC5AA2B52287CEE8A3C651F3D,
-	U3CAnimateExitGameWonTextU3Ed__78__ctor_mF75601190C41F573C1903C2D39DA051B1A6CC96A,
-	U3CAnimateExitGameWonTextU3Ed__78_System_IDisposable_Dispose_m2CD5C150DCEBB7069A24A7FDE47EB9426D8392CB,
-	U3CAnimateExitGameWonTextU3Ed__78_MoveNext_mB14290A10508AB89A062EE0AD4F464015EFFE54D,
-	U3CAnimateExitGameWonTextU3Ed__78_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m3A7A7D3DC0872788D50A60CE4EE18F50BB7780CA,
-	U3CAnimateExitGameWonTextU3Ed__78_System_Collections_IEnumerator_Reset_m9AFF9EB13ABAD624CEBED115C78B90B8F36BA367,
-	U3CAnimateExitGameWonTextU3Ed__78_System_Collections_IEnumerator_get_Current_m7B06FBC495F7B079D91D27099C8435555CA024D3,
-	U3CAnimateEnterGameLostTextU3Ed__79__ctor_m9527C44BB3B3AE6CD5C9E5E42048DA7DC60E0802,
-	U3CAnimateEnterGameLostTextU3Ed__79_System_IDisposable_Dispose_mC70475D11695770A2C5984C1CEFFC6B97E42D685,
-	U3CAnimateEnterGameLostTextU3Ed__79_MoveNext_mD652385C20D9522E97D7264C91EA26165DF5D282,
-	U3CAnimateEnterGameLostTextU3Ed__79_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m36298EFF7195C3D9EF8D6CFB397F002D5283905B,
-	U3CAnimateEnterGameLostTextU3Ed__79_System_Collections_IEnumerator_Reset_mCF7C271A93DEDBB805C7D2C5B2BA6DAB164C4FD8,
-	U3CAnimateEnterGameLostTextU3Ed__79_System_Collections_IEnumerator_get_Current_mF3CC722C0E74A0885E1B064C0420728A074B9AE7,
-	U3CAnimateExitGameLostTextU3Ed__80__ctor_m3EEFCE3F1F70FF1A54D57EA77580E51C445A27E4,
-	U3CAnimateExitGameLostTextU3Ed__80_System_IDisposable_Dispose_mF920577A05B928D61213248909DA45E42E4A0228,
-	U3CAnimateExitGameLostTextU3Ed__80_MoveNext_m01890E37F77FA7613A2B00D8E91F28F2C1DC5917,
-	U3CAnimateExitGameLostTextU3Ed__80_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mBD75BE7812E502E108CB6E0F1EE1197671AE4560,
-	U3CAnimateExitGameLostTextU3Ed__80_System_Collections_IEnumerator_Reset_m4900D4A86CB6704D4A8F930B98B3A759CE852193,
-	U3CAnimateExitGameLostTextU3Ed__80_System_Collections_IEnumerator_get_Current_m682959925283073B0D21FF63CEE68F158F218D5B,
-	U3CAnimateEnterBigTextU3Ed__81__ctor_mB5957FC5F695AC8DAC329A60613578154F3213BF,
-	U3CAnimateEnterBigTextU3Ed__81_System_IDisposable_Dispose_m7C05AA4A1B8FBB8423DEF5B714DC92769111CE39,
-	U3CAnimateEnterBigTextU3Ed__81_MoveNext_m70D25F13ACA79BB5E7C59107F79A889851F36D33,
-	U3CAnimateEnterBigTextU3Ed__81_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m9BA4564191171C46AB708AA86DB372862CCE7BF2,
-	U3CAnimateEnterBigTextU3Ed__81_System_Collections_IEnumerator_Reset_mD7221A3FE440F933281B7A894FE81E835358F100,
-	U3CAnimateEnterBigTextU3Ed__81_System_Collections_IEnumerator_get_Current_mA4AFE8A7CC43A5662957C125FE4B042D5706FF61,
-	U3CAnimateExitBigTextU3Ed__82__ctor_m7ED04FFAFF53E0DD0AFEF21AE4A4D52D30AAF495,
-	U3CAnimateExitBigTextU3Ed__82_System_IDisposable_Dispose_m3736E8906377568709D5B9EF86EC93FCA247E02B,
-	U3CAnimateExitBigTextU3Ed__82_MoveNext_m4000ADF506A37112B174D477D4B9D19F7884AE28,
-	U3CAnimateExitBigTextU3Ed__82_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mD254226BF6B01D0263FB65BE0C400AD316BEA9D4,
-	U3CAnimateExitBigTextU3Ed__82_System_Collections_IEnumerator_Reset_m4DB572267794EBDF9D21A8E79803D1178CB39EDC,
-	U3CAnimateExitBigTextU3Ed__82_System_Collections_IEnumerator_get_Current_m15673C214B18C7825CFCD06BDCE8580D1B3B1824,
-	U3CShowBallHeldPauseScreenU3Ed__88__ctor_m72FD21BBFFF9AC2350BE552FE55EEB612942A637,
-	U3CShowBallHeldPauseScreenU3Ed__88_System_IDisposable_Dispose_m2CEC04B6023F9B15E48D6D44959EE77720031B19,
-	U3CShowBallHeldPauseScreenU3Ed__88_MoveNext_mBE4A8EC30EE4B71221C919177463BAB12C90D8C2,
-	U3CShowBallHeldPauseScreenU3Ed__88_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mCF7542E0A6D5A4B3777370F95508C0F4AEE34EAF,
-	U3CShowBallHeldPauseScreenU3Ed__88_System_Collections_IEnumerator_Reset_m44341532EACF0637B8527F5D2AC7E44B88B19B86,
-	U3CShowBallHeldPauseScreenU3Ed__88_System_Collections_IEnumerator_get_Current_m283B51A7BEA821139BF8D13C4C2B425EAFD4C1CA,
-	U3CShowGameOverScreenHSU3Ed__90__ctor_m66575BB73C6E018B3F62DE2E032C035EEAA65316,
-	U3CShowGameOverScreenHSU3Ed__90_System_IDisposable_Dispose_m1BE52C1B6F8482E99B57D99985335C5A27C16F0E,
-	U3CShowGameOverScreenHSU3Ed__90_MoveNext_m5AC899A0B54729A5C3D67F6AE1173FAD1271280E,
-	U3CShowGameOverScreenHSU3Ed__90_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m2DE72A7C919069F4D99D90B144EACFF37E4A71AA,
-	U3CShowGameOverScreenHSU3Ed__90_System_Collections_IEnumerator_Reset_m434C7650625135425D598A69414CB02C67AB29AE,
-	U3CShowGameOverScreenHSU3Ed__90_System_Collections_IEnumerator_get_Current_mCA75B3C9CCB1A16884BC6016F9649D0309242C82,
+	U3CPlayFireworksU3Ed__65__ctor_m617A4586F413DB67142D75C49A268EECDC2CD187,
+	U3CPlayFireworksU3Ed__65_System_IDisposable_Dispose_mAC250E77ECFAD75282310C84D5B83FEBA06827D9,
+	U3CPlayFireworksU3Ed__65_MoveNext_m5794D2EE10A6F30834E7E20022AAEF144E41D0ED,
+	U3CPlayFireworksU3Ed__65_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m2D474EA54C0EF5D16B12C843564A9165411EEC7C,
+	U3CPlayFireworksU3Ed__65_System_Collections_IEnumerator_Reset_mAEBD1BAE91F7453048A429D2ADE220C153994C73,
+	U3CPlayFireworksU3Ed__65_System_Collections_IEnumerator_get_Current_mE5867C987E6F42F88A4E4E1FE07E8A0DDFFBEB84,
+	U3CFlashTimerU3Ed__74__ctor_mE4ED405A3D1FC0BF6E42EC2AB8E8C54D27FB7AAB,
+	U3CFlashTimerU3Ed__74_System_IDisposable_Dispose_mB20933FB50204867B6A94595B5427B1630A45229,
+	U3CFlashTimerU3Ed__74_MoveNext_m84D2FBE3C0D232F0EFDAB7FFF4FCEC3EFC1953E9,
+	U3CFlashTimerU3Ed__74_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mDD16BCA268728C28902AB5B513E0372F85B03E83,
+	U3CFlashTimerU3Ed__74_System_Collections_IEnumerator_Reset_m8A2B7B84ECC8AB36AE20E842C0CF1D87533102CD,
+	U3CFlashTimerU3Ed__74_System_Collections_IEnumerator_get_Current_m72D4008A256C45B42D6749F2CE0C11E58C92CED2,
+	U3CAnimateEnterTitleTextU3Ed__77__ctor_mD23A54B3352F61E459BDA6E485B044F02BBE3870,
+	U3CAnimateEnterTitleTextU3Ed__77_System_IDisposable_Dispose_m20DE784AB823DBA4CCD0E70E3B9C2B868374BC61,
+	U3CAnimateEnterTitleTextU3Ed__77_MoveNext_mE7DCC59CE7AE930CBF90933BD95AE36BC4216D8F,
+	U3CAnimateEnterTitleTextU3Ed__77_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m83E0C00CD1CB627700E2105D3014DDF3F3112759,
+	U3CAnimateEnterTitleTextU3Ed__77_System_Collections_IEnumerator_Reset_m301A2922990C3ECB23A81A09CF8713AA5335E466,
+	U3CAnimateEnterTitleTextU3Ed__77_System_Collections_IEnumerator_get_Current_mB0740E94D1812C8CDC8E91295BBEE38F64F28783,
+	U3CAnimateExitTitleTextU3Ed__78__ctor_m8ED1A98B457A4076CAFECB92762250220E7EFE53,
+	U3CAnimateExitTitleTextU3Ed__78_System_IDisposable_Dispose_m4EDC00D2C84FA8CC186A86B54747798FF2F6B244,
+	U3CAnimateExitTitleTextU3Ed__78_MoveNext_m281FE3DD641B2643BED153AFBC78C5945809C30A,
+	U3CAnimateExitTitleTextU3Ed__78_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m4E2F3D9D281EC0A96C7EFE5D09BC73A474F46741,
+	U3CAnimateExitTitleTextU3Ed__78_System_Collections_IEnumerator_Reset_m50E7BF9BDF8E29194C291095C8938EB76DB6B064,
+	U3CAnimateExitTitleTextU3Ed__78_System_Collections_IEnumerator_get_Current_mA2AEA1B8F9734933AA579E4FD0C56508928A3294,
+	U3CAnimateEnterGameWonTextU3Ed__79__ctor_mACFFF00C41D30527ECA4496FD7B17582BA9E9385,
+	U3CAnimateEnterGameWonTextU3Ed__79_System_IDisposable_Dispose_mA6EF8C96BE042645473BFA1B0733A1FBF5A378BB,
+	U3CAnimateEnterGameWonTextU3Ed__79_MoveNext_m8F0C6C030138FA9A48D832ABA6CC050506128500,
+	U3CAnimateEnterGameWonTextU3Ed__79_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mF9389E681E3388E0124F1E9A21AEFD31C029BC7D,
+	U3CAnimateEnterGameWonTextU3Ed__79_System_Collections_IEnumerator_Reset_m9BC6F8F7445E61538502E1D36F4727B04372F02C,
+	U3CAnimateEnterGameWonTextU3Ed__79_System_Collections_IEnumerator_get_Current_m2585F25F66AC4C49D06438766884B9A6D8C133F8,
+	U3CAnimateExitGameWonTextU3Ed__80__ctor_m1E4704A3A737F2DC9464336C021A9BA154476C2B,
+	U3CAnimateExitGameWonTextU3Ed__80_System_IDisposable_Dispose_m1D6F301433956D495788EADF91823E3F978B2165,
+	U3CAnimateExitGameWonTextU3Ed__80_MoveNext_m3B9705FE3CE0A8E97855C87879E2B8614C4A5CB7,
+	U3CAnimateExitGameWonTextU3Ed__80_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m4DF1420A70991003035431F94FD46DF2E98264D2,
+	U3CAnimateExitGameWonTextU3Ed__80_System_Collections_IEnumerator_Reset_mD58BCEAF6566D281AECEB8B9D33AC644F62B47B9,
+	U3CAnimateExitGameWonTextU3Ed__80_System_Collections_IEnumerator_get_Current_mE9BE9A6FB2D5B645921CFA6C1EED459A68CF37F9,
+	U3CAnimateEnterGameLostTextU3Ed__81__ctor_m472AFAFC282677D02D227BA068349243CFD8B223,
+	U3CAnimateEnterGameLostTextU3Ed__81_System_IDisposable_Dispose_mE7843A1C9069F3E595441B5CA75614D7248790F8,
+	U3CAnimateEnterGameLostTextU3Ed__81_MoveNext_mFBB3014605578AB70E797A8E3DF4CEBA9BDCE871,
+	U3CAnimateEnterGameLostTextU3Ed__81_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m717281C4FAD69592F234A0A4CA3D65F5737056A1,
+	U3CAnimateEnterGameLostTextU3Ed__81_System_Collections_IEnumerator_Reset_mDF1A332F6F1F91991E553872B5445EAD852AE30D,
+	U3CAnimateEnterGameLostTextU3Ed__81_System_Collections_IEnumerator_get_Current_m7F5981EC48C8850A6501D4BDDC325D9C567E5A4C,
+	U3CAnimateExitGameLostTextU3Ed__82__ctor_m002D146309DDCC3848ECEFA21118C0D13FB5DDCD,
+	U3CAnimateExitGameLostTextU3Ed__82_System_IDisposable_Dispose_m9CCE194CFEBC76C7D2DFC9AE0231DA192C7AD81C,
+	U3CAnimateExitGameLostTextU3Ed__82_MoveNext_mE633A933B117A743EE99F4976C45A15C2877C85C,
+	U3CAnimateExitGameLostTextU3Ed__82_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mA1B12622BC395C038C8272B06EF4F01F5B463810,
+	U3CAnimateExitGameLostTextU3Ed__82_System_Collections_IEnumerator_Reset_mCCA0F41F8A48BC1C2AE64BC2CC979376E5EBB7F7,
+	U3CAnimateExitGameLostTextU3Ed__82_System_Collections_IEnumerator_get_Current_m029E3D20816EEB460F003E7CFD94E91112FF442B,
+	U3CAnimateEnterBigTextU3Ed__83__ctor_m2EDCB86DBD94172512DFBDF70B80DD729B26CFD2,
+	U3CAnimateEnterBigTextU3Ed__83_System_IDisposable_Dispose_m32728B1DF7D25041BD32B4D70B1CFE17A19DC153,
+	U3CAnimateEnterBigTextU3Ed__83_MoveNext_m001285A324A51FC7BE53CA21A5B2EB67018D1705,
+	U3CAnimateEnterBigTextU3Ed__83_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mD89A9B5FE2D0F25250E75AE0A894FDB8D91D90D9,
+	U3CAnimateEnterBigTextU3Ed__83_System_Collections_IEnumerator_Reset_mD93D8E61B22C7DDADBFE654C4903D99AF72F7CAE,
+	U3CAnimateEnterBigTextU3Ed__83_System_Collections_IEnumerator_get_Current_mE78EAD0FDACBBEB423F5329BC7F4F467E98E9EB8,
+	U3CAnimateExitBigTextU3Ed__84__ctor_m31B62A13841A75798858131DEB6CD13DA4F3C298,
+	U3CAnimateExitBigTextU3Ed__84_System_IDisposable_Dispose_m2E236FC66FF7D06F775C353636B65C5F7A33B1A9,
+	U3CAnimateExitBigTextU3Ed__84_MoveNext_m3A5B72A93D82DC897BAAC65C7B8C518007013E44,
+	U3CAnimateExitBigTextU3Ed__84_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m121E3CE5AFE132A0FBAB6D11D67C313EE89A16A6,
+	U3CAnimateExitBigTextU3Ed__84_System_Collections_IEnumerator_Reset_m517248BD3B111EAB0A88E0E981E3EABFCC94D446,
+	U3CAnimateExitBigTextU3Ed__84_System_Collections_IEnumerator_get_Current_mE0BB9573F9AE4C86508854C3D60A66D960E4432D,
+	U3CShowBallHeldPauseScreenU3Ed__90__ctor_mC4B78209490FA1E10D4026E77F282BA429F152BC,
+	U3CShowBallHeldPauseScreenU3Ed__90_System_IDisposable_Dispose_m3AA4C8D52DE356DD93D57CDF115EBA84089AFDBA,
+	U3CShowBallHeldPauseScreenU3Ed__90_MoveNext_mF781FB75A315E91D7DEC34F8F2DCEB3A8AEF3CF6,
+	U3CShowBallHeldPauseScreenU3Ed__90_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mF0E62F2C705B319CEEB6EA0C3518842DCBA53E79,
+	U3CShowBallHeldPauseScreenU3Ed__90_System_Collections_IEnumerator_Reset_m9A440924029B00A858F1A5CB6701C528EABBF30F,
+	U3CShowBallHeldPauseScreenU3Ed__90_System_Collections_IEnumerator_get_Current_m561DBFD1C4B5AE3330486C3C534A8244DC8CE80F,
+	U3CShowGameOverScreenHSU3Ed__92__ctor_m848575DFA2927F457F7E9B1EC6576FFE2B81C766,
+	U3CShowGameOverScreenHSU3Ed__92_System_IDisposable_Dispose_mEFC11A2A80D27752F050D1E15C8EE43B54BCD11E,
+	U3CShowGameOverScreenHSU3Ed__92_MoveNext_m23F534406A45B44CCBB1F497402CE11BCC73D342,
+	U3CShowGameOverScreenHSU3Ed__92_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m6F552262E5E33343C9EA5160654D3F93D94A5660,
+	U3CShowGameOverScreenHSU3Ed__92_System_Collections_IEnumerator_Reset_m96FD8C931F033249372467DB9C93DD2D8795C306,
+	U3CShowGameOverScreenHSU3Ed__92_System_Collections_IEnumerator_get_Current_m4E8C9193FBB79CB93F3DFE54C1729931EDA00F99,
 	UtilFunctions_CalcDistScore_m38C026AC95AF8DDCFE4CBA9EE235482759BFBB6A,
 	UtilFunctions_RectToSphereCoordinates_m63D150A7B9BC59B8A242916B1AEB9BD84EDB976F,
 	UtilFunctions_FindClosestFracPt_mF857D31B4896B698417DB5DB0F2602098BDF49BB,
@@ -2818,7 +2818,7 @@ static const int32_t s_InvokerIndices[702] =
 };
 static const Il2CppTokenRangePair s_rgctxIndices[1] = 
 {
-	{ 0x0200006C, { 0, 16 } },
+	{ 0x0200006D, { 0, 16 } },
 };
 extern const uint32_t g_rgctx_Stack_1_t27D5A16BB4351804741537A125CB3490F12E5FD4;
 extern const uint32_t g_rgctx_Stack_1__ctor_mAA5D9F13E180C2292696DC133D239269C6E3B862;

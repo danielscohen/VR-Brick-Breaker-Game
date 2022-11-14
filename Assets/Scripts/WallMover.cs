@@ -5,22 +5,30 @@ using UnityEngine;
 public class WallMover : MonoBehaviour
 {
 
+    enum Wall {Front, Back};
     Animator _anim;
-    Transform _wall;
-    [SerializeField] float _rotSpeed = 1f;
+    // Transform _wall;
+    [SerializeField] float _rotSpeed = 5f;
+    [SerializeField] Wall _wall;
     bool _wallIsRotating = false;
     private void Start() {
-        _wall = transform.GetChild(0);
+        // _wall = transform.GetChild(0);
+        
+        if(_wall == Wall.Back){
+            _rotSpeed *= -1;
+        }
         
     }
     private void Update() {
         if(_wallIsRotating){
-            _wall.Rotate(new Vector3(0, 0, _rotSpeed * Time.deltaTime));
+            transform.Rotate(new Vector3(0, 0, _rotSpeed * Time.deltaTime));
         }
     }
     void OnEnable() {
         PowerUpManager.onStartPowerUp += StartMovingWall;
         PowerUpManager.onStopPowerUp += StopMovingWall;
+        PowerUpManager.onStartPowerUp += StartRotatingWall;
+        PowerUpManager.onStopPowerUp += StopRotatingWall;
     }
 
     void OnDisable() {
@@ -44,6 +52,7 @@ public class WallMover : MonoBehaviour
     }
     void StartRotatingWall(PowerUpType type){
         if(type == PowerUpType.RotateWalls){
+            _rotSpeed *= -1;
             _wallIsRotating = true;
         }
     }

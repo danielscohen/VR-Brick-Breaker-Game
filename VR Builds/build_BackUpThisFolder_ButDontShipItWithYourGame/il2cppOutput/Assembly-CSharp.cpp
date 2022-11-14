@@ -4845,54 +4845,58 @@ struct UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2  : public MonoBeha
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ____negativePointsPanel_29;
 	// UnityEngine.GameObject UIController::_movePanel
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ____movePanel_30;
+	// UnityEngine.GameObject UIController::_rotatePanel
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ____rotatePanel_31;
 	// UnityEngine.GameObject UIController::_wall1
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ____wall1_31;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ____wall1_32;
 	// UnityEngine.GameObject UIController::_wall2
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ____wall2_32;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ____wall2_33;
 	// UnityEngine.GameObject UIController::_racket
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ____racket_33;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ____racket_34;
 	// UnityEngine.GameObject UIController::_gameTitle
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ____gameTitle_34;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ____gameTitle_35;
 	// UnityEngine.GameObject UIController::_pausedText
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ____pausedText_35;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ____pausedText_36;
 	// UnityEngine.GameObject UIController::_gameOverBigText
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ____gameOverBigText_36;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ____gameOverBigText_37;
 	// UnityEngine.GameObject UIController::_victoryText
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ____victoryText_37;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ____victoryText_38;
 	// UnityEngine.UI.Image UIController::_doublePointsTimer
-	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ____doublePointsTimer_38;
+	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ____doublePointsTimer_39;
 	// UnityEngine.UI.Image UIController::_negativePointsTimer
-	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ____negativePointsTimer_39;
+	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ____negativePointsTimer_40;
 	// UnityEngine.UI.Image UIController::_moveTimer
-	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ____moveTimer_40;
+	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ____moveTimer_41;
+	// UnityEngine.UI.Image UIController::_rotateTimer
+	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ____rotateTimer_42;
 	// UnityEngine.UI.Slider UIController::_musicVolumeSlider
-	Slider_t87EA570E3D6556CABF57456C2F3873FFD86E652F* ____musicVolumeSlider_41;
+	Slider_t87EA570E3D6556CABF57456C2F3873FFD86E652F* ____musicVolumeSlider_43;
 	// UnityEngine.UI.Slider UIController::_sFXVolumeSlider
-	Slider_t87EA570E3D6556CABF57456C2F3873FFD86E652F* ____sFXVolumeSlider_42;
+	Slider_t87EA570E3D6556CABF57456C2F3873FFD86E652F* ____sFXVolumeSlider_44;
 	// TMPro.TMP_Dropdown UIController::_diffDropDown
-	TMP_Dropdown_t73B37BFDA0D005451C7B750938AFB1748E5EA504* ____diffDropDown_43;
+	TMP_Dropdown_t73B37BFDA0D005451C7B750938AFB1748E5EA504* ____diffDropDown_45;
 	// UnityEngine.GameObject UIController::_highScorePromptScreen
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ____highScorePromptScreen_44;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ____highScorePromptScreen_46;
 	// UnityEngine.GameObject UIController::_highScoreInputScreen
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ____highScoreInputScreen_45;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ____highScoreInputScreen_47;
 	// UnityEngine.GameObject UIController::_beginnerHighScoreScreen
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ____beginnerHighScoreScreen_46;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ____beginnerHighScoreScreen_48;
 	// UnityEngine.GameObject UIController::_normalHighScoreScreen
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ____normalHighScoreScreen_47;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ____normalHighScoreScreen_49;
 	// UnityEngine.GameObject UIController::_expertHighScoreScreen
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ____expertHighScoreScreen_48;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ____expertHighScoreScreen_50;
 	// UnityEngine.GameObject UIController::_BallHeldPauseScreen
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ____BallHeldPauseScreen_49;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ____BallHeldPauseScreen_51;
 	// UnityEngine.GameObject UIController::_fireworks
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ____fireworks_50;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ____fireworks_52;
 	// TMPro.TMP_InputField UIController::_highScoreNameInput
-	TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* ____highScoreNameInput_51;
+	TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* ____highScoreNameInput_53;
 	// UnityEngine.Transform UIController::_highScoreEntry
-	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ____highScoreEntry_52;
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ____highScoreEntry_54;
 	// UnityEngine.Transform[] UIController::_highScoreContainer
-	TransformU5BU5D_tBB9C5F5686CAE82E3D97D43DF0F3D68ABF75EC24* ____highScoreContainer_53;
+	TransformU5BU5D_tBB9C5F5686CAE82E3D97D43DF0F3D68ABF75EC24* ____highScoreContainer_55;
 	// System.Collections.Generic.List`1<UnityEngine.GameObject> UIController::_gameScreens
-	List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* ____gameScreens_54;
+	List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* ____gameScreens_56;
 };
 
 struct UIController_tB28317BDC5493B0C94BC719AA8B3FFC90E5AF6D2_StaticFields
