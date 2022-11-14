@@ -826,6 +826,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteralEDAD4AAA637571D329430B15027C9AB7D3365E5D
 IL2CPP_EXTERN_C String_t* _stringLiteralF25F24DA0D6F9489ACFB6442D496BDAC3A2AD5F6;
 IL2CPP_EXTERN_C String_t* _stringLiteralFD2F208A10A5A9D448171549ADC6F838FE3F97EE;
 IL2CPP_EXTERN_C const RuntimeMethod* BallManager_AddBallPowerUp_m51CB457D4ADE0414CFDA8C8AE95A454007F4F9AB_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* BallManager_DeactivateActiveBalls_m214179207BE608F372181AD6A7C9B6DFADC4F3A7_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* BallManager_LoadNewBall_mBF4EC969B8785BC4D1C304C83BF6A5DD6809B8B1_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* BallManager_ManageBallReturn_m4D9F2CE584DB4B3D3F74EA640C2C25E9CC785A59_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* BallManager_SetActiveBallsInvisible_m43AD5EBCE5B0C35A478EEB5EAB8D4E2D5B461A4D_RuntimeMethod_var;
@@ -7104,6 +7105,8 @@ inline bool Enumerator_MoveNext_m96F4B0BD0A5485C8E8CC57D961DF6F1FA256AF27 (Enume
 }
 // System.Void BallController::SetBallVisible()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BallController_SetBallVisible_m030A8DD706324CAD12262407D40676975E970324 (BallController_tE8E7F4DFB0572A5167A880744EB68B67E4FAE58C* __this, const RuntimeMethod* method) ;
+// System.Void UnityEngine.GameObject::SetActive(System.Boolean)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92 (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, bool ___value0, const RuntimeMethod* method) ;
 // T UnityEngine.GameObject::GetComponent<UnityEngine.Rigidbody>()
 inline Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* GameObject_GetComponent_TisRigidbody_t268697F5A994213ED97393309870968BC1C7393C_m2D7F86C77ECF9B82AAC077B511F1004280571B90 (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method)
 {
@@ -7113,8 +7116,6 @@ inline Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* GameObject_GetCompon
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline (const RuntimeMethod* method) ;
 // System.Void UnityEngine.Rigidbody::set_angularVelocity(UnityEngine.Vector3)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rigidbody_set_angularVelocity_m23266B4E52BF0D2E65CC984AC73CC40B8D4A27E0 (Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___value0, const RuntimeMethod* method) ;
-// System.Void UnityEngine.GameObject::SetActive(System.Boolean)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92 (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, bool ___value0, const RuntimeMethod* method) ;
 // System.Void System.Collections.Generic.Stack`1<UnityEngine.GameObject>::Push(T)
 inline void Stack_1_Push_m03D2069DF70B4E90843AA84CA38A61D3074C46EF (Stack_1_tEDA6555F162AE2CC5394B19622F8A10CD078C7AF* __this, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___item0, const RuntimeMethod* method)
 {
@@ -10860,6 +10861,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BallManager_OnEnable_m03BB9094203F0D975A
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Action_1_tE5FB5BEC797B6CFE5573EBFB1863455CAD5A1F8F_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BallManager_AddBallPowerUp_m51CB457D4ADE0414CFDA8C8AE95A454007F4F9AB_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BallManager_DeactivateActiveBalls_m214179207BE608F372181AD6A7C9B6DFADC4F3A7_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BallManager_LoadNewBall_mBF4EC969B8785BC4D1C304C83BF6A5DD6809B8B1_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BallManager_ManageBallReturn_m4D9F2CE584DB4B3D3F74EA640C2C25E9CC785A59_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BallManager_SetActiveBallsInvisible_m43AD5EBCE5B0C35A478EEB5EAB8D4E2D5B461A4D_RuntimeMethod_var);
@@ -10903,10 +10905,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BallManager_OnEnable_m03BB9094203F0D975A
 		NullCheck(L_6);
 		Action__ctor_mBDC7B0B4A3F583B64C2896F01BDED360772F67DC(L_6, __this, (intptr_t)((void*)BallManager_SetActiveBallsVisible_m30F9E070BF4A723BC2EB1045C1F2CBF5F00A3BCC_RuntimeMethod_var), NULL);
 		GameController_add_onResumeGame_m4C981DE1FA89937617931C08EEB45B70E134E796(L_6, NULL);
-		// GameController.onGameOver += SetActiveBallsInvisible;
+		// GameController.onGameOver += DeactivateActiveBalls;
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_7 = (Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07*)il2cpp_codegen_object_new(Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var);
 		NullCheck(L_7);
-		Action__ctor_mBDC7B0B4A3F583B64C2896F01BDED360772F67DC(L_7, __this, (intptr_t)((void*)BallManager_SetActiveBallsInvisible_m43AD5EBCE5B0C35A478EEB5EAB8D4E2D5B461A4D_RuntimeMethod_var), NULL);
+		Action__ctor_mBDC7B0B4A3F583B64C2896F01BDED360772F67DC(L_7, __this, (intptr_t)((void*)BallManager_DeactivateActiveBalls_m214179207BE608F372181AD6A7C9B6DFADC4F3A7_RuntimeMethod_var), NULL);
 		GameController_add_onGameOver_mDAD50F6BBBD3C965DE208F588EDFA1209BFBF840(L_7, NULL);
 		// }
 		return;
@@ -10922,6 +10924,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BallManager_OnDisable_m70F8847EE60D27AE2
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Action_1_tE5FB5BEC797B6CFE5573EBFB1863455CAD5A1F8F_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BallManager_AddBallPowerUp_m51CB457D4ADE0414CFDA8C8AE95A454007F4F9AB_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BallManager_DeactivateActiveBalls_m214179207BE608F372181AD6A7C9B6DFADC4F3A7_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BallManager_LoadNewBall_mBF4EC969B8785BC4D1C304C83BF6A5DD6809B8B1_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BallManager_ManageBallReturn_m4D9F2CE584DB4B3D3F74EA640C2C25E9CC785A59_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BallManager_SetActiveBallsInvisible_m43AD5EBCE5B0C35A478EEB5EAB8D4E2D5B461A4D_RuntimeMethod_var);
@@ -10965,10 +10968,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BallManager_OnDisable_m70F8847EE60D27AE2
 		NullCheck(L_6);
 		Action__ctor_mBDC7B0B4A3F583B64C2896F01BDED360772F67DC(L_6, __this, (intptr_t)((void*)BallManager_SetActiveBallsVisible_m30F9E070BF4A723BC2EB1045C1F2CBF5F00A3BCC_RuntimeMethod_var), NULL);
 		GameController_remove_onResumeGame_m8787996CD226D4F2D71667FCA4CF0EB07FF15121(L_6, NULL);
-		// GameController.onGameOver -= SetActiveBallsInvisible;
+		// GameController.onGameOver -= DeactivateActiveBalls;
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_7 = (Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07*)il2cpp_codegen_object_new(Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var);
 		NullCheck(L_7);
-		Action__ctor_mBDC7B0B4A3F583B64C2896F01BDED360772F67DC(L_7, __this, (intptr_t)((void*)BallManager_SetActiveBallsInvisible_m43AD5EBCE5B0C35A478EEB5EAB8D4E2D5B461A4D_RuntimeMethod_var), NULL);
+		Action__ctor_mBDC7B0B4A3F583B64C2896F01BDED360772F67DC(L_7, __this, (intptr_t)((void*)BallManager_DeactivateActiveBalls_m214179207BE608F372181AD6A7C9B6DFADC4F3A7_RuntimeMethod_var), NULL);
 		GameController_remove_onGameOver_m57482D94C3CD6524D1216BCD298FA7AF60F68049(L_7, NULL);
 		// }
 		return;
@@ -11426,6 +11429,80 @@ IL_001f_1:
 	}
 
 IL_0038:
+	{
+		// }
+		return;
+	}
+}
+// System.Void BallManager::DeactivateActiveBalls()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BallManager_DeactivateActiveBalls_m214179207BE608F372181AD6A7C9B6DFADC4F3A7 (BallManager_t81337400CCAB0A19AD4E3558C3BE320533A97E45* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_Dispose_m07D362A07C19B36C2FD1B4DC79DD99903D4DA95D_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_MoveNext_m96F4B0BD0A5485C8E8CC57D961DF6F1FA256AF27_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_get_Current_m7236EBE1CFCB6533F96E030500D322B13D0CA5A4_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_GetEnumerator_mA843D26C63E5963415DFCA6E49DFA27AFD9C75E8_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	Enumerator_t88BD1282EF117E59AACFC9EC55B89F0B9EDACE60 V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	{
+		// foreach(GameObject ball in activeBalls){
+		List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* L_0 = __this->___activeBalls_13;
+		NullCheck(L_0);
+		Enumerator_t88BD1282EF117E59AACFC9EC55B89F0B9EDACE60 L_1;
+		L_1 = List_1_GetEnumerator_mA843D26C63E5963415DFCA6E49DFA27AFD9C75E8(L_0, List_1_GetEnumerator_mA843D26C63E5963415DFCA6E49DFA27AFD9C75E8_RuntimeMethod_var);
+		V_0 = L_1;
+	}
+	{
+		auto __finallyBlock = il2cpp::utils::Finally([&]
+		{
+
+FINALLY_0026:
+			{// begin finally (depth: 1)
+				Enumerator_Dispose_m07D362A07C19B36C2FD1B4DC79DD99903D4DA95D((&V_0), Enumerator_Dispose_m07D362A07C19B36C2FD1B4DC79DD99903D4DA95D_RuntimeMethod_var);
+				return;
+			}// end finally (depth: 1)
+		});
+		try
+		{// begin try (depth: 1)
+			{
+				goto IL_001b_1;
+			}
+
+IL_000e_1:
+			{
+				// foreach(GameObject ball in activeBalls){
+				GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2;
+				L_2 = Enumerator_get_Current_m7236EBE1CFCB6533F96E030500D322B13D0CA5A4_inline((&V_0), Enumerator_get_Current_m7236EBE1CFCB6533F96E030500D322B13D0CA5A4_RuntimeMethod_var);
+				// ball.SetActive(false);
+				NullCheck(L_2);
+				GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_2, (bool)0, NULL);
+			}
+
+IL_001b_1:
+			{
+				// foreach(GameObject ball in activeBalls){
+				bool L_3;
+				L_3 = Enumerator_MoveNext_m96F4B0BD0A5485C8E8CC57D961DF6F1FA256AF27((&V_0), Enumerator_MoveNext_m96F4B0BD0A5485C8E8CC57D961DF6F1FA256AF27_RuntimeMethod_var);
+				if (L_3)
+				{
+					goto IL_000e_1;
+				}
+			}
+			{
+				goto IL_0034;
+			}
+		}// end try (depth: 1)
+		catch(Il2CppExceptionWrapper& e)
+		{
+			__finallyBlock.StoreException(e.ex);
+		}
+	}
+
+IL_0034:
 	{
 		// }
 		return;

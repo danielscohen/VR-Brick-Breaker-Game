@@ -22,6 +22,7 @@ public class BallController : MonoBehaviour
     Renderer _ballRen;
 
 
+
     void Awake() {
         
         ballRb = GetComponent<Rigidbody>();
@@ -36,7 +37,6 @@ public class BallController : MonoBehaviour
 
     private void Update() {
         if(transform.position.z < -0.5){
-            Debug.Log("Delete Ball");
             onBallLost?.Invoke(BallID);
         }
         // if(ballRb.velocity.sqrMagnitude > 0){
@@ -70,8 +70,12 @@ public class BallController : MonoBehaviour
     }
 
     void OnEnable() {
+        GameController.onGameOver += DestroyBall;
         StartCoroutine(VelocityCacher());
         JustCollidedWithBrick = false;
+    }
+    void OnDisable() {
+        GameController.onGameOver -= DestroyBall;
     }
 
     void OnCollisionEnter(Collision collision) {
@@ -103,6 +107,10 @@ public class BallController : MonoBehaviour
             PrevVelocity = ballRb.velocity;
             yield return null;
         }
+    }
+
+    void DestroyBall(){
+        Destroy(gameObject);
     }
 
     // private void FixedUpdate() {

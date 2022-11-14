@@ -40,7 +40,6 @@ public class BallManager : MonoBehaviour
         PowerUpController.onPLayerCaughtPowerUp += AddBallPowerUp;
         GameController.onPauseGame += SetActiveBallsInvisible;
         GameController.onResumeGame += SetActiveBallsVisible;
-        GameController.onGameOver += SetActiveBallsInvisible;
     }
 
     void OnDisable() {
@@ -51,7 +50,6 @@ public class BallManager : MonoBehaviour
         PowerUpController.onPLayerCaughtPowerUp -= AddBallPowerUp;
         GameController.onPauseGame -= SetActiveBallsInvisible;
         GameController.onResumeGame -= SetActiveBallsVisible;
-        GameController.onGameOver -= SetActiveBallsInvisible;
     }
 
     // private void Update() {
@@ -129,6 +127,11 @@ public class BallManager : MonoBehaviour
     public void SetActiveBallsVisible(){
         foreach(GameObject ball in activeBalls){
             ball.GetComponent<BallController>().SetBallVisible();
+        }
+    }
+    public void DeactivateActiveBalls(){
+        foreach(GameObject ball in activeBalls){
+            ball.SetActive(false);
         }
     }
 
