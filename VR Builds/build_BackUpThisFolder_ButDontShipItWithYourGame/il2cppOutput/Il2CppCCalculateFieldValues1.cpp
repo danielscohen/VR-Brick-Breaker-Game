@@ -4495,14 +4495,14 @@ struct Mobile_t304A73480DF447472BDB16BA19A9E4FE2C8CB2DD_StaticFields
 	Action_1_t10DCB0C07D0D3C565CEACADC80D1152B35A45F6C* ___OnMuteStateChanged_2;
 };
 
-// BallController/<VelocityCacher>d__38
-struct U3CVelocityCacherU3Ed__38_t558C81A6F70C0A0AD282C5D0ADDD41C402ED0A36  : public RuntimeObject
+// BallController/<VelocityCacher>d__39
+struct U3CVelocityCacherU3Ed__39_t41CA3ADA93EFBE86B7457BEA0FFFCF73AB521E46  : public RuntimeObject
 {
-	// System.Int32 BallController/<VelocityCacher>d__38::<>1__state
+	// System.Int32 BallController/<VelocityCacher>d__39::<>1__state
 	int32_t ___U3CU3E1__state_0;
-	// System.Object BallController/<VelocityCacher>d__38::<>2__current
+	// System.Object BallController/<VelocityCacher>d__39::<>2__current
 	RuntimeObject* ___U3CU3E2__current_1;
-	// BallController BallController/<VelocityCacher>d__38::<>4__this
+	// BallController BallController/<VelocityCacher>d__39::<>4__this
 	BallController_tE8E7F4DFB0572A5167A880744EB68B67E4FAE58C* ___U3CU3E4__this_2;
 };
 
@@ -23847,7 +23847,7 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4220[17] =
 	static_cast<int32_t>(sizeof(RuntimeObject)),0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4221[3] = 
 {
-	static_cast<int32_t>(offsetof(U3CVelocityCacherU3Ed__38_t558C81A6F70C0A0AD282C5D0ADDD41C402ED0A36, ___U3CU3E1__state_0)),static_cast<int32_t>(offsetof(U3CVelocityCacherU3Ed__38_t558C81A6F70C0A0AD282C5D0ADDD41C402ED0A36, ___U3CU3E2__current_1)),static_cast<int32_t>(offsetof(U3CVelocityCacherU3Ed__38_t558C81A6F70C0A0AD282C5D0ADDD41C402ED0A36, ___U3CU3E4__this_2)),};
+	static_cast<int32_t>(offsetof(U3CVelocityCacherU3Ed__39_t41CA3ADA93EFBE86B7457BEA0FFFCF73AB521E46, ___U3CU3E1__state_0)),static_cast<int32_t>(offsetof(U3CVelocityCacherU3Ed__39_t41CA3ADA93EFBE86B7457BEA0FFFCF73AB521E46, ___U3CU3E2__current_1)),static_cast<int32_t>(offsetof(U3CVelocityCacherU3Ed__39_t41CA3ADA93EFBE86B7457BEA0FFFCF73AB521E46, ___U3CU3E4__this_2)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4222[13] = 
 {
 	static_cast<int32_t>(offsetof(BallController_tE8E7F4DFB0572A5167A880744EB68B67E4FAE58C, ___U3CPrevVelocityU3Ek__BackingField_4)),static_cast<int32_t>(offsetof(BallController_tE8E7F4DFB0572A5167A880744EB68B67E4FAE58C, ___U3CJustCollidedWithBrickU3Ek__BackingField_5)),static_cast<int32_t>(offsetof(BallController_tE8E7F4DFB0572A5167A880744EB68B67E4FAE58C, ____collTime_6)),static_cast<int32_t>(offsetof(BallController_tE8E7F4DFB0572A5167A880744EB68B67E4FAE58C, ____nextCollWaitTime_7)),static_cast<int32_t>(offsetof(BallController_tE8E7F4DFB0572A5167A880744EB68B67E4FAE58C, ____effectPrefab_8)),static_cast<int32_t>(offsetof(BallController_tE8E7F4DFB0572A5167A880744EB68B67E4FAE58C_StaticFields, ___onBallLost_9)),static_cast<int32_t>(offsetof(BallController_tE8E7F4DFB0572A5167A880744EB68B67E4FAE58C, ___ballRb_10)),static_cast<int32_t>(offsetof(BallController_tE8E7F4DFB0572A5167A880744EB68B67E4FAE58C, ____camPos_11)),static_cast<int32_t>(offsetof(BallController_tE8E7F4DFB0572A5167A880744EB68B67E4FAE58C, ___Gravity_12)),static_cast<int32_t>(offsetof(BallController_tE8E7F4DFB0572A5167A880744EB68B67E4FAE58C, ____maxSpeedSqrd_13)),static_cast<int32_t>(offsetof(BallController_tE8E7F4DFB0572A5167A880744EB68B67E4FAE58C, ___U3CBallIDU3Ek__BackingField_14)),static_cast<int32_t>(offsetof(BallController_tE8E7F4DFB0572A5167A880744EB68B67E4FAE58C, ___U3CGravityEnabledU3Ek__BackingField_15)),static_cast<int32_t>(offsetof(BallController_tE8E7F4DFB0572A5167A880744EB68B67E4FAE58C, ____ballRen_16)),};

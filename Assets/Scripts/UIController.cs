@@ -223,12 +223,9 @@ public class UIController : MonoBehaviour
         while(true){
             // AudioManager.Instance.PlayAudio(AudioTypes.TimerFlash);
             yield return new WaitForSeconds(0.5f);
-            _redTimerCircle.enabled = true;
             _timerText.enabled = true;
             yield return new WaitForSeconds(0.5f);
-            _redTimerCircle.enabled = false;
             _timerText.enabled = false;
-            yield return new WaitForSeconds(0.5f);
         }
     }
     void UpdatePowerUpTimer(PowerUpType type, float timePer) {

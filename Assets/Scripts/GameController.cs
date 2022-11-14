@@ -33,11 +33,11 @@ public class GameController : MonoBehaviour
 
     private void OnEnable() {
         pauseReference.action.started += OnPausePressed;
-        endGameRef.action.started += onEndGame;
+        // endGameRef.action.started += onEndGame;
     }
     private void OnDisable() {
         pauseReference.action.started -= OnPausePressed;
-        endGameRef.action.started -= onEndGame;
+        // endGameRef.action.started -= onEndGame;
     }
 
     // private void Update() {
