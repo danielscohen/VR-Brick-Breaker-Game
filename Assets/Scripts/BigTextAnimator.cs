@@ -16,6 +16,7 @@ public class BigTextAnimator : MonoBehaviour
     public IEnumerator AnimateEnter(){
         for(int i = 0; i < _textLines.Count; i++){
             Transform text = _textLines[i];
+            AudioManager.Instance.PlayAudio(AudioTypes.BigTextMove, text.position);
             text.gameObject.SetActive(true);
             bool dirRight = i % 2 == 0;
             if(dirRight){
@@ -29,6 +30,7 @@ public class BigTextAnimator : MonoBehaviour
     public IEnumerator AnimateExit(){
         for(int i = 0; i < _textLines.Count; i++){
             Transform text = _textLines[i];
+            AudioManager.Instance.PlayAudio(AudioTypes.BigTextMove, text.position);
             bool dirRight = i % 2 == 0;
             if(dirRight){
                 yield return StartCoroutine(AnimateEaseOut(new Vector3(0, text.position.y, text.position.z), new Vector3(-_moveDist, text.position.y, text.position.z), text));

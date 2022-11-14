@@ -133,7 +133,7 @@ MonoBehaviour:
   voxFadeInDur: 0.1
   minFragSizeKeep: 1
   particleProb: 3
-  PowerUpSpawnProb: 2
+  PowerUpSpawnProb: 5
   _impactAudio: {fileID: 8300000, guid: 69a458f045892a549bbc6dea3120cfbf, type: 3}
   _fracAudio: {fileID: 8300000, guid: e0a923b712a6b6047a97543d13cea64c, type: 3}
   _explosionAudio: {fileID: 8300000, guid: 65d61f9b9070ac34a99c2acfa192ce7f, type: 3}

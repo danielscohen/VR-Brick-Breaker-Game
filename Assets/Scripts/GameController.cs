@@ -95,6 +95,7 @@ public class GameController : MonoBehaviour
     }
 
     IEnumerator LoadGame(){
+        Time.timeScale = 1;
         AudioManager.Instance.PlayGameMusic();
         yield return StartCoroutine(UIController.Instance.AnimateEnterTitleText());
         onLoadGame?.Invoke();
@@ -128,12 +129,14 @@ public class GameController : MonoBehaviour
     }
 
     IEnumerator StartGameCo(){
-        yield return StartCoroutine(UIController.Instance.AnimateExitTitleText());
+        AudioManager.Instance.StopGameMusic();
+        AudioManager.Instance.PlayButtonPressedAudio();
         CurrentGameState = GameState.Running;
-        AudioManager.Instance.PlayAudio(AudioReason.GameStarted);
-        _player.transform.position = new Vector3(_playerMenuPos.x, _playerMenuPos.y, _playerMenuPos.z - 1000f);
         onStartGame?.Invoke();
         onResumeGame?.Invoke();
+        yield return StartCoroutine(UIController.Instance.AnimateExitTitleText());
+        _player.transform.position = new Vector3(_playerMenuPos.x, _playerMenuPos.y, _playerMenuPos.z - 1000f);
+        AudioManager.Instance.PlayGameMusic();
         BallIsBeingHeld = false;
     }
 

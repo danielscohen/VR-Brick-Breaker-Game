@@ -16,13 +16,14 @@ public class AudioManager : MonoBehaviour
         } else {
             Instance = this;
         }
-    }
-    void Start()
-    {
+
         _audioClips = new Dictionary<AudioTypes, AudioClip>();
         for(int i = 0; i < _audioClipsList.Count; i++){
             _audioClips.Add((AudioTypes)i, _audioClipsList[i]);
         }
+    }
+    void Start()
+    {
         
 
         if(!PersistentValues.IsFirstScene){
@@ -34,6 +35,9 @@ public class AudioManager : MonoBehaviour
 
     public void PlayGameMusic(){
         _musicSource.Play();
+    }
+    public void StopGameMusic(){
+        _musicSource.Stop();
     }
 
     public void SetMusicVolume(float vol){

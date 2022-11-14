@@ -18,6 +18,7 @@ public enum AudioTypes
     TimerFlash,
     LoadNewBall,
     RacketHit,
-    Fireworks
+    Fireworks,
+    BigTextMove
 
 }
