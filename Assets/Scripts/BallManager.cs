@@ -115,6 +115,11 @@ public class BallManager : MonoBehaviour
     void AddBallPowerUp(PowerUpType type){
         if(type == PowerUpType.ExtraBall){
             _ballsRemaining++;
+            if(_ballsRemaining == 1){
+                _ballSocket.GetComponent<XRSocketInteractor>().allowHover = true;
+                _ballSocket.GetComponent<XRSocketInteractor>().allowSelect = true;
+                LoadNewBall();
+            }
             onBallsLeftCountChange?.Invoke(_ballsRemaining);
         }
     }
@@ -165,7 +170,8 @@ public class BallManager : MonoBehaviour
         if(_ballsRemaining > 0){
             LoadNewBall();
         } else {
-            _ballSocket.SetActive(false);
+            _ballSocket.GetComponent<XRSocketInteractor>().allowHover = false;
+            _ballSocket.GetComponent<XRSocketInteractor>().allowSelect = false;
         }
     }
     // private void Throw(float timePressed) {
