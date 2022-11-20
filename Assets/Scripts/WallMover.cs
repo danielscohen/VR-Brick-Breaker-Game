@@ -11,11 +11,13 @@ public class WallMover : MonoBehaviour
     [SerializeField] float _rotSpeed = 5f;
     [SerializeField] Wall _wall;
     bool _wallIsRotating = false;
+    float _wallMoveDir = 1f;
     private void Start() {
         // _wall = transform.GetChild(0);
         
         if(_wall == Wall.Back){
             _rotSpeed *= -1;
+            _wallMoveDir = -1f;
         }
         
     }

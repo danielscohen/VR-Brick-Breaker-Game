@@ -19775,6 +19775,8 @@ struct WallMover_t5D8105CFFD1F0C45F6F3E39661D2F291BB6BFFF9  : public MonoBehavio
 	int32_t ____wall_6;
 	// System.Boolean WallMover::_wallIsRotating
 	bool ____wallIsRotating_7;
+	// System.Single WallMover::_wallMoveDir
+	float ____wallMoveDir_8;
 };
 
 // UnityEngine.XR.Interaction.Toolkit.XRBaseInteractable
@@ -24106,9 +24108,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4312[18] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4314[3] = 
 {
 	static_cast<int32_t>(sizeof(RuntimeObject)),0,0,};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4315[4] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4315[5] = 
 {
-	static_cast<int32_t>(offsetof(WallMover_t5D8105CFFD1F0C45F6F3E39661D2F291BB6BFFF9, ____anim_4)),static_cast<int32_t>(offsetof(WallMover_t5D8105CFFD1F0C45F6F3E39661D2F291BB6BFFF9, ____rotSpeed_5)),static_cast<int32_t>(offsetof(WallMover_t5D8105CFFD1F0C45F6F3E39661D2F291BB6BFFF9, ____wall_6)),static_cast<int32_t>(offsetof(WallMover_t5D8105CFFD1F0C45F6F3E39661D2F291BB6BFFF9, ____wallIsRotating_7)),};
+	static_cast<int32_t>(offsetof(WallMover_t5D8105CFFD1F0C45F6F3E39661D2F291BB6BFFF9, ____anim_4)),static_cast<int32_t>(offsetof(WallMover_t5D8105CFFD1F0C45F6F3E39661D2F291BB6BFFF9, ____rotSpeed_5)),static_cast<int32_t>(offsetof(WallMover_t5D8105CFFD1F0C45F6F3E39661D2F291BB6BFFF9, ____wall_6)),static_cast<int32_t>(offsetof(WallMover_t5D8105CFFD1F0C45F6F3E39661D2F291BB6BFFF9, ____wallIsRotating_7)),static_cast<int32_t>(offsetof(WallMover_t5D8105CFFD1F0C45F6F3E39661D2F291BB6BFFF9, ____wallMoveDir_8)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4316[5] = 
 {
 	static_cast<int32_t>(offsetof(LookCamera_tA4F0603492EBAE87D7EE5DD8710A788E6118CAEA, ___speedNormal_4)),static_cast<int32_t>(offsetof(LookCamera_tA4F0603492EBAE87D7EE5DD8710A788E6118CAEA, ___speedFast_5)),static_cast<int32_t>(offsetof(LookCamera_tA4F0603492EBAE87D7EE5DD8710A788E6118CAEA, ___mouseSensitivityX_6)),static_cast<int32_t>(offsetof(LookCamera_tA4F0603492EBAE87D7EE5DD8710A788E6118CAEA, ___mouseSensitivityY_7)),static_cast<int32_t>(offsetof(LookCamera_tA4F0603492EBAE87D7EE5DD8710A788E6118CAEA, ___rotY_8)),};

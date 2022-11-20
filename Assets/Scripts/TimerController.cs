@@ -15,10 +15,12 @@ public class TimerController : MonoBehaviour
 
     void OnEnable() {
         GameController.onStartGame += SetStartingTime;
+        GameController.onGameOver += StopTimer;
     }
 
     void OnDisable() {
         GameController.onStartGame -= SetStartingTime;
+        GameController.onGameOver -= StopTimer;
     }
     void Update()
     {
@@ -62,5 +64,9 @@ public class TimerController : MonoBehaviour
         float seconds = Mathf.FloorToInt(timeToDisplay % 60);
         string timerText = string.Format("{0:00}:{1:00}", minutes, seconds);
         onUpdateTimer?.Invoke(timerText, timeToDisplay / timeLimit);
+    }
+
+    void StopTimer(){
+        timerIsRunning = false;
     }
 }

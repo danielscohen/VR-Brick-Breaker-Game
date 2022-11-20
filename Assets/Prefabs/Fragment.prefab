@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nDist: 0
-  expMag: 4.5
+  expMag: 6
   Gravity: 0.2
   maxFragFadeSize: 5
   fadeDuration: 1.5
@@ -57,6 +57,7 @@ MonoBehaviour:
   _flashDuration: 0.4
   _expPrefab: {fileID: 3302442364004722511, guid: 10434d6bf3af98b46a88ab696f543ee3,
     type: 3}
+  _ptsPrefab: {fileID: 0}
   _explosionAudio: {fileID: 8300000, guid: 04608e661dee36e419e2eb3d6dd4bb79, type: 3}
   toDisable: 0
 --- !u!54 &4100311205927107429
