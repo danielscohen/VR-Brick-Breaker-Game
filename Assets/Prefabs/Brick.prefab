@@ -126,10 +126,10 @@ MonoBehaviour:
   fracBranchProb: 4
   craterRadMult: 0.03
   maxFragDepth: 2
-  fracLineDrawDelay: 0.03
+  fracLineDrawDelay: 0.02
   fragExpDelay: 0.01
   voxFadePer: 0.4
-  voxFadeOutDur: 0.5
+  voxFadeOutDur: 0.3
   voxFadeInDur: 0.1
   minFragSizeKeep: 1
   particleProb: 3

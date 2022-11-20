@@ -393,7 +393,7 @@ public class BrickFrag : MonoBehaviour
                     fracRenderers[j].SetPosition(index, fracRenderers[j].transform.InverseTransformPoint(loc));
                 }
             }
-            if (i % 2 == 0) {
+            if (i % 1 == 0) {
                 yield return new WaitForSeconds(fracLineDrawDelay);
             }  
         }
