@@ -4627,8 +4627,6 @@ struct U3CStartCollActionsU3Ed__66_t7F6205BD2C23CAB626A5D0D79C78ED3892E5E7DD  : 
 	RuntimeObject* ___U3CU3E2__current_1;
 	// BrickFrag BrickFrag/<StartCollActions>d__66::<>4__this
 	BrickFrag_tB9F5EC2E69C2473D1A7E4958069298BE4CD7B5EF* ___U3CU3E4__this_2;
-	// System.Int32 BrickFrag/<StartCollActions>d__66::<i>5__2
-	int32_t ___U3CiU3E5__2_3;
 };
 
 // BrickFrag/Fragment
@@ -14834,22 +14832,22 @@ struct PointerEvent_t54CCE1D636377610727DCD7F66F0FEBCE53EF6FB  : public RuntimeO
 	int32_t ___U3CmodifiersU3Ek__BackingField_17;
 };
 
-// ParticleController/<FadeOut>d__7
-struct U3CFadeOutU3Ed__7_tB5B6790773302638DF04A50EF0A3BD87B859C1C2  : public RuntimeObject
+// ParticleController/<FadeOut>d__6
+struct U3CFadeOutU3Ed__6_tC4B31533ACD07D7205FC13914A29321C56E2CD47  : public RuntimeObject
 {
-	// System.Int32 ParticleController/<FadeOut>d__7::<>1__state
+	// System.Int32 ParticleController/<FadeOut>d__6::<>1__state
 	int32_t ___U3CU3E1__state_0;
-	// System.Object ParticleController/<FadeOut>d__7::<>2__current
+	// System.Object ParticleController/<FadeOut>d__6::<>2__current
 	RuntimeObject* ___U3CU3E2__current_1;
-	// ParticleController ParticleController/<FadeOut>d__7::<>4__this
+	// ParticleController ParticleController/<FadeOut>d__6::<>4__this
 	ParticleController_tAFFF1284CCCAA9663C6086B839C44FC9EDFBB802* ___U3CU3E4__this_2;
-	// UnityEngine.Material ParticleController/<FadeOut>d__7::<mat>5__2
+	// UnityEngine.Material ParticleController/<FadeOut>d__6::<mat>5__2
 	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___U3CmatU3E5__2_3;
-	// System.Single ParticleController/<FadeOut>d__7::<time>5__3
+	// System.Single ParticleController/<FadeOut>d__6::<time>5__3
 	float ___U3CtimeU3E5__3_4;
-	// UnityEngine.Color ParticleController/<FadeOut>d__7::<startColor>5__4
+	// UnityEngine.Color ParticleController/<FadeOut>d__6::<startColor>5__4
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___U3CstartColorU3E5__4_5;
-	// UnityEngine.Color ParticleController/<FadeOut>d__7::<endColor>5__5
+	// UnityEngine.Color ParticleController/<FadeOut>d__6::<endColor>5__5
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___U3CendColorU3E5__5_6;
 };
 
@@ -23886,9 +23884,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4233[3] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4234[2] = 
 {
 	static_cast<int32_t>(offsetof(DrawPt_t2728986AB6FEFAC411DEFD0B04E625B8349CED3A, ___pt_0)),static_cast<int32_t>(offsetof(DrawPt_t2728986AB6FEFAC411DEFD0B04E625B8349CED3A, ___epoch_1)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4235[4] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4235[3] = 
 {
-	static_cast<int32_t>(offsetof(U3CStartCollActionsU3Ed__66_t7F6205BD2C23CAB626A5D0D79C78ED3892E5E7DD, ___U3CU3E1__state_0)),static_cast<int32_t>(offsetof(U3CStartCollActionsU3Ed__66_t7F6205BD2C23CAB626A5D0D79C78ED3892E5E7DD, ___U3CU3E2__current_1)),static_cast<int32_t>(offsetof(U3CStartCollActionsU3Ed__66_t7F6205BD2C23CAB626A5D0D79C78ED3892E5E7DD, ___U3CU3E4__this_2)),static_cast<int32_t>(offsetof(U3CStartCollActionsU3Ed__66_t7F6205BD2C23CAB626A5D0D79C78ED3892E5E7DD, ___U3CiU3E5__2_3)),};
+	static_cast<int32_t>(offsetof(U3CStartCollActionsU3Ed__66_t7F6205BD2C23CAB626A5D0D79C78ED3892E5E7DD, ___U3CU3E1__state_0)),static_cast<int32_t>(offsetof(U3CStartCollActionsU3Ed__66_t7F6205BD2C23CAB626A5D0D79C78ED3892E5E7DD, ___U3CU3E2__current_1)),static_cast<int32_t>(offsetof(U3CStartCollActionsU3Ed__66_t7F6205BD2C23CAB626A5D0D79C78ED3892E5E7DD, ___U3CU3E4__this_2)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4236[2] = 
 {
 	static_cast<int32_t>(offsetof(U3CU3Ec__DisplayClass77_0_tF09CD29F377F69F3A43172B619F5DFD9A9D6B0ED, ___i_0)),static_cast<int32_t>(offsetof(U3CU3Ec__DisplayClass77_0_tF09CD29F377F69F3A43172B619F5DFD9A9D6B0ED, ___U3CU3E9__1_1)),};
@@ -23987,7 +23985,7 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4269[3] =
 	static_cast<int32_t>(offsetof(HighScore_tAB53E25EE211F5AF017E511C8EC1B10EDC12DC7A, ___name_0)) + static_cast<int32_t>(sizeof(RuntimeObject)),static_cast<int32_t>(offsetof(HighScore_tAB53E25EE211F5AF017E511C8EC1B10EDC12DC7A, ___date_1)) + static_cast<int32_t>(sizeof(RuntimeObject)),static_cast<int32_t>(offsetof(HighScore_tAB53E25EE211F5AF017E511C8EC1B10EDC12DC7A, ___score_2)) + static_cast<int32_t>(sizeof(RuntimeObject)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4272[7] = 
 {
-	static_cast<int32_t>(offsetof(U3CFadeOutU3Ed__7_tB5B6790773302638DF04A50EF0A3BD87B859C1C2, ___U3CU3E1__state_0)),static_cast<int32_t>(offsetof(U3CFadeOutU3Ed__7_tB5B6790773302638DF04A50EF0A3BD87B859C1C2, ___U3CU3E2__current_1)),static_cast<int32_t>(offsetof(U3CFadeOutU3Ed__7_tB5B6790773302638DF04A50EF0A3BD87B859C1C2, ___U3CU3E4__this_2)),static_cast<int32_t>(offsetof(U3CFadeOutU3Ed__7_tB5B6790773302638DF04A50EF0A3BD87B859C1C2, ___U3CmatU3E5__2_3)),static_cast<int32_t>(offsetof(U3CFadeOutU3Ed__7_tB5B6790773302638DF04A50EF0A3BD87B859C1C2, ___U3CtimeU3E5__3_4)),static_cast<int32_t>(offsetof(U3CFadeOutU3Ed__7_tB5B6790773302638DF04A50EF0A3BD87B859C1C2, ___U3CstartColorU3E5__4_5)),static_cast<int32_t>(offsetof(U3CFadeOutU3Ed__7_tB5B6790773302638DF04A50EF0A3BD87B859C1C2, ___U3CendColorU3E5__5_6)),};
+	static_cast<int32_t>(offsetof(U3CFadeOutU3Ed__6_tC4B31533ACD07D7205FC13914A29321C56E2CD47, ___U3CU3E1__state_0)),static_cast<int32_t>(offsetof(U3CFadeOutU3Ed__6_tC4B31533ACD07D7205FC13914A29321C56E2CD47, ___U3CU3E2__current_1)),static_cast<int32_t>(offsetof(U3CFadeOutU3Ed__6_tC4B31533ACD07D7205FC13914A29321C56E2CD47, ___U3CU3E4__this_2)),static_cast<int32_t>(offsetof(U3CFadeOutU3Ed__6_tC4B31533ACD07D7205FC13914A29321C56E2CD47, ___U3CmatU3E5__2_3)),static_cast<int32_t>(offsetof(U3CFadeOutU3Ed__6_tC4B31533ACD07D7205FC13914A29321C56E2CD47, ___U3CtimeU3E5__3_4)),static_cast<int32_t>(offsetof(U3CFadeOutU3Ed__6_tC4B31533ACD07D7205FC13914A29321C56E2CD47, ___U3CstartColorU3E5__4_5)),static_cast<int32_t>(offsetof(U3CFadeOutU3Ed__6_tC4B31533ACD07D7205FC13914A29321C56E2CD47, ___U3CendColorU3E5__5_6)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4273[4] = 
 {
 	static_cast<int32_t>(offsetof(ParticleController_tAFFF1284CCCAA9663C6086B839C44FC9EDFBB802, ___particleRb_4)),static_cast<int32_t>(offsetof(ParticleController_tAFFF1284CCCAA9663C6086B839C44FC9EDFBB802, ___playerPos_5)),static_cast<int32_t>(offsetof(ParticleController_tAFFF1284CCCAA9663C6086B839C44FC9EDFBB802, ___Gravity_6)),static_cast<int32_t>(offsetof(ParticleController_tAFFF1284CCCAA9663C6086B839C44FC9EDFBB802, ___duration_7)),};

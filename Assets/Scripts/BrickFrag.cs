@@ -180,7 +180,7 @@ public class BrickFrag : MonoBehaviour
         numVoxels = new Vector3Int(voxels.GetLength(0), voxels.GetLength(1), voxels.GetLength(2));
         ballCollDir = ballCollVel.normalized;
         ballCollSpeed = ballCollVel.magnitude;
-        Debug.Log($"speed: {ballCollSpeed}");
+        // Debug.Log($"speed: {ballCollSpeed}");
         craterRadius = ballCollSpeed * craterRadMult;
         collisionPt = other.GetContact(0).point;
 
@@ -235,9 +235,9 @@ public class BrickFrag : MonoBehaviour
 
         for (int i = 0; i < frags.Count; i++) {
             frags[i].fragC.MakeFragExplode(GetWorldFracPoints());
-            if (i % 1 == 0) {
-                yield return new WaitForSeconds(fragExpDelay);
-            }
+            // if (i % 1 == 0) {
+            //     yield return new WaitForSeconds(fragExpDelay);
+            // }
         }
 
     }

@@ -100,10 +100,10 @@ public class FragController : MonoBehaviour
         Vector3 minPt = UtilFunctions.FindClosestFracPt(transform.position, fracPts);
         float distFromFracPt = Vector3.Distance(minPt, transform.position);
         //Vector3 expForce = ((transform.position - minPt)).normalized * (1 / nDist) * expMag * collForce;
-        Vector3 expForce = ((transform.position - minPt)).normalized * expMag * collForce;
+        Vector3 expForce = ((transform.position - minPt)).normalized * expMag * collForce * 0.5f;
         StartCoroutine(MakeFragFlash());
         fragRb.AddForce(expForce, ForceMode.Impulse);
-        // fragRb.AddExplosionForce(expMag * collForce, _brickPos, 5f);
+        fragRb.AddExplosionForce(expMag * collForce, _brickPos, 5f);
         // ApplyZAxisForces(expMag * collForce);
         MakeFall();
     }

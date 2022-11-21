@@ -116,7 +116,7 @@ MonoBehaviour:
   fragSpawner: {fileID: 0}
   lightExpPrefab: {fileID: 1989625961592895221, guid: 0191ea5fa50e3c848a7900d6d2ab8a24,
     type: 3}
-  particleExpDelay: 0.1
+  particleExpDelay: 0
   ptsPerUnit: 50
   coneAngle: 170
   fracBranchDepth: 3
@@ -127,7 +127,7 @@ MonoBehaviour:
   craterRadMult: 0.03
   maxFragDepth: 2
   fracLineDrawDelay: 0.02
-  fragExpDelay: 0.01
+  fragExpDelay: 0
   voxFadePer: 0.4
   voxFadeOutDur: 0.3
   voxFadeInDur: 0.1

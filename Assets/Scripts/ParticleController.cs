@@ -17,11 +17,11 @@ public class ParticleController : MonoBehaviour
         this.playerPos = playerPos;
     }
 
-    void FixedUpdate() {
-        Vector3 dir = (playerPos - transform.position).normalized;
-        particleRb.AddForce(dir * Gravity);
+    // void FixedUpdate() {
+    //     Vector3 dir = (playerPos - transform.position).normalized;
+    //     particleRb.AddForce(dir * Gravity);
 
-    }
+    // }
     public IEnumerator FadeOut() {
         Material mat = GetComponent<Renderer>().material;
         float time = 0f;
