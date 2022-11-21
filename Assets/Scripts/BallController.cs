@@ -47,7 +47,7 @@ public class BallController : MonoBehaviour
 
     private void FixedUpdate() {
         if(ballRb.velocity.sqrMagnitude > _maxSpeedSqrd){
-            ballRb.velocity *= 0.80f;
+            ballRb.velocity *= 0.95f;
         }
         
     }

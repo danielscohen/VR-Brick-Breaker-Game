@@ -352,8 +352,8 @@ extern void BrickFrag_ContainedInBrick_m8ABA0F0D05602C6872EC90279876A0ADB28B07A1
 extern void BrickFrag_ApproxOrGreater_m32E4A663037FAE10548EE2E775E37A2DD74F2259 (void);
 // 0x000000AA UnityEngine.Vector3 BrickFrag::NudgeCollisionPt(UnityEngine.Vector3)
 extern void BrickFrag_NudgeCollisionPt_mBD27ED731AF12C5BC86CDD7C4B4F787A748A12B0 (void);
-// 0x000000AB System.Boolean BrickFrag::CreateFracLine(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Bounds,System.Int32,System.Int32,System.Boolean)
-extern void BrickFrag_CreateFracLine_m400E6EE2FECA52FA597B40073C989F857C7F7E2D (void);
+// 0x000000AB System.Int32 BrickFrag::CreateFracLine(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Bounds,System.Int32,System.Int32,System.Boolean)
+extern void BrickFrag_CreateFracLine_m26838477494316A6932A9E12CA8C902F5DDD8163 (void);
 // 0x000000AC System.Single BrickFrag::GetLineBrickBoundsIntersect(UnityEngine.Vector3,UnityEngine.Vector3)
 extern void BrickFrag_GetLineBrickBoundsIntersect_m7A817B83BC51BEF18AE342F2552AB229D7514A1C (void);
 // 0x000000AD System.Boolean BrickFrag::IsInCrater(UnityEngine.Vector3)
@@ -1583,7 +1583,7 @@ static Il2CppMethodPointer s_methodPointers[707] =
 	BrickFrag_ContainedInBrick_m8ABA0F0D05602C6872EC90279876A0ADB28B07A1,
 	BrickFrag_ApproxOrGreater_m32E4A663037FAE10548EE2E775E37A2DD74F2259,
 	BrickFrag_NudgeCollisionPt_mBD27ED731AF12C5BC86CDD7C4B4F787A748A12B0,
-	BrickFrag_CreateFracLine_m400E6EE2FECA52FA597B40073C989F857C7F7E2D,
+	BrickFrag_CreateFracLine_m26838477494316A6932A9E12CA8C902F5DDD8163,
 	BrickFrag_GetLineBrickBoundsIntersect_m7A817B83BC51BEF18AE342F2552AB229D7514A1C,
 	BrickFrag_IsInCrater_m4235C5911693927E12A88FA579DCD2B4FC205887,
 	BrickFrag_DrawFracLines_m4D16DF22F6B3AB60325FEFD09BE2F1FABD513CBF,
@@ -2298,7 +2298,7 @@ static const int32_t s_InvokerIndices[707] =
 	2856,
 	1341,
 	3626,
-	152,
+	157,
 	1728,
 	2856,
 	4846,

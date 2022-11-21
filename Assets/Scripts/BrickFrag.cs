@@ -180,8 +180,11 @@ public class BrickFrag : MonoBehaviour
         numVoxels = new Vector3Int(voxels.GetLength(0), voxels.GetLength(1), voxels.GetLength(2));
         ballCollDir = ballCollVel.normalized;
         ballCollSpeed = ballCollVel.magnitude;
+        Debug.Log($"speed: {ballCollSpeed}");
         craterRadius = ballCollSpeed * craterRadMult;
         collisionPt = other.GetContact(0).point;
+
+        ptsPerUnit = (int)Mathf.Floor(ballCollSpeed * 10);
 
         StartCoroutine(StartCollActions());
     }
@@ -259,17 +262,21 @@ public class BrickFrag : MonoBehaviour
         Vector3 dirToCenter = (transform.TransformPoint(Vector3.zero) - startPt).normalized;
 
         Vector3 dir = ballCollDir;
+        int numRots = 0;
 
         while (true) {
-            if (CreateFracLine(startPt, dir, brickBounds, fracBranchDepth, 0, true)){
+            if (CreateFracLine(startPt, dir, brickBounds, fracBranchDepth, 0, true) > 20){
                 ConvertFracPointsToLocal();
+                // Debug.Log($"num rots: {numRots}");
                 return;
             }
             if (Vector3.Angle(dir, dirToCenter) < 1f){
                 ConvertFracPointsToLocal();
+                // Debug.Log($"num rots forced to stop: {numRots}");
                 return;
             } 
-            dir = Vector3.RotateTowards(dir, dirToCenter, 20f, 0);
+            dir = Vector3.RotateTowards(dir, dirToCenter, 0.08f, 0);
+            numRots++;
         }
     }
 
@@ -303,19 +310,20 @@ public class BrickFrag : MonoBehaviour
         return collisionPt + dir * startDist;
     }
 
-    bool CreateFracLine(Vector3 branchPt, Vector3 fracDir, Bounds brickBounds, int branchDepth, int epoch, bool firstLine) {
+    int CreateFracLine(Vector3 branchPt, Vector3 fracDir, Bounds brickBounds, int branchDepth, int epoch, bool firstLine) {
         List<Vector3> fracPts = new List<Vector3>();
         if (!firstLine) {
             fracDir = PerturbVectorDir(fracDir).normalized;
         }
         float distToBound = GetLineBrickBoundsIntersect(branchPt, fracDir);
         //Debug.Log($"dist to bound: {distToBound}");
-        if (distToBound < 0) return false;
+        if (distToBound < 0) return 0;
         Vector3 boundPt = branchPt + fracDir * distToBound;
+
 
         var numPts = (int)(ptsPerUnit * Mathf.Abs(distToBound));
         //Debug.Log($"num points: {numPts}");
-        if(numPts == 0) return false;
+        if(numPts == 0) return 0;
         fracDrawPts.Add(new List<DrawPt>());
         for (int i = 0; i <= numPts; i++) {
             var point = Vector3.Lerp(branchPt, boundPt, (float)i / numPts);
@@ -329,7 +337,7 @@ public class BrickFrag : MonoBehaviour
             }
             epoch++;
         }
-        return true;
+        return fracLinePts.Count;
     }
 
     float GetLineBrickBoundsIntersect(Vector3 pt, Vector3 dir) {
@@ -593,7 +601,7 @@ public class BrickFrag : MonoBehaviour
         if(x < 0 || y < 0 || z < 0) return;
         if (x >= numVoxels.x || y >= numVoxels.y || z >= numVoxels.z) return;
         if(voxMap[x, y, z] != -1) return;
-        int r = Random.Range(1, (int)((1f / fragSizeMult) * ballCollSpeed));
+        int r = Random.Range(1, (int)((1f / fragSizeMult) * (fracLinePts.Count / 10)));
         if (r > prob) return;
         voxMap[x, y, z] = groupIndex;
         freeIndices.Remove(x + y * voxMap.GetLength(0) + z * voxMap.GetLength(0) * voxMap.GetLength(1));
