@@ -44,9 +44,9 @@ public class PlayerPointsManager : MonoBehaviour
     void AnimatePoints(int pts, Vector3 pos){
         GameObject ptsModel;
         if(_negPoints){
-            ptsModel = Instantiate(_ptsPrefabNeg, pos + Vector3.forward * 0.2f, Quaternion.identity);
+            ptsModel = Instantiate(_ptsPrefabNeg, pos + Vector3.forward * 0.3f, Quaternion.identity);
         } else{
-            ptsModel = Instantiate(_ptsPrefabPos, pos + Vector3.forward * 0.2f, Quaternion.identity);
+            ptsModel = Instantiate(_ptsPrefabPos, pos + Vector3.forward * 0.3f, Quaternion.identity);
         }
         TextMeshPro ptsText = ptsModel.transform.GetChild(0).GetComponent<TextMeshPro>();
         string sign = _negPoints ? "-" : "+";

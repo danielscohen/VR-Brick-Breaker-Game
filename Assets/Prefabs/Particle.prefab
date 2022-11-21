@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Gravity: 1
-  duration: 0.8
+  duration: 1.5
 --- !u!114 &-8545705193919337518
 MonoBehaviour:
   m_ObjectHideFlags: 0
