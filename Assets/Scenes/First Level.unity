@@ -25835,7 +25835,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1251934942
 RectTransform:
   m_ObjectHideFlags: 0
@@ -35088,7 +35088,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -62}
+  m_AnchoredPosition: {x: 0, y: -57}
   m_SizeDelta: {x: 200, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1855775390
@@ -35112,8 +35112,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: 'To win the game, destroy All the bricks by throwing orbs at them. Collect
-    fragments of shattered bricks for points. If you run out of orbs, or fail to
-    break all the bricks before the time runs out, you lose the game.
+    fragments of shattered bricks with your body to earn points. If you run out of
+    orbs, or fail to break all the bricks before the time runs out, you lose the
+    game. Use your hands to throw and catch orbs, or pick up the racket and use that
+    to hit the orbs instead! New orbs to throw and your racket appear on your sides.
 
     There
     are five different powerups to collect that can randomly drop from shattered
@@ -35145,8 +35147,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 6
-  m_fontSizeBase: 6
+  m_fontSize: 5
+  m_fontSizeBase: 5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -36429,7 +36431,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -20}
+  m_AnchoredPosition: {x: 0, y: -11}
   m_SizeDelta: {x: 200, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1966129595
@@ -36480,8 +36482,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 10
+  m_fontSizeBase: 10
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -36869,7 +36871,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1989229227
 RectTransform:
   m_ObjectHideFlags: 0
