@@ -3857,7 +3857,7 @@ GameObject:
   - component: {fileID: 231789432}
   - component: {fileID: 231789431}
   m_Layer: 5
-  m_Name: Controlls
+  m_Name: Controls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4150,7 +4150,7 @@ GameObject:
   - component: {fileID: 252156433}
   - component: {fileID: 252156432}
   m_Layer: 5
-  m_Name: Highscores
+  m_Name: High Scores
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6302,7 +6302,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Highscores
+  m_text: High Scores
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4dd324da81ac0344f9af12111c5eea83, type: 2}
   m_sharedMaterial: {fileID: -1109333902305745644, guid: 4dd324da81ac0344f9af12111c5eea83,
@@ -10748,7 +10748,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Controlls
+  m_text: Controls
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4dd324da81ac0344f9af12111c5eea83, type: 2}
   m_sharedMaterial: {fileID: -1109333902305745644, guid: 4dd324da81ac0344f9af12111c5eea83,
@@ -14880,7 +14880,7 @@ GameObject:
   - component: {fileID: 823141302}
   - component: {fileID: 823141301}
   m_Layer: 5
-  m_Name: Controlls
+  m_Name: Controls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
