@@ -806,6 +806,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteral1FB9018D8BFC0FACF068B1067EF9E96C35FED1FE
 IL2CPP_EXTERN_C String_t* _stringLiteral20E39C3AB7068FAFD9E4B868E16D2E5BC64D4952;
 IL2CPP_EXTERN_C String_t* _stringLiteral2C8914C782EAE6A014BA8AF6056E8F75198FAA4B;
 IL2CPP_EXTERN_C String_t* _stringLiteral2D7E13E279D593020E0D24FF3B7826140798B778;
+IL2CPP_EXTERN_C String_t* _stringLiteral2DF695CA8FA95F37F1989CAEB5C7CAB44D43C293;
 IL2CPP_EXTERN_C String_t* _stringLiteral325BA3BF46827E4BA8B523BD56E8B38A4A2477AD;
 IL2CPP_EXTERN_C String_t* _stringLiteral3B2C1C62D4D1C2A0C8A9AC42DB00D33C654F9AD0;
 IL2CPP_EXTERN_C String_t* _stringLiteral50639CAD49418C7B223CC529395C0E2A3892501C;
@@ -8090,8 +8091,6 @@ inline HighScore_tAB53E25EE211F5AF017E511C8EC1B10EDC12DC7A List_1_get_Item_m180A
 }
 // System.Int32 GameController::CheckIfHighScore(System.Int32,System.Collections.Generic.List`1<HighScore>)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t GameController_CheckIfHighScore_mDBEF01C5185614B24B3CD9380BC883236F1C396C (GameController_tDA619EE453F7ED2C8297EF928518A0B447E44D09* __this, int32_t ___score0, List_1_t579D314527E310D4C617955A34C1A1C4FD959642* ___scores1, const RuntimeMethod* method) ;
-// System.String System.DateTime::ToShortDateString()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* DateTime_ToShortDateString_m8863B024FF293DF625932CCA2E35A095C6FCBDCB (DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D* __this, const RuntimeMethod* method) ;
 // System.Void System.Collections.Generic.List`1<HighScore>::Insert(System.Int32,T)
 inline void List_1_Insert_mFEF590C4B85C297D876A93C3180ED25CA8343235 (List_1_t579D314527E310D4C617955A34C1A1C4FD959642* __this, int32_t ___index0, HighScore_tAB53E25EE211F5AF017E511C8EC1B10EDC12DC7A ___item1, const RuntimeMethod* method)
 {
@@ -23417,6 +23416,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameController_SubmitHighScore_mBFBA1802
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Insert_mFEF590C4B85C297D876A93C3180ED25CA8343235_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_RemoveAt_mDAC00952D968F847F5C8DFE2B184B92F70D56CD6_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Count_mFCF142DBC144429DB5F3DA35E2B2465D25655093_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral2DF695CA8FA95F37F1989CAEB5C7CAB44D43C293);
 		s_Il2CppMethodInitialized = true;
 	}
 	int32_t V_0 = 0;
@@ -23433,7 +23433,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameController_SubmitHighScore_mBFBA1802
 		int32_t L_2;
 		L_2 = GameController_CheckIfHighScore_mDBEF01C5185614B24B3CD9380BC883236F1C396C(__this, L_0, L_1, NULL);
 		V_0 = L_2;
-		// HighScore newHighScore = new HighScore{name = name, date = DateTime.Now.ToShortDateString(), score = _score};
+		// HighScore newHighScore = new HighScore{name = name, date = DateTime.Now.ToString("d/M/yyyy"), score = _score};
 		il2cpp_codegen_initobj((&V_2), sizeof(HighScore_tAB53E25EE211F5AF017E511C8EC1B10EDC12DC7A));
 		String_t* L_3 = ___name0;
 		(&V_2)->___name_0 = L_3;
@@ -23443,7 +23443,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameController_SubmitHighScore_mBFBA1802
 		L_4 = DateTime_get_Now_m636CB9651A9099D20BA1CF813A0C69637317325C(NULL);
 		V_3 = L_4;
 		String_t* L_5;
-		L_5 = DateTime_ToShortDateString_m8863B024FF293DF625932CCA2E35A095C6FCBDCB((&V_3), NULL);
+		L_5 = DateTime_ToString_m6963A84785C320DA776C9FCFFEDAF26C8F1A8D78((&V_3), _stringLiteral2DF695CA8FA95F37F1989CAEB5C7CAB44D43C293, NULL);
 		(&V_2)->___date_1 = L_5;
 		Il2CppCodeGenWriteBarrier((void**)(&(&V_2)->___date_1), (void*)L_5);
 		int32_t L_6 = __this->____score_19;
@@ -23463,7 +23463,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameController_SubmitHighScore_mBFBA1802
 		L_12 = List_1_get_Count_mFCF142DBC144429DB5F3DA35E2B2465D25655093_inline(L_11, List_1_get_Count_mFCF142DBC144429DB5F3DA35E2B2465D25655093_RuntimeMethod_var);
 		if ((((int32_t)L_12) <= ((int32_t)((int32_t)10))))
 		{
-			goto IL_006f;
+			goto IL_0074;
 		}
 	}
 	{
@@ -23473,7 +23473,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameController_SubmitHighScore_mBFBA1802
 		List_1_RemoveAt_mDAC00952D968F847F5C8DFE2B184B92F70D56CD6(L_13, ((int32_t)10), List_1_RemoveAt_mDAC00952D968F847F5C8DFE2B184B92F70D56CD6_RuntimeMethod_var);
 	}
 
-IL_006f:
+IL_0074:
 	{
 		// HighScoresManager.SaveHighScores(GameDifficulty, _highScores);
 		int32_t L_14;

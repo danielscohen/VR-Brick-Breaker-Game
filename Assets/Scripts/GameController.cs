@@ -254,7 +254,7 @@ public class GameController : MonoBehaviour
 
     public void SubmitHighScore(string name){
         int index = CheckIfHighScore(_score, _highScores);
-        HighScore newHighScore = new HighScore{name = name, date = DateTime.Now.ToShortDateString(), score = _score};
+        HighScore newHighScore = new HighScore{name = name, date = DateTime.Now.ToString("d/M/yyyy"), score = _score};
         _highScores.Insert(index, newHighScore);
         if(_highScores.Count > 10){
             _highScores.RemoveAt(10);

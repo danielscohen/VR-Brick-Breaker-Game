@@ -397,7 +397,10 @@ public class UIController : MonoBehaviour
 
     public void OnHighScoreNameSubmitted(){
         _highScoreName = _highScoreNameInput.text;
-        if(_highScoreName == "") _highScoreName = "<Anonymous>";
+        if(_highScoreName == "") _highScoreName = "Anonymous";
+        if(_highScoreName.Length > 10){
+            _highScoreName = _highScoreName.Substring(0, 10);
+        }
         GameController.Instance.SubmitHighScore(_highScoreName);
     }
     public void LoadHighScoreBoards(){
