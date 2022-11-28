@@ -195,7 +195,14 @@ public class UIController : MonoBehaviour
         _playerHealthText.text = health.ToString();
     }
     void UpdateBallsRemainingText(int numBalls) {
-        _ballsRemainingText.text = $"{numBalls} Orbs Left";
+        if(numBalls == 0){
+            _ballsRemainingText.text = $"No Orbs Left";
+        } else if (numBalls == 1){
+            _ballsRemainingText.text = $"{numBalls} Orb Left";
+
+        } else {
+            _ballsRemainingText.text = $"{numBalls} Orbs Left";
+        }
     }
     void UpdateTimerText(string time, float timePer) {
         Image hiddenTimer;
