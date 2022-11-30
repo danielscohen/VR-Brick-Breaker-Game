@@ -98,7 +98,7 @@ public class FragController : MonoBehaviour
     
     public void MakeFragExplode(List<Vector3> fracPts) {
         Vector3 minPt = UtilFunctions.FindClosestFracPt(transform.position, fracPts);
-        float distFromFracPt = Vector3.Distance(minPt, transform.position);
+        // float distFromFracPt = Vector3.Distance(minPt, transform.position);
         //Vector3 expForce = ((transform.position - minPt)).normalized * (1 / nDist) * expMag * collForce;
         Vector3 expForce = ((transform.position - minPt)).normalized * expMag * collForce * 0.5f;
         StartCoroutine(MakeFragFlash());
