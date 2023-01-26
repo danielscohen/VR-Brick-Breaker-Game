@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: f6b33dfed9f8d2d4fb4177c9dbbeffaa
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - fragPrefab: {fileID: 4664629428739493599, guid: a5b79cce20ffa8d409f90d1ce3e7405b, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

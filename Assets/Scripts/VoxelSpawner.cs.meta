@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: f6bf86156f9e2bb429d4af13b7b82b2c
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - voxelPrefab: {fileID: 2833307672728136992, guid: 37f196992ce35a34c9377f5101adc006, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
